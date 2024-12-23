@@ -1,0 +1,53 @@
+globals
+    player targ1 = PlayerEx(1)
+    player targ2 = PlayerEx(2)
+    player targ3 = PlayerEx(3)
+    player targ  = targ1
+
+    constant integer GERMANIC_TIER_1 = 'o002'
+    constant integer GERMANIC_HOUSE = 'o005'
+    constant integer GERMAINC_WORKER = 'o003'
+endglobals
+
+//--------------------------------------------------------------------------------------------------
+//  switch_targets
+//--------------------------------------------------------------------------------------------------
+function switch_targets takes nothing returns nothing
+    loop
+        exitwhen CommandsWaiting() > 0
+        call Sleep(1)
+    endloop
+
+    set targ = targ2
+endfunction
+
+//--------------------------------------------------------------------------------------------------
+//  main
+//--------------------------------------------------------------------------------------------------
+function main takes nothing returns nothing
+
+    call CampaignAI(GERMANIC_HOUSE,null)
+
+    call SetHarvestLumber(false)
+    call DoCampaignFarms(false)
+
+
+    call DoCampaignFarms(true)
+    call SetReplacements(9,9,9)
+    call SetPeonsRepair(true)
+
+    //call SetCaptainHome(ATTACK_CAPTAIN, -4268,-6436)
+    //call SetCaptainHome(DEFENSE_CAPTAIN,-4723,-6604)
+
+    call SetBuildUnitEx( 1,1,1, GERMANIC_TIER_1    )
+    call SetBuildUnitEx( 5,5,5, GERMAINC_WORKER         )
+
+    //call CampaignDefenderEx( 1, 1, 1, DVINDICATOR   )
+    //call CampaignDefenderEx( 1, 1, 1, DSEER         )
+    //call CampaignDefenderEx( 1, 1, 1, DSALAMANDER   )
+    //call CampaignDefenderEx( 1, 1, 1, AKAMA         )
+
+    //call WaitForSignal()
+
+    //call StartThread(function switch_targets)
+endfunction

@@ -43,7 +43,7 @@ Train Eques
 }
 
 STRING 20
-// Units: h002 (Tent), Name (Name)
+// Units: h00H (Tent), Name (Name)
 {
 Tent
 }
@@ -58,18 +58,6 @@ STRING 22
 // Units: o000 (Catapult), Tip (Tooltip - Basic)
 {
 Train Catapult
-}
-
-STRING 23
-// Units: h003 (Praetorian Guard), Name (Name)
-{
-Praetorian Guard
-}
-
-STRING 24
-// Units: h003 (Praetorian Guard), Tip (Tooltip - Basic)
-{
-Train Praetorian Guard
 }
 
 STRING 25
@@ -216,21 +204,10 @@ STRING 53
 Train Pioneer
 }
 
-STRING 54
-// Units: h00A (Lumber Storage), Name (Name)
-{
-Lumber Storage
-}
-
 STRING 55
 // Units: h00B (Wall), Name (Name)
 {
 Wall
-}
-
-STRING 56
-{
-Roman Victory:
 }
 
 STRING 57
@@ -544,5 +521,162 @@ Defeat the Roman Legions!
 STRING 112
 {
 Defend yourself against the Germanic Tribes!
+}
+
+STRING 113
+{
+Varus:
+}
+
+STRING 114
+{
+It is an ambush! The Germanic Tribes have trapped us! Arminius you traitor!
+}
+
+STRING 116
+{
+Defeat!
+}
+
+STRING 118
+{
+Defeat!
+}
+
+STRING 121
+// Units: h003 (Centurio), Name (Name)
+{
+Centurio
+}
+
+STRING 122
+// Units: h003 (Centurio), Tip (Tooltip - Basic)
+{
+Train Centurio
+}
+
+STRING 123
+// Units: h00G (Vexillifer), Name (Name)
+{
+Vexillifer
+}
+
+STRING 124
+// Units: h00G (Vexillifer), Tip (Tooltip - Basic)
+{
+Train Vexillifer
+}
+
+STRING 125
+// Abilities: A004 (Throw Pilum), Tip (Tooltip - Normal)
+{
+Throw Pilum
+}
+
+STRING 126
+// Abilities: A004 (Throw Pilum), Ubertip (Tooltip - Normal - Extended)
+{
+Throws a Pilum that stuns a target enemy unit.
+}
+
+STRING 127
+// Abilities: A004 (Throw Pilum), Name (Name)
+{
+Throw Pilum
+}
+
+STRING 128
+// Units: o00A (Druid), Name (Name)
+{
+Druid
+}
+
+STRING 129
+// Units: o00A (Druid), Tip (Tooltip - Basic)
+{
+Train Druid
+}
+
+STRING 130
+// Units: o00B (Altar of Sacrifice), Name (Name)
+{
+Altar of Sacrifice
+}
+
+STRING 131
+// Units: o00B (Altar of Sacrifice), Tip (Tooltip - Basic)
+{
+Build Altar of Sacrifice
+}
+
+STRING 132
+// Units: o00C (Druid Shrine), Name (Name)
+{
+Druid Shrine
+}
+
+STRING 133
+// Units: o00C (Druid Shrine), Tip (Tooltip - Basic)
+{
+Build Druid Shrine
+}
+
+STRING 134
+// Units: o00D (Market), Name (Name)
+{
+Market
+}
+
+STRING 135
+// Units: h002 (Command Tent), Name (Name)
+{
+Command Tent
+}
+
+STRING 136
+// Units: h002 (Command Tent), Tip (Tooltip - Basic)
+{
+Build Command Tent
+}
+
+STRING 137
+// Units: h00I (Cart), Name (Name)
+{
+Cart
+}
+
+STRING 138
+// Units: h00I (Cart), Tip (Tooltip - Basic)
+{
+Train Cart
+}
+
+STRING 139
+{
+Roman Victory:
+}
+
+STRING 140
+// Units: h00A (Lumber Mill), Name (Name)
+{
+Lumber Mill
+}
+
+STRING 141
+// Units: h00A (Lumber Mill), Tip (Tooltip - Basic)
+{
+Build Lumber Mill
+}
+
+STRING 142
+// Units: h00J (Forum), Name (Name)
+{
+Forum
+}
+
+STRING 143
+// Units: h00J (Forum), Tip (Tooltip - Basic)
+{
+Build Forum
 }
 
