@@ -1,0 +1,548 @@
+﻿STRING 3
+{
+Battle of the Teutoburg Forest 1.0
+}
+
+STRING 4
+{
+2-6
+}
+
+STRING 5
+{
+A major battle between Germanic tribes and the Roman Empire that took place somewhere near modern Kalkriese from September 8–11, 9 AD, when an alliance of Germanic peoples ambushed three Roman legions led by Publius Quinctilius Varus and their auxiliaries.
+}
+
+STRING 6
+{
+Baradé
+}
+
+STRING 16
+// Units: h000 (Legionary), Name (Name)
+{
+Legionary
+}
+
+STRING 17
+// Units: h000 (Legionary), Tip (Tooltip - Basic)
+{
+Train Legionary
+}
+
+STRING 18
+// Units: h001 (Eques), Name (Name)
+{
+Eques
+}
+
+STRING 19
+// Units: h001 (Eques), Tip (Tooltip - Basic)
+{
+Train Eques
+}
+
+STRING 20
+// Units: h002 (Tent), Name (Name)
+{
+Tent
+}
+
+STRING 21
+// Units: o000 (Catapult), Name (Name)
+{
+Catapult
+}
+
+STRING 22
+// Units: o000 (Catapult), Tip (Tooltip - Basic)
+{
+Train Catapult
+}
+
+STRING 23
+// Units: h003 (Praetorian Guard), Name (Name)
+{
+Praetorian Guard
+}
+
+STRING 24
+// Units: h003 (Praetorian Guard), Tip (Tooltip - Basic)
+{
+Train Praetorian Guard
+}
+
+STRING 25
+// Abilities: A000 (Defend), EditorSuffix (Editor Suffix)
+{
+(Legionary)
+}
+
+STRING 26
+// Doodads: D000 (Wall Jerusalem), Name (Name)
+{
+Wall Jerusalem
+}
+
+STRING 29
+// Units: h004 (Siege Tower), Name (Name)
+{
+Siege Tower
+}
+
+STRING 30
+// Units: h004 (Siege Tower), Tip (Tooltip - Basic)
+{
+Train Siege Tower
+}
+
+STRING 31
+// Units: h005 (Siege Tower), Name (Name)
+{
+Siege Tower
+}
+
+STRING 32
+// Units: h005 (Siege Tower), Tip (Tooltip - Basic)
+{
+Train Siege Tower
+}
+
+STRING 33
+// Units: h005 (Siege Tower), EditorSuffix (Name - Editor Suffix)
+{
+(Morphed)
+}
+
+STRING 34
+// Abilities: A001 (Put Down Ramp), Name (Name)
+{
+Put Down Ramp
+}
+
+STRING 35
+// Abilities: A001 (Put Down Ramp), Tip (Tooltip - Normal)
+{
+Put Down Ramp
+}
+
+STRING 36
+// Abilities: A001 (Put Down Ramp), Ubertip (Tooltip - Normal - Extended)
+{
+Puts down the ramp, so units can enter the wall.
+}
+
+STRING 37
+// Abilities: A001 (Put Down Ramp), Untip (Tooltip - Turn Off)
+{
+Put Up Ramp
+}
+
+STRING 38
+// Abilities: A001 (Put Down Ramp), Unubertip (Tooltip - Turn Off - Extended)
+{
+Puts the ramp back up, so the Siege Tower can move again.
+}
+
+STRING 42
+// Units: H007 (Military Commander), Name (Name)
+{
+Military Commander
+}
+
+STRING 43
+// Units: H007 (Military Commander), Propernames (Proper Names)
+{
+Titus
+}
+
+STRING 44
+// Units: H007 (Military Commander), Awakentip (Tooltip - Awaken)
+{
+Revive Military Commander
+}
+
+STRING 45
+// Units: H007 (Military Commander), Revivetip (Tooltip - Revive)
+{
+Revive Military Commander
+}
+
+STRING 46
+// Units: H008 (Second-in-command), Name (Name)
+{
+Second-in-command
+}
+
+STRING 47
+// Units: H008 (Second-in-command), Propernames (Proper Names)
+{
+Tiberius Julius Alexander
+}
+
+STRING 48
+// Units: H008 (Second-in-command), Awakentip (Tooltip - Awaken)
+{
+Revive Military Commander
+}
+
+STRING 49
+// Units: H008 (Second-in-command), Revivetip (Tooltip - Revive)
+{
+Revive Military Commander
+}
+
+STRING 50
+// Destructibles: B001 (Pathing Blocker (Ground) (Large - Diagonal 1)), Name (Name)
+{
+Pathing Blocker (Ground) (Large - Diagonal 1)
+}
+
+STRING 51
+// Abilities: S000 (Unload), EditorSuffix (Editor Suffix)
+{
+(Siege Towers)
+}
+
+STRING 52
+// Units: h009 (Pioneer), Name (Name)
+{
+Pioneer
+}
+
+STRING 53
+// Units: h009 (Pioneer), Tip (Tooltip - Basic)
+{
+Train Pioneer
+}
+
+STRING 54
+// Units: h00A (Lumber Storage), Name (Name)
+{
+Lumber Storage
+}
+
+STRING 55
+// Units: h00B (Wall), Name (Name)
+{
+Wall
+}
+
+STRING 56
+{
+Roman Victory:
+}
+
+STRING 57
+{
+Defeat!
+}
+
+STRING 58
+// Abilities: A002 (Command Aura), Tip (Tooltip - Normal)
+{
+Command Aura - [|cffffcc00Level 1|r]
+}
+
+STRING 59
+// Abilities: A002 (Command Aura), Tip (Tooltip - Normal)
+{
+Command Aura - [|cffffcc00Level 2|r]
+}
+
+STRING 60
+// Abilities: A002 (Command Aura), Tip (Tooltip - Normal)
+{
+Command Aura - [|cffffcc00Level 3|r]
+}
+
+STRING 61
+// Abilities: A002 (Command Aura), Ubertip (Tooltip - Normal - Extended)
+{
+Gives extra damage to the attacks of nearby friendly units.
+}
+
+STRING 62
+// Abilities: A002 (Command Aura), Ubertip (Tooltip - Normal - Extended)
+{
+Gives extra damage to the attacks of nearby friendly units.
+}
+
+STRING 63
+// Abilities: A002 (Command Aura), Researchtip (Tooltip - Learn)
+{
+Learn Devotion Aura - [|cffffcc00Level %d|r]
+}
+
+STRING 64
+// Abilities: A002 (Command Aura), Researchubertip (Tooltip - Learn - Extended)
+{
+Gives extra damage to the attacks of nearby friendly units.
+}
+
+STRING 65
+// Abilities: A002 (Command Aura), Researchhotkey (Hotkey - Learn)
+{
+A
+}
+
+STRING 66
+// Units: H00C (Military Commander), Name (Name)
+{
+Military Commander
+}
+
+STRING 67
+// Units: H00C (Military Commander), Propernames (Proper Names)
+{
+Titus
+}
+
+STRING 68
+// Units: H00C (Military Commander), Awakentip (Tooltip - Awaken)
+{
+Revive Military Commander
+}
+
+STRING 69
+// Units: H00C (Military Commander), Revivetip (Tooltip - Revive)
+{
+Revive Military Commander
+}
+
+STRING 70
+// Units: H00C (Military Commander), EditorSuffix (Name - Editor Suffix)
+{
+(Horse)
+}
+
+STRING 71
+// Abilities: A003 (Cavallery Charge), Name (Name)
+{
+Cavallery Charge
+}
+
+STRING 72
+// Abilities: A003 (Cavallery Charge), Researchtip (Tooltip - Learn)
+{
+Learn Cavallery Charge
+}
+
+STRING 73
+// Abilities: A003 (Cavallery Charge), Tip (Tooltip - Normal)
+{
+Cavallery Charge
+}
+
+STRING 75
+// Units: H006 (Germanic Chieftain), Propernames (Proper Names)
+{
+Simon bar Giora
+}
+
+STRING 77
+{
+Legio XVII
+}
+
+STRING 78
+{
+Legio XVIII
+}
+
+STRING 79
+{
+Legio XIX
+}
+
+STRING 80
+{
+Cherusci
+}
+
+STRING 81
+{
+Bructeri
+}
+
+STRING 82
+{
+Angrivarii
+}
+
+STRING 83
+{
+Roman Legions
+}
+
+STRING 84
+{
+Germanic Tribes
+}
+
+STRING 85
+// Units: H006 (Germanic Chieftain), Name (Name)
+{
+Germanic Chieftain
+}
+
+STRING 86
+// Units: H00D (Roman Governor), Propernames (Proper Names)
+{
+Varus
+}
+
+STRING 87
+// Units: H00D (Roman Governor), Name (Name)
+{
+Roman Governor
+}
+
+STRING 88
+// Units: H00D (Roman Governor), Awakentip (Tooltip - Awaken)
+{
+Revive Varus
+}
+
+STRING 89
+// Units: H00D (Roman Governor), Revivetip (Tooltip - Revive)
+{
+Revive Varus
+}
+
+STRING 90
+// Units: O001 (Blademaster), Propernames (Proper Names)
+{
+Arminius
+}
+
+STRING 91
+// Destructibles: B000 (Germanic Tree), Name (Name)
+{
+Germanic Tree
+}
+
+STRING 92
+// Units: o002 (Germanic Town Center), Name (Name)
+{
+Germanic Town Center
+}
+
+STRING 93
+// Units: o002 (Germanic Town Center), Tip (Tooltip - Basic)
+{
+Build Germanic Town Center
+}
+
+STRING 94
+// Units: o003 (Villager), Name (Name)
+{
+Villager
+}
+
+STRING 95
+// Units: o003 (Villager), Tip (Tooltip - Basic)
+{
+Train Villager
+}
+
+STRING 96
+// Units: n000 (Archer), Name (Name)
+{
+Archer
+}
+
+STRING 97
+// Units: n000 (Archer), Tip (Tooltip - Basic)
+{
+Train Archer
+}
+
+STRING 98
+// Units: o004 (Rider), Name (Name)
+{
+Rider
+}
+
+STRING 99
+// Units: o004 (Rider), Tip (Tooltip - Basic)
+{
+Train Rider
+}
+
+STRING 100
+// Units: o005 (House), Name (Name)
+{
+House
+}
+
+STRING 101
+// Units: o005 (House), Tip (Tooltip - Basic)
+{
+Build House
+}
+
+STRING 102
+// Units: o007 (Stables), Name (Name)
+{
+Stables
+}
+
+STRING 103
+// Units: o007 (Stables), Tip (Tooltip - Basic)
+{
+Build Stables
+}
+
+STRING 104
+// Units: o008 (Stockpile), Name (Name)
+{
+Stockpile
+}
+
+STRING 105
+// Units: o008 (Stockpile), Tip (Tooltip - Basic)
+{
+Build Stockpile
+}
+
+STRING 106
+// Units: n002 (Warrior), Name (Name)
+{
+Warrior
+}
+
+STRING 107
+// Units: n002 (Warrior), Tip (Tooltip - Basic)
+{
+Train Warrior
+}
+
+STRING 108
+// Units: n003 (Javelin Thrower), Name (Name)
+{
+Javelin Thrower
+}
+
+STRING 109
+// Units: n003 (Javelin Thrower), Tip (Tooltip - Basic)
+{
+Train Javelin Thrower
+}
+
+STRING 110
+// Units: h00E (Guard Tower), Tip (Tooltip - Basic)
+{
+Build Guard Tower
+}
+
+STRING 111
+{
+Defeat the Roman Legions!
+}
+
+STRING 112
+{
+Defend yourself against the Germanic Tribes!
+}
+
