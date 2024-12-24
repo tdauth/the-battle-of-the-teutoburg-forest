@@ -1,0 +1,12 @@
+[TALT]
+DependencyOr=o00B,halt,oalt,eate,uaod
+
+[TWN1]
+DependencyOr=o002,h002,htow,ogre,etol,unpl
+
+[TWN2]
+DependencyOr=o00F,hkee,ostr,etoa,unp1
+
+[TWN3]
+DependencyOr=o00G,hcas,ofrt,etoe,unp2
+

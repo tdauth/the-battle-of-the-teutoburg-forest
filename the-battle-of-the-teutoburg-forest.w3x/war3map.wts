@@ -210,11 +210,6 @@ STRING 55
 Wall
 }
 
-STRING 57
-{
-Defeat!
-}
-
 STRING 58
 // Abilities: A002 (Command Aura), Tip (Tooltip - Normal)
 {
@@ -312,7 +307,7 @@ Cavallery Charge
 }
 
 STRING 75
-// Units: H006 (Germanic Chieftain), Propernames (Proper Names)
+// Units: H006 (Chieftain), Propernames (Proper Names)
 {
 Simon bar Giora
 }
@@ -355,12 +350,6 @@ Roman Legions
 STRING 84
 {
 Germanic Tribes
-}
-
-STRING 85
-// Units: H006 (Germanic Chieftain), Name (Name)
-{
-Germanic Chieftain
 }
 
 STRING 86
@@ -520,7 +509,7 @@ Defeat the Roman Legions!
 
 STRING 112
 {
-Defend yourself against the Germanic Tribes!
+Defeat the Germanic Tribes!
 }
 
 STRING 113
@@ -530,7 +519,7 @@ Varus:
 
 STRING 114
 {
-It is an ambush! The Germanic Tribes have trapped us! Arminius you traitor!
+Where is Arminus?
 }
 
 STRING 116
@@ -651,11 +640,6 @@ STRING 138
 Train Cart
 }
 
-STRING 139
-{
-Roman Victory:
-}
-
 STRING 140
 // Units: h00A (Lumber Mill), Name (Name)
 {
@@ -678,5 +662,245 @@ STRING 143
 // Units: h00J (Forum), Tip (Tooltip - Basic)
 {
 Build Forum
+}
+
+STRING 144
+// Upgrades: R001 (Witch Doctor Adept Training,Witch Doctor Master Training), Name (Name)
+{
+Druid Adept Training
+}
+
+STRING 145
+// Upgrades: R001 (Witch Doctor Adept Training,Witch Doctor Master Training), Name (Name)
+{
+Druid Master Training
+}
+
+STRING 146
+// Upgrades: R001 (Witch Doctor Adept Training,Witch Doctor Master Training), Tip (Tooltip)
+{
+Druid Adept Training
+}
+
+STRING 147
+// Upgrades: R001 (Witch Doctor Adept Training,Witch Doctor Master Training), Tip (Tooltip)
+{
+Druid Master Training
+}
+
+STRING 148
+// Units: n008 (Eagle), Name (Name)
+{
+Eagle
+}
+
+STRING 149
+// Units: n009 (Thunder Eagle), Name (Name)
+{
+Thunder Eagle
+}
+
+STRING 150
+// Upgrades: R002 (Defend), Ubertip (Tooltip - Extended)
+{
+Allows Roman Warriors to use the Defend ability, which increases their defensive capabilities against Piercing attacks.
+}
+
+STRING 151
+// Upgrades: R003 (Defend), Name (Name)
+{
+Throw Pilum
+}
+
+STRING 152
+// Upgrades: R003 (Defend), Tip (Tooltip)
+{
+Research Throw Pilum
+}
+
+STRING 153
+// Upgrades: R003 (Defend), Ubertip (Tooltip - Extended)
+{
+Allows Roman warriors to use the Throw Pilum ability, which damages and stuns enemy units.
+}
+
+STRING 154
+// Upgrades: R003 (Defend), Hotkey (Hotkey)
+{
+T
+}
+
+STRING 155
+// Units: h00L (Stables), Name (Name)
+{
+Stables
+}
+
+STRING 156
+// Units: h00L (Stables), Tip (Tooltip - Basic)
+{
+Build Stables
+}
+
+STRING 157
+// Units: o004 (Rider), Ubertip (Tooltip - Extended)
+{
+Highly mobile rider. Effective against archers. Can learn the Ensnare ability. |n|n|cffffcc00Attacks land units.|r
+}
+
+STRING 158
+// Units: o009 (Shipyard), Name (Name)
+{
+Shipyard
+}
+
+STRING 159
+// Units: o009 (Shipyard), Hotkey (Hotkey)
+{
+Y
+}
+
+STRING 160
+// Units: o009 (Shipyard), Tip (Tooltip - Basic)
+{
+Build Shipyard
+}
+
+STRING 161
+// Units: h00M (Shipyard), Hotkey (Hotkey)
+{
+Y
+}
+
+STRING 162
+// Units: h00M (Shipyard), Name (Name)
+{
+Shipyard
+}
+
+STRING 163
+// Units: h00M (Shipyard), Tip (Tooltip - Basic)
+{
+Build Shipyard
+}
+
+STRING 164
+// Units: H006 (Chieftain), Name (Name)
+{
+Chieftain
+}
+
+STRING 165
+// Units: H006 (Chieftain), Awakentip (Tooltip - Awaken)
+{
+Revive Chieftain
+}
+
+STRING 166
+// Units: H006 (Chieftain), Revivetip (Tooltip - Revive)
+{
+Revive Chieftain
+}
+
+STRING 167
+// Units: H006 (Chieftain), Tip (Tooltip - Basic)
+{
+Summon Chieftain
+}
+
+STRING 168
+// Units: O00H (Druid), Name (Name)
+{
+Druid
+}
+
+STRING 169
+// Units: O00H (Druid), Awakentip (Tooltip - Awaken)
+{
+Revive Druid
+}
+
+STRING 170
+// Units: O00H (Druid), Revivetip (Tooltip - Revive)
+{
+Revive Druid
+}
+
+STRING 171
+// Units: O00H (Druid), Tip (Tooltip - Basic)
+{
+Summon Druid
+}
+
+STRING 172
+// Abilities: A006 (Unit Inventory), EditorSuffix (Editor Suffix)
+{
+(Roman Empire)
+}
+
+STRING 173
+// Abilities: A007 (Unit Inventory), EditorSuffix (Editor Suffix)
+{
+(Germanic Tribes)
+}
+
+STRING 174
+// Upgrades: R004 (Pillage), Ubertip (Tooltip - Extended)
+{
+Causes Germanic unit attacks to gain resources when hitting enemy buildings.
+}
+
+STRING 175
+// Upgrades: R005 (Backpack), EditorSuffix (Editor Suffix)
+{
+(Roman Empire)
+}
+
+STRING 176
+// Upgrades: R005 (Backpack), Ubertip (Tooltip - Extended)
+{
+Gives specific Roman ground units the ability to carry items.
+}
+
+STRING 177
+// Upgrades: R006 (Backpack), EditorSuffix (Editor Suffix)
+{
+(Germanic Tribes)
+}
+
+STRING 178
+// Upgrades: R006 (Backpack), Ubertip (Tooltip - Extended)
+{
+Gives specific Germanic ground units the ability to carry items.
+}
+
+STRING 179
+// Units: o00E (Shaman), Casterupgradetip (Caster Upgrade Tips)
+{
+- Purge,- Purge|n- Summon Eagle,- Purge|n- Summon Eagle|n- Bloodlust
+}
+
+STRING 180
+// Abilities: A008 (Summon Eagle), Name (Name)
+{
+Summon Eagle
+}
+
+STRING 181
+// Abilities: A008 (Summon Eagle), Tip (Tooltip - Normal)
+{
+Summon Eagle
+}
+
+STRING 182
+// Abilities: A008 (Summon Eagle), Ubertip (Tooltip - Normal - Extended)
+{
+Summons a powerful Eagle with <nsel,realHP> hit points that does <nsel,mindmg1> - <nsel,maxdmg1> damage. |nLasts <ACwe,Dur1> seconds.
+}
+
+STRING 183
+// Buffs/Effects: B000 (), Bufftip (Tooltip)
+{
+Eagle
 }
 

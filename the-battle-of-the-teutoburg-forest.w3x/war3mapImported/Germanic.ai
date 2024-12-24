@@ -4,9 +4,17 @@ globals
     player targ3 = PlayerEx(3)
     player targ  = targ1
 
+    constant integer ARMINIUS = 'O001'
+    constant integer CHIEFTAIN = 'H006'
+    constant integer DRUID = 'O00H'
     constant integer GERMANIC_TIER_1 = 'o002'
+    constant integer GERMANIC_TIER_2 = 'o00F'
+    constant integer GERMANIC_TIER_3 = 'o00G'
     constant integer GERMANIC_HOUSE = 'o005'
+    constant integer GERMANIC_ALTAR = 'o00B'
+    constant integer GERMANIC_WATCH_TOWER = 'o00I'
     constant integer GERMAINC_WORKER = 'o003'
+    constant integer GERMANIC_ARCHER = 'n000'
 endglobals
 
 //--------------------------------------------------------------------------------------------------
@@ -40,6 +48,8 @@ function main takes nothing returns nothing
     //call SetCaptainHome(DEFENSE_CAPTAIN,-4723,-6604)
 
     call SetBuildUnitEx( 1,1,1, GERMANIC_TIER_1    )
+    call SetBuildUnitEx( 1,1,1, GERMANIC_ALTAR    )
+    call SetBuildUnitEx( 1,1,1, GERMANIC_WATCH_TOWER    )
     call SetBuildUnitEx( 5,5,5, GERMAINC_WORKER         )
 
     //call CampaignDefenderEx( 1, 1, 1, DVINDICATOR   )
