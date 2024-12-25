@@ -994,9 +994,9 @@ function CreateNeutralHostile takes nothing returns nothing
     local trigger t
     local real life
 
-    set u = BlzCreateUnitWithSkin( p, 'n004', -7247.4, -7319.4, 150.045, 'n004' )
-    set u = BlzCreateUnitWithSkin( p, 'n004', -7160.5, -7515.5, 66.848, 'n004' )
-    set u = BlzCreateUnitWithSkin( p, 'n005', -7090.6, -7375.1, 171.010, 'n005' )
+    set u = BlzCreateUnitWithSkin( p, 'n004', -7053.7, -7317.3, 36.836, 'n004' )
+    set u = BlzCreateUnitWithSkin( p, 'n004', -6966.8, -7513.4, 66.848, 'n004' )
+    set u = BlzCreateUnitWithSkin( p, 'n005', -6896.9, -7373.0, 28.730, 'n005' )
     set t = CreateTrigger(  )
     call TriggerRegisterUnitEvent( t, u, EVENT_UNIT_DEATH )
     call TriggerRegisterUnitEvent( t, u, EVENT_UNIT_CHANGE_OWNER )
@@ -1100,6 +1100,10 @@ function CreateNeutralPassive takes nothing returns nothing
     set u = BlzCreateUnitWithSkin( p, 'nder', -2912.5, -2844.1, 220.964, 'nder' )
     set u = BlzCreateUnitWithSkin( p, 'nder', 973.2, -3527.1, 266.328, 'nder' )
     set u = BlzCreateUnitWithSkin( p, 'nder', -116.6, -1758.3, 355.397, 'nder' )
+    set u = BlzCreateUnitWithSkin( p, 'nder', -3078.4, 5801.8, 220.964, 'nder' )
+    set u = BlzCreateUnitWithSkin( p, 'nder', -6698.5, 5441.0, 220.964, 'nder' )
+    set u = BlzCreateUnitWithSkin( p, 'nder', 3208.5, 5608.1, 220.964, 'nder' )
+    set u = BlzCreateUnitWithSkin( p, 'nder', 6585.9, 5448.8, 220.964, 'nder' )
 endfunction
 
 //===========================================================================
