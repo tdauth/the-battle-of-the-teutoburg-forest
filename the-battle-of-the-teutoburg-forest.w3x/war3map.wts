@@ -132,54 +132,6 @@ STRING 38
 Puts the ramp back up, so the Siege Tower can move again.
 }
 
-STRING 42
-// Units: H007 (Military Commander), Name (Name)
-{
-Military Commander
-}
-
-STRING 43
-// Units: H007 (Military Commander), Propernames (Proper Names)
-{
-Titus
-}
-
-STRING 44
-// Units: H007 (Military Commander), Awakentip (Tooltip - Awaken)
-{
-Revive Military Commander
-}
-
-STRING 45
-// Units: H007 (Military Commander), Revivetip (Tooltip - Revive)
-{
-Revive Military Commander
-}
-
-STRING 46
-// Units: H008 (Second-in-command), Name (Name)
-{
-Second-in-command
-}
-
-STRING 47
-// Units: H008 (Second-in-command), Propernames (Proper Names)
-{
-Tiberius Julius Alexander
-}
-
-STRING 48
-// Units: H008 (Second-in-command), Awakentip (Tooltip - Awaken)
-{
-Revive Military Commander
-}
-
-STRING 49
-// Units: H008 (Second-in-command), Revivetip (Tooltip - Revive)
-{
-Revive Military Commander
-}
-
 STRING 50
 // Destructibles: B001 (Pathing Blocker (Ground) (Large - Diagonal 1)), Name (Name)
 {
@@ -202,12 +154,6 @@ STRING 53
 // Units: h009 (Pioneer), Tip (Tooltip - Basic)
 {
 Train Pioneer
-}
-
-STRING 55
-// Units: h00B (Wall), Name (Name)
-{
-Wall
 }
 
 STRING 58
@@ -256,36 +202,6 @@ STRING 65
 // Abilities: A002 (Command Aura), Researchhotkey (Hotkey - Learn)
 {
 A
-}
-
-STRING 66
-// Units: H00C (Military Commander), Name (Name)
-{
-Military Commander
-}
-
-STRING 67
-// Units: H00C (Military Commander), Propernames (Proper Names)
-{
-Titus
-}
-
-STRING 68
-// Units: H00C (Military Commander), Awakentip (Tooltip - Awaken)
-{
-Revive Military Commander
-}
-
-STRING 69
-// Units: H00C (Military Commander), Revivetip (Tooltip - Revive)
-{
-Revive Military Commander
-}
-
-STRING 70
-// Units: H00C (Military Commander), EditorSuffix (Name - Editor Suffix)
-{
-(Horse)
 }
 
 STRING 71
@@ -386,18 +302,6 @@ STRING 91
 // Destructibles: B000 (Germanic Tree), Name (Name)
 {
 Germanic Tree
-}
-
-STRING 92
-// Units: o002 (Germanic Town Center), Name (Name)
-{
-Germanic Town Center
-}
-
-STRING 93
-// Units: o002 (Germanic Town Center), Tip (Tooltip - Basic)
-{
-Build Germanic Town Center
 }
 
 STRING 94
@@ -596,18 +500,6 @@ STRING 131
 // Units: o00B (Altar of Sacrifice), Tip (Tooltip - Basic)
 {
 Build Altar of Sacrifice
-}
-
-STRING 132
-// Units: o00C (Druid Shrine), Name (Name)
-{
-Druid Shrine
-}
-
-STRING 133
-// Units: o00C (Druid Shrine), Tip (Tooltip - Basic)
-{
-Build Druid Shrine
 }
 
 STRING 134
@@ -902,5 +794,235 @@ STRING 183
 // Buffs/Effects: B000 (), Bufftip (Tooltip)
 {
 Eagle
+}
+
+STRING 184
+// Units: o002 (Town Center), Name (Name)
+{
+Town Center
+}
+
+STRING 185
+// Units: o002 (Town Center), Tip (Tooltip - Basic)
+{
+Build Town Center
+}
+
+STRING 186
+// Units: o002 (Town Center), Ubertip (Tooltip - Extended)
+{
+Primary structure, used to train Villagers and receive gathered resources. Can be upgraded to Stronghold and then Fortress to enable the production of additional types of structures and units.
+}
+
+STRING 187
+// Units: o007 (Stables), Ubertip (Tooltip - Extended)
+{
+Trains Riders.
+}
+
+STRING 188
+// Units: n003 (Javelin Thrower), Hotkey (Hotkey)
+{
+J
+}
+
+STRING 189
+// Upgrades: R007 (Improved Lumber Harvesting,Advanced Lumber Harvesting), Ubertip (Tooltip - Extended)
+{
+Increases the amount of lumber that Villagers can carry by <Rhlh,mod1>.
+}
+
+STRING 190
+// Upgrades: R007 (Improved Lumber Harvesting,Advanced Lumber Harvesting), Ubertip (Tooltip - Extended)
+{
+Further increases the amount of lumber that Villagers can carry by <Rhlh,mod1>.
+}
+
+STRING 191
+// Abilities: A00A (Bear Form), Unubertip (Tooltip - Turn Off - Extended)
+{
+Transforms the Druid into a Human.
+}
+
+STRING 192
+// Abilities: A00A (Bear Form), Untip (Tooltip - Turn Off)
+{
+Human Form
+}
+
+STRING 193
+// Units: o00C (Shrine), Ubertip (Tooltip - Extended)
+{
+Spellcaster production building. Trains Shaman and Druids. |nAlso contains spell upgrades for Shaman and Druids.
+}
+
+STRING 194
+// Items: gobm (Bear Traps), Name (Name)
+{
+Bear Traps
+}
+
+STRING 195
+// Items: gobm (Bear Traps), Tip (Tooltip - Basic)
+{
+Purchase Bear Traps
+}
+
+STRING 196
+// Units: o00C (Shrine), Name (Name)
+{
+Shrine
+}
+
+STRING 197
+// Units: o00C (Shrine), Tip (Tooltip - Basic)
+{
+Build Shrine
+}
+
+STRING 198
+// Units: h00B (Seer), Name (Name)
+{
+Seer
+}
+
+STRING 199
+// Units: h00B (Seer), Tip (Tooltip - Basic)
+{
+Train Seer
+}
+
+STRING 200
+// Abilities: A00E (Far Sight), Name (Name)
+{
+Far Sight
+}
+
+STRING 201
+// Abilities: A00E (Far Sight), Tip (Tooltip - Normal)
+{
+Far Sight
+}
+
+STRING 202
+// Units: H008 (Tribune), Name (Name)
+{
+Tribune
+}
+
+STRING 203
+// Units: H008 (Tribune), Propernames (Proper Names)
+{
+Gaius Rabuleius,Volero Publilius,Quintus Maelius,Gaius Servilius Geminus,Licinius Lucullus,Tiberius Numicius,Quintus Hortensius,Aulus Verginius
+}
+
+STRING 204
+// Units: H008 (Tribune), Awakentip (Tooltip - Awaken)
+{
+Revive Tribune
+}
+
+STRING 205
+// Units: H008 (Tribune), Revivetip (Tooltip - Revive)
+{
+Revive Tribune
+}
+
+STRING 206
+// Units: H008 (Tribune), Tip (Tooltip - Basic)
+{
+Summon Tribune
+}
+
+STRING 207
+// Units: H007 (Senator), Name (Name)
+{
+Senator
+}
+
+STRING 208
+// Units: H007 (Senator), Awakentip (Tooltip - Awaken)
+{
+Revive Senator
+}
+
+STRING 209
+// Units: H007 (Senator), Revivetip (Tooltip - Revive)
+{
+Revive Senator
+}
+
+STRING 210
+// Units: H007 (Senator), Tip (Tooltip - Basic)
+{
+Summon Senator
+}
+
+STRING 211
+{
+Varus Disaster
+}
+
+STRING 212
+{
+A major battle between Germanic tribes and the Roman Empire that took place somewhere near modern Kalkriese from September 8–11, 9 AD, when an alliance of Germanic peoples ambushed three Roman legions led by Publius Quinctilius Varus and their auxiliaries.
+}
+
+STRING 213
+{
+- Roman Legions: Defeat the Germanic Tribes.
+}
+
+STRING 214
+{
+- Germanic Tribes: Defeat the Roman Legions.
+}
+
+STRING 215
+// Abilities: A00G (Sacrifice), Name (Name)
+{
+Sacrifice
+}
+
+STRING 216
+// Abilities: A00G (Sacrifice), Tip (Tooltip - Normal)
+{
+Sacrifice
+}
+
+STRING 217
+// Upgrades: R00E (Spirit Walker Adept Training,Spirit Walker Master Training), Name (Name)
+{
+Seer Adept Training
+}
+
+STRING 218
+// Upgrades: R00E (Spirit Walker Adept Training,Spirit Walker Master Training), Name (Name)
+{
+Seer Master Training
+}
+
+STRING 219
+// Upgrades: R00E (Spirit Walker Adept Training,Spirit Walker Master Training), Tip (Tooltip)
+{
+Seer Adept Training
+}
+
+STRING 220
+// Upgrades: R00E (Spirit Walker Adept Training,Spirit Walker Master Training), Tip (Tooltip)
+{
+Seer Master Training
+}
+
+STRING 221
+// Units: h00B (Seer), Casterupgradetip (Caster Upgrade Tips)
+{
+- Far Sight,- Far Sight|n- Dispel Magic,- Far Sight|n- Dispel Magic|n- Sacrifice
+}
+
+STRING 222
+// Units: h00B (Seer), Ubertip (Tooltip - Extended)
+{
+Versatile spellcaster. Can initially cast Far Sight, which reveals a hidden area on the map. Can also learn Dispel Magic and Sacrifice. |n|n|cffffcc00Attacks land and air units.|r
 }
 

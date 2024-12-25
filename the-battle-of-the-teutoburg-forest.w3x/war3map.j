@@ -64,6 +64,18 @@ globals
     destructable            gg_dest_B000_0716          = null
     unit                    gg_unit_o003_0258          = null
     unit                    gg_unit_o003_0259          = null
+    rect                    gg_rct_Waygate_Top         = null
+    rect                    gg_rct_Waygate_Bottom      = null
+    rect                    gg_rct_Moonlight           = null
+    unit                    gg_unit_h003_0080          = null
+    trigger                 gg_trg_Cage_1_Death        = null
+    destructable            gg_dest_LOcg_12553         = null
+    trigger                 gg_trg_Cage_2_Death        = null
+    destructable            gg_dest_LOcg_12552         = null
+    trigger                 gg_trg_Cage_3_Death        = null
+    destructable            gg_dest_LOcg_12554         = null
+    trigger                 gg_trg_Player_Leaves_Roman = null
+    trigger                 gg_trg_Player_Leaves_Germanic = null
 endglobals
 
 function InitGlobals takes nothing returns nothing
@@ -79,6 +91,118 @@ endfunction
 //*  Custom Script Code
 //*
 //***************************************************************************
+
+//***************************************************************************
+//*
+//*  Destructible Item Tables
+//*
+//***************************************************************************
+
+function Doodad012549_DropItems takes nothing returns nothing
+    local widget  trigWidget = null
+    local unit    trigUnit   = null
+    local integer itemID     = 0
+    local boolean canDrop    = true
+
+    set trigWidget = bj_lastDyingWidget
+    if (trigWidget == null) then
+        set trigUnit = GetTriggerUnit()
+    endif
+
+    if (trigUnit != null) then
+        set canDrop = not IsUnitHidden(trigUnit)
+        if (canDrop and GetChangingUnit() != null) then
+            set canDrop = (GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE))
+        endif
+    endif
+
+    if (canDrop) then
+        // Item set 0
+        call RandomDistReset(  )
+        call RandomDistAddItem( 'gobm', 100 )
+        set itemID = RandomDistChoose(  )
+        if (trigUnit != null) then
+            call UnitDropItem( trigUnit, itemID )
+        else
+            call WidgetDropItem( trigWidget, itemID )
+        endif
+
+    endif
+
+    set bj_lastDyingWidget = null
+    call DestroyTrigger(GetTriggeringTrigger())
+endfunction
+
+function Doodad012550_DropItems takes nothing returns nothing
+    local widget  trigWidget = null
+    local unit    trigUnit   = null
+    local integer itemID     = 0
+    local boolean canDrop    = true
+
+    set trigWidget = bj_lastDyingWidget
+    if (trigWidget == null) then
+        set trigUnit = GetTriggerUnit()
+    endif
+
+    if (trigUnit != null) then
+        set canDrop = not IsUnitHidden(trigUnit)
+        if (canDrop and GetChangingUnit() != null) then
+            set canDrop = (GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE))
+        endif
+    endif
+
+    if (canDrop) then
+        // Item set 0
+        call RandomDistReset(  )
+        call RandomDistAddItem( 'gobm', 100 )
+        set itemID = RandomDistChoose(  )
+        if (trigUnit != null) then
+            call UnitDropItem( trigUnit, itemID )
+        else
+            call WidgetDropItem( trigWidget, itemID )
+        endif
+
+    endif
+
+    set bj_lastDyingWidget = null
+    call DestroyTrigger(GetTriggeringTrigger())
+endfunction
+
+function Doodad012551_DropItems takes nothing returns nothing
+    local widget  trigWidget = null
+    local unit    trigUnit   = null
+    local integer itemID     = 0
+    local boolean canDrop    = true
+
+    set trigWidget = bj_lastDyingWidget
+    if (trigWidget == null) then
+        set trigUnit = GetTriggerUnit()
+    endif
+
+    if (trigUnit != null) then
+        set canDrop = not IsUnitHidden(trigUnit)
+        if (canDrop and GetChangingUnit() != null) then
+            set canDrop = (GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE))
+        endif
+    endif
+
+    if (canDrop) then
+        // Item set 0
+        call RandomDistReset(  )
+        call RandomDistAddItem( 'gobm', 100 )
+        set itemID = RandomDistChoose(  )
+        if (trigUnit != null) then
+            call UnitDropItem( trigUnit, itemID )
+        else
+            call WidgetDropItem( trigWidget, itemID )
+        endif
+
+    endif
+
+    set bj_lastDyingWidget = null
+    call DestroyTrigger(GetTriggeringTrigger())
+endfunction
+
 
 //***************************************************************************
 //*
@@ -106,6 +230,24 @@ function CreateAllDestructables takes nothing returns nothing
     local real life
     set gg_dest_B000_7302 = BlzCreateDestructableWithSkin( 'B000', -6880.0, -224.0, 270.000, 1.149, 2, 'B000' )
     set gg_dest_B000_0716 = BlzCreateDestructableWithSkin( 'B000', -3296.0, -7520.0, 270.000, 1.185, 1, 'B000' )
+    set gg_dest_LOcg_12553 = BlzCreateDestructableWithSkin( 'LOcg', -2240.0, -2240.0, 290.282, 0.915, 0, 'LOcg' )
+    set gg_dest_LOcg_12552 = BlzCreateDestructableWithSkin( 'LOcg', -1984.0, -2240.0, 266.379, 0.921, 0, 'LOcg' )
+    set gg_dest_LOcg_12554 = BlzCreateDestructableWithSkin( 'LOcg', -1792.0, -2368.0, 235.383, 1.091, 0, 'LOcg' )
+    set d = BlzCreateDestructableWithSkin( 'LTcr', -5760.0, -6720.0, 312.000, 1.131, 0, 'LTcr' )
+    set t = CreateTrigger(  )
+    call TriggerRegisterDeathEvent( t, d )
+    call TriggerAddAction( t, function SaveDyingWidget )
+    call TriggerAddAction( t, function Doodad012551_DropItems )
+    set d = BlzCreateDestructableWithSkin( 'LTcr', -5696.0, -6848.0, 10.000, 1.025, 1, 'LTcr' )
+    set t = CreateTrigger(  )
+    call TriggerRegisterDeathEvent( t, d )
+    call TriggerAddAction( t, function SaveDyingWidget )
+    call TriggerAddAction( t, function Doodad012550_DropItems )
+    set d = BlzCreateDestructableWithSkin( 'LTcr', -5824.0, -6848.0, 164.000, 1.027, 1, 'LTcr' )
+    set t = CreateTrigger(  )
+    call TriggerRegisterDeathEvent( t, d )
+    call TriggerAddAction( t, function SaveDyingWidget )
+    call TriggerAddAction( t, function Doodad012549_DropItems )
 endfunction
 
 //***************************************************************************
@@ -138,7 +280,7 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     local trigger t
     local real life
 
-    set gg_unit_H00D_0005 = BlzCreateUnitWithSkin( p, 'H00D', -6485.8, -1510.1, 207.208, 'H00D' )
+    set u = BlzCreateUnitWithSkin( p, 'H00D', -6485.8, -1510.1, 207.208, 'H00D' )
     set u = BlzCreateUnitWithSkin( p, 'h000', -5490.8, -924.2, 210.759, 'h000' )
     set u = BlzCreateUnitWithSkin( p, 'h000', -5427.3, -1006.4, 205.515, 'h000' )
     set u = BlzCreateUnitWithSkin( p, 'h000', -5336.9, -928.8, 226.733, 'h000' )
@@ -155,7 +297,7 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u = BlzCreateUnitWithSkin( p, 'h001', -6127.6, -1404.4, 203.739, 'h001' )
     set u = BlzCreateUnitWithSkin( p, 'h001', -6346.6, -1378.3, 203.739, 'h001' )
     set u = BlzCreateUnitWithSkin( p, 'h001', -6297.7, -1492.0, 203.739, 'h001' )
-    set u = BlzCreateUnitWithSkin( p, 'h003', -5571.4, -1079.5, 207.634, 'h003' )
+    set gg_unit_h003_0080 = BlzCreateUnitWithSkin( p, 'h003', -5571.4, -1079.5, 207.634, 'h003' )
     set u = BlzCreateUnitWithSkin( p, 'h00G', -4857.9, -552.2, 209.402, 'h00G' )
     set u = BlzCreateUnitWithSkin( p, 'h00G', -4930.3, -462.6, 213.716, 'h00G' )
     set gg_unit_h009_0127 = BlzCreateUnitWithSkin( p, 'h009', -5693.7, 386.1, 270.000, 'h009' )
@@ -298,11 +440,11 @@ function CreateUnitsForPlayer2 takes nothing returns nothing
     set u = BlzCreateUnitWithSkin( p, 'n001', 3867.9, -1033.4, 211.530, 'n001' )
     set u = BlzCreateUnitWithSkin( p, 'n001', 3970.3, -1001.2, 212.283, 'n001' )
     set u = BlzCreateUnitWithSkin( p, 'n001', 4027.2, -869.3, 233.765, 'n001' )
+    set u = BlzCreateUnitWithSkin( p, 'H007', 2021.3, -272.0, 206.890, 'H007' )
     set u = BlzCreateUnitWithSkin( p, 'h009', 4275.4, -308.4, 270.000, 'h009' )
     set u = BlzCreateUnitWithSkin( p, 'h009', 4150.5, -315.3, 270.000, 'h009' )
     set u = BlzCreateUnitWithSkin( p, 'h009', 4272.3, -175.7, 270.000, 'h009' )
     set u = BlzCreateUnitWithSkin( p, 'h009', 4159.0, -188.8, 270.000, 'h009' )
-    set u = BlzCreateUnitWithSkin( p, 'H008', 2014.1, -285.0, 207.564, 'H008' )
     set u = BlzCreateUnitWithSkin( p, 'h000', 3043.9, -829.0, 157.116, 'h000' )
 endfunction
 
@@ -373,7 +515,7 @@ function CreateBuildingsForPlayer4 takes nothing returns nothing
     local real life
 
     set u = BlzCreateUnitWithSkin( p, 'o002', 3264.0, -6464.0, 270.000, 'o002' )
-    set u = BlzCreateUnitWithSkin( p, 'o007', 4096.0, -6848.0, 270.000, 'o007' )
+    set u = BlzCreateUnitWithSkin( p, 'o007', 4352.0, -6784.0, 270.000, 'o007' )
     set u = BlzCreateUnitWithSkin( p, 'o00C', 2496.0, -7040.0, 270.000, 'o00C' )
     set u = BlzCreateUnitWithSkin( p, 'o006', 2688.0, -5952.0, 270.000, 'o006' )
     set u = BlzCreateUnitWithSkin( p, 'o008', 3872.0, -6176.0, 270.000, 'o008' )
@@ -386,6 +528,7 @@ function CreateBuildingsForPlayer4 takes nothing returns nothing
     set u = BlzCreateUnitWithSkin( p, 'o00I', 3584.0, -5248.0, 270.000, 'o00I' )
     set u = BlzCreateUnitWithSkin( p, 'o00I', 4800.0, -7040.0, 270.000, 'o00I' )
     set u = BlzCreateUnitWithSkin( p, 'o00I', 2112.0, -5888.0, 270.000, 'o00I' )
+    set u = BlzCreateUnitWithSkin( p, 'o00B', 3808.0, -7136.0, 270.000, 'o00B' )
 endfunction
 
 //===========================================================================
@@ -476,7 +619,7 @@ function CreateUnitsForPlayer5 takes nothing returns nothing
     set u = BlzCreateUnitWithSkin( p, 'n003', 54.3, 5278.2, 270.000, 'n003' )
     set u = BlzCreateUnitWithSkin( p, 'n003', 50.5, 5395.5, 270.000, 'n003' )
     set u = BlzCreateUnitWithSkin( p, 'o003', 1028.0, 6452.9, 67.524, 'o003' )
-    set u = BlzCreateUnitWithSkin( p, 'o003', 1114.8, 6449.0, 274.007, 'o003' )
+    set u = BlzCreateUnitWithSkin( p, 'o003', 1114.8, 6449.0, 87.965, 'o003' )
     set u = BlzCreateUnitWithSkin( p, 'o003', 1205.0, 6449.1, 117.524, 'o003' )
 endfunction
 
@@ -489,7 +632,7 @@ function CreateNeutralHostile takes nothing returns nothing
     local real life
 
     set u = BlzCreateUnitWithSkin( p, 'n004', -7247.4, -7319.4, 150.045, 'n004' )
-    set u = BlzCreateUnitWithSkin( p, 'n005', -7199.4, -7493.6, 342.290, 'n005' )
+    set u = BlzCreateUnitWithSkin( p, 'n004', -7160.5, -7515.5, 66.848, 'n004' )
     set u = BlzCreateUnitWithSkin( p, 'n005', -7090.6, -7375.1, 171.007, 'n005' )
     set u = BlzCreateUnitWithSkin( p, 'n004', 485.8, -2324.9, 150.045, 'n004' )
     set u = BlzCreateUnitWithSkin( p, 'n005', 533.8, -2499.1, 342.290, 'n005' )
@@ -503,15 +646,15 @@ function CreateNeutralHostile takes nothing returns nothing
     set u = BlzCreateUnitWithSkin( p, 'n004', 4762.3, 4501.3, 150.045, 'n004' )
     set u = BlzCreateUnitWithSkin( p, 'n005', 4810.3, 4327.1, 342.290, 'n005' )
     set u = BlzCreateUnitWithSkin( p, 'n005', 4919.1, 4445.6, 171.007, 'n005' )
-    set u = BlzCreateUnitWithSkin( p, 'n004', -988.9, -5773.3, 150.045, 'n004' )
-    set u = BlzCreateUnitWithSkin( p, 'n005', -940.9, -5947.5, 342.290, 'n005' )
-    set u = BlzCreateUnitWithSkin( p, 'n005', -832.1, -5829.0, 171.007, 'n005' )
+    set u = BlzCreateUnitWithSkin( p, 'n004', -988.9, -5773.3, 204.396, 'n004' )
+    set u = BlzCreateUnitWithSkin( p, 'n005', -938.4, -5950.7, 265.235, 'n005' )
     set u = BlzCreateUnitWithSkin( p, 'n004', -5224.7, 6911.1, 150.045, 'n004' )
     set u = BlzCreateUnitWithSkin( p, 'n005', -5176.8, 6736.9, 342.290, 'n005' )
     set u = BlzCreateUnitWithSkin( p, 'n005', -5067.9, 6855.3, 171.007, 'n005' )
     set u = BlzCreateUnitWithSkin( p, 'n008', 5869.2, -4497.1, 217.261, 'n008' )
     set u = BlzCreateUnitWithSkin( p, 'n008', 5705.3, -4562.5, 348.134, 'n008' )
     set u = BlzCreateUnitWithSkin( p, 'n009', 5818.4, -4686.6, 157.626, 'n009' )
+    set u = BlzCreateUnitWithSkin( p, 'n004', -830.4, -5863.7, -69.100, 'n004' )
 endfunction
 
 //===========================================================================
@@ -534,8 +677,20 @@ function CreateNeutralPassiveBuildings takes nothing returns nothing
     call SetResourceAmount( gg_unit_ngol_0125, 1000000 )
     set u = BlzCreateUnitWithSkin( p, 'ngol', 0.0, 6848.0, 270.000, 'ngol' )
     call SetResourceAmount( u, 1000000 )
+    set u = BlzCreateUnitWithSkin( p, 'n00A', -6144.0, 3648.0, 270.000, 'n00A' )
+    call SetUnitColor( u, ConvertPlayerColor(11) )
     set u = BlzCreateUnitWithSkin( p, 'nfoh', 5888.0, 5696.0, 270.000, 'nfoh' )
     set u = BlzCreateUnitWithSkin( p, 'nmoo', 5952.0, -5248.0, 270.000, 'nmoo' )
+    set u = BlzCreateUnitWithSkin( p, 'nwgt', -896.0, -5056.0, 270.000, 'nwgt' )
+    call WaygateSetDestination( u, GetRectCenterX(gg_rct_Waygate_Top), GetRectCenterY(gg_rct_Waygate_Top) )
+    call WaygateActivate( u, true )
+    call SetUnitColor( u, ConvertPlayerColor(10) )
+    set u = BlzCreateUnitWithSkin( p, 'nwgt', 2752.0, 6656.0, 270.000, 'nwgt' )
+    call WaygateSetDestination( u, GetRectCenterX(gg_rct_Waygate_Bottom), GetRectCenterY(gg_rct_Waygate_Bottom) )
+    call WaygateActivate( u, true )
+    call SetUnitColor( u, ConvertPlayerColor(10) )
+    set u = BlzCreateUnitWithSkin( p, 'n00A', -320.0, -640.0, 270.000, 'n00A' )
+    call SetUnitColor( u, ConvertPlayerColor(11) )
 endfunction
 
 //===========================================================================
@@ -589,8 +744,13 @@ endfunction
 function CreateRegions takes nothing returns nothing
     local weathereffect we
 
-    set gg_rct_Fog = Rect( 5408.0, -4576.0, 6176.0, -4096.0 )
+    set gg_rct_Fog = Rect( 5408.0, -4640.0, 6176.0, -4096.0 )
     set we = AddWeatherEffect( gg_rct_Fog, 'FDwh' )
+    call EnableWeatherEffect( we, true )
+    set gg_rct_Waygate_Top = Rect( 2336.0, 6208.0, 3200.0, 7040.0 )
+    set gg_rct_Waygate_Bottom = Rect( -1312.0, -5504.0, -448.0, -4672.0 )
+    set gg_rct_Moonlight = Rect( -5472.0, 6464.0, -4704.0, 7072.0 )
+    set we = AddWeatherEffect( gg_rct_Moonlight, 'LRma' )
     call EnableWeatherEffect( we, true )
 endfunction
 
@@ -707,32 +867,36 @@ function Trig_Cinematic_Intro_Func003A takes nothing returns nothing
     call CameraSetupApplyForPlayer( true, gg_cam_Camera_002, GetEnumPlayer(), 4.00 )
 endfunction
 
-function Trig_Cinematic_Intro_Func005001 takes nothing returns boolean
+function Trig_Cinematic_Intro_Func004001 takes nothing returns boolean
     return ( udg_CinematicSkip == true )
 endfunction
 
-function Trig_Cinematic_Intro_Func007001 takes nothing returns boolean
+function Trig_Cinematic_Intro_Func006001 takes nothing returns boolean
     return ( udg_CinematicSkip == true )
 endfunction
 
-function Trig_Cinematic_Intro_Func009A takes nothing returns nothing
-    call CameraSetupApplyForPlayer( true, gg_cam_Camera_003, GetEnumPlayer(), 4.00 )
+function Trig_Cinematic_Intro_Func008001 takes nothing returns boolean
+    return ( udg_CinematicSkip == true )
 endfunction
 
 function Trig_Cinematic_Intro_Func010001 takes nothing returns boolean
     return ( udg_CinematicSkip == true )
 endfunction
 
-function Trig_Cinematic_Intro_Func012A takes nothing returns nothing
-    call CameraSetupApplyForPlayer( true, gg_cam_Camera_004, GetEnumPlayer(), 4.00 )
+function Trig_Cinematic_Intro_Func011A takes nothing returns nothing
+    call CameraSetupApplyForPlayer( true, gg_cam_Camera_003, GetEnumPlayer(), 4.00 )
 endfunction
 
-function Trig_Cinematic_Intro_Func013001 takes nothing returns boolean
+function Trig_Cinematic_Intro_Func012001 takes nothing returns boolean
+    return ( udg_CinematicSkip == true )
+endfunction
+
+function Trig_Cinematic_Intro_Func014001 takes nothing returns boolean
     return ( udg_CinematicSkip == true )
 endfunction
 
 function Trig_Cinematic_Intro_Func015A takes nothing returns nothing
-    call CameraSetupApplyForPlayer( true, gg_cam_Camera_005, GetEnumPlayer(), 3.00 )
+    call CameraSetupApplyForPlayer( true, gg_cam_Camera_004, GetEnumPlayer(), 4.00 )
 endfunction
 
 function Trig_Cinematic_Intro_Func016001 takes nothing returns boolean
@@ -743,44 +907,76 @@ function Trig_Cinematic_Intro_Func018001 takes nothing returns boolean
     return ( udg_CinematicSkip == true )
 endfunction
 
+function Trig_Cinematic_Intro_Func019A takes nothing returns nothing
+    call CameraSetupApplyForPlayer( true, gg_cam_Camera_005, GetEnumPlayer(), 3.00 )
+endfunction
+
+function Trig_Cinematic_Intro_Func020001 takes nothing returns boolean
+    return ( udg_CinematicSkip == true )
+endfunction
+
+function Trig_Cinematic_Intro_Func022001 takes nothing returns boolean
+    return ( udg_CinematicSkip == true )
+endfunction
+
 function Trig_Cinematic_Intro_Actions takes nothing returns nothing
     call PauseAllUnitsBJ( true )
     call ForForce( GetPlayersAll(), function Trig_Cinematic_Intro_Func003A )
-    call PolledWait( 1.50 )
-    if ( Trig_Cinematic_Intro_Func005001() ) then
-        return
-    else
-        call DoNothing(  )
-    endif
-    call TransmissionFromUnitWithNameBJ( GetPlayersAll(), gg_unit_H00D_0005, "TRIGSTR_113", null, "TRIGSTR_114", bj_TIMETYPE_ADD, 0, false )
-    if ( Trig_Cinematic_Intro_Func007001() ) then
+    if ( Trig_Cinematic_Intro_Func004001() ) then
         return
     else
         call DoNothing(  )
     endif
     call PolledWait( 1.50 )
-    call ForForce( GetPlayersAll(), function Trig_Cinematic_Intro_Func009A )
+    if ( Trig_Cinematic_Intro_Func006001() ) then
+        return
+    else
+        call DoNothing(  )
+    endif
+    call TransmissionFromUnitWithNameBJ( GetPlayersAll(), gg_unit_h003_0080, "TRIGSTR_113", null, "TRIGSTR_114", bj_TIMETYPE_ADD, 0, false )
+    if ( Trig_Cinematic_Intro_Func008001() ) then
+        return
+    else
+        call DoNothing(  )
+    endif
+    call PolledWait( 1.50 )
     if ( Trig_Cinematic_Intro_Func010001() ) then
         return
     else
         call DoNothing(  )
     endif
-    call PolledWait( 2.00 )
-    call ForForce( GetPlayersAll(), function Trig_Cinematic_Intro_Func012A )
-    if ( Trig_Cinematic_Intro_Func013001() ) then
+    call ForForce( GetPlayersAll(), function Trig_Cinematic_Intro_Func011A )
+    if ( Trig_Cinematic_Intro_Func012001() ) then
         return
     else
         call DoNothing(  )
     endif
     call PolledWait( 2.00 )
+    if ( Trig_Cinematic_Intro_Func014001() ) then
+        return
+    else
+        call DoNothing(  )
+    endif
     call ForForce( GetPlayersAll(), function Trig_Cinematic_Intro_Func015A )
     if ( Trig_Cinematic_Intro_Func016001() ) then
         return
     else
         call DoNothing(  )
     endif
-    call PolledWait( 1.50 )
+    call PolledWait( 2.00 )
     if ( Trig_Cinematic_Intro_Func018001() ) then
+        return
+    else
+        call DoNothing(  )
+    endif
+    call ForForce( GetPlayersAll(), function Trig_Cinematic_Intro_Func019A )
+    if ( Trig_Cinematic_Intro_Func020001() ) then
+        return
+    else
+        call DoNothing(  )
+    endif
+    call PolledWait( 1.50 )
+    if ( Trig_Cinematic_Intro_Func022001() ) then
         return
     else
         call DoNothing(  )
@@ -849,12 +1045,54 @@ function InitTrig_Cinematic_Intro_End takes nothing returns nothing
 endfunction
 
 //===========================================================================
+// Trigger: Cage 1 Death
+//===========================================================================
+function Trig_Cage_1_Death_Actions takes nothing returns nothing
+    call CreateNUnitsAtLoc( 1, 'h00B', Player(3), GetDestructableLoc(GetDyingDestructable()), 315.00 )
+endfunction
+
+//===========================================================================
+function InitTrig_Cage_1_Death takes nothing returns nothing
+    set gg_trg_Cage_1_Death = CreateTrigger(  )
+    call TriggerRegisterDeathEvent( gg_trg_Cage_1_Death, gg_dest_LOcg_12553 )
+    call TriggerAddAction( gg_trg_Cage_1_Death, function Trig_Cage_1_Death_Actions )
+endfunction
+
+//===========================================================================
+// Trigger: Cage 2 Death
+//===========================================================================
+function Trig_Cage_2_Death_Actions takes nothing returns nothing
+    call CreateNUnitsAtLoc( 1, 'o00A', Player(4), GetDestructableLoc(GetDyingDestructable()), 270.00 )
+endfunction
+
+//===========================================================================
+function InitTrig_Cage_2_Death takes nothing returns nothing
+    set gg_trg_Cage_2_Death = CreateTrigger(  )
+    call TriggerRegisterDeathEvent( gg_trg_Cage_2_Death, gg_dest_LOcg_12552 )
+    call TriggerAddAction( gg_trg_Cage_2_Death, function Trig_Cage_2_Death_Actions )
+endfunction
+
+//===========================================================================
+// Trigger: Cage 3 Death
+//===========================================================================
+function Trig_Cage_3_Death_Actions takes nothing returns nothing
+    call CreateNUnitsAtLoc( 1, 'o00E', Player(4), GetDestructableLoc(GetDyingDestructable()), 225.00 )
+endfunction
+
+//===========================================================================
+function InitTrig_Cage_3_Death takes nothing returns nothing
+    set gg_trg_Cage_3_Death = CreateTrigger(  )
+    call TriggerRegisterDeathEvent( gg_trg_Cage_3_Death, gg_dest_LOcg_12554 )
+    call TriggerAddAction( gg_trg_Cage_3_Death, function Trig_Cage_3_Death_Actions )
+endfunction
+
+//===========================================================================
 // Trigger: Initialization
 //
 // Default melee game initialization for all players
 //===========================================================================
 function Trig_Initialization_Func011Func001C takes nothing returns boolean
-    if ( not ( GetPlayerSlotState(GetEnumPlayer()) == PLAYER_SLOT_STATE_EMPTY ) ) then
+    if ( not ( GetPlayerController(GetEnumPlayer()) != MAP_CONTROL_USER ) ) then
         return false
     endif
     return true
@@ -869,7 +1107,7 @@ function Trig_Initialization_Func011A takes nothing returns nothing
 endfunction
 
 function Trig_Initialization_Func012Func001C takes nothing returns boolean
-    if ( not ( GetPlayerSlotState(GetEnumPlayer()) == PLAYER_SLOT_STATE_EMPTY ) ) then
+    if ( not ( GetPlayerController(GetEnumPlayer()) != MAP_CONTROL_USER ) ) then
         return false
     endif
     return true
@@ -961,6 +1199,9 @@ function Trig_Game_Start_Actions takes nothing returns nothing
     call ForForce( udg_RomanPlayers, function Trig_Game_Start_Func022A )
     call ForForce( udg_GermanicPlayers, function Trig_Game_Start_Func023A )
     // Objectives
+    call CreateQuestBJ( bj_QUESTTYPE_REQ_DISCOVERED, "TRIGSTR_211", "TRIGSTR_212", "ReplaceableTextures\\CommandButtons\\BTNAmbush.blp" )
+    call CreateQuestItemBJ( GetLastCreatedQuestBJ(), "TRIGSTR_213" )
+    call CreateQuestItemBJ( GetLastCreatedQuestBJ(), "TRIGSTR_214" )
     call QuestMessageBJ( udg_RomanPlayers, bj_QUESTMESSAGE_DISCOVERED, "TRIGSTR_112" )
     call QuestMessageBJ( udg_GermanicPlayers, bj_QUESTMESSAGE_DISCOVERED, "TRIGSTR_111" )
     // Weather
@@ -971,6 +1212,38 @@ endfunction
 function InitTrig_Game_Start takes nothing returns nothing
     set gg_trg_Game_Start = CreateTrigger(  )
     call TriggerAddAction( gg_trg_Game_Start, function Trig_Game_Start_Actions )
+endfunction
+
+//===========================================================================
+// Trigger: Player Leaves Roman
+//===========================================================================
+function Trig_Player_Leaves_Roman_Actions takes nothing returns nothing
+    call SetForceAllianceStateBJ( GetForceOfPlayer(GetTriggerPlayer()), udg_RomanPlayers, bj_ALLIANCE_ALLIED_ADVUNITS )
+endfunction
+
+//===========================================================================
+function InitTrig_Player_Leaves_Roman takes nothing returns nothing
+    set gg_trg_Player_Leaves_Roman = CreateTrigger(  )
+    call TriggerRegisterPlayerEventLeave( gg_trg_Player_Leaves_Roman, Player(0) )
+    call TriggerRegisterPlayerEventLeave( gg_trg_Player_Leaves_Roman, Player(1) )
+    call TriggerRegisterPlayerEventLeave( gg_trg_Player_Leaves_Roman, Player(2) )
+    call TriggerAddAction( gg_trg_Player_Leaves_Roman, function Trig_Player_Leaves_Roman_Actions )
+endfunction
+
+//===========================================================================
+// Trigger: Player Leaves Germanic
+//===========================================================================
+function Trig_Player_Leaves_Germanic_Actions takes nothing returns nothing
+    call SetForceAllianceStateBJ( GetForceOfPlayer(GetTriggerPlayer()), udg_GermanicPlayers, bj_ALLIANCE_ALLIED_ADVUNITS )
+endfunction
+
+//===========================================================================
+function InitTrig_Player_Leaves_Germanic takes nothing returns nothing
+    set gg_trg_Player_Leaves_Germanic = CreateTrigger(  )
+    call TriggerRegisterPlayerEventLeave( gg_trg_Player_Leaves_Germanic, Player(3) )
+    call TriggerRegisterPlayerEventLeave( gg_trg_Player_Leaves_Germanic, Player(4) )
+    call TriggerRegisterPlayerEventLeave( gg_trg_Player_Leaves_Germanic, Player(5) )
+    call TriggerAddAction( gg_trg_Player_Leaves_Germanic, function Trig_Player_Leaves_Germanic_Actions )
 endfunction
 
 //===========================================================================
@@ -1008,8 +1281,13 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_Cinematic_Intro(  )
     call InitTrig_Cinematic_Skip(  )
     call InitTrig_Cinematic_Intro_End(  )
+    call InitTrig_Cage_1_Death(  )
+    call InitTrig_Cage_2_Death(  )
+    call InitTrig_Cage_3_Death(  )
     call InitTrig_Initialization(  )
     call InitTrig_Game_Start(  )
+    call InitTrig_Player_Leaves_Roman(  )
+    call InitTrig_Player_Leaves_Germanic(  )
     call InitTrig_Lightning_Start(  )
     call InitTrig_Lightning_Effect(  )
 endfunction
