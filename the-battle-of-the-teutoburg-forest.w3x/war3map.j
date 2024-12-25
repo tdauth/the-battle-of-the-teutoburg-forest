@@ -43,6 +43,8 @@ globals
     trigger                 gg_trg_Cage_1_Death        = null
     trigger                 gg_trg_Cage_2_Death        = null
     trigger                 gg_trg_Cage_3_Death        = null
+    trigger                 gg_trg_Breeding_Training   = null
+    trigger                 gg_trg_Breeding_Death      = null
     trigger                 gg_trg_Initialization      = null
     trigger                 gg_trg_Game_Start          = null
     trigger                 gg_trg_Player_Leaves_Roman = null
@@ -51,15 +53,28 @@ globals
     trigger                 gg_trg_Germanic_Victory    = null
     trigger                 gg_trg_Lightning_Start     = null
     trigger                 gg_trg_Lightning_Effect    = null
+    trigger                 gg_trg_Shrine_Death        = null
+    unit                    gg_unit_ngol_0004          = null
     unit                    gg_unit_ngol_0003          = null
+    unit                    gg_unit_h009_0132          = null
     unit                    gg_unit_h009_0131          = null
     unit                    gg_unit_h009_0130          = null
     unit                    gg_unit_h009_0129          = null
     unit                    gg_unit_h009_0128          = null
     unit                    gg_unit_h009_0127          = null
     unit                    gg_unit_ngol_0125          = null
+    unit                    gg_unit_ngol_0006          = null
+    unit                    gg_unit_h009_0140          = null
+    unit                    gg_unit_h009_0134          = null
     unit                    gg_unit_h003_0080          = null
+    unit                    gg_unit_h009_0135          = null
     unit                    gg_unit_H00D_0005          = null
+    unit                    gg_unit_h009_0139          = null
+    unit                    gg_unit_h009_0141          = null
+    unit                    gg_unit_h009_0133          = null
+    unit                    gg_unit_h009_0136          = null
+    unit                    gg_unit_h009_0137          = null
+    unit                    gg_unit_h009_0138          = null
     unit                    gg_unit_o003_0046          = null
     unit                    gg_unit_o003_0047          = null
     unit                    gg_unit_o003_0048          = null
@@ -69,37 +84,22 @@ globals
     unit                    gg_unit_h009_0237          = null
     unit                    gg_unit_h009_0238          = null
     unit                    gg_unit_h009_0239          = null
+    unit                    gg_unit_h009_0240          = null
+    unit                    gg_unit_h009_0242          = null
+    unit                    gg_unit_h009_0243          = null
+    unit                    gg_unit_h009_0244          = null
+    unit                    gg_unit_h009_0246          = null
+    unit                    gg_unit_h009_0247          = null
     unit                    gg_unit_o003_0257          = null
     unit                    gg_unit_o003_0258          = null
     unit                    gg_unit_o003_0259          = null
     destructable            gg_dest_B000_0716          = null
     destructable            gg_dest_B000_7302          = null
+    destructable            gg_dest_B000_7505          = null
+    destructable            gg_dest_B000_8108          = null
     destructable            gg_dest_LOcg_12552         = null
     destructable            gg_dest_LOcg_12553         = null
     destructable            gg_dest_LOcg_12554         = null
-    trigger                 gg_trg_Breeding_Training   = null
-    trigger                 gg_trg_Breeding_Death      = null
-    trigger                 gg_trg_Shrine_Death        = null
-    unit                    gg_unit_h009_0141          = null
-    unit                    gg_unit_ngol_0004          = null
-    unit                    gg_unit_h009_0139          = null
-    unit                    gg_unit_h009_0140          = null
-    unit                    gg_unit_h009_0137          = null
-    unit                    gg_unit_h009_0138          = null
-    unit                    gg_unit_h009_0247          = null
-    destructable            gg_dest_B000_8108          = null
-    unit                    gg_unit_h009_0244          = null
-    unit                    gg_unit_h009_0246          = null
-    unit                    gg_unit_h009_0136          = null
-    unit                    gg_unit_ngol_0006          = null
-    unit                    gg_unit_h009_0134          = null
-    unit                    gg_unit_h009_0135          = null
-    unit                    gg_unit_h009_0132          = null
-    unit                    gg_unit_h009_0133          = null
-    unit                    gg_unit_h009_0243          = null
-    destructable            gg_dest_B000_7505          = null
-    unit                    gg_unit_h009_0240          = null
-    unit                    gg_unit_h009_0242          = null
 endglobals
 
 function InitGlobals takes nothing returns nothing
@@ -1834,7 +1834,7 @@ function InitCustomPlayerSlots takes nothing returns nothing
     call SetPlayerColor( Player(1), ConvertPlayerColor(1) )
     call SetPlayerRacePreference( Player(1), RACE_PREF_HUMAN )
     call SetPlayerRaceSelectable( Player(1), false )
-    call SetPlayerController( Player(1), MAP_CONTROL_COMPUTER )
+    call SetPlayerController( Player(1), MAP_CONTROL_USER )
 
     // Player 2
     call SetPlayerStartLocation( Player(2), 2 )
@@ -1842,7 +1842,7 @@ function InitCustomPlayerSlots takes nothing returns nothing
     call SetPlayerColor( Player(2), ConvertPlayerColor(2) )
     call SetPlayerRacePreference( Player(2), RACE_PREF_HUMAN )
     call SetPlayerRaceSelectable( Player(2), false )
-    call SetPlayerController( Player(2), MAP_CONTROL_COMPUTER )
+    call SetPlayerController( Player(2), MAP_CONTROL_USER )
 
     // Player 3
     call SetPlayerStartLocation( Player(3), 3 )
@@ -1850,7 +1850,7 @@ function InitCustomPlayerSlots takes nothing returns nothing
     call SetPlayerColor( Player(3), ConvertPlayerColor(3) )
     call SetPlayerRacePreference( Player(3), RACE_PREF_ORC )
     call SetPlayerRaceSelectable( Player(3), false )
-    call SetPlayerController( Player(3), MAP_CONTROL_COMPUTER )
+    call SetPlayerController( Player(3), MAP_CONTROL_USER )
 
     // Player 4
     call SetPlayerStartLocation( Player(4), 4 )
@@ -1858,7 +1858,7 @@ function InitCustomPlayerSlots takes nothing returns nothing
     call SetPlayerColor( Player(4), ConvertPlayerColor(4) )
     call SetPlayerRacePreference( Player(4), RACE_PREF_ORC )
     call SetPlayerRaceSelectable( Player(4), false )
-    call SetPlayerController( Player(4), MAP_CONTROL_COMPUTER )
+    call SetPlayerController( Player(4), MAP_CONTROL_USER )
 
     // Player 5
     call SetPlayerStartLocation( Player(5), 5 )
@@ -1866,7 +1866,7 @@ function InitCustomPlayerSlots takes nothing returns nothing
     call SetPlayerColor( Player(5), ConvertPlayerColor(5) )
     call SetPlayerRacePreference( Player(5), RACE_PREF_ORC )
     call SetPlayerRaceSelectable( Player(5), false )
-    call SetPlayerController( Player(5), MAP_CONTROL_COMPUTER )
+    call SetPlayerController( Player(5), MAP_CONTROL_USER )
 
 endfunction
 
@@ -1923,6 +1923,10 @@ endfunction
 
 function InitAllyPriorities takes nothing returns nothing
 
+    call SetStartLocPrioCount( 0, 2 )
+    call SetStartLocPrio( 0, 0, 1, MAP_LOC_PRIO_HIGH )
+    call SetStartLocPrio( 0, 1, 3, MAP_LOC_PRIO_LOW )
+
     call SetStartLocPrioCount( 1, 3 )
     call SetStartLocPrio( 1, 0, 0, MAP_LOC_PRIO_HIGH )
     call SetStartLocPrio( 1, 1, 2, MAP_LOC_PRIO_LOW )
@@ -1932,6 +1936,11 @@ function InitAllyPriorities takes nothing returns nothing
     call SetStartLocPrio( 2, 0, 1, MAP_LOC_PRIO_HIGH )
     call SetStartLocPrio( 2, 1, 4, MAP_LOC_PRIO_HIGH )
     call SetStartLocPrio( 2, 2, 5, MAP_LOC_PRIO_LOW )
+
+    call SetStartLocPrioCount( 3, 3 )
+    call SetStartLocPrio( 3, 0, 0, MAP_LOC_PRIO_HIGH )
+    call SetStartLocPrio( 3, 1, 1, MAP_LOC_PRIO_LOW )
+    call SetStartLocPrio( 3, 2, 4, MAP_LOC_PRIO_LOW )
 
     call SetStartLocPrioCount( 4, 2 )
     call SetStartLocPrio( 4, 0, 2, MAP_LOC_PRIO_HIGH )
@@ -1982,7 +1991,7 @@ function config takes nothing returns nothing
     call SetMapDescription( "TRIGSTR_263" )
     call SetPlayers( 6 )
     call SetTeams( 6 )
-    call SetGamePlacement( MAP_PLACEMENT_USE_MAP_SETTINGS )
+    call SetGamePlacement( MAP_PLACEMENT_TEAMS_TOGETHER )
 
     call DefineStartLocation( 0, -4864.0, -576.0 )
     call DefineStartLocation( 1, -896.0, 1280.0 )
