@@ -1,21 +1,6 @@
 ﻿STRING 3
 {
-Battle of the Teutoburg Forest 1.0
-}
-
-STRING 4
-{
-2-6
-}
-
-STRING 5
-{
-A major battle between Germanic tribes and the Roman Empire that took place somewhere near modern Kalkriese from September 8–11, 9 AD, when an alliance of Germanic peoples ambushed three Roman legions led by Publius Quinctilius Varus and their auxiliaries.
-}
-
-STRING 6
-{
-Baradé
+Varus Disaster 1.0
 }
 
 STRING 16
@@ -1174,5 +1159,92 @@ STRING 250
 // Upgrades: R003 (Defend), Hotkey (Hotkey)
 {
 T
+}
+
+STRING 251
+// Units: n00D (Archer), EditorSuffix (Name - Editor Suffix)
+{
+(Ready)
+}
+
+STRING 252
+// Abilities: A00J (Ready), Name (Name)
+{
+Ready
+}
+
+STRING 253
+// Abilities: A00J (Ready), Hotkey (Hotkey - Normal)
+{
+R
+}
+
+STRING 254
+// Abilities: A00J (Ready), Unhotkey (Hotkey - Turn Off)
+{
+R
+}
+
+STRING 255
+// Abilities: A00J (Ready), Tip (Tooltip - Normal)
+{
+Ready
+}
+
+STRING 256
+// Abilities: A00J (Ready), Untip (Tooltip - Turn Off)
+{
+Normal Form
+}
+
+STRING 257
+// Abilities: A00J (Ready), Unubertip (Tooltip - Turn Off - Extended)
+{
+Transforms the Archer into the normal movable form.
+}
+
+STRING 258
+// Abilities: A00J (Ready), Ubertip (Tooltip - Normal - Extended)
+{
+Changes into an imovable form with larger attack range.
+}
+
+STRING 259
+// Upgrades: R00G (Long Rifles), Name (Name)
+{
+Ready
+}
+
+STRING 260
+// Upgrades: R00G (Long Rifles), Tip (Tooltip)
+{
+Research Ready
+}
+
+STRING 261
+// Upgrades: R00G (Long Rifles), Ubertip (Tooltip - Extended)
+{
+Gives Archers the Ready ability.
+}
+
+STRING 262
+{
+2-6
+}
+
+STRING 263
+{
+A major battle between Germanic tribes and the Roman Empire that took place somewhere near modern Kalkriese from September 8â€“11, 9 AD, when an alliance of Germanic peoples ambushed three Roman legions led by Publius Quinctilius Varus and their auxiliarie
+}
+
+STRING 264
+{
+Baradé
+}
+
+STRING 265
+// Units: H007 (Senator), Propernames (Proper Names)
+{
+Lucius Minicius Rufus,Gaius Oppius Sabinus,Servius Cornelius Cethegus,Titus Quinctius Crispinus Sulpic,Marcus Egnatius Rufus
 }
 

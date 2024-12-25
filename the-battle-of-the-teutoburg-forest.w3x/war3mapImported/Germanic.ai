@@ -121,6 +121,7 @@ function main takes nothing returns nothing
     call CampaignAI(GERMANIC_HOUSE, function SkillArrays)
     call SetReplacements(9,9,9)
     call SetPeonsRepair(true)
+    call SetWoodPeons(7)
 
     call SetBuildUnitEx( 1,1,1, GERMANIC_TIER_1    )
     call SetBuildUnitEx( 1,1,1, GERMANIC_ALTAR    )
