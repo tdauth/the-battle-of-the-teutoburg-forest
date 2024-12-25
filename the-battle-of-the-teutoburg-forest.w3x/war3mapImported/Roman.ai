@@ -44,103 +44,6 @@ function InitHero takes nothing returns nothing
     endif
 endfunction
 
-function AttackTarget takes unit target, boolean addAlliance returns nothing
-    if (target == null) then
-        call Trace("Attack target but have nothing\n")
-        return
-    endif
-    if (addAlliance) then
-        call Trace("Attack target with alliance target\n")
-        call SetAllianceTarget(target)
-    endif
-    call Trace("Attack target form a group and move to kill\n")
-    call FormGroup(3, true)
-    call AttackMoveKillA(target)
-    if (not addAlliance) then
-        call SetAllianceTarget(null)
-    endif
-endfunction
-
-function LaunchAttack takes nothing returns nothing
-    local unit target = null
-    local boolean setAlly = true
-
-    call Trace("Launch attack\n")
-
-    // Don't launch any attack while town is threatened
-    if (TownThreatened()) then
-        call Trace("Launch attack cancel since town is threatened\n")
-        call Sleep(2)
-        return
-    endif
-
-    call Trace("Launch attack enemy player\n")
-    // Target Priority #1
-    if (target == null) then
-        set target = GetAllianceTarget()
-        call Trace("Launch attack alliance target\n")
-        if (target != null) then
-            call Trace("Launch attack alliance target found\n")
-            set setAlly = false
-        endif
-    endif
-
-    // Target Priority #2
-    if (target == null) then
-        set target = GetExpansionFoe()
-        call Trace("Launch attack expansion foe\n")
-        if (target != null) then
-            call Trace("Launch attack expansion foe found\n")
-            set take_exp = false
-        endif
-    endif
-
-    // Target Priority #3
-    if (target == null) then
-        call Trace("Launch attack mega target\n")
-        set target = GetMegaTarget()
-    endif
-
-    // Target Priority #4
-    if (target == null) then
-        call Trace("Launch attack enemy expansion\n")
-        set target = GetEnemyExpansion()
-    endif
-
-    // Target Priority #5
-    if (target == null) then
-        call Trace("Launch attack enemy base\n")
-        call StartGetEnemyBase()
-        loop
-            exitwhen (not WaitGetEnemyBase())
-            call SuicideSleep(1)
-        endloop
-        set target = GetEnemyBase()
-    endif
-
-    // Target Priority #6
-    if (target == null) then
-        call Trace("Launch attack creep camp small\n")
-        set target = GetCreepCamp(0, 9, false)
-    endif
-
-    // Target Priority #7
-    if (target == null) then
-        call Trace("Launch attack creep camp big\n")
-        set target = GetCreepCamp(0, 75, true)
-    endif
-
-    // Attack the target and increment attack wave
-    if (target != null) then
-        call Trace("Attack\n")
-        call AttackTarget(target, setAlly)
-    else
-        call Trace("Wait for another attack try\n")
-        // If no target was found, sleep a bit before trying again
-        call Sleep(20)
-    endif
-endfunction
-
 function main takes nothing returns nothing
     call InitHero()
 
@@ -157,22 +60,54 @@ function main takes nothing returns nothing
     call SetBuildUnitEx( 1,1,1, ROMAN_ALTAR    )
     call SetBuildUnitEx( 1,1,1, ROMAN_GUARD_TOWER    )
     call SetBuildUnitEx( 1,1,1, ROMAN_SHOP    )
+    call SetBuildUpgr(1, UPG_ROMAN_MELEE)
+    call SetBuildUpgr(1, UPG_ROMAN_ARMOR)
+    call SetBuildUpgr(1, UPG_ROMAN_RANGED)
+    call SetBuildUpgr(1, UPG_ROMAN_DEFEND)
+    call SetBuildUpgr(1, UPG_ROMAN_MASONRY)
 
     call SetBuildUnitEx( 1,1,1, ROMAN_TIER_2    )
     call SetBuildUnitEx( 1,1,1, ROMAN_TEMPLE    )
     call SetBuildUnitEx( 1,1,1, ROMAN_WORKSHOP    )
+    call SetBuildUpgr(2, UPG_ROMAN_MELEE)
+    call SetBuildUpgr(2, UPG_ROMAN_ARMOR)
+    call SetBuildUpgr(2, UPG_ROMAN_RANGED)
+    call SetBuildUpgr(1, UPG_ROMAN_PRIEST)
+    call SetBuildUpgr(1, UPG_ROMAN_VEXILLIFIER)
+    call SetBuildUpgr(2, UPG_ROMAN_MASONRY)
 
     call SetBuildUnitEx( 1,1,1, ROMAN_TIER_3    )
-
     call SetBuildUnitEx( 1,1,1, ROMAN_STABLES    )
+    call SetBuildUpgr(3, UPG_ROMAN_MELEE)
+    call SetBuildUpgr(3, UPG_ROMAN_ARMOR)
+    call SetBuildUpgr(3, UPG_ROMAN_RANGED)
+    call SetBuildUpgr(2, UPG_ROMAN_PRIEST)
+    call SetBuildUpgr(2, UPG_ROMAN_VEXILLIFIER)
+    call SetBuildUpgr(3, UPG_ROMAN_MASONRY)
+
+    call SetBuildUpgr(1, UPG_ROMAN_BACKPACK)
+    call SetBuildUpgr(1, UPG_ROMAN_ANIMAL)
+    call SetBuildUpgr(1, UPG_ROMAN_AQUEDUCT)
+    call SetBuildUpgr(1, UPG_ROMAN_OIL)
+    call SetBuildUpgr(1, UPG_ROMAN_SENTRY)
+    call SetBuildUpgr(1, UPG_ROMAN_READY)
+    call SetBuildUpgr(1, UPG_ROMAN_SUNDERING_BLADES)
+    call SetBuildUpgr(1, UPG_ROMAN_PILUM)
+    call SetBuildUpgr(1, UPG_ROMAN_VORPAL_BLADES)
 
     loop
         call InitAssaultGroup()
         call CampaignAttackerEx(1, 1, 1, hero_id)
         call CampaignAttackerEx(3, 4, 4, ROMAN_LEGIONARY)
         call CampaignAttackerEx(1, 2, 3, ROMAN_ARCHER)
+        call CampaignAttackerEx(2, 3, 4, ROMAN_CENTURIO)
         call CampaignAttackerEx(1, 2, 3, ROMAN_SLINGER)
         call CampaignAttackerEx(1, 2, 3, ROMAN_EQUES)
+        call CampaignAttackerEx(1, 2, 3, ROMAN_PRIEST)
+        call CampaignAttackerEx(1, 2, 3, ROMAN_VEXILLIFER)
+        call CampaignAttackerEx(1, 1, 1, ROMAN_CART)
+        call CampaignAttackerEx(1, 1, 1, ROMAN_BALLISTA)
+        call CampaignAttackerEx(1, 1, 1, ROMAN_CATAPULT)
         call Sleep(M1) // Waits 1 minute before attacking
         call LaunchAttack()
     endloop

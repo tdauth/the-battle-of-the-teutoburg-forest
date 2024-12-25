@@ -719,6 +719,28 @@ globals
     constant integer ROMAN_ARCHER       = 'n001'
     constant integer ROMAN_SLINGER      = 'n00E'
     constant integer ROMAN_EQUES        = 'h001'
+    constant integer ROMAN_CART        = 'h00I'
+    constant integer ROMAN_CATAPULT        = 'o000'
+    constant integer ROMAN_CENTURIO        = 'h003'
+    constant integer ROMAN_PRIEST        = 'h004'
+    constant integer ROMAN_VEXILLIFER        = 'h00G'
+    constant integer ROMAN_BALLISTA        = 'e001'
+    constant integer UPG_ROMAN_ANIMAL = 'R00R'
+    constant integer UPG_ROMAN_AQUEDUCT = 'R00F'
+    constant integer UPG_ROMAN_BACKPACK = 'R005'
+    constant integer UPG_ROMAN_OIL = 'R00I'
+    constant integer UPG_ROMAN_DEFEND = 'R002'
+    constant integer UPG_ROMAN_MASONRY = 'R00L'
+    constant integer UPG_ROMAN_MELEE = 'R00M'
+    constant integer UPG_ROMAN_ARMOR = 'R00N'
+    constant integer UPG_ROMAN_SENTRY = 'R00K'
+    constant integer UPG_ROMAN_PRIEST = 'R00Q'
+    constant integer UPG_ROMAN_READY = 'R00G'
+    constant integer UPG_ROMAN_VEXILLIFIER = 'R00P'
+    constant integer UPG_ROMAN_RANGED = 'R00O'
+    constant integer UPG_ROMAN_SUNDERING_BLADES = 'R00S'
+    constant integer UPG_ROMAN_PILUM = 'R003'
+    constant integer UPG_ROMAN_VORPAL_BLADES = 'R00J'
 
     //--------------------------------------------------------------------
 
@@ -2635,4 +2657,95 @@ function PickMeleeHero takes race raceid returns integer
     set hero_id3       = heroes[third]
 
     return hero_id
+endfunction
+
+function AttackTarget takes unit target, boolean addAlliance returns nothing
+    if (target == null) then
+        call Trace("Attack target but have nothing\n")
+        return
+    endif
+    if (addAlliance) then
+        call Trace("Attack target with alliance target\n")
+        call SetAllianceTarget(target)
+    endif
+    call Trace("Attack target form a group and move to kill\n")
+    call FormGroup(3, true)
+    call AttackMoveKillA(target)
+    if (not addAlliance) then
+        call SetAllianceTarget(null)
+    endif
+endfunction
+
+function LaunchAttack takes nothing returns nothing
+    local unit target = null
+    local boolean setAlly = true
+
+    call Trace("Launch attack\n")
+
+    // Don't launch any attack while town is threatened
+    if (TownThreatened()) then
+        call Trace("Launch attack cancel since town is threatened\n")
+        call Sleep(2)
+        return
+    endif
+
+    call Trace("Launch attack enemy player\n")
+    // Target Priority #1
+    if (target == null) then
+        set target = GetAllianceTarget()
+        call Trace("Launch attack alliance target\n")
+        if (target != null) then
+            call Trace("Launch attack alliance target found\n")
+            set setAlly = false
+        endif
+    endif
+
+    // Target Priority #2
+    if (target == null) then
+        set target = GetExpansionFoe()
+        call Trace("Launch attack expansion foe\n")
+        if (target != null) then
+            call Trace("Launch attack expansion foe found\n")
+            set take_exp = false
+        endif
+    endif
+
+    // Target Priority #3
+    if (target == null) then
+        call Trace("Launch attack mega target\n")
+        set target = GetMegaTarget()
+    endif
+
+    // Target Priority #4
+    if (target == null) then
+        call Trace("Launch attack enemy expansion\n")
+        set target = GetEnemyExpansion()
+    endif
+
+    // Target Priority #5
+    if (target == null) then
+        call Trace("Launch attack enemy base\n")
+        call StartGetEnemyBase()
+        loop
+            exitwhen (not WaitGetEnemyBase())
+            call SuicideSleep(1)
+        endloop
+        set target = GetEnemyBase()
+    endif
+
+    // Target Priority #6
+    if (target == null) then
+        call Trace("Launch attack creep camp small\n")
+        set target = GetCreepCamp(0, 9, false)
+    endif
+
+    // Attack the target and increment attack wave
+    if (target != null) then
+        call Trace("Attack\n")
+        call AttackTarget(target, setAlly)
+    else
+        call Trace("Wait for another attack try\n")
+        // If no target was found, sleep a bit before trying again
+        call Sleep(20)
+    endif
 endfunction
