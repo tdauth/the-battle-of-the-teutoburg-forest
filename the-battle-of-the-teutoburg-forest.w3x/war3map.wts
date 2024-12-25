@@ -1012,7 +1012,7 @@ Build Altar of Gods
 }
 
 STRING 238
-// Units: h003 (Centurio), Hotkey (Hotkey)
+// Units: h002 (Castrum), Hotkey (Hotkey)
 {
 C
 }
@@ -1327,13 +1327,13 @@ Hero Glow
 }
 
 STRING 296
-// Buffs/Effects: B001 (), Bufftip (Tooltip)
+// Buffs/Effects: B001 (Hero Glow), EditorName (Name (Editor Only))
 {
 Hero Glow
 }
 
 STRING 297
-// Units: h00I (Cart), Hotkey (Hotkey)
+// Units: h003 (Centurio), Hotkey (Hotkey)
 {
 C
 }
@@ -1444,5 +1444,107 @@ STRING 315
 // Units: n00H (Germanic Warrior), Tip (Tooltip - Basic)
 {
 Hire Germanic Warrior
+}
+
+STRING 316
+// Units: h00G (Vexillifer), Casterupgradetip (Caster Upgrade Tips)
+{
+- Abolish Magic,- Abolish Magic|n- Mana Burn,- Abolish Magic|n- Mana Burn|n- Inner Fire
+}
+
+STRING 317
+// Units: h00G (Vexillifer), Ubertip (Tooltip - Extended)
+{
+Supporting spellcaster. Can initially cast Abolish Magic which removes positive buffs from enemies or negative buffs from allies. Can also learn Mana Burn and Inner Fire. |n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 318
+// Units: h004 (Priest), Casterupgradetip (Caster Upgrade Tips)
+{
+- Heal,- Heal|n- Anti-Magic Shell,- Heal|n- Anti-Magic Shell|n- Cripple
+}
+
+STRING 319
+// Units: h004 (Priest), Ubertip (Tooltip - Extended)
+{
+Supporting spellcaster. Can initially cast Heal, which increases the life of wounded units. Can also learn Anti-Magic Shell and Cripple. |n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 320
+// Upgrades: R00P (Sorceress Adept Training,Sorceress Master Training), Name (Name)
+{
+Vexillifer Adept Training
+}
+
+STRING 321
+// Upgrades: R00P (Sorceress Adept Training,Sorceress Master Training), Name (Name)
+{
+Vexillifer Master Training
+}
+
+STRING 322
+// Upgrades: R00P (Sorceress Adept Training,Sorceress Master Training), Tip (Tooltip)
+{
+Vexillifer Adept Training
+}
+
+STRING 323
+// Upgrades: R00P (Sorceress Adept Training,Sorceress Master Training), Tip (Tooltip)
+{
+Vexillifer Master Training
+}
+
+STRING 324
+// Upgrades: R00P (Sorceress Adept Training,Sorceress Master Training), Ubertip (Tooltip - Extended)
+{
+Increases Vexillifers' mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Mana Burn.
+}
+
+STRING 325
+// Upgrades: R00P (Sorceress Adept Training,Sorceress Master Training), Ubertip (Tooltip - Extended)
+{
+Increases Vexillifers' mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Inner Fire.
+}
+
+STRING 326
+// Upgrades: R00Q (Priest Adept Training,Priest Master Training), Ubertip (Tooltip - Extended)
+{
+Increases Priests' mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Anti-Magic Shell.
+}
+
+STRING 327
+// Upgrades: R00Q (Priest Adept Training,Priest Master Training), Ubertip (Tooltip - Extended)
+{
+Increases Priests' mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Cripple.
+}
+
+STRING 328
+// Units: h002 (Castrum), Ubertip (Tooltip - Extended)
+{
+Primary structure, used to train Pioneers and receive gathered resources. Can be upgraded to Permanent Castrum and then Legion Castrum to enable the production of additional types of structures and units.
+}
+
+STRING 329
+// Units: h00A (Lumber Mill), Hotkey (Hotkey)
+{
+L
+}
+
+STRING 330
+// Units: h00A (Lumber Mill), Ubertip (Tooltip - Extended)
+{
+Serves as a drop-off point for harvested lumber. |nAlso contains the upgrades for improved armor, weaponry and Masonry.
+}
+
+STRING 331
+// Units: h00I (Cart), Hotkey (Hotkey)
+{
+C
+}
+
+STRING 332
+// Buffs/Effects: B001 (Hero Glow), Bufftip (Tooltip)
+{
+|cff00ff00Hero Glow|r
 }
 

@@ -633,6 +633,13 @@ function CreateBuildingsForPlayer0 takes nothing returns nothing
     set u = BlzCreateUnitWithSkin( p, 'h00H', -4736.0, -960.0, 270.000, 'h00H' )
     set u = BlzCreateUnitWithSkin( p, 'h00H', -4864.0, -1216.0, 270.000, 'h00H' )
     set u = BlzCreateUnitWithSkin( p, 'h00H', -4672.0, -1152.0, 270.000, 'h00H' )
+    set u = BlzCreateUnitWithSkin( p, 'h00P', -5920.0, -544.0, 270.000, 'h00P' )
+    set u = BlzCreateUnitWithSkin( p, 'h00F', -4992.0, 0.0, 270.000, 'h00F' )
+    set u = BlzCreateUnitWithSkin( p, 'h00H', -5312.0, -1216.0, 270.000, 'h00H' )
+    set u = BlzCreateUnitWithSkin( p, 'h00H', -5120.0, -1152.0, 270.000, 'h00H' )
+    set u = BlzCreateUnitWithSkin( p, 'h00H', -5248.0, -1408.0, 270.000, 'h00H' )
+    set u = BlzCreateUnitWithSkin( p, 'h00H', -5056.0, -1344.0, 270.000, 'h00H' )
+    set u = BlzCreateUnitWithSkin( p, 'h00J', -6528.0, -896.0, 270.000, 'h00J' )
 endfunction
 
 //===========================================================================
@@ -697,6 +704,13 @@ function CreateBuildingsForPlayer1 takes nothing returns nothing
     set u = BlzCreateUnitWithSkin( p, 'h00H', -2368.0, 1472.0, 270.000, 'h00H' )
     set u = BlzCreateUnitWithSkin( p, 'h00H', -2496.0, 1664.0, 270.000, 'h00H' )
     set u = BlzCreateUnitWithSkin( p, 'h00H', -2304.0, 1728.0, 270.000, 'h00H' )
+    set u = BlzCreateUnitWithSkin( p, 'h00H', -2560.0, 1344.0, 270.000, 'h00H' )
+    set u = BlzCreateUnitWithSkin( p, 'h00H', -2752.0, 1216.0, 270.000, 'h00H' )
+    set u = BlzCreateUnitWithSkin( p, 'h00H', -2880.0, 1408.0, 270.000, 'h00H' )
+    set u = BlzCreateUnitWithSkin( p, 'h00H', -2688.0, 1472.0, 270.000, 'h00H' )
+    set u = BlzCreateUnitWithSkin( p, 'h00P', -1696.0, 1760.0, 270.000, 'h00P' )
+    set u = BlzCreateUnitWithSkin( p, 'h00F', -1216.0, 1792.0, 270.000, 'h00F' )
+    set u = BlzCreateUnitWithSkin( p, 'h00J', -1600.0, 448.0, 270.000, 'h00J' )
 endfunction
 
 //===========================================================================
@@ -761,6 +775,13 @@ function CreateBuildingsForPlayer2 takes nothing returns nothing
     set u = BlzCreateUnitWithSkin( p, 'h00H', 5696.0, -1408.0, 270.000, 'h00H' )
     set u = BlzCreateUnitWithSkin( p, 'h00H', 5504.0, -1600.0, 270.000, 'h00H' )
     set u = BlzCreateUnitWithSkin( p, 'h00H', 5888.0, -1408.0, 270.000, 'h00H' )
+    set u = BlzCreateUnitWithSkin( p, 'h00J', 4224.0, -1600.0, 270.000, 'h00J' )
+    set u = BlzCreateUnitWithSkin( p, 'h00P', 3680.0, -1504.0, 270.000, 'h00P' )
+    set u = BlzCreateUnitWithSkin( p, 'h00F', 3776.0, -320.0, 270.000, 'h00F' )
+    set u = BlzCreateUnitWithSkin( p, 'h00H', 3136.0, -256.0, 270.000, 'h00H' )
+    set u = BlzCreateUnitWithSkin( p, 'h00H', 3328.0, -256.0, 270.000, 'h00H' )
+    set u = BlzCreateUnitWithSkin( p, 'h00H', 3136.0, -448.0, 270.000, 'h00H' )
+    set u = BlzCreateUnitWithSkin( p, 'h00H', 3328.0, -448.0, 270.000, 'h00H' )
 endfunction
 
 //===========================================================================
@@ -1855,7 +1876,7 @@ function InitCustomPlayerSlots takes nothing returns nothing
     call SetPlayerColor( Player(1), ConvertPlayerColor(1) )
     call SetPlayerRacePreference( Player(1), RACE_PREF_HUMAN )
     call SetPlayerRaceSelectable( Player(1), false )
-    call SetPlayerController( Player(1), MAP_CONTROL_USER )
+    call SetPlayerController( Player(1), MAP_CONTROL_COMPUTER )
 
     // Player 2
     call SetPlayerStartLocation( Player(2), 2 )
@@ -1863,7 +1884,7 @@ function InitCustomPlayerSlots takes nothing returns nothing
     call SetPlayerColor( Player(2), ConvertPlayerColor(2) )
     call SetPlayerRacePreference( Player(2), RACE_PREF_HUMAN )
     call SetPlayerRaceSelectable( Player(2), false )
-    call SetPlayerController( Player(2), MAP_CONTROL_USER )
+    call SetPlayerController( Player(2), MAP_CONTROL_COMPUTER )
 
     // Player 3
     call SetPlayerStartLocation( Player(3), 3 )
@@ -1871,7 +1892,7 @@ function InitCustomPlayerSlots takes nothing returns nothing
     call SetPlayerColor( Player(3), ConvertPlayerColor(3) )
     call SetPlayerRacePreference( Player(3), RACE_PREF_ORC )
     call SetPlayerRaceSelectable( Player(3), false )
-    call SetPlayerController( Player(3), MAP_CONTROL_USER )
+    call SetPlayerController( Player(3), MAP_CONTROL_COMPUTER )
 
     // Player 4
     call SetPlayerStartLocation( Player(4), 4 )
@@ -1879,7 +1900,7 @@ function InitCustomPlayerSlots takes nothing returns nothing
     call SetPlayerColor( Player(4), ConvertPlayerColor(4) )
     call SetPlayerRacePreference( Player(4), RACE_PREF_ORC )
     call SetPlayerRaceSelectable( Player(4), false )
-    call SetPlayerController( Player(4), MAP_CONTROL_USER )
+    call SetPlayerController( Player(4), MAP_CONTROL_COMPUTER )
 
     // Player 5
     call SetPlayerStartLocation( Player(5), 5 )
@@ -1887,7 +1908,7 @@ function InitCustomPlayerSlots takes nothing returns nothing
     call SetPlayerColor( Player(5), ConvertPlayerColor(5) )
     call SetPlayerRacePreference( Player(5), RACE_PREF_ORC )
     call SetPlayerRaceSelectable( Player(5), false )
-    call SetPlayerController( Player(5), MAP_CONTROL_USER )
+    call SetPlayerController( Player(5), MAP_CONTROL_COMPUTER )
 
 endfunction
 
@@ -1943,10 +1964,6 @@ function InitCustomTeams takes nothing returns nothing
 endfunction
 
 function InitAllyPriorities takes nothing returns nothing
-
-    call SetStartLocPrioCount( 0, 2 )
-    call SetStartLocPrio( 0, 0, 1, MAP_LOC_PRIO_HIGH )
-    call SetStartLocPrio( 0, 1, 3, MAP_LOC_PRIO_LOW )
 
     call SetStartLocPrioCount( 1, 3 )
     call SetStartLocPrio( 1, 0, 0, MAP_LOC_PRIO_HIGH )
@@ -2012,7 +2029,7 @@ function config takes nothing returns nothing
     call SetMapDescription( "TRIGSTR_263" )
     call SetPlayers( 6 )
     call SetTeams( 6 )
-    call SetGamePlacement( MAP_PLACEMENT_TEAMS_TOGETHER )
+    call SetGamePlacement( MAP_PLACEMENT_USE_MAP_SETTINGS )
 
     call DefineStartLocation( 0, -4864.0, -576.0 )
     call DefineStartLocation( 1, -896.0, 1280.0 )
