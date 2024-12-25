@@ -229,18 +229,6 @@ STRING 95
 Train Villager
 }
 
-STRING 96
-// Units: n000 (Archer), Name (Name)
-{
-Archer
-}
-
-STRING 97
-// Units: n000 (Archer), Tip (Tooltip - Basic)
-{
-Train Archer
-}
-
 STRING 98
 // Units: o004 (Rider), Name (Name)
 {
@@ -707,12 +695,6 @@ STRING 186
 // Units: o002 (Town Center), Ubertip (Tooltip - Extended)
 {
 Primary structure, used to train Villagers and receive gathered resources. Can be upgraded to Stronghold and then Fortress to enable the production of additional types of structures and units.
-}
-
-STRING 187
-// Units: o007 (Stables), Ubertip (Tooltip - Extended)
-{
-Trains Riders.
 }
 
 STRING 188
@@ -1417,7 +1399,7 @@ Germanic Merchant
 }
 
 STRING 311
-// Units: o00E (Shaman), Hotkey (Hotkey)
+// Units: n000 (Hunter), Hotkey (Hotkey)
 {
 H
 }
@@ -1546,5 +1528,71 @@ STRING 332
 // Buffs/Effects: B001 (Hero Glow), Bufftip (Tooltip)
 {
 |cff00ff00Hero Glow|r
+}
+
+STRING 333
+// Units: n000 (Hunter), Name (Name)
+{
+Hunter
+}
+
+STRING 334
+// Units: n000 (Hunter), Tip (Tooltip - Basic)
+{
+Train Hunter
+}
+
+STRING 335
+// Units: o007 (Stables), Ubertip (Tooltip - Extended)
+{
+Trains Riders and Chariots.
+}
+
+STRING 336
+// Units: o00E (Shaman), Hotkey (Hotkey)
+{
+H
+}
+
+STRING 337
+// Units: h005 (Chariot), Name (Name)
+{
+Chariot
+}
+
+STRING 338
+// Units: h005 (Chariot), Tip (Tooltip - Basic)
+{
+Train Chariot
+}
+
+STRING 339
+// Units: h00R (Chariot), Name (Name)
+{
+Chariot
+}
+
+STRING 340
+// Units: h00R (Chariot), Tip (Tooltip - Basic)
+{
+Train Chariot
+}
+
+STRING 341
+// Units: h00R (Chariot), Ubertip (Tooltip - Extended)
+{
+Powerful mounted warrior. |n|n|cffffcc00Attacks land units.|r
+}
+
+STRING 342
+// Units: o003 (Villager), Ubertip (Tooltip - Extended)
+{
+Basic worker unit. Can harvest gold and lumber, build structures, and Repair. |n|n|cffffcc00Attacks land units and trees.|r
+}
+
+STRING 343
+// Abilities: A00E (Far Sight), Ubertip (Tooltip - Normal - Extended)
+{
+Reveals anarea for <Afla,Dur1> seconds. |nReveals invisible units.
 }
 

@@ -1874,7 +1874,7 @@ function InitCustomPlayerSlots takes nothing returns nothing
     call SetPlayerColor( Player(0), ConvertPlayerColor(0) )
     call SetPlayerRacePreference( Player(0), RACE_PREF_HUMAN )
     call SetPlayerRaceSelectable( Player(0), false )
-    call SetPlayerController( Player(0), MAP_CONTROL_USER )
+    call SetPlayerController( Player(0), MAP_CONTROL_COMPUTER )
 
     // Player 1
     call SetPlayerStartLocation( Player(1), 1 )
@@ -1898,7 +1898,7 @@ function InitCustomPlayerSlots takes nothing returns nothing
     call SetPlayerColor( Player(3), ConvertPlayerColor(3) )
     call SetPlayerRacePreference( Player(3), RACE_PREF_ORC )
     call SetPlayerRaceSelectable( Player(3), false )
-    call SetPlayerController( Player(3), MAP_CONTROL_COMPUTER )
+    call SetPlayerController( Player(3), MAP_CONTROL_USER )
 
     // Player 4
     call SetPlayerStartLocation( Player(4), 4 )
@@ -1980,11 +1980,6 @@ function InitAllyPriorities takes nothing returns nothing
     call SetStartLocPrio( 2, 0, 1, MAP_LOC_PRIO_HIGH )
     call SetStartLocPrio( 2, 1, 4, MAP_LOC_PRIO_HIGH )
     call SetStartLocPrio( 2, 2, 5, MAP_LOC_PRIO_LOW )
-
-    call SetStartLocPrioCount( 3, 3 )
-    call SetStartLocPrio( 3, 0, 0, MAP_LOC_PRIO_HIGH )
-    call SetStartLocPrio( 3, 1, 1, MAP_LOC_PRIO_LOW )
-    call SetStartLocPrio( 3, 2, 4, MAP_LOC_PRIO_LOW )
 
     call SetStartLocPrioCount( 4, 2 )
     call SetStartLocPrio( 4, 0, 2, MAP_LOC_PRIO_HIGH )
