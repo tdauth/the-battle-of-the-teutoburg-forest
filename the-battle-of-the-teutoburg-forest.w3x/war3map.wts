@@ -66,12 +66,6 @@ STRING 25
 (Legionary)
 }
 
-STRING 26
-// Doodads: D000 (Wall Jerusalem), Name (Name)
-{
-Wall Jerusalem
-}
-
 STRING 29
 // Units: h004 (Siege Tower), Name (Name)
 {
@@ -508,18 +502,6 @@ STRING 134
 Market
 }
 
-STRING 135
-// Units: h002 (Command Tent), Name (Name)
-{
-Command Tent
-}
-
-STRING 136
-// Units: h002 (Command Tent), Tip (Tooltip - Basic)
-{
-Build Command Tent
-}
-
 STRING 137
 // Units: h00I (Cart), Name (Name)
 {
@@ -617,7 +599,7 @@ Allows Roman warriors to use the Throw Pilum ability, which damages and stuns en
 }
 
 STRING 154
-// Upgrades: R003 (Defend), Hotkey (Hotkey)
+// Units: h00E (Guard Tower), Hotkey (Hotkey)
 {
 T
 }
@@ -1024,5 +1006,173 @@ STRING 222
 // Units: h00B (Seer), Ubertip (Tooltip - Extended)
 {
 Versatile spellcaster. Can initially cast Far Sight, which reveals a hidden area on the map. Can also learn Dispel Magic and Sacrifice. |n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 223
+// Units: h002 (Castrum), Name (Name)
+{
+Castrum
+}
+
+STRING 224
+// Units: h002 (Castrum), Tip (Tooltip - Basic)
+{
+Build Castrum
+}
+
+STRING 225
+// Units: h002 (Castrum), EditorSuffix (Name - Editor Suffix)
+{
+(Tier 1)
+}
+
+STRING 226
+// Units: h00F (Academy), Name (Name)
+{
+Academy
+}
+
+STRING 227
+// Units: h00F (Academy), Tip (Tooltip - Basic)
+{
+Build Academy
+}
+
+STRING 228
+// Units: h00C (Permanent Castrum), Name (Name)
+{
+Permanent Castrum
+}
+
+STRING 229
+// Units: h00C (Permanent Castrum), Tip (Tooltip - Basic)
+{
+Upgrade to Permanent Castrum
+}
+
+STRING 230
+// Units: h00C (Permanent Castrum), EditorSuffix (Name - Editor Suffix)
+{
+(Tier 2)
+}
+
+STRING 231
+// Units: h00N (Legion Castrum), EditorSuffix (Name - Editor Suffix)
+{
+(Tier 3)
+}
+
+STRING 232
+// Units: h00N (Legion Castrum), Name (Name)
+{
+Legion Castrum
+}
+
+STRING 233
+// Units: h00N (Legion Castrum), Tip (Tooltip - Basic)
+{
+Upgrade to Legion Castrum
+}
+
+STRING 234
+// Units: h00O (Temple), Name (Name)
+{
+Temple
+}
+
+STRING 235
+// Units: h00O (Temple), Tip (Tooltip - Basic)
+{
+Build Temple
+}
+
+STRING 236
+// Units: h00P (Altar of Gods), Name (Name)
+{
+Altar of Gods
+}
+
+STRING 237
+// Units: h00P (Altar of Gods), Tip (Tooltip - Basic)
+{
+Build Altar of Gods
+}
+
+STRING 238
+// Units: h003 (Centurio), Hotkey (Hotkey)
+{
+C
+}
+
+STRING 239
+// Upgrades: R00F (Magic Sentry), Name (Name)
+{
+Aqueduct
+}
+
+STRING 240
+// Upgrades: R00F (Magic Sentry), Hotkey (Hotkey)
+{
+A
+}
+
+STRING 241
+// Upgrades: R00F (Magic Sentry), Tip (Tooltip)
+{
+Research Aqueduct
+}
+
+STRING 242
+// Upgrades: R00F (Magic Sentry), Ubertip (Tooltip - Extended)
+{
+Increases the mana capacity of Roman units.
+}
+
+STRING 243
+// Upgrades: R00F (Magic Sentry), effect1 (Effect 1)
+{
+rmnx
+}
+
+STRING 244
+// Units: H007 (Senator), Ubertip (Tooltip - Extended)
+{
+Mystical Hero, adept at controlling magic and ranged assaults. Can learn Silence, Sleep, Brilliance Aura and Charm. |n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 245
+// Units: n00A (Mercenary Camp), EditorSuffix (Name - Editor Suffix)
+{
+(Germania)
+}
+
+STRING 246
+// Units: n00B (Corrupted Druid), Name (Name)
+{
+Corrupted Druid
+}
+
+STRING 247
+// Units: n00B (Corrupted Druid), Tip (Tooltip - Basic)
+{
+Hire Corrupted Druid
+}
+
+STRING 248
+// Units: n00C (Renegade Druid), Name (Name)
+{
+Renegade Druid
+}
+
+STRING 249
+// Units: n00C (Renegade Druid), Tip (Tooltip - Basic)
+{
+Hire Renegade Druid
+}
+
+STRING 250
+// Upgrades: R003 (Defend), Hotkey (Hotkey)
+{
+T
 }
 

@@ -1,10 +1,30 @@
 function InitHero takes nothing returns nothing
     if (GetUnitCount(VARUS) > 0) then
         set hero_id = VARUS
+        set skills1[ 1] = HOLY_BOLT
+        set skills1[ 2] = DEVOTION_AURA
+        set skills1[ 3] = SHOCKWAVE
+        set skills1[ 4] = DEVOTION_AURA
+        set skills1[ 5] = SHOCKWAVE
+        set skills1[ 6] = REINCARNATION
+        set skills1[ 7] = DEVOTION_AURA
+        set skills1[ 8] = SHOCKWAVE
+        set skills1[ 9] = HOLY_BOLT
+        set skills1[10] = HOLY_BOLT
     elseif (GetUnitCount(TRIBUNE) > 0) then
         set hero_id = TRIBUNE
     else
         set hero_id = SENATOR
+        set skills1[ 1] = 'ANsi'
+        set skills1[ 2] = BRILLIANCE_AURA
+        set skills1[ 3] = SLEEP
+        set skills1[ 4] = BRILLIANCE_AURA
+        set skills1[ 5] = SLEEP
+        set skills1[ 6] = 'ANch'
+        set skills1[ 7] = BRILLIANCE_AURA
+        set skills1[ 8] = SLEEP
+        set skills1[ 9] = 'ANsi'
+        set skills1[10] = 'ANsi'
     endif
 endfunction
 
@@ -108,11 +128,24 @@ endfunction
 function main takes nothing returns nothing
     call InitHero()
 
-    call CampaignAI(ROMAN_HOUSE,null)
+    call CampaignAI(ROMAN_HOUSE, function SkillArrays)
     call SetReplacements(9,9,9)
     call SetPeonsRepair(true)
 
     call SetBuildUnitEx( 1,1,1, ROMAN_TIER_1    )
+    call SetBuildUnitEx( 1,1,1, ROMAN_BARRACKS    )
+    call SetBuildUnitEx( 1,1,1, ROMAN_MILL    )
+    call SetBuildUnitEx( 1,1,1, ROMAN_ALTAR    )
+    call SetBuildUnitEx( 1,1,1, ROMAN_GUARD_TOWER    )
+    call SetBuildUnitEx( 1,1,1, ROMAN_SHOP    )
+
+    call SetBuildUnitEx( 1,1,1, ROMAN_TIER_2    )
+    call SetBuildUnitEx( 1,1,1, ROMAN_TEMPLE    )
+    call SetBuildUnitEx( 1,1,1, ROMAN_WORKSHOP    )
+
+    call SetBuildUnitEx( 1,1,1, ROMAN_TIER_3    )
+
+    call SetBuildUnitEx( 1,1,1, ROMAN_STABLES    )
     //call SetBuildUnitEx( 5,5,5, ROMAN_WORKER         )
 
     loop

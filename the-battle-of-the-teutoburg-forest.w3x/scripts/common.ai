@@ -696,7 +696,17 @@ globals
     constant integer TRIBUNE            = 'H008'
     constant integer SENATOR            = 'H007'
     constant integer ROMAN_TIER_1       = 'h002'
+    constant integer ROMAN_TIER_2       = 'h00C'
+    constant integer ROMAN_TIER_3       = 'h00N'
     constant integer ROMAN_HOUSE        = 'h00H'
+    constant integer ROMAN_BARRACKS     = 'h00F'
+    constant integer ROMAN_MILL     = 'h00A'
+    constant integer ROMAN_GUARD_TOWER     = 'h00E'
+    constant integer ROMAN_ALTAR     = 'h00P'
+    constant integer ROMAN_TEMPLE     = 'h00O'
+    constant integer ROMAN_WORKSHOP     = 'h00K'
+    constant integer ROMAN_STABLES     = 'h00L'
+    constant integer ROMAN_SHOP     = 'h00J'
     constant integer ROMAN_WORKER       = 'h009'
     constant integer ROMAN_LEGIONARY    = 'h000'
     constant integer ROMAN_ARCHER       = 'n001'
@@ -1135,6 +1145,12 @@ function TownCountEx takes integer unitid, boolean only_done, integer townid ret
         set have_qty = have_qty + GetUnitCountEx(GERMANIC_TIER_2,false,townid) + GetUnitCountEx(GERMANIC_TIER_3,false,townid)
     elseif unitid == GERMANIC_TIER_2 then
         set have_qty = have_qty  + GetUnitCountEx(GERMANIC_TIER_3,false,townid)
+
+    elseif unitid == ROMAN_TIER_1 then
+        set have_qty = have_qty + GetUnitCountEx(ROMAN_TIER_2,false,townid) + GetUnitCountEx(ROMAN_TIER_3,false,townid)
+    elseif unitid == ROMAN_TIER_2 then
+        set have_qty = have_qty  + GetUnitCountEx(ROMAN_TIER_3,false,townid)
+
     elseif unitid == TOWN_HALL then
         set have_qty = have_qty + GetUnitCountEx(KEEP,false,townid) + GetUnitCountEx(CASTLE,false,townid)
     elseif unitid == KEEP then

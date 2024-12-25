@@ -1,6 +1,16 @@
 function InitHero takes nothing returns nothing
     if (GetUnitCount(ARMINIUS) > 0) then
         set hero_id = ARMINIUS
+        set skills1[ 1] = 'ANbr'
+        set skills1[ 2] = 'A002'
+        set skills1[ 3] = 'ANbr'
+        set skills1[ 4] = 'A002'
+        set skills1[ 5] = 'ANbr'
+        set skills1[ 6] = AVATAR
+        set skills1[ 7] = 'A002'
+        set skills1[ 8] = WIND_WALK
+        set skills1[ 9] = WIND_WALK
+        set skills1[10] = WIND_WALK
     elseif (GetUnitCount(CHIEFTAIN) > 0) then
         set hero_id = CHIEFTAIN
     else
@@ -108,7 +118,7 @@ endfunction
 function main takes nothing returns nothing
     call InitHero()
 
-    call CampaignAI(GERMANIC_HOUSE,null)
+    call CampaignAI(GERMANIC_HOUSE, function SkillArrays)
     call SetReplacements(9,9,9)
     call SetPeonsRepair(true)
 

@@ -76,6 +76,7 @@ globals
     destructable            gg_dest_LOcg_12554         = null
     trigger                 gg_trg_Player_Leaves_Roman = null
     trigger                 gg_trg_Player_Leaves_Germanic = null
+    rect                    gg_rct_Fog_2               = null
 endglobals
 
 function InitGlobals takes nothing returns nothing
@@ -280,7 +281,7 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     local trigger t
     local real life
 
-    set u = BlzCreateUnitWithSkin( p, 'H00D', -6485.8, -1510.1, 207.208, 'H00D' )
+    set gg_unit_H00D_0005 = BlzCreateUnitWithSkin( p, 'H00D', -6485.8, -1510.1, 207.208, 'H00D' )
     set u = BlzCreateUnitWithSkin( p, 'h000', -5490.8, -924.2, 210.759, 'h000' )
     set u = BlzCreateUnitWithSkin( p, 'h000', -5427.3, -1006.4, 205.515, 'h000' )
     set u = BlzCreateUnitWithSkin( p, 'h000', -5336.9, -928.8, 226.733, 'h000' )
@@ -655,6 +656,9 @@ function CreateNeutralHostile takes nothing returns nothing
     set u = BlzCreateUnitWithSkin( p, 'n008', 5705.3, -4562.5, 348.134, 'n008' )
     set u = BlzCreateUnitWithSkin( p, 'n009', 5818.4, -4686.6, 157.626, 'n009' )
     set u = BlzCreateUnitWithSkin( p, 'n004', -830.4, -5863.7, -69.100, 'n004' )
+    set u = BlzCreateUnitWithSkin( p, 'n00B', 7004.0, 2368.8, 155.657, 'n00B' )
+    set u = BlzCreateUnitWithSkin( p, 'n00C', 7023.6, 2167.1, 201.412, 'n00C' )
+    set u = BlzCreateUnitWithSkin( p, 'n00C', 6928.1, 2678.8, 221.188, 'n00C' )
 endfunction
 
 //===========================================================================
@@ -751,6 +755,9 @@ function CreateRegions takes nothing returns nothing
     set gg_rct_Waygate_Bottom = Rect( -1312.0, -5504.0, -448.0, -4672.0 )
     set gg_rct_Moonlight = Rect( -5472.0, 6464.0, -4704.0, 7072.0 )
     set we = AddWeatherEffect( gg_rct_Moonlight, 'LRma' )
+    call EnableWeatherEffect( we, true )
+    set gg_rct_Fog_2 = Rect( 6560.0, 1856.0, 7360.0, 2912.0 )
+    set we = AddWeatherEffect( gg_rct_Fog_2, 'FDgh' )
     call EnableWeatherEffect( we, true )
 endfunction
 
@@ -1091,21 +1098,6 @@ endfunction
 //
 // Default melee game initialization for all players
 //===========================================================================
-function Trig_Initialization_Func011Func001C takes nothing returns boolean
-    if ( not ( GetPlayerController(GetEnumPlayer()) != MAP_CONTROL_USER ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_Initialization_Func011A takes nothing returns nothing
-    if ( Trig_Initialization_Func011Func001C() ) then
-        call SetForceAllianceStateBJ( GetForceOfPlayer(GetEnumPlayer()), udg_RomanPlayers, bj_ALLIANCE_ALLIED_ADVUNITS )
-    else
-        call DoNothing(  )
-    endif
-endfunction
-
 function Trig_Initialization_Func012Func001C takes nothing returns boolean
     if ( not ( GetPlayerController(GetEnumPlayer()) != MAP_CONTROL_USER ) ) then
         return false
@@ -1115,6 +1107,21 @@ endfunction
 
 function Trig_Initialization_Func012A takes nothing returns nothing
     if ( Trig_Initialization_Func012Func001C() ) then
+        call SetForceAllianceStateBJ( GetForceOfPlayer(GetEnumPlayer()), udg_RomanPlayers, bj_ALLIANCE_ALLIED_ADVUNITS )
+    else
+        call DoNothing(  )
+    endif
+endfunction
+
+function Trig_Initialization_Func013Func001C takes nothing returns boolean
+    if ( not ( GetPlayerController(GetEnumPlayer()) != MAP_CONTROL_USER ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Initialization_Func013A takes nothing returns nothing
+    if ( Trig_Initialization_Func013Func001C() ) then
         call SetForceAllianceStateBJ( GetForceOfPlayer(GetEnumPlayer()), udg_GermanicPlayers, bj_ALLIANCE_ALLIED_ADVUNITS )
     else
         call DoNothing(  )
@@ -1125,14 +1132,15 @@ function Trig_Initialization_Actions takes nothing returns nothing
     call MeleeStartingVisibility(  )
     call MeleeStartingResources(  )
     call MeleeInitVictoryDefeat(  )
+    call BlzShowUnitTeamGlow( gg_unit_H00D_0005, true )
     call ForceAddPlayerSimple( Player(0), udg_RomanPlayers )
     call ForceAddPlayerSimple( Player(1), udg_RomanPlayers )
     call ForceAddPlayerSimple( Player(2), udg_RomanPlayers )
     call ForceAddPlayerSimple( Player(3), udg_GermanicPlayers )
     call ForceAddPlayerSimple( Player(4), udg_GermanicPlayers )
     call ForceAddPlayerSimple( Player(5), udg_GermanicPlayers )
-    call ForForce( udg_RomanPlayers, function Trig_Initialization_Func011A )
-    call ForForce( udg_GermanicPlayers, function Trig_Initialization_Func012A )
+    call ForForce( udg_RomanPlayers, function Trig_Initialization_Func012A )
+    call ForForce( udg_GermanicPlayers, function Trig_Initialization_Func013A )
 endfunction
 
 //===========================================================================
@@ -1312,7 +1320,7 @@ function InitCustomPlayerSlots takes nothing returns nothing
     call SetPlayerColor( Player(0), ConvertPlayerColor(0) )
     call SetPlayerRacePreference( Player(0), RACE_PREF_HUMAN )
     call SetPlayerRaceSelectable( Player(0), false )
-    call SetPlayerController( Player(0), MAP_CONTROL_COMPUTER )
+    call SetPlayerController( Player(0), MAP_CONTROL_USER )
 
     // Player 1
     call SetPlayerStartLocation( Player(1), 1 )
@@ -1336,7 +1344,7 @@ function InitCustomPlayerSlots takes nothing returns nothing
     call SetPlayerColor( Player(3), ConvertPlayerColor(3) )
     call SetPlayerRacePreference( Player(3), RACE_PREF_ORC )
     call SetPlayerRaceSelectable( Player(3), false )
-    call SetPlayerController( Player(3), MAP_CONTROL_USER )
+    call SetPlayerController( Player(3), MAP_CONTROL_COMPUTER )
 
     // Player 4
     call SetPlayerStartLocation( Player(4), 4 )
@@ -1408,10 +1416,6 @@ function InitCustomTeams takes nothing returns nothing
 endfunction
 
 function InitAllyPriorities takes nothing returns nothing
-
-    call SetStartLocPrioCount( 0, 2 )
-    call SetStartLocPrio( 0, 0, 1, MAP_LOC_PRIO_HIGH )
-    call SetStartLocPrio( 0, 1, 3, MAP_LOC_PRIO_LOW )
 
     call SetStartLocPrioCount( 1, 3 )
     call SetStartLocPrio( 1, 0, 0, MAP_LOC_PRIO_HIGH )

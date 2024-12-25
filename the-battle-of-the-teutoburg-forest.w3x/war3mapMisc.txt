@@ -1,3 +1,6 @@
+[HERO]
+DependencyOr=H008,H007,H00D,H006,H007,H00D,Hamg,Hblm,Hmkg,Hpal,Obla,Ofar,Oshd,Otch,Edem,Ekee,Emoo,Ewar,Ucrl,Udea,Udre,Ulic,Npbm,Nbrn,Nngs,Nplh,Nbst
+
 [TALT]
 DependencyOr=o00B,halt,oalt,eate,uaod
 
@@ -5,8 +8,8 @@ DependencyOr=o00B,halt,oalt,eate,uaod
 DependencyOr=o002,h002,htow,ogre,etol,unpl
 
 [TWN2]
-DependencyOr=o00F,hkee,ostr,etoa,unp1
+DependencyOr=h00C,o00F,hkee,ostr,etoa,unp1
 
 [TWN3]
-DependencyOr=o00G,hcas,ofrt,etoe,unp2
+DependencyOr=h00N,o00G,hcas,ofrt,etoe,unp2
 
