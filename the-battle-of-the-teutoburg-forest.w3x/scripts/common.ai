@@ -710,6 +710,7 @@ globals
     constant integer ROMAN_WORKER       = 'h009'
     constant integer ROMAN_LEGIONARY    = 'h000'
     constant integer ROMAN_ARCHER       = 'n001'
+    constant integer ROMAN_SLINGER      = 'n00E'
     constant integer ROMAN_EQUES        = 'h001'
 
     //--------------------------------------------------------------------

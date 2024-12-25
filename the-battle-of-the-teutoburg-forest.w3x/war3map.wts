@@ -1248,3 +1248,99 @@ STRING 265
 Lucius Minicius Rufus,Gaius Oppius Sabinus,Servius Cornelius Cethegus,Titus Quinctius Crispinus Sulpic,Marcus Egnatius Rufus
 }
 
+STRING 266
+// Units: n00E (Slinger), Name (Name)
+{
+Slinger
+}
+
+STRING 267
+// Units: n00E (Slinger), Tip (Tooltip - Basic)
+{
+Train Slinger
+}
+
+STRING 268
+// Units: h00Q (Legionary), Name (Name)
+{
+Legionary
+}
+
+STRING 269
+// Units: h00Q (Legionary), Tip (Tooltip - Basic)
+{
+Train Legionary
+}
+
+STRING 270
+// Units: h00Q (Legionary), EditorSuffix (Name - Editor Suffix)
+{
+(Sword)
+}
+
+STRING 271
+// Units: n00F (Pig), Tip (Tooltip - Basic)
+{
+Breed Pig
+}
+
+STRING 272
+// Units: n00F (Pig), Ubertip (Tooltip - Extended)
+{
+Gives additional resources when dying.
+}
+
+STRING 273
+// Units: n00G (Sheep), Tip (Tooltip - Basic)
+{
+Breed Sheep
+}
+
+STRING 274
+// Units: n00G (Sheep), Ubertip (Tooltip - Extended)
+{
+Gives additional resources when dying.
+}
+
+STRING 275
+// Abilities: A00L (Sword), Name (Name)
+{
+Sword
+}
+
+STRING 276
+// Abilities: A00L (Sword), Hotkey (Hotkey - Normal)
+{
+R
+}
+
+STRING 277
+// Abilities: A00L (Sword), Unhotkey (Hotkey - Turn Off)
+{
+R
+}
+
+STRING 278
+// Abilities: A00L (Sword), Tip (Tooltip - Normal)
+{
+Sword
+}
+
+STRING 279
+// Abilities: A00L (Sword), Untip (Tooltip - Turn Off)
+{
+Normal Form
+}
+
+STRING 280
+// Abilities: A00L (Sword), Unubertip (Tooltip - Turn Off - Extended)
+{
+Transforms the Archer into the normal movable form.
+}
+
+STRING 281
+// Abilities: A00L (Sword), Ubertip (Tooltip - Normal - Extended)
+{
+Changes into an imovable form with larger attack range.
+}
+

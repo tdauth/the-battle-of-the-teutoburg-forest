@@ -77,6 +77,8 @@ globals
     destructable            gg_dest_LOcg_12552         = null
     destructable            gg_dest_LOcg_12553         = null
     destructable            gg_dest_LOcg_12554         = null
+    trigger                 gg_trg_Breeding_Training   = null
+    trigger                 gg_trg_Breeding_Death      = null
 endglobals
 
 function InitGlobals takes nothing returns nothing
@@ -1097,6 +1099,74 @@ function InitTrig_Cage_3_Death takes nothing returns nothing
 endfunction
 
 //===========================================================================
+// Trigger: Breeding Training
+//===========================================================================
+function Trig_Breeding_Training_Func002C takes nothing returns boolean
+    if ( ( GetUnitTypeId(GetTrainedUnit()) == 'n00F' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTrainedUnit()) == 'n00G' ) ) then
+        return true
+    endif
+    return false
+endfunction
+
+function Trig_Breeding_Training_Conditions takes nothing returns boolean
+    if ( not Trig_Breeding_Training_Func002C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Breeding_Training_Actions takes nothing returns nothing
+    call UnitApplyTimedLifeBJ( 60, 'BTLF', GetTrainedUnit() )
+endfunction
+
+//===========================================================================
+function InitTrig_Breeding_Training takes nothing returns nothing
+    set gg_trg_Breeding_Training = CreateTrigger(  )
+    call TriggerRegisterAnyUnitEventBJ( gg_trg_Breeding_Training, EVENT_PLAYER_UNIT_TRAIN_FINISH )
+    call TriggerAddCondition( gg_trg_Breeding_Training, Condition( function Trig_Breeding_Training_Conditions ) )
+    call TriggerAddAction( gg_trg_Breeding_Training, function Trig_Breeding_Training_Actions )
+endfunction
+
+//===========================================================================
+// Trigger: Breeding Death
+//===========================================================================
+function Trig_Breeding_Death_Func004C takes nothing returns boolean
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'n00F' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'n00G' ) ) then
+        return true
+    endif
+    return false
+endfunction
+
+function Trig_Breeding_Death_Conditions takes nothing returns boolean
+    if ( not ( GetKillingUnitBJ() == null ) ) then
+        return false
+    endif
+    if ( not Trig_Breeding_Death_Func004C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Breeding_Death_Actions takes nothing returns nothing
+    call AdjustPlayerStateBJ( 30, GetOwningPlayer(GetTriggerUnit()), PLAYER_STATE_RESOURCE_GOLD )
+    call AdjustPlayerStateBJ( 30, GetOwningPlayer(GetTriggerUnit()), PLAYER_STATE_RESOURCE_LUMBER )
+endfunction
+
+//===========================================================================
+function InitTrig_Breeding_Death takes nothing returns nothing
+    set gg_trg_Breeding_Death = CreateTrigger(  )
+    call TriggerRegisterAnyUnitEventBJ( gg_trg_Breeding_Death, EVENT_PLAYER_UNIT_DEATH )
+    call TriggerAddCondition( gg_trg_Breeding_Death, Condition( function Trig_Breeding_Death_Conditions ) )
+    call TriggerAddAction( gg_trg_Breeding_Death, function Trig_Breeding_Death_Actions )
+endfunction
+
+//===========================================================================
 // Trigger: Initialization
 //
 // Default melee game initialization for all players
@@ -1296,6 +1366,8 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_Cage_1_Death(  )
     call InitTrig_Cage_2_Death(  )
     call InitTrig_Cage_3_Death(  )
+    call InitTrig_Breeding_Training(  )
+    call InitTrig_Breeding_Death(  )
     call InitTrig_Initialization(  )
     call InitTrig_Game_Start(  )
     call InitTrig_Player_Leaves_Roman(  )
