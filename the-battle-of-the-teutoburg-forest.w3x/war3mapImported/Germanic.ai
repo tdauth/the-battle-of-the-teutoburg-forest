@@ -11,10 +11,16 @@ function InitHero takes nothing returns nothing
         set skills1[ 8] = WIND_WALK
         set skills1[ 9] = WIND_WALK
         set skills1[10] = WIND_WALK
+
+        call BlzDisplayChatMessage(Player(GetAiPlayer()), 0, "I play Arminius.")
     elseif (GetUnitCount(CHIEFTAIN) > 0) then
         set hero_id = CHIEFTAIN
+
+        call BlzDisplayChatMessage(Player(GetAiPlayer()), 0, "I play a chieftain.")
     else
         set hero_id = DRUID
+
+        call BlzDisplayChatMessage(Player(GetAiPlayer()), 0, "I play a druid.")
     endif
 endfunction
 
@@ -125,17 +131,19 @@ function main takes nothing returns nothing
     call SetWoodPeons(7)
 
     call SetBuildUnitEx( 1,1,1, GERMANIC_TIER_1    )
+    call SetBuildUnitEx( 12,12,12, GERMAINC_WORKER         )
     call SetBuildUnitEx( 1,1,1, GERMANIC_ALTAR    )
     call SetBuildUnitEx( 1,1,1, GERMANIC_WATCH_TOWER    )
     call SetBuildUnitEx( 1,1,1, GERMANIC_STOCKPILE    )
-    //call SetBuildUnitEx( 5,5,5, GERMAINC_WORKER         )
-
+    call SetBuildUnitEx( 1,1,1, GERMANIC_SHOP    )
 
     call SetBuildUnitEx( 1,1,1, GERMANIC_TIER_2    )
+    call SetBuildUnitEx( 1,1,1, GERMANIC_SHRINE    )
 
     call SetBuildUpgr(1, UPG_GERMANIC_LUMBER)
 
     call SetBuildUnitEx( 1,1,1, GERMANIC_TIER_3    )
+    call SetBuildUnitEx( 1,1,1, GERMANIC_STABLES    )
 
     call SetBuildUpgr(2, UPG_GERMANIC_LUMBER)
 

@@ -2,39 +2,45 @@ function InitHero takes nothing returns nothing
     if (GetUnitCount(VARUS) > 0) then
         set hero_id = VARUS
         set skills1[ 1] = HOLY_BOLT
-        set skills1[ 2] = DEVOTION_AURA
+        set skills1[ 2] = COMMAND_AURA
         set skills1[ 3] = SHOCKWAVE
-        set skills1[ 4] = DEVOTION_AURA
+        set skills1[ 4] = COMMAND_AURA
         set skills1[ 5] = SHOCKWAVE
         set skills1[ 6] = REINCARNATION
-        set skills1[ 7] = DEVOTION_AURA
+        set skills1[ 7] = COMMAND_AURA
         set skills1[ 8] = SHOCKWAVE
         set skills1[ 9] = HOLY_BOLT
         set skills1[10] = HOLY_BOLT
+
+        call BlzDisplayChatMessage(Player(GetAiPlayer()), 0, "I play Varus.")
     elseif (GetUnitCount(TRIBUNE) > 0) then
         set hero_id = TRIBUNE
-        set skills1[ 1] = SHADOW_TOUCH
-        set skills1[ 2] = 'A002'
+        set skills1[ 1] = SCOUT
+        set skills1[ 2] = DEVOTION_AURA
         set skills1[ 3] = DIVINE_SHIELD
-        set skills1[ 4] = 'A002'
+        set skills1[ 4] = DEVOTION_AURA
         set skills1[ 5] = DIVINE_SHIELD
-        set skills1[ 6] = 'ANvc'
-        set skills1[ 7] = 'A002'
+        set skills1[ 6] = VOLCANO
+        set skills1[ 7] = DEVOTION_AURA
         set skills1[ 8] = DIVINE_SHIELD
-        set skills1[ 9] = SHADOW_TOUCH
-        set skills1[10] = SHADOW_TOUCH
+        set skills1[ 9] = SCOUT
+        set skills1[10] = SCOUT
+
+        call BlzDisplayChatMessage(Player(GetAiPlayer()), 0, "I play a tribune.")
     else
         set hero_id = SENATOR
-        set skills1[ 1] = 'ANsi'
+        set skills1[ 1] = SILENCE
         set skills1[ 2] = BRILLIANCE_AURA
         set skills1[ 3] = SLEEP
         set skills1[ 4] = BRILLIANCE_AURA
         set skills1[ 5] = SLEEP
-        set skills1[ 6] = 'ANch'
+        set skills1[ 6] = CHARM
         set skills1[ 7] = BRILLIANCE_AURA
         set skills1[ 8] = SLEEP
-        set skills1[ 9] = 'ANsi'
-        set skills1[10] = 'ANsi'
+        set skills1[ 9] = SILENCE
+        set skills1[10] = SILENCE
+
+        call BlzDisplayChatMessage(Player(GetAiPlayer()), 0, "I play a senator.")
     endif
 endfunction
 
@@ -145,6 +151,7 @@ function main takes nothing returns nothing
     call SetWoodPeons(7)
 
     call SetBuildUnitEx( 1,1,1, ROMAN_TIER_1    )
+    call SetBuildUnitEx( 12,12,12, ROMAN_WORKER         )
     call SetBuildUnitEx( 1,1,1, ROMAN_BARRACKS    )
     call SetBuildUnitEx( 1,1,1, ROMAN_MILL    )
     call SetBuildUnitEx( 1,1,1, ROMAN_ALTAR    )
@@ -158,7 +165,6 @@ function main takes nothing returns nothing
     call SetBuildUnitEx( 1,1,1, ROMAN_TIER_3    )
 
     call SetBuildUnitEx( 1,1,1, ROMAN_STABLES    )
-    //call SetBuildUnitEx( 5,5,5, ROMAN_WORKER         )
 
     loop
         call InitAssaultGroup()

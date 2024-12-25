@@ -51,66 +51,6 @@ STRING 25
 (Legionary)
 }
 
-STRING 29
-// Units: h004 (Siege Tower), Name (Name)
-{
-Siege Tower
-}
-
-STRING 30
-// Units: h004 (Siege Tower), Tip (Tooltip - Basic)
-{
-Train Siege Tower
-}
-
-STRING 31
-// Units: h005 (Siege Tower), Name (Name)
-{
-Siege Tower
-}
-
-STRING 32
-// Units: h005 (Siege Tower), Tip (Tooltip - Basic)
-{
-Train Siege Tower
-}
-
-STRING 33
-// Units: h005 (Siege Tower), EditorSuffix (Name - Editor Suffix)
-{
-(Morphed)
-}
-
-STRING 34
-// Abilities: A001 (Put Down Ramp), Name (Name)
-{
-Put Down Ramp
-}
-
-STRING 35
-// Abilities: A001 (Put Down Ramp), Tip (Tooltip - Normal)
-{
-Put Down Ramp
-}
-
-STRING 36
-// Abilities: A001 (Put Down Ramp), Ubertip (Tooltip - Normal - Extended)
-{
-Puts down the ramp, so units can enter the wall.
-}
-
-STRING 37
-// Abilities: A001 (Put Down Ramp), Untip (Tooltip - Turn Off)
-{
-Put Up Ramp
-}
-
-STRING 38
-// Abilities: A001 (Put Down Ramp), Unubertip (Tooltip - Turn Off - Extended)
-{
-Puts the ramp back up, so the Siege Tower can move again.
-}
-
 STRING 50
 // Destructibles: B001 (Pathing Blocker (Ground) (Large - Diagonal 1)), Name (Name)
 {
@@ -199,12 +139,6 @@ STRING 73
 // Abilities: A003 (Cavallery Charge), Tip (Tooltip - Normal)
 {
 Cavallery Charge
-}
-
-STRING 75
-// Units: H006 (Chieftain), Propernames (Proper Names)
-{
-Simon bar Giora
 }
 
 STRING 77
@@ -692,7 +626,7 @@ Summon Druid
 }
 
 STRING 172
-// Abilities: A006 (Unit Inventory), EditorSuffix (Editor Suffix)
+// Units: e001 (Ballista), EditorSuffix (Name - Editor Suffix)
 {
 (Roman Empire)
 }
@@ -710,7 +644,7 @@ Causes Germanic unit attacks to gain resources when hitting enemy buildings.
 }
 
 STRING 175
-// Upgrades: R005 (Backpack), EditorSuffix (Editor Suffix)
+// Abilities: A006 (Unit Inventory), EditorSuffix (Editor Suffix)
 {
 (Roman Empire)
 }
@@ -937,12 +871,12 @@ A major battle between Germanic tribes and the Roman Empire that took place some
 
 STRING 213
 {
-- Roman Legions: Defeat the Germanic Tribes.
+Roman Legions: Defeat the Germanic Tribes.
 }
 
 STRING 214
 {
-- Germanic Tribes: Defeat the Roman Legions.
+Germanic Tribes: Defeat the Roman Legions.
 }
 
 STRING 215
@@ -1302,45 +1236,189 @@ STRING 274
 Gives additional resources when dying.
 }
 
-STRING 275
-// Abilities: A00L (Sword), Name (Name)
-{
-Sword
-}
-
 STRING 276
-// Abilities: A00L (Sword), Hotkey (Hotkey - Normal)
+// Abilities: A00L (Draw Sword), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 277
-// Abilities: A00L (Sword), Unhotkey (Hotkey - Turn Off)
+// Abilities: A00L (Draw Sword), Unhotkey (Hotkey - Turn Off)
 {
 R
 }
 
-STRING 278
-// Abilities: A00L (Sword), Tip (Tooltip - Normal)
+STRING 282
+// Abilities: A00L (Draw Sword), Unubertip (Tooltip - Turn Off - Extended)
 {
-Sword
+Draws the spear removing attack speed but adding damage and attack range.
 }
 
-STRING 279
-// Abilities: A00L (Sword), Untip (Tooltip - Turn Off)
+STRING 283
+// Abilities: A00L (Draw Sword), Ubertip (Tooltip - Normal - Extended)
 {
-Normal Form
+Draws the sword adding attack speed but removing damage and range.
 }
 
-STRING 280
-// Abilities: A00L (Sword), Unubertip (Tooltip - Turn Off - Extended)
+STRING 284
+// Units: e001 (Ballista), Name (Name)
 {
-Transforms the Archer into the normal movable form.
+Ballista
 }
 
-STRING 281
-// Abilities: A00L (Sword), Ubertip (Tooltip - Normal - Extended)
+STRING 285
+// Units: e001 (Ballista), Tip (Tooltip - Basic)
 {
-Changes into an imovable form with larger attack range.
+Train Ballista
+}
+
+STRING 286
+// Abilities: A00L (Draw Sword), Name (Name)
+{
+Draw Sword
+}
+
+STRING 287
+// Abilities: A00L (Draw Sword), Tip (Tooltip - Normal)
+{
+Draw Sword
+}
+
+STRING 288
+// Abilities: A00L (Draw Sword), Untip (Tooltip - Turn Off)
+{
+Draw Spear
+}
+
+STRING 289
+// Upgrades: R005 (Backpack), EditorSuffix (Editor Suffix)
+{
+(Roman Empire)
+}
+
+STRING 290
+// Units: h009 (Pioneer), Ubertip (Tooltip - Extended)
+{
+Basic worker unit. Can harvest gold and lumber, build structures and Repair. |n|n|cffffcc00Attacks land units and trees.|r
+}
+
+STRING 291
+// Items: tsct (Ivory Tower), Description (Description)
+{
+Creates a Guard Tower.
+}
+
+STRING 292
+// Items: tsct (Ivory Tower), Ubertip (Tooltip - Extended)
+{
+Creates a Guard Tower at a target location.
+}
+
+STRING 293
+// Units: H006 (Chieftain), Propernames (Proper Names)
+{
+Chariomerus,Segimer
+}
+
+STRING 294
+// Units: O00H (Druid), Propernames (Proper Names)
+{
+Getafix
+}
+
+STRING 295
+// Abilities: A001 (Hero Glow), Name (Name)
+{
+Hero Glow
+}
+
+STRING 296
+// Buffs/Effects: B001 (), Bufftip (Tooltip)
+{
+Hero Glow
+}
+
+STRING 297
+// Units: h00I (Cart), Hotkey (Hotkey)
+{
+C
+}
+
+STRING 298
+// Units: h00I (Cart), Ubertip (Tooltip - Extended)
+{
+Transporting and healing unit without attack.
+}
+
+STRING 299
+// Units: h00G (Vexillifer), Hotkey (Hotkey)
+{
+V
+}
+
+STRING 300
+// Upgrades: R00J (Vorpal Blades), Ubertip (Tooltip - Extended)
+{
+Permits the missiles launched by the Ballista to strike through initial ground targets and damage those behind. Also allows them to attack trees.
+}
+
+STRING 301
+// Upgrades: R00L (Improved Masonry,Advanced Masonry,Imbued Masonry), Ubertip (Tooltip - Extended)
+{
+Increases the armor and hit points of Roman buildings.
+}
+
+STRING 302
+// Upgrades: R00L (Improved Masonry,Advanced Masonry,Imbued Masonry), Ubertip (Tooltip - Extended)
+{
+Further increases the armor and hit points of Roman buildings.
+}
+
+STRING 303
+// Upgrades: R00L (Improved Masonry,Advanced Masonry,Imbued Masonry), Ubertip (Tooltip - Extended)
+{
+Further increases the armor and hit points of Roman buildings.
+}
+
+STRING 304
+// Upgrades: R00O (Black Gunpowder,Refined Gunpowder,Imbued Gunpowder), Name (Name)
+{
+Steel Ranged Weapons
+}
+
+STRING 305
+// Upgrades: R00O (Black Gunpowder,Refined Gunpowder,Imbued Gunpowder), Name (Name)
+{
+Thorium Ranged Weapons
+}
+
+STRING 306
+// Upgrades: R00O (Black Gunpowder,Refined Gunpowder,Imbued Gunpowder), Name (Name)
+{
+Arcanite Ranged Weapons
+}
+
+STRING 307
+// Upgrades: R00O (Black Gunpowder,Refined Gunpowder,Imbued Gunpowder), Tip (Tooltip)
+{
+Upgrade to Steel Ranged Weapons
+}
+
+STRING 308
+// Upgrades: R00O (Black Gunpowder,Refined Gunpowder,Imbued Gunpowder), Tip (Tooltip)
+{
+Upgrade to Thorium Ranged Weapons
+}
+
+STRING 309
+// Upgrades: R00O (Black Gunpowder,Refined Gunpowder,Imbued Gunpowder), Tip (Tooltip)
+{
+Upgrade to Arcanite Ranged Weapons
+}
+
+STRING 310
+// Units: ngme (Germanic Merchant), Name (Name)
+{
+Germanic Merchant
 }
 
