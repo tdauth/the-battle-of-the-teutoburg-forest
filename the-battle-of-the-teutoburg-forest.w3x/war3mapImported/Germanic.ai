@@ -59,16 +59,34 @@ function main takes nothing returns nothing
     call SetBuildUnitEx( 1,1,1, GERMANIC_WATCH_TOWER    )
     call SetBuildUnitEx( 1,1,1, GERMANIC_STOCKPILE    )
     call SetBuildUnitEx( 1,1,1, GERMANIC_SHOP    )
+    call SetBuildUpgr(1, UPG_GERMANIC_MELEE)
+    call SetBuildUpgr(1, UPG_GERMANIC_ARMOR)
+    call SetBuildUpgr(1, UPG_GERMANIC_RANGED)
+
 
     call SetBuildUnitEx( 1,1,1, GERMANIC_TIER_2    )
     call SetBuildUnitEx( 1,1,1, GERMANIC_SHRINE    )
-
+    call SetBuildUpgr(2, UPG_GERMANIC_MELEE)
+    call SetBuildUpgr(2, UPG_GERMANIC_ARMOR)
+    call SetBuildUpgr(2, UPG_GERMANIC_RANGED)
+    call SetBuildUpgr(1, UPG_GERMANIC_SHAMAN)
+    call SetBuildUpgr(1, UPG_GERMANIC_DRUID)
+    call SetBuildUpgr(1, UPG_GERMANIC_SEER)
     call SetBuildUpgr(1, UPG_GERMANIC_LUMBER)
 
     call SetBuildUnitEx( 1,1,1, GERMANIC_TIER_3    )
     call SetBuildUnitEx( 1,1,1, GERMANIC_STABLES    )
-
+    call SetBuildUpgr(3, UPG_GERMANIC_MELEE)
+    call SetBuildUpgr(3, UPG_GERMANIC_ARMOR)
+    call SetBuildUpgr(3, UPG_GERMANIC_RANGED)
+    call SetBuildUpgr(2, UPG_GERMANIC_SHAMAN)
+    call SetBuildUpgr(2, UPG_GERMANIC_DRUID)
+    call SetBuildUpgr(2, UPG_GERMANIC_SEER)
     call SetBuildUpgr(2, UPG_GERMANIC_LUMBER)
+    call SetBuildUpgr(1, UPG_GERMANIC_VENOM)
+    call SetBuildUpgr(1, UPG_GERMANIC_PILLAGE)
+    call SetBuildUpgr(1, UPG_GERMANIC_ULTRAVISION)
+    call SetBuildUpgr(1, UPG_GERMANIC_ENSNARE)
 
     loop
         call InitAssaultGroup()
@@ -76,6 +94,10 @@ function main takes nothing returns nothing
         call CampaignAttackerEx(3, 4, 4, GERMANIC_WARRIOR)
         call CampaignAttackerEx(1, 2, 3, GERMANIC_ARCHER)
         call CampaignAttackerEx(1, 2, 3, GERMANIC_RIDER)
+        call CampaignAttackerEx(1, 2, 3, GERMANIC_JAVELIN)
+        call CampaignAttackerEx(1, 2, 3, GERMANIC_DRUID)
+        call CampaignAttackerEx(1, 2, 3, GERMANIC_SHAMAN)
+        call CampaignAttackerEx(1, 2, 3, GERMANIC_SEER)
         call Sleep(M1) // Waits 1 minute before attacking
         call LaunchAttack()
     endloop
