@@ -15,10 +15,30 @@ function InitHero takes nothing returns nothing
         call BlzDisplayChatMessage(Player(GetAiPlayer()), 0, "I play Arminius.")
     elseif (GetUnitCount(CHIEFTAIN) > 0) then
         set hero_id = CHIEFTAIN
+        set skills1[ 1] = THUNDER_BOLT
+        set skills1[ 2] = BASH
+        set skills1[ 3] = THUNDER_CLAP
+        set skills1[ 4] = THUNDER_BOLT
+        set skills1[ 5] = BASH
+        set skills1[ 6] = BLADE_STORM
+        set skills1[ 7] = BASH
+        set skills1[ 8] = THUNDER_BOLT
+        set skills1[ 9] = THUNDER_CLAP
+        set skills1[10] = THUNDER_CLAP
 
         call BlzDisplayChatMessage(Player(GetAiPlayer()), 0, "I play a chieftain.")
     else
         set hero_id = DRUID
+        set skills1[ 1] = HEALING_WAVE
+        set skills1[ 2] = SCOUT
+        set skills1[ 3] = HEX
+        set skills1[ 4] = HEALING_WAVE
+        set skills1[ 5] = SCOUT
+        set skills1[ 6] = CHARM
+        set skills1[ 7] = SCOUT
+        set skills1[ 8] = HEALING_WAVE
+        set skills1[ 9] = HEX
+        set skills1[10] = HEX
 
         call BlzDisplayChatMessage(Player(GetAiPlayer()), 0, "I play a druid.")
     endif

@@ -336,7 +336,7 @@ Varus:
 
 STRING 114
 {
-Where is Arminus?
+Where is Arminius?
 }
 
 STRING 116
@@ -665,12 +665,6 @@ STRING 178
 // Upgrades: R006 (Backpack), Ubertip (Tooltip - Extended)
 {
 Gives specific Germanic ground units the ability to carry items.
-}
-
-STRING 179
-// Units: o00E (Shaman), Casterupgradetip (Caster Upgrade Tips)
-{
-- Purge,- Purge|n- Summon Eagle,- Purge|n- Summon Eagle|n- Bloodlust
 }
 
 STRING 180
@@ -1420,5 +1414,23 @@ STRING 310
 // Units: ngme (Germanic Merchant), Name (Name)
 {
 Germanic Merchant
+}
+
+STRING 311
+// Units: o00E (Shaman), Hotkey (Hotkey)
+{
+H
+}
+
+STRING 312
+// Units: o00E (Shaman), Casterupgradetip (Caster Upgrade Tips)
+{
+- Invisibility,- Invisibility|n- Summon Eagle,- Invisibility|n- Summon Eagle|n- Bloodlust
+}
+
+STRING 313
+// Units: o00E (Shaman), Ubertip (Tooltip - Extended)
+{
+Primary spellcaster. Can initially cast Invisibility which makes allied units invisible for some time. Can also learn Summon Eagle and Bloodlust. |n|n|cffffcc00Attacks land and air units.|r
 }
 

@@ -100,6 +100,11 @@ globals
     destructable            gg_dest_LOcg_12552         = null
     destructable            gg_dest_LOcg_12553         = null
     destructable            gg_dest_LOcg_12554         = null
+    unit                    gg_unit_H008_0123          = null
+    unit                    gg_unit_H007_0229          = null
+    unit                    gg_unit_O001_0002          = null
+    unit                    gg_unit_O00H_0067          = null
+    unit                    gg_unit_H006_0213          = null
 endglobals
 
 function InitGlobals takes nothing returns nothing
@@ -718,7 +723,7 @@ function CreateUnitsForPlayer1 takes nothing returns nothing
     set u = BlzCreateUnitWithSkin( p, 'h003', -2680.1, 740.4, 225.223, 'h003' )
     set u = BlzCreateUnitWithSkin( p, 'h00G', -1965.4, 947.6, 210.905, 'h00G' )
     set u = BlzCreateUnitWithSkin( p, 'h00G', -2046.6, 1012.9, 225.779, 'h00G' )
-    set u = BlzCreateUnitWithSkin( p, 'H008', -3494.1, 341.9, 217.193, 'H008' )
+    set gg_unit_H008_0123 = BlzCreateUnitWithSkin( p, 'H008', -3494.1, 341.9, 217.193, 'H008' )
     set gg_unit_h009_0132 = BlzCreateUnitWithSkin( p, 'h009', -1147.6, 583.7, 270.000, 'h009' )
     set gg_unit_h009_0133 = BlzCreateUnitWithSkin( p, 'h009', -1034.3, 596.8, 270.000, 'h009' )
     set gg_unit_h009_0134 = BlzCreateUnitWithSkin( p, 'h009', -1156.1, 457.1, 270.000, 'h009' )
@@ -798,7 +803,7 @@ function CreateUnitsForPlayer2 takes nothing returns nothing
     set u = BlzCreateUnitWithSkin( p, 'n001', 3867.9, -1033.4, 211.530, 'n001' )
     set u = BlzCreateUnitWithSkin( p, 'n001', 3970.3, -1001.2, 212.283, 'n001' )
     set u = BlzCreateUnitWithSkin( p, 'n001', 4027.2, -869.3, 233.765, 'n001' )
-    set u = BlzCreateUnitWithSkin( p, 'H007', 2021.3, -272.0, 206.890, 'H007' )
+    set gg_unit_H007_0229 = BlzCreateUnitWithSkin( p, 'H007', 2021.3, -272.0, 206.890, 'H007' )
     set gg_unit_h009_0244 = BlzCreateUnitWithSkin( p, 'h009', 4275.4, -308.4, 270.000, 'h009' )
     set u = BlzCreateUnitWithSkin( p, 'h009', 4150.5, -315.3, 270.000, 'h009' )
     set gg_unit_h009_0246 = BlzCreateUnitWithSkin( p, 'h009', 4272.3, -175.7, 270.000, 'h009' )
@@ -838,7 +843,7 @@ function CreateUnitsForPlayer3 takes nothing returns nothing
     local trigger t
     local real life
 
-    set u = BlzCreateUnitWithSkin( p, 'O001', -4505.1, -5128.6, 90.849, 'O001' )
+    set gg_unit_O001_0002 = BlzCreateUnitWithSkin( p, 'O001', -4505.1, -5128.6, 90.849, 'O001' )
     set gg_unit_o003_0046 = BlzCreateUnitWithSkin( p, 'o003', -4795.1, -6454.7, 270.000, 'o003' )
     set gg_unit_o003_0047 = BlzCreateUnitWithSkin( p, 'o003', -4651.0, -6459.0, 270.000, 'o003' )
     set gg_unit_o003_0048 = BlzCreateUnitWithSkin( p, 'o003', -4536.8, -6455.2, 270.000, 'o003' )
@@ -902,7 +907,7 @@ function CreateUnitsForPlayer4 takes nothing returns nothing
     set u = BlzCreateUnitWithSkin( p, 'o003', 3263.7, -6830.9, 270.000, 'o003' )
     set u = BlzCreateUnitWithSkin( p, 'o003', 3384.2, -6829.3, 270.000, 'o003' )
     set u = BlzCreateUnitWithSkin( p, 'o003', 3503.7, -6826.2, 270.000, 'o003' )
-    set u = BlzCreateUnitWithSkin( p, 'O00H', 1835.6, -4844.6, 90.000, 'O00H' )
+    set gg_unit_O00H_0067 = BlzCreateUnitWithSkin( p, 'O00H', 1835.6, -4844.6, 90.000, 'O00H' )
     set u = BlzCreateUnitWithSkin( p, 'o00E', 2664.4, -7169.6, 248.496, 'o00E' )
     set u = BlzCreateUnitWithSkin( p, 'o00A', 2523.7, -7269.0, 326.388, 'o00A' )
     set u = BlzCreateUnitWithSkin( p, 'n002', 1709.4, -5006.2, 90.000, 'n002' )
@@ -971,7 +976,7 @@ function CreateUnitsForPlayer5 takes nothing returns nothing
     set u = BlzCreateUnitWithSkin( p, 'n000', -658.8, 5263.1, 270.000, 'n000' )
     set u = BlzCreateUnitWithSkin( p, 'n000', -518.7, 5259.9, 270.000, 'n000' )
     set u = BlzCreateUnitWithSkin( p, 'n000', -389.6, 5251.7, 270.000, 'n000' )
-    set u = BlzCreateUnitWithSkin( p, 'H006', -527.7, 4796.8, 270.000, 'H006' )
+    set gg_unit_H006_0213 = BlzCreateUnitWithSkin( p, 'H006', -527.7, 4796.8, 270.000, 'H006' )
     set u = BlzCreateUnitWithSkin( p, 'n003', 177.2, 5395.6, 270.000, 'n003' )
     set u = BlzCreateUnitWithSkin( p, 'n003', 176.9, 5270.9, 270.000, 'n003' )
     set u = BlzCreateUnitWithSkin( p, 'n003', 54.3, 5278.2, 270.000, 'n003' )
@@ -1556,6 +1561,21 @@ endfunction
 //
 // Default melee game initialization for all players
 //===========================================================================
+function Trig_Initialization_Func012Func001C takes nothing returns boolean
+    if ( not ( GetPlayerController(GetEnumPlayer()) != MAP_CONTROL_USER ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Initialization_Func012A takes nothing returns nothing
+    if ( Trig_Initialization_Func012Func001C() ) then
+        call SetForceAllianceStateBJ( GetForceOfPlayer(GetEnumPlayer()), udg_RomanPlayers, bj_ALLIANCE_ALLIED_ADVUNITS )
+    else
+        call DoNothing(  )
+    endif
+endfunction
+
 function Trig_Initialization_Func013Func001C takes nothing returns boolean
     if ( not ( GetPlayerController(GetEnumPlayer()) != MAP_CONTROL_USER ) ) then
         return false
@@ -1565,21 +1585,6 @@ endfunction
 
 function Trig_Initialization_Func013A takes nothing returns nothing
     if ( Trig_Initialization_Func013Func001C() ) then
-        call SetForceAllianceStateBJ( GetForceOfPlayer(GetEnumPlayer()), udg_RomanPlayers, bj_ALLIANCE_ALLIED_ADVUNITS )
-    else
-        call DoNothing(  )
-    endif
-endfunction
-
-function Trig_Initialization_Func014Func001C takes nothing returns boolean
-    if ( not ( GetPlayerController(GetEnumPlayer()) != MAP_CONTROL_USER ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_Initialization_Func014A takes nothing returns nothing
-    if ( Trig_Initialization_Func014Func001C() ) then
         call SetForceAllianceStateBJ( GetForceOfPlayer(GetEnumPlayer()), udg_GermanicPlayers, bj_ALLIANCE_ALLIED_ADVUNITS )
     else
         call DoNothing(  )
@@ -1589,7 +1594,6 @@ endfunction
 function Trig_Initialization_Actions takes nothing returns nothing
     call MeleeStartingVisibility(  )
     call MeleeStartingResources(  )
-    call MeleeGrantHeroItems(  )
     call MeleeInitVictoryDefeat(  )
     call BlzShowUnitTeamGlow( gg_unit_H00D_0005, true )
     call ForceAddPlayerSimple( Player(0), udg_RomanPlayers )
@@ -1598,8 +1602,14 @@ function Trig_Initialization_Actions takes nothing returns nothing
     call ForceAddPlayerSimple( Player(3), udg_GermanicPlayers )
     call ForceAddPlayerSimple( Player(4), udg_GermanicPlayers )
     call ForceAddPlayerSimple( Player(5), udg_GermanicPlayers )
-    call ForForce( udg_RomanPlayers, function Trig_Initialization_Func013A )
-    call ForForce( udg_GermanicPlayers, function Trig_Initialization_Func014A )
+    call ForForce( udg_RomanPlayers, function Trig_Initialization_Func012A )
+    call ForForce( udg_GermanicPlayers, function Trig_Initialization_Func013A )
+    call UnitAddItemByIdSwapped( 'stwp', gg_unit_H00D_0005 )
+    call UnitAddItemByIdSwapped( 'stwp', gg_unit_H008_0123 )
+    call UnitAddItemByIdSwapped( 'stwp', gg_unit_H007_0229 )
+    call UnitAddItemByIdSwapped( 'stwp', gg_unit_O001_0002 )
+    call UnitAddItemByIdSwapped( 'stwp', gg_unit_O00H_0067 )
+    call UnitAddItemByIdSwapped( 'stwp', gg_unit_H006_0213 )
 endfunction
 
 //===========================================================================
