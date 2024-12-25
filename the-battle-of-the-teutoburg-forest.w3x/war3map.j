@@ -64,6 +64,7 @@ globals
     unit                    gg_unit_h009_0127          = null
     unit                    gg_unit_ngol_0125          = null
     unit                    gg_unit_ngol_0006          = null
+    unit                    gg_unit_H008_0123          = null
     unit                    gg_unit_h009_0140          = null
     unit                    gg_unit_h009_0134          = null
     unit                    gg_unit_h003_0080          = null
@@ -75,11 +76,14 @@ globals
     unit                    gg_unit_h009_0136          = null
     unit                    gg_unit_h009_0137          = null
     unit                    gg_unit_h009_0138          = null
+    unit                    gg_unit_O001_0002          = null
     unit                    gg_unit_o003_0046          = null
     unit                    gg_unit_o003_0047          = null
     unit                    gg_unit_o003_0048          = null
     unit                    gg_unit_o003_0049          = null
     unit                    gg_unit_o003_0050          = null
+    unit                    gg_unit_H006_0213          = null
+    unit                    gg_unit_O00H_0067          = null
     unit                    gg_unit_h009_0236          = null
     unit                    gg_unit_h009_0237          = null
     unit                    gg_unit_h009_0238          = null
@@ -90,6 +94,7 @@ globals
     unit                    gg_unit_h009_0244          = null
     unit                    gg_unit_h009_0246          = null
     unit                    gg_unit_h009_0247          = null
+    unit                    gg_unit_H007_0229          = null
     unit                    gg_unit_o003_0257          = null
     unit                    gg_unit_o003_0258          = null
     unit                    gg_unit_o003_0259          = null
@@ -100,11 +105,6 @@ globals
     destructable            gg_dest_LOcg_12552         = null
     destructable            gg_dest_LOcg_12553         = null
     destructable            gg_dest_LOcg_12554         = null
-    unit                    gg_unit_H008_0123          = null
-    unit                    gg_unit_H007_0229          = null
-    unit                    gg_unit_O001_0002          = null
-    unit                    gg_unit_O00H_0067          = null
-    unit                    gg_unit_H006_0213          = null
 endglobals
 
 function InitGlobals takes nothing returns nothing
@@ -1050,6 +1050,13 @@ function CreateNeutralHostile takes nothing returns nothing
     set u = BlzCreateUnitWithSkin( p, 'n00C', 7023.6, 2167.1, 201.412, 'n00C' )
     set u = BlzCreateUnitWithSkin( p, 'n00C', 6928.1, 2678.8, 221.188, 'n00C' )
     set u = BlzCreateUnitWithSkin( p, 'n00C', 6799.4, 2374.0, 201.412, 'n00C' )
+    set u = BlzCreateUnitWithSkin( p, 'n00H', 4024.6, 1828.1, 122.534, 'n00H' )
+    set u = BlzCreateUnitWithSkin( p, 'n00H', 4078.9, 1718.3, 265.416, 'n00H' )
+    set u = BlzCreateUnitWithSkin( p, 'n00I', 3970.7, 1746.7, 214.712, 'n00I' )
+    set u = BlzCreateUnitWithSkin( p, 'n00J', 4108.5, 1778.3, 19.633, 'n00J' )
+    set u = BlzCreateUnitWithSkin( p, 'n00J', -2013.4, -2448.7, 131.609, 'n00J' )
+    set u = BlzCreateUnitWithSkin( p, 'n00I', -1903.4, -2521.4, 32.586, 'n00I' )
+    set u = BlzCreateUnitWithSkin( p, 'n00H', -2149.4, -2401.3, 50.154, 'n00H' )
 endfunction
 
 //===========================================================================
@@ -1974,7 +1981,7 @@ endfunction
 function main takes nothing returns nothing
     local weathereffect we
     call SetCameraBounds( -7424.0 + GetCameraMargin(CAMERA_MARGIN_LEFT), -7680.0 + GetCameraMargin(CAMERA_MARGIN_BOTTOM), 7424.0 - GetCameraMargin(CAMERA_MARGIN_RIGHT), 7168.0 - GetCameraMargin(CAMERA_MARGIN_TOP), -7424.0 + GetCameraMargin(CAMERA_MARGIN_LEFT), 7168.0 - GetCameraMargin(CAMERA_MARGIN_TOP), 7424.0 - GetCameraMargin(CAMERA_MARGIN_RIGHT), -7680.0 + GetCameraMargin(CAMERA_MARGIN_BOTTOM) )
-    call SetDayNightModels( "Environment\\DNC\\DNCLordaeron\\DNCLordaeronTerrain\\DNCLordaeronTerrain.mdl", "Environment\\DNC\\DNCLordaeron\\DNCLordaeronUnit\\DNCLordaeronUnit.mdl" )
+    call SetDayNightModels( "Environment\\DNC\\DNCAshenvale\\DNCAshenvaleTerrain\\DNCAshenvaleTerrain.mdl", "Environment\\DNC\\DNCAshenvale\\DNCAshenvaleUnit\\DNCAshenvaleUnit.mdl" )
     call SetTerrainFogEx( 0, 3000.0, 5000.0, 0.000, 0.502, 0.502, 0.502 )
     set we = AddWeatherEffect( Rect(-8192.0,-8192.0,8192.0,8192.0), 'RLhr' )
     call EnableWeatherEffect( we, true )

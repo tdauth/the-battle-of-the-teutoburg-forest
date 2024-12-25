@@ -1434,3 +1434,15 @@ STRING 313
 Primary spellcaster. Can initially cast Invisibility which makes allied units invisible for some time. Can also learn Summon Eagle and Bloodlust. |n|n|cffffcc00Attacks land and air units.|r
 }
 
+STRING 314
+// Units: n00H (Germanic Warrior), Name (Name)
+{
+Germanic Warrior
+}
+
+STRING 315
+// Units: n00H (Germanic Warrior), Tip (Tooltip - Basic)
+{
+Hire Germanic Warrior
+}
+

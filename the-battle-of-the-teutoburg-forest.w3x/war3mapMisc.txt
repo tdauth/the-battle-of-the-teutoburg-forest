@@ -2,17 +2,14 @@
 DependencyOr=H008,H007,H00D,H006,H007,H00D,Hamg,Hblm,Hmkg,Hpal,Obla,Ofar,Oshd,Otch,Edem,Ekee,Emoo,Ewar,Ucrl,Udea,Udre,Ulic,Npbm,Nbrn,Nngs,Nplh,Nbst
 
 [TALT]
-DependencyOr=h00P,o00B,halt,oalt,eate,uaod
+DependencyOr=o00B,halt,oalt,eate,uaod
 
 [TWN1]
 DependencyOr=o002,h002,htow,ogre,etol,unpl
-Name=Tier 1
 
 [TWN2]
 DependencyOr=h00C,o00F,hkee,ostr,etoa,unp1
-Name=Tier 2
 
 [TWN3]
 DependencyOr=h00N,o00G,hcas,ofrt,etoe,unp2
-Name=Tier 3
 
