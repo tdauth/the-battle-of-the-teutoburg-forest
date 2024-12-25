@@ -629,17 +629,19 @@ function CreateBuildingsForPlayer0 takes nothing returns nothing
 
     set u = BlzCreateUnitWithSkin( p, 'h002', -5568.0, -64.0, 270.000, 'h002' )
     set u = BlzCreateUnitWithSkin( p, 'h00A', -6528.0, -384.0, 270.000, 'h00A' )
-    set u = BlzCreateUnitWithSkin( p, 'h00H', -4928.0, -1024.0, 270.000, 'h00H' )
-    set u = BlzCreateUnitWithSkin( p, 'h00H', -4736.0, -960.0, 270.000, 'h00H' )
-    set u = BlzCreateUnitWithSkin( p, 'h00H', -4864.0, -1216.0, 270.000, 'h00H' )
-    set u = BlzCreateUnitWithSkin( p, 'h00H', -4672.0, -1152.0, 270.000, 'h00H' )
+    set u = BlzCreateUnitWithSkin( p, 'h00H', -4992.0, -960.0, 270.000, 'h00H' )
+    set u = BlzCreateUnitWithSkin( p, 'h00H', -4736.0, -896.0, 270.000, 'h00H' )
+    set u = BlzCreateUnitWithSkin( p, 'h00H', -4864.0, -1152.0, 270.000, 'h00H' )
+    set u = BlzCreateUnitWithSkin( p, 'h00H', -4672.0, -1088.0, 270.000, 'h00H' )
     set u = BlzCreateUnitWithSkin( p, 'h00P', -5920.0, -544.0, 270.000, 'h00P' )
     set u = BlzCreateUnitWithSkin( p, 'h00F', -4992.0, 0.0, 270.000, 'h00F' )
-    set u = BlzCreateUnitWithSkin( p, 'h00H', -5312.0, -1216.0, 270.000, 'h00H' )
-    set u = BlzCreateUnitWithSkin( p, 'h00H', -5120.0, -1152.0, 270.000, 'h00H' )
+    set u = BlzCreateUnitWithSkin( p, 'h00H', -5376.0, -1216.0, 270.000, 'h00H' )
+    set u = BlzCreateUnitWithSkin( p, 'h00H', -5184.0, -1088.0, 270.000, 'h00H' )
     set u = BlzCreateUnitWithSkin( p, 'h00H', -5248.0, -1408.0, 270.000, 'h00H' )
-    set u = BlzCreateUnitWithSkin( p, 'h00H', -5056.0, -1344.0, 270.000, 'h00H' )
+    set u = BlzCreateUnitWithSkin( p, 'h00H', -5056.0, -1280.0, 270.000, 'h00H' )
     set u = BlzCreateUnitWithSkin( p, 'h00J', -6528.0, -896.0, 270.000, 'h00J' )
+    set u = BlzCreateUnitWithSkin( p, 'h00H', -5440.0, -1536.0, 270.000, 'h00H' )
+    set u = BlzCreateUnitWithSkin( p, 'h00H', -5568.0, -1344.0, 270.000, 'h00H' )
 endfunction
 
 //===========================================================================
@@ -703,14 +705,16 @@ function CreateBuildingsForPlayer1 takes nothing returns nothing
     set u = BlzCreateUnitWithSkin( p, 'h00H', -2176.0, 1600.0, 270.000, 'h00H' )
     set u = BlzCreateUnitWithSkin( p, 'h00H', -2368.0, 1472.0, 270.000, 'h00H' )
     set u = BlzCreateUnitWithSkin( p, 'h00H', -2496.0, 1664.0, 270.000, 'h00H' )
-    set u = BlzCreateUnitWithSkin( p, 'h00H', -2304.0, 1728.0, 270.000, 'h00H' )
+    set u = BlzCreateUnitWithSkin( p, 'h00H', -2304.0, 1792.0, 270.000, 'h00H' )
     set u = BlzCreateUnitWithSkin( p, 'h00H', -2560.0, 1344.0, 270.000, 'h00H' )
     set u = BlzCreateUnitWithSkin( p, 'h00H', -2752.0, 1216.0, 270.000, 'h00H' )
     set u = BlzCreateUnitWithSkin( p, 'h00H', -2880.0, 1408.0, 270.000, 'h00H' )
-    set u = BlzCreateUnitWithSkin( p, 'h00H', -2688.0, 1472.0, 270.000, 'h00H' )
+    set u = BlzCreateUnitWithSkin( p, 'h00H', -2688.0, 1536.0, 270.000, 'h00H' )
     set u = BlzCreateUnitWithSkin( p, 'h00P', -1696.0, 1760.0, 270.000, 'h00P' )
     set u = BlzCreateUnitWithSkin( p, 'h00F', -1216.0, 1792.0, 270.000, 'h00F' )
     set u = BlzCreateUnitWithSkin( p, 'h00J', -1600.0, 448.0, 270.000, 'h00J' )
+    set u = BlzCreateUnitWithSkin( p, 'h00H', -3072.0, 1280.0, 270.000, 'h00H' )
+    set u = BlzCreateUnitWithSkin( p, 'h00H', -2944.0, 1088.0, 270.000, 'h00H' )
 endfunction
 
 //===========================================================================
@@ -778,10 +782,12 @@ function CreateBuildingsForPlayer2 takes nothing returns nothing
     set u = BlzCreateUnitWithSkin( p, 'h00J', 4224.0, -1600.0, 270.000, 'h00J' )
     set u = BlzCreateUnitWithSkin( p, 'h00P', 3680.0, -1504.0, 270.000, 'h00P' )
     set u = BlzCreateUnitWithSkin( p, 'h00F', 3776.0, -320.0, 270.000, 'h00F' )
+    set u = BlzCreateUnitWithSkin( p, 'h00H', 2944.0, -256.0, 270.000, 'h00H' )
     set u = BlzCreateUnitWithSkin( p, 'h00H', 3136.0, -256.0, 270.000, 'h00H' )
     set u = BlzCreateUnitWithSkin( p, 'h00H', 3328.0, -256.0, 270.000, 'h00H' )
     set u = BlzCreateUnitWithSkin( p, 'h00H', 3136.0, -448.0, 270.000, 'h00H' )
     set u = BlzCreateUnitWithSkin( p, 'h00H', 3328.0, -448.0, 270.000, 'h00H' )
+    set u = BlzCreateUnitWithSkin( p, 'h00H', 2944.0, -448.0, 270.000, 'h00H' )
 endfunction
 
 //===========================================================================
