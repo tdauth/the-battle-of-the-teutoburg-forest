@@ -2138,3 +2138,15 @@ STRING 446
 General Frank: It's a bear trap!
 }
 
+STRING 447
+// Units: n00L (Eagle Roost), Name (Name)
+{
+Eagle Roost
+}
+
+STRING 448
+// Units: n00L (Eagle Roost), Tip (Tooltip - Basic)
+{
+Build Eagle Roost
+}
+

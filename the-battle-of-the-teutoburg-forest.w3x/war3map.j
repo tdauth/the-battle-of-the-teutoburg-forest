@@ -480,6 +480,41 @@ function Unit000295_DropItems takes nothing returns nothing
     call DestroyTrigger(GetTriggeringTrigger())
 endfunction
 
+function Unit000383_DropItems takes nothing returns nothing
+    local widget  trigWidget = null
+    local unit    trigUnit   = null
+    local integer itemID     = 0
+    local boolean canDrop    = true
+
+    set trigWidget = bj_lastDyingWidget
+    if (trigWidget == null) then
+        set trigUnit = GetTriggerUnit()
+    endif
+
+    if (trigUnit != null) then
+        set canDrop = not IsUnitHidden(trigUnit)
+        if (canDrop and GetChangingUnit() != null) then
+            set canDrop = (GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE))
+        endif
+    endif
+
+    if (canDrop) then
+        // Item set 0
+        call RandomDistReset(  )
+        call RandomDistAddItem( ChooseRandomItemEx( ITEM_TYPE_ANY, 6 ), 100 )
+        set itemID = RandomDistChoose(  )
+        if (trigUnit != null) then
+            call UnitDropItem( trigUnit, itemID )
+        else
+            call WidgetDropItem( trigWidget, itemID )
+        endif
+
+    endif
+
+    set bj_lastDyingWidget = null
+    call DestroyTrigger(GetTriggeringTrigger())
+endfunction
+
 
 //***************************************************************************
 //*
@@ -1255,6 +1290,13 @@ function CreateNeutralHostile takes nothing returns nothing
     set u = BlzCreateUnitWithSkin( p, 'n00J', -2013.4, -2448.7, 131.609, 'n00J' )
     set u = BlzCreateUnitWithSkin( p, 'n00I', -1903.4, -2521.4, 32.586, 'n00I' )
     set u = BlzCreateUnitWithSkin( p, 'n00H', -2149.4, -2401.3, 50.154, 'n00H' )
+    set u = BlzCreateUnitWithSkin( p, 'n009', 5169.1, 6701.9, 287.560, 'n009' )
+    set t = CreateTrigger(  )
+    call TriggerRegisterUnitEvent( t, u, EVENT_UNIT_DEATH )
+    call TriggerRegisterUnitEvent( t, u, EVENT_UNIT_CHANGE_OWNER )
+    call TriggerAddAction( t, function Unit000383_DropItems )
+    set u = BlzCreateUnitWithSkin( p, 'n008', 5351.9, 6653.8, -83.601, 'n008' )
+    set u = BlzCreateUnitWithSkin( p, 'n008', 5022.1, 6578.9, -37.271, 'n008' )
 endfunction
 
 //===========================================================================
@@ -1304,6 +1346,7 @@ function CreateNeutralPassiveBuildings takes nothing returns nothing
     call SetResourceAmount( u, 1000000 )
     set u = BlzCreateUnitWithSkin( p, 'ngol', 1152.0, -1664.0, 270.000, 'ngol' )
     call SetResourceAmount( u, 1000000 )
+    set u = BlzCreateUnitWithSkin( p, 'n00L', 5120.0, 6912.0, 270.000, 'n00L' )
 endfunction
 
 //===========================================================================
