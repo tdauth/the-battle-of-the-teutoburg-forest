@@ -324,7 +324,7 @@ Varus:
 
 STRING 114
 {
-Where is Arminius?
+Arminius has betrayed us. Prepare for battle!
 }
 
 STRING 116
@@ -825,7 +825,7 @@ Summon Senator
 
 STRING 211
 {
-Varus Disaster
+The Battle
 }
 
 STRING 212
@@ -1134,7 +1134,7 @@ STRING 263
 {
 A major battle between Germanic tribes and the Roman Empire.
 |cffffcc00Supports Computer players.|r
-|cffffcc00Discord:|r https://discord.gg/VBDFBSbQ
+|cffffcc00Discord:|r VBDFBSbQ
 }
 
 STRING 264
@@ -1257,7 +1257,7 @@ Draw Spear
 }
 
 STRING 289
-// Upgrades: R005 (Backpack), EditorSuffix (Editor Suffix)
+// Abilities: A00Y (Harvest), EditorSuffix (Editor Suffix)
 {
 (Roman Empire)
 }
@@ -1598,7 +1598,7 @@ STRING 346
 - Use the fountains to heal and restore mana.
 - Level your heroes by killing creeps.
 - Supports Computer players.
-- https://discord.gg/VBDFBSbQ
+- |cffffcc00Discord:|r VBDFBSbQ
 }
 
 STRING 347
@@ -1721,24 +1721,6 @@ STRING 366
 Research Advanced Horse keeping
 }
 
-STRING 367
-// Upgrades: R00T (Steel Armor,Thorium Armor,Arcanite Armor), Ubertip (Tooltip - Extended)
-{
-Increases the movement speed of Riders and Chariots.
-}
-
-STRING 368
-// Upgrades: R00T (Steel Armor,Thorium Armor,Arcanite Armor), Ubertip (Tooltip - Extended)
-{
-Further increases the movement speed of Riders and Chariots.
-}
-
-STRING 369
-// Upgrades: R00T (Steel Armor,Thorium Armor,Arcanite Armor), Ubertip (Tooltip - Extended)
-{
-Further increases the movement speed of Riders and Chariots.
-}
-
 STRING 370
 // Units: h00A (Storage), Name (Name)
 {
@@ -1770,6 +1752,174 @@ Arminius:
 
 STRING 375
 {
-The Romans form a long trail. We should start our ambush!
+We should prepare our ambush and destroy the Roman Legions!
+}
+
+STRING 376
+// Units: n004 (Bear), Tip (Tooltip - Basic)
+{
+Hire Bear
+}
+
+STRING 377
+// Units: n004 (Bear), Ubertip (Tooltip - Extended)
+{
+Light raging beast. |n|n|cffffcc00Attacks land units.|r
+}
+
+STRING 378
+// Units: n005 (Raging Bear), Ubertip (Tooltip - Extended)
+{
+Medium raging beast. Has the Bash ability. |n|n|cffffcc00Attacks land units.|r
+}
+
+STRING 379
+// Units: n005 (Raging Bear), Tip (Tooltip - Basic)
+{
+Hire Raging Bear
+}
+
+STRING 380
+// Units: n008 (Eagle), Tip (Tooltip - Basic)
+{
+Hire Eagle
+}
+
+STRING 381
+// Units: n008 (Eagle), Ubertip (Tooltip - Extended)
+{
+Light flying ranged unit that hurls pin-feathers. |n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 382
+// Units: n009 (Thunder Eagle), Ubertip (Tooltip - Extended)
+{
+Medium flying ranged unit that hurls pin-feathers. Has the True Sight ability. |n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 383
+// Units: n009 (Thunder Eagle), Tip (Tooltip - Basic)
+{
+Hire Thunder Eagle
+}
+
+STRING 384
+// Units: h003 (Centurio), Ubertip (Tooltip - Extended)
+{
+Versatile foot soldier. Can learn the Defend and Evasion ability. |n|n|cffffcc00Attacks land units.|r
+}
+
+STRING 385
+// Upgrades: R00U (Cloud), Name (Name)
+{
+Evasion
+}
+
+STRING 386
+// Upgrades: R00U (Cloud), Tip (Tooltip)
+{
+Research Evasion
+}
+
+STRING 387
+// Upgrades: R00U (Cloud), Ubertip (Tooltip - Extended)
+{
+Provides Centurios with the Evasion ability which gives the unit a chance to avoid enemy attacks.
+}
+
+STRING 388
+// Upgrades: R005 (Backpack), EditorSuffix (Editor Suffix)
+{
+(Roman Empire)
+}
+
+STRING 389
+// Units: h005 (Chariot), Hotkey (Hotkey)
+{
+C
+}
+
+STRING 390
+// Units: n00K (Boar), Name (Name)
+{
+Boar
+}
+
+STRING 391
+// Units: n00K (Boar), Tip (Tooltip - Basic)
+{
+Invoke Boar
+}
+
+STRING 392
+// Units: n00K (Boar), Ubertip (Tooltip - Extended)
+{
+Call upon the spirit of Boar to save you.
+}
+
+STRING 393
+// Units: o00J (Ritual Site), Name (Name)
+{
+Ritual Site
+}
+
+STRING 394
+// Units: o00J (Ritual Site), Tip (Tooltip - Basic)
+{
+Build Ritual Site
+}
+
+STRING 395
+// Units: o00J (Ritual Site), Ubertip (Tooltip - Extended)
+{
+Trains Berserkers.
+}
+
+STRING 396
+// Units: o00K (Berserker), Name (Name)
+{
+Berserker
+}
+
+STRING 397
+// Units: o00K (Berserker), Hotkey (Hotkey)
+{
+B
+}
+
+STRING 398
+// Units: o00K (Berserker), Tip (Tooltip - Basic)
+{
+Train Berserker
+}
+
+STRING 399
+// Units: o00K (Berserker), Ubertip (Tooltip - Extended)
+{
+Mighty warrior. |n|n|cffffcc00Attacks land units.|r
+}
+
+STRING 400
+// Upgrades: R00T (Steel Armor,Thorium Armor,Arcanite Armor), Ubertip (Tooltip - Extended)
+{
+Increases the movement speed and maximum hit points of Riders and Chariots.
+}
+
+STRING 401
+// Upgrades: R00T (Steel Armor,Thorium Armor,Arcanite Armor), Ubertip (Tooltip - Extended)
+{
+Further increases the movement speed and maximum hit points of Riders and Chariots.
+}
+
+STRING 402
+// Upgrades: R00T (Steel Armor,Thorium Armor,Arcanite Armor), Ubertip (Tooltip - Extended)
+{
+Further increases the movement speed and maximum hit points of Riders and Chariots.
+}
+
+STRING 403
+// Upgrades: R00T (Steel Armor,Thorium Armor,Arcanite Armor), effect2 (Effect 2)
+{
+rhpx
 }
 

@@ -34,7 +34,10 @@ globals
     camerasetup             gg_cam_Camera_003          = null
     camerasetup             gg_cam_Camera_004          = null
     camerasetup             gg_cam_Camera_005          = null
+    camerasetup             gg_cam_Camera_006          = null
+    camerasetup             gg_cam_Camera_007          = null
     sound                   gg_snd_LightningBolt1      = null
+    sound                   gg_snd_RollingThunder1     = null
     trigger                 gg_trg_Cinematic_Intro_Setup = null
     trigger                 gg_trg_Cinematic_Intro     = null
     trigger                 gg_trg_Cinematic_Skip      = null
@@ -105,8 +108,6 @@ globals
     destructable            gg_dest_LOcg_12552         = null
     destructable            gg_dest_LOcg_12553         = null
     destructable            gg_dest_LOcg_12554         = null
-    camerasetup             gg_cam_Camera_006          = null
-    camerasetup             gg_cam_Camera_007          = null
 endglobals
 
 function InitGlobals takes nothing returns nothing
@@ -672,8 +673,12 @@ function InitSounds takes nothing returns nothing
     set gg_snd_LightningBolt1 = CreateSound( "Doodads/Cinematic/Lightningbolt/LightningBolt1.flac", false, false, true, 1, 1, "DefaultEAXON" )
     call SetSoundParamsFromLabel( gg_snd_LightningBolt1, "CinematicLightningBolt" )
     call SetSoundDuration( gg_snd_LightningBolt1, 3000 )
-    call SetSoundChannel( gg_snd_LightningBolt1, 8 )
+    call SetSoundChannel( gg_snd_LightningBolt1, 10 )
     call SetSoundVolume( gg_snd_LightningBolt1, 127 )
+    set gg_snd_RollingThunder1 = CreateSound( "Sound/Ambient/DoodadEffects/RollingThunder1.flac", false, false, false, 0, 0, "DefaultEAXON" )
+    call SetSoundParamsFromLabel( gg_snd_RollingThunder1, "RollingThunderSound" )
+    call SetSoundDuration( gg_snd_RollingThunder1, 3831 )
+    call SetSoundVolume( gg_snd_RollingThunder1, 127 )
 endfunction
 
 //***************************************************************************
@@ -762,6 +767,8 @@ function CreateBuildingsForPlayer0 takes nothing returns nothing
     set u = BlzCreateUnitWithSkin( p, 'h00J', -6528.0, -896.0, 270.000, 'h00J' )
     set u = BlzCreateUnitWithSkin( p, 'h00H', -5440.0, -1536.0, 270.000, 'h00H' )
     set u = BlzCreateUnitWithSkin( p, 'h00H', -5568.0, -1344.0, 270.000, 'h00H' )
+    set u = BlzCreateUnitWithSkin( p, 'h00H', -5760.0, -1472.0, 270.000, 'h00H' )
+    set u = BlzCreateUnitWithSkin( p, 'h00H', -5632.0, -1664.0, 270.000, 'h00H' )
 endfunction
 
 //===========================================================================
@@ -810,6 +817,9 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set gg_unit_h009_0237 = BlzCreateUnitWithSkin( p, 'h009', -6961.3, -570.1, 270.000, 'h009' )
     set gg_unit_h009_0238 = BlzCreateUnitWithSkin( p, 'h009', -6839.5, -430.5, 270.000, 'h009' )
     set gg_unit_h009_0239 = BlzCreateUnitWithSkin( p, 'h009', -6952.8, -443.6, 270.000, 'h009' )
+    set u = BlzCreateUnitWithSkin( p, 'e001', -4238.0, -180.8, 216.528, 'e001' )
+    set u = BlzCreateUnitWithSkin( p, 'h004', -4062.3, -7.5, 222.003, 'h004' )
+    set u = BlzCreateUnitWithSkin( p, 'h004', -3976.6, -81.9, 216.248, 'h004' )
 endfunction
 
 //===========================================================================
@@ -835,6 +845,8 @@ function CreateBuildingsForPlayer1 takes nothing returns nothing
     set u = BlzCreateUnitWithSkin( p, 'h00J', -1600.0, 448.0, 270.000, 'h00J' )
     set u = BlzCreateUnitWithSkin( p, 'h00H', -3072.0, 1280.0, 270.000, 'h00H' )
     set u = BlzCreateUnitWithSkin( p, 'h00H', -2944.0, 1088.0, 270.000, 'h00H' )
+    set u = BlzCreateUnitWithSkin( p, 'h00H', -3264.0, 1088.0, 270.000, 'h00H' )
+    set u = BlzCreateUnitWithSkin( p, 'h00H', -3136.0, 896.0, 270.000, 'h00H' )
 endfunction
 
 //===========================================================================
@@ -883,6 +895,9 @@ function CreateUnitsForPlayer1 takes nothing returns nothing
     set u = BlzCreateUnitWithSkin( p, 'h001', -3281.0, 362.9, 202.942, 'h001' )
     set u = BlzCreateUnitWithSkin( p, 'h001', -3137.8, 528.4, 202.942, 'h001' )
     set u = BlzCreateUnitWithSkin( p, 'h001', -3090.1, 426.5, 202.942, 'h001' )
+    set u = BlzCreateUnitWithSkin( p, 'e001', -1368.7, 1200.5, 176.420, 'e001' )
+    set u = BlzCreateUnitWithSkin( p, 'h004', -1127.1, 1144.3, 186.160, 'h004' )
+    set u = BlzCreateUnitWithSkin( p, 'h004', -1134.9, 1238.4, 186.160, 'h004' )
 endfunction
 
 //===========================================================================
@@ -908,6 +923,8 @@ function CreateBuildingsForPlayer2 takes nothing returns nothing
     set u = BlzCreateUnitWithSkin( p, 'h00H', 3136.0, -448.0, 270.000, 'h00H' )
     set u = BlzCreateUnitWithSkin( p, 'h00H', 3328.0, -448.0, 270.000, 'h00H' )
     set u = BlzCreateUnitWithSkin( p, 'h00H', 2944.0, -448.0, 270.000, 'h00H' )
+    set u = BlzCreateUnitWithSkin( p, 'h00H', 6080.0, -1408.0, 270.000, 'h00H' )
+    set u = BlzCreateUnitWithSkin( p, 'h00H', 6272.0, -1408.0, 270.000, 'h00H' )
 endfunction
 
 //===========================================================================
@@ -956,6 +973,9 @@ function CreateUnitsForPlayer2 takes nothing returns nothing
     set gg_unit_h009_0246 = BlzCreateUnitWithSkin( p, 'h009', 4272.3, -175.7, 270.000, 'h009' )
     set gg_unit_h009_0247 = BlzCreateUnitWithSkin( p, 'h009', 4159.0, -188.8, 270.000, 'h009' )
     set u = BlzCreateUnitWithSkin( p, 'h000', 3043.9, -829.0, 157.116, 'h000' )
+    set u = BlzCreateUnitWithSkin( p, 'e001', 4298.4, -893.0, 176.420, 'e001' )
+    set u = BlzCreateUnitWithSkin( p, 'h004', 4558.4, -948.7, 186.160, 'h004' )
+    set u = BlzCreateUnitWithSkin( p, 'h004', 4550.6, -854.6, 186.160, 'h004' )
 endfunction
 
 //===========================================================================
@@ -1002,8 +1022,8 @@ function CreateUnitsForPlayer3 takes nothing returns nothing
     set u = BlzCreateUnitWithSkin( p, 'n000', -4940.3, -5042.3, 90.000, 'n000' )
     set u = BlzCreateUnitWithSkin( p, 'n000', -4800.3, -5045.5, 90.000, 'n000' )
     set u = BlzCreateUnitWithSkin( p, 'n000', -4671.1, -5053.6, 90.000, 'n000' )
-    set u = BlzCreateUnitWithSkin( p, 'o00E', -5076.7, -6559.8, 248.496, 'o00E' )
-    set u = BlzCreateUnitWithSkin( p, 'o00A', -5217.5, -6659.1, 326.388, 'o00A' )
+    set u = BlzCreateUnitWithSkin( p, 'o00E', -5441.8, -5178.0, 90.000, 'o00E' )
+    set u = BlzCreateUnitWithSkin( p, 'o00A', -5443.4, -5311.8, 90.000, 'o00A' )
     set u = BlzCreateUnitWithSkin( p, 'n002', -4939.4, -4937.0, 90.000, 'n002' )
     set u = BlzCreateUnitWithSkin( p, 'n002', -4804.6, -4936.2, 90.000, 'n002' )
     set u = BlzCreateUnitWithSkin( p, 'n002', -4666.5, -4942.7, 90.000, 'n002' )
@@ -1017,6 +1037,8 @@ function CreateUnitsForPlayer3 takes nothing returns nothing
     set u = BlzCreateUnitWithSkin( p, 'o004', -5039.0, -5305.4, 90.000, 'o004' )
     set u = BlzCreateUnitWithSkin( p, 'n000', -4550.8, -5050.5, 90.000, 'n000' )
     set u = BlzCreateUnitWithSkin( p, 'n002', -4537.4, -4936.9, 90.000, 'n002' )
+    set u = BlzCreateUnitWithSkin( p, 'o00E', -5304.9, -5187.6, 90.000, 'o00E' )
+    set u = BlzCreateUnitWithSkin( p, 'o00A', -5306.4, -5321.4, 90.000, 'o00A' )
 endfunction
 
 //===========================================================================
@@ -1079,6 +1101,10 @@ function CreateUnitsForPlayer4 takes nothing returns nothing
     set u = BlzCreateUnitWithSkin( p, 'o004', 2136.0, -5409.5, 90.000, 'o004' )
     set u = BlzCreateUnitWithSkin( p, 'n000', 2114.2, -5154.3, 90.000, 'n000' )
     set u = BlzCreateUnitWithSkin( p, 'n002', 2110.9, -5007.0, 90.000, 'n002' )
+    set u = BlzCreateUnitWithSkin( p, 'o00E', 1850.1, -5580.0, 90.000, 'o00E' )
+    set u = BlzCreateUnitWithSkin( p, 'o00A', 1848.5, -5713.8, 90.000, 'o00A' )
+    set u = BlzCreateUnitWithSkin( p, 'o00E', 1987.0, -5589.7, 90.000, 'o00E' )
+    set u = BlzCreateUnitWithSkin( p, 'o00A', 1985.5, -5723.5, 90.000, 'o00A' )
 endfunction
 
 //===========================================================================
@@ -1140,6 +1166,10 @@ function CreateUnitsForPlayer5 takes nothing returns nothing
     set u = BlzCreateUnitWithSkin( p, 'o004', -749.0, 4997.9, 270.000, 'o004' )
     set u = BlzCreateUnitWithSkin( p, 'n000', -777.0, 5268.2, 270.000, 'n000' )
     set u = BlzCreateUnitWithSkin( p, 'n002', -791.0, 5399.0, 270.000, 'n002' )
+    set u = BlzCreateUnitWithSkin( p, 'o00E', 308.4, 5430.4, 270.000, 'o00E' )
+    set u = BlzCreateUnitWithSkin( p, 'o00A', 306.9, 5296.6, 270.000, 'o00A' )
+    set u = BlzCreateUnitWithSkin( p, 'o00E', 445.4, 5420.7, 270.000, 'o00E' )
+    set u = BlzCreateUnitWithSkin( p, 'o00A', 443.8, 5286.9, 270.000, 'o00A' )
 endfunction
 
 //===========================================================================
@@ -1262,6 +1292,18 @@ function CreateNeutralPassiveBuildings takes nothing returns nothing
     set u = BlzCreateUnitWithSkin( p, 'n00A', -320.0, -640.0, 270.000, 'n00A' )
     call SetUnitColor( u, ConvertPlayerColor(11) )
     set u = BlzCreateUnitWithSkin( p, 'ngme', 3712.0, 2240.0, 270.000, 'ngme' )
+    set u = BlzCreateUnitWithSkin( p, 'ngol', -6464.0, -7232.0, 270.000, 'ngol' )
+    call SetResourceAmount( u, 1000000 )
+    set u = BlzCreateUnitWithSkin( p, 'ngol', -768.0, -6144.0, 270.000, 'ngol' )
+    call SetResourceAmount( u, 1000000 )
+    set u = BlzCreateUnitWithSkin( p, 'ngol', -5568.0, 6208.0, 270.000, 'ngol' )
+    call SetResourceAmount( u, 1000000 )
+    set u = BlzCreateUnitWithSkin( p, 'ngol', -2752.0, -1088.0, 270.000, 'ngol' )
+    call SetResourceAmount( u, 1000000 )
+    set u = BlzCreateUnitWithSkin( p, 'ngol', -4096.0, 896.0, 270.000, 'ngol' )
+    call SetResourceAmount( u, 1000000 )
+    set u = BlzCreateUnitWithSkin( p, 'ngol', 1152.0, -1664.0, 270.000, 'ngol' )
+    call SetResourceAmount( u, 1000000 )
 endfunction
 
 //===========================================================================
@@ -1279,6 +1321,12 @@ function CreateNeutralPassive takes nothing returns nothing
     set u = BlzCreateUnitWithSkin( p, 'nder', -6698.5, 5441.0, 220.964, 'nder' )
     set u = BlzCreateUnitWithSkin( p, 'nder', 3208.5, 5608.1, 220.964, 'nder' )
     set u = BlzCreateUnitWithSkin( p, 'nder', 6585.9, 5448.8, 220.964, 'nder' )
+    set u = BlzCreateUnitWithSkin( p, 'n00K', 3930.1, -2667.6, 228.951, 'n00K' )
+    set u = BlzCreateUnitWithSkin( p, 'n00K', 5261.2, 3506.9, 112.185, 'n00K' )
+    set u = BlzCreateUnitWithSkin( p, 'n00K', -2277.4, 4527.5, 54.109, 'n00K' )
+    set u = BlzCreateUnitWithSkin( p, 'n00K', -6779.0, 2534.8, 128.313, 'n00K' )
+    set u = BlzCreateUnitWithSkin( p, 'n00K', -6953.4, -2138.5, 277.842, 'n00K' )
+    set u = BlzCreateUnitWithSkin( p, 'n00K', -7149.1, -4777.2, 37.091, 'n00K' )
 endfunction
 
 //===========================================================================
@@ -1417,7 +1465,7 @@ function CreateCameras takes nothing returns nothing
     call CameraSetupSetField( gg_cam_Camera_006, CAMERA_FIELD_TARGET_DISTANCE, 718.2, 0.0 )
     call CameraSetupSetField( gg_cam_Camera_006, CAMERA_FIELD_ROLL, 0.0, 0.0 )
     call CameraSetupSetField( gg_cam_Camera_006, CAMERA_FIELD_FIELD_OF_VIEW, 70.0, 0.0 )
-    call CameraSetupSetField( gg_cam_Camera_006, CAMERA_FIELD_FARZ, 8857.8, 0.0 )
+    call CameraSetupSetField( gg_cam_Camera_006, CAMERA_FIELD_FARZ, 10000.0, 0.0 )
     call CameraSetupSetField( gg_cam_Camera_006, CAMERA_FIELD_NEARZ, 16.0, 0.0 )
     call CameraSetupSetField( gg_cam_Camera_006, CAMERA_FIELD_LOCAL_PITCH, 0.0, 0.0 )
     call CameraSetupSetField( gg_cam_Camera_006, CAMERA_FIELD_LOCAL_YAW, 0.0, 0.0 )
@@ -1431,7 +1479,7 @@ function CreateCameras takes nothing returns nothing
     call CameraSetupSetField( gg_cam_Camera_007, CAMERA_FIELD_TARGET_DISTANCE, 718.2, 0.0 )
     call CameraSetupSetField( gg_cam_Camera_007, CAMERA_FIELD_ROLL, 0.0, 0.0 )
     call CameraSetupSetField( gg_cam_Camera_007, CAMERA_FIELD_FIELD_OF_VIEW, 70.0, 0.0 )
-    call CameraSetupSetField( gg_cam_Camera_007, CAMERA_FIELD_FARZ, 8857.8, 0.0 )
+    call CameraSetupSetField( gg_cam_Camera_007, CAMERA_FIELD_FARZ, 10000.0, 0.0 )
     call CameraSetupSetField( gg_cam_Camera_007, CAMERA_FIELD_NEARZ, 16.0, 0.0 )
     call CameraSetupSetField( gg_cam_Camera_007, CAMERA_FIELD_LOCAL_PITCH, 0.0, 0.0 )
     call CameraSetupSetField( gg_cam_Camera_007, CAMERA_FIELD_LOCAL_YAW, 0.0, 0.0 )
@@ -1450,14 +1498,14 @@ endfunction
 // Trigger: Cinematic Intro Setup
 //===========================================================================
 function Trig_Cinematic_Intro_Setup_Func005A takes nothing returns nothing
-    call CameraSetupApplyForPlayer( true, gg_cam_Camera_001, GetEnumPlayer(), 0 )
+    call CameraSetupApplyForPlayer( true, gg_cam_Camera_006, GetEnumPlayer(), 0.00 )
 endfunction
 
 function Trig_Cinematic_Intro_Setup_Actions takes nothing returns nothing
+    call StopMusicBJ( false )
     call CinematicModeBJ( true, GetPlayersAll() )
     call SetTimeOfDay( 6.00 )
     call UseTimeOfDayBJ( false )
-    call SetTerrainFogExBJ( 0, 1000, 8000, 0, 100, 100, 100 )
     call ForForce( GetPlayersAll(), function Trig_Cinematic_Intro_Setup_Func005A )
 endfunction
 
@@ -1470,24 +1518,15 @@ endfunction
 //===========================================================================
 // Trigger: Cinematic Intro
 //===========================================================================
-function Trig_Cinematic_Intro_Func005A takes nothing returns nothing
-    call CameraSetupApplyForPlayer( true, gg_cam_Camera_006, GetEnumPlayer(), 0.00 )
-    call CameraSetupApplyForPlayer( true, gg_cam_Camera_007, GetEnumPlayer(), 4.00 )
-endfunction
-
-function Trig_Cinematic_Intro_Func006001 takes nothing returns boolean
-    return ( udg_CinematicSkip == true )
+function Trig_Cinematic_Intro_Func007A takes nothing returns nothing
+    call CameraSetupApplyForPlayer( true, gg_cam_Camera_007, GetEnumPlayer(), 6.00 )
 endfunction
 
 function Trig_Cinematic_Intro_Func008001 takes nothing returns boolean
     return ( udg_CinematicSkip == true )
 endfunction
 
-function Trig_Cinematic_Intro_Func009A takes nothing returns nothing
-    call CameraSetupApplyForPlayer( true, gg_cam_Camera_002, GetEnumPlayer(), 4.00 )
-endfunction
-
-function Trig_Cinematic_Intro_Func011001 takes nothing returns boolean
+function Trig_Cinematic_Intro_Func010001 takes nothing returns boolean
     return ( udg_CinematicSkip == true )
 endfunction
 
@@ -1496,19 +1535,12 @@ function Trig_Cinematic_Intro_Func013001 takes nothing returns boolean
 endfunction
 
 function Trig_Cinematic_Intro_Func014A takes nothing returns nothing
-    call CameraSetupApplyForPlayer( true, gg_cam_Camera_003, GetEnumPlayer(), 4.00 )
-endfunction
-
-function Trig_Cinematic_Intro_Func015001 takes nothing returns boolean
-    return ( udg_CinematicSkip == true )
+    call CameraSetupApplyForPlayer( true, gg_cam_Camera_001, GetEnumPlayer(), 0.00 )
+    call CameraSetupApplyForPlayer( true, gg_cam_Camera_002, GetEnumPlayer(), 4.00 )
 endfunction
 
 function Trig_Cinematic_Intro_Func017001 takes nothing returns boolean
     return ( udg_CinematicSkip == true )
-endfunction
-
-function Trig_Cinematic_Intro_Func018A takes nothing returns nothing
-    call CameraSetupApplyForPlayer( true, gg_cam_Camera_004, GetEnumPlayer(), 4.00 )
 endfunction
 
 function Trig_Cinematic_Intro_Func019001 takes nothing returns boolean
@@ -1520,7 +1552,7 @@ function Trig_Cinematic_Intro_Func021001 takes nothing returns boolean
 endfunction
 
 function Trig_Cinematic_Intro_Func022A takes nothing returns nothing
-    call CameraSetupApplyForPlayer( true, gg_cam_Camera_005, GetEnumPlayer(), 3.00 )
+    call CameraSetupApplyForPlayer( true, gg_cam_Camera_003, GetEnumPlayer(), 3.00 )
 endfunction
 
 function Trig_Cinematic_Intro_Func023001 takes nothing returns boolean
@@ -1531,54 +1563,70 @@ function Trig_Cinematic_Intro_Func025001 takes nothing returns boolean
     return ( udg_CinematicSkip == true )
 endfunction
 
+function Trig_Cinematic_Intro_Func026A takes nothing returns nothing
+    call CameraSetupApplyForPlayer( true, gg_cam_Camera_004, GetEnumPlayer(), 3.00 )
+endfunction
+
+function Trig_Cinematic_Intro_Func027001 takes nothing returns boolean
+    return ( udg_CinematicSkip == true )
+endfunction
+
+function Trig_Cinematic_Intro_Func029001 takes nothing returns boolean
+    return ( udg_CinematicSkip == true )
+endfunction
+
+function Trig_Cinematic_Intro_Func030A takes nothing returns nothing
+    call CameraSetupApplyForPlayer( true, gg_cam_Camera_005, GetEnumPlayer(), 3.00 )
+endfunction
+
+function Trig_Cinematic_Intro_Func031001 takes nothing returns boolean
+    return ( udg_CinematicSkip == true )
+endfunction
+
+function Trig_Cinematic_Intro_Func033001 takes nothing returns boolean
+    return ( udg_CinematicSkip == true )
+endfunction
+
 function Trig_Cinematic_Intro_Actions takes nothing returns nothing
+    call SetSkyModel( "Environment\\Sky\\FoggedSky\\FoggedSky.mdl" )
+    call SetTerrainFogExBJ( 0, 200.00, 8000, 0.00, 60.00, 60.00, 60.00 )
     call PauseAllUnitsBJ( true )
-    call PlayThematicMusicBJ( "TragicConfrontation" )
+    call PlayThematicMusicBJ( "Tension" )
     call TransmissionFromUnitWithNameBJ( GetPlayersAll(), gg_unit_O001_0002, "TRIGSTR_374", null, "TRIGSTR_375", bj_TIMETYPE_ADD, 0, false )
-    call ForForce( GetPlayersAll(), function Trig_Cinematic_Intro_Func005A )
-    if ( Trig_Cinematic_Intro_Func006001() ) then
-        return
-    else
-        call DoNothing(  )
-    endif
-    call PolledWait( 3.50 )
+    call ForForce( GetPlayersAll(), function Trig_Cinematic_Intro_Func007A )
     if ( Trig_Cinematic_Intro_Func008001() ) then
         return
     else
         call DoNothing(  )
     endif
-    call ForForce( GetPlayersAll(), function Trig_Cinematic_Intro_Func009A )
-    call TransmissionFromUnitWithNameBJ( GetPlayersAll(), gg_unit_h003_0080, "TRIGSTR_113", null, "TRIGSTR_114", bj_TIMETYPE_ADD, 0, false )
-    if ( Trig_Cinematic_Intro_Func011001() ) then
+    call PolledWait( 5.50 )
+    if ( Trig_Cinematic_Intro_Func010001() ) then
         return
     else
         call DoNothing(  )
     endif
-    call PolledWait( 1.50 )
+    call CinematicFadeBJ( bj_CINEFADETYPE_FADEOUT, 2, "ReplaceableTextures\\CameraMasks\\Black_mask.blp", 0, 0, 0, 0 )
+    call PolledWait( 2.00 )
     if ( Trig_Cinematic_Intro_Func013001() ) then
         return
     else
         call DoNothing(  )
     endif
     call ForForce( GetPlayersAll(), function Trig_Cinematic_Intro_Func014A )
-    if ( Trig_Cinematic_Intro_Func015001() ) then
-        return
-    else
-        call DoNothing(  )
-    endif
+    call CinematicFadeBJ( bj_CINEFADETYPE_FADEIN, 2, "ReplaceableTextures\\CameraMasks\\Black_mask.blp", 0, 0, 0, 0 )
     call PolledWait( 2.00 )
     if ( Trig_Cinematic_Intro_Func017001() ) then
         return
     else
         call DoNothing(  )
     endif
-    call ForForce( GetPlayersAll(), function Trig_Cinematic_Intro_Func018A )
+    call TransmissionFromUnitWithNameBJ( GetPlayersAll(), gg_unit_h003_0080, "TRIGSTR_113", null, "TRIGSTR_114", bj_TIMETYPE_ADD, 0, false )
     if ( Trig_Cinematic_Intro_Func019001() ) then
         return
     else
         call DoNothing(  )
     endif
-    call PolledWait( 2.00 )
+    call PolledWait( 1.50 )
     if ( Trig_Cinematic_Intro_Func021001() ) then
         return
     else
@@ -1590,8 +1638,32 @@ function Trig_Cinematic_Intro_Actions takes nothing returns nothing
     else
         call DoNothing(  )
     endif
-    call PolledWait( 1.50 )
+    call PolledWait( 2.00 )
     if ( Trig_Cinematic_Intro_Func025001() ) then
+        return
+    else
+        call DoNothing(  )
+    endif
+    call ForForce( GetPlayersAll(), function Trig_Cinematic_Intro_Func026A )
+    if ( Trig_Cinematic_Intro_Func027001() ) then
+        return
+    else
+        call DoNothing(  )
+    endif
+    call PolledWait( 2.00 )
+    if ( Trig_Cinematic_Intro_Func029001() ) then
+        return
+    else
+        call DoNothing(  )
+    endif
+    call ForForce( GetPlayersAll(), function Trig_Cinematic_Intro_Func030A )
+    if ( Trig_Cinematic_Intro_Func031001() ) then
+        return
+    else
+        call DoNothing(  )
+    endif
+    call PolledWait( 1.50 )
+    if ( Trig_Cinematic_Intro_Func033001() ) then
         return
     else
         call DoNothing(  )
@@ -1645,7 +1717,7 @@ function Trig_Cinematic_Intro_End_Actions takes nothing returns nothing
     call DisableTrigger( gg_trg_Cinematic_Skip )
     // End
     call CinematicModeBJ( false, GetPlayersAll() )
-    call ResetTerrainFogBJ(  )
+    call SetTerrainFogExBJ( 0, 0.00, 4000.00, 0.50, 50.00, 50.00, 50.00 )
     call ForForce( GetPlayersAll(), function Trig_Cinematic_Intro_End_Func005A )
     call CinematicFadeBJ( bj_CINEFADETYPE_FADEIN, 2, "ReplaceableTextures\\CameraMasks\\Black_mask.blp", 0, 0, 0, 0 )
     call PolledWait( 2 )
@@ -1775,8 +1847,18 @@ endfunction
 //
 // Default melee game initialization for all players
 //===========================================================================
+function Trig_Initialization_Func012Func001Func001C takes nothing returns boolean
+    if ( ( GetPlayerSlotState(GetEnumPlayer()) == PLAYER_SLOT_STATE_EMPTY ) ) then
+        return true
+    endif
+    if ( ( GetPlayerController(GetEnumPlayer()) != MAP_CONTROL_USER ) ) then
+        return true
+    endif
+    return false
+endfunction
+
 function Trig_Initialization_Func012Func001C takes nothing returns boolean
-    if ( not ( GetPlayerController(GetEnumPlayer()) != MAP_CONTROL_USER ) ) then
+    if ( not Trig_Initialization_Func012Func001Func001C() ) then
         return false
     endif
     return true
@@ -1790,8 +1872,18 @@ function Trig_Initialization_Func012A takes nothing returns nothing
     endif
 endfunction
 
+function Trig_Initialization_Func013Func001Func003C takes nothing returns boolean
+    if ( ( GetPlayerSlotState(GetEnumPlayer()) == PLAYER_SLOT_STATE_EMPTY ) ) then
+        return true
+    endif
+    if ( ( GetPlayerController(GetEnumPlayer()) != MAP_CONTROL_USER ) ) then
+        return true
+    endif
+    return false
+endfunction
+
 function Trig_Initialization_Func013Func001C takes nothing returns boolean
-    if ( not ( GetPlayerController(GetEnumPlayer()) != MAP_CONTROL_USER ) ) then
+    if ( not Trig_Initialization_Func013Func001Func003C() ) then
         return false
     endif
     return true
@@ -1973,9 +2065,20 @@ endfunction
 //===========================================================================
 // Trigger: Lightning Effect
 //===========================================================================
+function Trig_Lightning_Effect_Func003C takes nothing returns boolean
+    if ( not ( GetRandomInt(1, 2) == 1 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
 function Trig_Lightning_Effect_Actions takes nothing returns nothing
     call CinematicFadeBJ( bj_CINEFADETYPE_FADEOUTIN, 0.30, "ReplaceableTextures\\CameraMasks\\White_mask.blp", 100.00, 100.00, 100.00, 0 )
-    call PlaySoundBJ( gg_snd_LightningBolt1 )
+    if ( Trig_Lightning_Effect_Func003C() ) then
+        call PlaySoundBJ( gg_snd_LightningBolt1 )
+    else
+        call PlaySoundBJ( gg_snd_RollingThunder1 )
+    endif
     call ConditionalTriggerExecute( gg_trg_Lightning_Start )
 endfunction
 
@@ -2050,7 +2153,7 @@ function InitCustomPlayerSlots takes nothing returns nothing
     call SetPlayerColor( Player(0), ConvertPlayerColor(0) )
     call SetPlayerRacePreference( Player(0), RACE_PREF_HUMAN )
     call SetPlayerRaceSelectable( Player(0), false )
-    call SetPlayerController( Player(0), MAP_CONTROL_USER )
+    call SetPlayerController( Player(0), MAP_CONTROL_COMPUTER )
 
     // Player 1
     call SetPlayerStartLocation( Player(1), 1 )
@@ -2058,7 +2161,7 @@ function InitCustomPlayerSlots takes nothing returns nothing
     call SetPlayerColor( Player(1), ConvertPlayerColor(1) )
     call SetPlayerRacePreference( Player(1), RACE_PREF_HUMAN )
     call SetPlayerRaceSelectable( Player(1), false )
-    call SetPlayerController( Player(1), MAP_CONTROL_USER )
+    call SetPlayerController( Player(1), MAP_CONTROL_COMPUTER )
 
     // Player 2
     call SetPlayerStartLocation( Player(2), 2 )
@@ -2066,7 +2169,7 @@ function InitCustomPlayerSlots takes nothing returns nothing
     call SetPlayerColor( Player(2), ConvertPlayerColor(2) )
     call SetPlayerRacePreference( Player(2), RACE_PREF_HUMAN )
     call SetPlayerRaceSelectable( Player(2), false )
-    call SetPlayerController( Player(2), MAP_CONTROL_USER )
+    call SetPlayerController( Player(2), MAP_CONTROL_COMPUTER )
 
     // Player 3
     call SetPlayerStartLocation( Player(3), 3 )
@@ -2147,9 +2250,8 @@ endfunction
 
 function InitAllyPriorities takes nothing returns nothing
 
-    call SetStartLocPrioCount( 0, 2 )
+    call SetStartLocPrioCount( 0, 1 )
     call SetStartLocPrio( 0, 0, 1, MAP_LOC_PRIO_HIGH )
-    call SetStartLocPrio( 0, 1, 3, MAP_LOC_PRIO_LOW )
 
     call SetStartLocPrioCount( 1, 3 )
     call SetStartLocPrio( 1, 0, 0, MAP_LOC_PRIO_HIGH )
@@ -2161,17 +2263,15 @@ function InitAllyPriorities takes nothing returns nothing
     call SetStartLocPrio( 2, 1, 4, MAP_LOC_PRIO_HIGH )
     call SetStartLocPrio( 2, 2, 5, MAP_LOC_PRIO_LOW )
 
-    call SetStartLocPrioCount( 3, 3 )
-    call SetStartLocPrio( 3, 0, 0, MAP_LOC_PRIO_HIGH )
-    call SetStartLocPrio( 3, 1, 1, MAP_LOC_PRIO_LOW )
-    call SetStartLocPrio( 3, 2, 4, MAP_LOC_PRIO_LOW )
+    call SetStartLocPrioCount( 3, 1 )
+    call SetStartLocPrio( 3, 0, 4, MAP_LOC_PRIO_HIGH )
 
-    call SetStartLocPrioCount( 4, 2 )
-    call SetStartLocPrio( 4, 0, 2, MAP_LOC_PRIO_HIGH )
-    call SetStartLocPrio( 4, 1, 3, MAP_LOC_PRIO_LOW )
+    call SetStartLocPrioCount( 4, 1 )
+    call SetStartLocPrio( 4, 0, 3, MAP_LOC_PRIO_HIGH )
 
-    call SetStartLocPrioCount( 5, 1 )
-    call SetStartLocPrio( 5, 0, 1, MAP_LOC_PRIO_HIGH )
+    call SetStartLocPrioCount( 5, 2 )
+    call SetStartLocPrio( 5, 0, 3, MAP_LOC_PRIO_HIGH )
+    call SetStartLocPrio( 5, 1, 4, MAP_LOC_PRIO_HIGH )
 endfunction
 
 //***************************************************************************
@@ -2185,7 +2285,7 @@ function main takes nothing returns nothing
     local weathereffect we
     call SetCameraBounds( -7424.0 + GetCameraMargin(CAMERA_MARGIN_LEFT), -7680.0 + GetCameraMargin(CAMERA_MARGIN_BOTTOM), 7424.0 - GetCameraMargin(CAMERA_MARGIN_RIGHT), 7168.0 - GetCameraMargin(CAMERA_MARGIN_TOP), -7424.0 + GetCameraMargin(CAMERA_MARGIN_LEFT), 7168.0 - GetCameraMargin(CAMERA_MARGIN_TOP), 7424.0 - GetCameraMargin(CAMERA_MARGIN_RIGHT), -7680.0 + GetCameraMargin(CAMERA_MARGIN_BOTTOM) )
     call SetDayNightModels( "Environment\\DNC\\DNCAshenvale\\DNCAshenvaleTerrain\\DNCAshenvaleTerrain.mdl", "Environment\\DNC\\DNCAshenvale\\DNCAshenvaleUnit\\DNCAshenvaleUnit.mdl" )
-    call SetTerrainFogEx( 0, 3000.0, 5000.0, 0.000, 0.502, 0.502, 0.502 )
+    call SetTerrainFogEx( 0, 0.0, 4000.0, 0.500, 0.502, 0.502, 0.502 )
     set we = AddWeatherEffect( Rect(-8192.0,-8192.0,8192.0,8192.0), 'RLhr' )
     call EnableWeatherEffect( we, true )
     call NewSoundEnvironment( "Default" )

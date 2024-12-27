@@ -94,6 +94,7 @@ function main takes nothing returns nothing
     call SetBuildUpgr(1, UPG_ROMAN_SUNDERING_BLADES)
     call SetBuildUpgr(1, UPG_ROMAN_PILUM)
     call SetBuildUpgr(1, UPG_ROMAN_VORPAL_BLADES)
+    call SetBuildUpgr(1, UPG_ROMAN_EVASION)
 
     loop
         call InitAssaultGroup()

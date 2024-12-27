@@ -77,6 +77,7 @@ function main takes nothing returns nothing
 
     call SetBuildUnitEx( 1,1,1, GERMANIC_TIER_3    )
     call SetBuildUnitEx( 1,1,1, GERMANIC_STABLES    )
+    call SetBuildUnitEx( 1,1,1, GERMANIC_RITUAL_SITE    )
     call SetBuildUpgr(3, UPG_GERMANIC_MELEE)
     call SetBuildUpgr(3, UPG_GERMANIC_ARMOR)
     call SetBuildUpgr(3, UPG_GERMANIC_RANGED)
@@ -100,6 +101,7 @@ function main takes nothing returns nothing
         call CampaignAttackerEx(1, 2, 3, GERMANIC_DRUID)
         call CampaignAttackerEx(1, 2, 3, GERMANIC_SHAMAN)
         call CampaignAttackerEx(1, 2, 3, GERMANIC_SEER)
+        call CampaignAttackerEx(1, 2, 3, GERMANIC_BERSKER)
         call Sleep(M1) // Waits 1 minute before attacking
         call LaunchAttack()
     endloop

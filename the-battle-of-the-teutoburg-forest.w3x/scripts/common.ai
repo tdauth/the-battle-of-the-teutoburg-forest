@@ -689,6 +689,7 @@ globals
     constant integer GERMANIC_STABLES = 'o007'
     constant integer GERMANIC_SHRINE = 'o00C'
     constant integer GERMANIC_SHOP = 'o00D'
+    constant integer GERMANIC_RITUAL_SITE = 'o00J'
     constant integer GERMAINC_WORKER    = 'o003'
     constant integer GERMANIC_ARCHER    = 'n000'
     constant integer GERMANIC_WARRIOR   = 'n002'
@@ -697,6 +698,7 @@ globals
     constant integer GERMANIC_SHAMAN     = 'o00E'
     constant integer GERMANIC_SEER     = 'h00B'
     constant integer GERMANIC_JAVELIN   = 'n003'
+    constant integer GERMANIC_BERSKER = 'o00K'
     constant integer UPG_GERMANIC_BACKPACK = 'R006'
     constant integer UPG_GERMANIC_STRENGTH = 'R00A'
     constant integer UPG_GERMANIC_DRUID = 'R001'
@@ -758,6 +760,7 @@ globals
     constant integer UPG_ROMAN_SUNDERING_BLADES = 'R00S'
     constant integer UPG_ROMAN_PILUM = 'R003'
     constant integer UPG_ROMAN_VORPAL_BLADES = 'R00J'
+    constant integer UPG_ROMAN_EVASION = 'R00U'
 
     //--------------------------------------------------------------------
 
