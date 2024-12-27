@@ -105,6 +105,8 @@ globals
     destructable            gg_dest_LOcg_12552         = null
     destructable            gg_dest_LOcg_12553         = null
     destructable            gg_dest_LOcg_12554         = null
+    camerasetup             gg_cam_Camera_006          = null
+    camerasetup             gg_cam_Camera_007          = null
 endglobals
 
 function InitGlobals takes nothing returns nothing
@@ -372,6 +374,111 @@ function Unit000292_DropItems takes nothing returns nothing
     call DestroyTrigger(GetTriggeringTrigger())
 endfunction
 
+function Unit000293_DropItems takes nothing returns nothing
+    local widget  trigWidget = null
+    local unit    trigUnit   = null
+    local integer itemID     = 0
+    local boolean canDrop    = true
+
+    set trigWidget = bj_lastDyingWidget
+    if (trigWidget == null) then
+        set trigUnit = GetTriggerUnit()
+    endif
+
+    if (trigUnit != null) then
+        set canDrop = not IsUnitHidden(trigUnit)
+        if (canDrop and GetChangingUnit() != null) then
+            set canDrop = (GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE))
+        endif
+    endif
+
+    if (canDrop) then
+        // Item set 0
+        call RandomDistReset(  )
+        call RandomDistAddItem( 'rreb', 100 )
+        set itemID = RandomDistChoose(  )
+        if (trigUnit != null) then
+            call UnitDropItem( trigUnit, itemID )
+        else
+            call WidgetDropItem( trigWidget, itemID )
+        endif
+
+    endif
+
+    set bj_lastDyingWidget = null
+    call DestroyTrigger(GetTriggeringTrigger())
+endfunction
+
+function Unit000294_DropItems takes nothing returns nothing
+    local widget  trigWidget = null
+    local unit    trigUnit   = null
+    local integer itemID     = 0
+    local boolean canDrop    = true
+
+    set trigWidget = bj_lastDyingWidget
+    if (trigWidget == null) then
+        set trigUnit = GetTriggerUnit()
+    endif
+
+    if (trigUnit != null) then
+        set canDrop = not IsUnitHidden(trigUnit)
+        if (canDrop and GetChangingUnit() != null) then
+            set canDrop = (GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE))
+        endif
+    endif
+
+    if (canDrop) then
+        // Item set 0
+        call RandomDistReset(  )
+        call RandomDistAddItem( 'rreb', 100 )
+        set itemID = RandomDistChoose(  )
+        if (trigUnit != null) then
+            call UnitDropItem( trigUnit, itemID )
+        else
+            call WidgetDropItem( trigWidget, itemID )
+        endif
+
+    endif
+
+    set bj_lastDyingWidget = null
+    call DestroyTrigger(GetTriggeringTrigger())
+endfunction
+
+function Unit000295_DropItems takes nothing returns nothing
+    local widget  trigWidget = null
+    local unit    trigUnit   = null
+    local integer itemID     = 0
+    local boolean canDrop    = true
+
+    set trigWidget = bj_lastDyingWidget
+    if (trigWidget == null) then
+        set trigUnit = GetTriggerUnit()
+    endif
+
+    if (trigUnit != null) then
+        set canDrop = not IsUnitHidden(trigUnit)
+        if (canDrop and GetChangingUnit() != null) then
+            set canDrop = (GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE))
+        endif
+    endif
+
+    if (canDrop) then
+        // Item set 0
+        call RandomDistReset(  )
+        call RandomDistAddItem( 'rreb', 100 )
+        set itemID = RandomDistChoose(  )
+        if (trigUnit != null) then
+            call UnitDropItem( trigUnit, itemID )
+        else
+            call WidgetDropItem( trigWidget, itemID )
+        endif
+
+    endif
+
+    set bj_lastDyingWidget = null
+    call DestroyTrigger(GetTriggeringTrigger())
+endfunction
+
 
 //***************************************************************************
 //*
@@ -611,6 +718,19 @@ function CreateAllDestructables takes nothing returns nothing
     call TriggerRegisterDeathEvent( t, d )
     call TriggerAddAction( t, function SaveDyingWidget )
     call TriggerAddAction( t, function Doodad012550_DropItems )
+endfunction
+
+//***************************************************************************
+//*
+//*  Items
+//*
+//***************************************************************************
+
+function CreateAllItems takes nothing returns nothing
+    local integer itemID
+
+    call BlzCreateItemWithSkin( 'rhe2', 7261.7, 2550.5, 'rhe2' )
+    call BlzCreateItemWithSkin( 'rman', 7249.2, 2283.7, 'rman' )
 endfunction
 
 //***************************************************************************
@@ -870,7 +990,7 @@ function CreateUnitsForPlayer3 takes nothing returns nothing
     local trigger t
     local real life
 
-    set gg_unit_O001_0002 = BlzCreateUnitWithSkin( p, 'O001', -4505.1, -5128.6, 90.849, 'O001' )
+    set gg_unit_O001_0002 = BlzCreateUnitWithSkin( p, 'O001', -4398.3, -5128.9, 90.849, 'O001' )
     set gg_unit_o003_0046 = BlzCreateUnitWithSkin( p, 'o003', -4795.1, -6454.7, 270.000, 'o003' )
     set gg_unit_o003_0047 = BlzCreateUnitWithSkin( p, 'o003', -4651.0, -6459.0, 270.000, 'o003' )
     set gg_unit_o003_0048 = BlzCreateUnitWithSkin( p, 'o003', -4536.8, -6455.2, 270.000, 'o003' )
@@ -894,6 +1014,9 @@ function CreateUnitsForPlayer3 takes nothing returns nothing
     set gg_unit_o003_0257 = BlzCreateUnitWithSkin( p, 'o003', -3221.3, -7223.1, 270.000, 'o003' )
     set gg_unit_o003_0258 = BlzCreateUnitWithSkin( p, 'o003', -3097.9, -7229.7, 270.000, 'o003' )
     set gg_unit_o003_0259 = BlzCreateUnitWithSkin( p, 'o003', -2975.8, -7229.6, 270.000, 'o003' )
+    set u = BlzCreateUnitWithSkin( p, 'o004', -5039.0, -5305.4, 90.000, 'o004' )
+    set u = BlzCreateUnitWithSkin( p, 'n000', -4550.8, -5050.5, 90.000, 'n000' )
+    set u = BlzCreateUnitWithSkin( p, 'n002', -4537.4, -4936.9, 90.000, 'n002' )
 endfunction
 
 //===========================================================================
@@ -953,6 +1076,9 @@ function CreateUnitsForPlayer4 takes nothing returns nothing
     set u = BlzCreateUnitWithSkin( p, 'o003', 4110.9, -6365.4, 270.000, 'o003' )
     set u = BlzCreateUnitWithSkin( p, 'o003', 4231.4, -6363.9, 270.000, 'o003' )
     set u = BlzCreateUnitWithSkin( p, 'o003', 4350.9, -6360.8, 270.000, 'o003' )
+    set u = BlzCreateUnitWithSkin( p, 'o004', 2136.0, -5409.5, 90.000, 'o004' )
+    set u = BlzCreateUnitWithSkin( p, 'n000', 2114.2, -5154.3, 90.000, 'n000' )
+    set u = BlzCreateUnitWithSkin( p, 'n002', 2110.9, -5007.0, 90.000, 'n002' )
 endfunction
 
 //===========================================================================
@@ -994,7 +1120,7 @@ function CreateUnitsForPlayer5 takes nothing returns nothing
     set u = BlzCreateUnitWithSkin( p, 'o003', 186.9, 6630.2, 117.524, 'o003' )
     set u = BlzCreateUnitWithSkin( p, 'o00E', -509.8, 5919.2, 248.496, 'o00E' )
     set u = BlzCreateUnitWithSkin( p, 'o00A', -650.5, 5819.9, 326.388, 'o00A' )
-    set u = BlzCreateUnitWithSkin( p, 'n002', -684.3, 5407.6, 270.000, 'n002' )
+    set u = BlzCreateUnitWithSkin( p, 'n002', -666.9, 5407.7, 270.000, 'n002' )
     set u = BlzCreateUnitWithSkin( p, 'n002', -549.5, 5408.4, 270.000, 'n002' )
     set u = BlzCreateUnitWithSkin( p, 'n002', -411.4, 5401.9, 270.000, 'n002' )
     set u = BlzCreateUnitWithSkin( p, 'o004', -514.7, 4992.2, 270.000, 'o004' )
@@ -1011,6 +1137,9 @@ function CreateUnitsForPlayer5 takes nothing returns nothing
     set u = BlzCreateUnitWithSkin( p, 'o003', 1028.0, 6452.9, 67.524, 'o003' )
     set u = BlzCreateUnitWithSkin( p, 'o003', 1114.8, 6449.0, 87.965, 'o003' )
     set u = BlzCreateUnitWithSkin( p, 'o003', 1205.0, 6449.1, 117.524, 'o003' )
+    set u = BlzCreateUnitWithSkin( p, 'o004', -749.0, 4997.9, 270.000, 'o004' )
+    set u = BlzCreateUnitWithSkin( p, 'n000', -777.0, 5268.2, 270.000, 'n000' )
+    set u = BlzCreateUnitWithSkin( p, 'n002', -791.0, 5399.0, 270.000, 'n002' )
 endfunction
 
 //===========================================================================
@@ -1074,9 +1203,21 @@ function CreateNeutralHostile takes nothing returns nothing
     call TriggerRegisterUnitEvent( t, u, EVENT_UNIT_DEATH )
     call TriggerRegisterUnitEvent( t, u, EVENT_UNIT_CHANGE_OWNER )
     call TriggerAddAction( t, function Unit000292_DropItems )
-    set u = BlzCreateUnitWithSkin( p, 'n00C', 7023.6, 2167.1, 201.412, 'n00C' )
-    set u = BlzCreateUnitWithSkin( p, 'n00C', 6928.1, 2678.8, 221.188, 'n00C' )
-    set u = BlzCreateUnitWithSkin( p, 'n00C', 6799.4, 2374.0, 201.412, 'n00C' )
+    set u = BlzCreateUnitWithSkin( p, 'n00C', 7023.6, 2167.1, 201.410, 'n00C' )
+    set t = CreateTrigger(  )
+    call TriggerRegisterUnitEvent( t, u, EVENT_UNIT_DEATH )
+    call TriggerRegisterUnitEvent( t, u, EVENT_UNIT_CHANGE_OWNER )
+    call TriggerAddAction( t, function Unit000293_DropItems )
+    set u = BlzCreateUnitWithSkin( p, 'n00C', 6928.1, 2678.8, 221.190, 'n00C' )
+    set t = CreateTrigger(  )
+    call TriggerRegisterUnitEvent( t, u, EVENT_UNIT_DEATH )
+    call TriggerRegisterUnitEvent( t, u, EVENT_UNIT_CHANGE_OWNER )
+    call TriggerAddAction( t, function Unit000294_DropItems )
+    set u = BlzCreateUnitWithSkin( p, 'n00C', 6799.4, 2374.0, 201.410, 'n00C' )
+    set t = CreateTrigger(  )
+    call TriggerRegisterUnitEvent( t, u, EVENT_UNIT_DEATH )
+    call TriggerRegisterUnitEvent( t, u, EVENT_UNIT_CHANGE_OWNER )
+    call TriggerAddAction( t, function Unit000295_DropItems )
     set u = BlzCreateUnitWithSkin( p, 'n00H', 4024.6, 1828.1, 122.534, 'n00H' )
     set u = BlzCreateUnitWithSkin( p, 'n00H', 4078.9, 1718.3, 265.416, 'n00H' )
     set u = BlzCreateUnitWithSkin( p, 'n00I', 3970.7, 1746.7, 214.712, 'n00I' )
@@ -1269,6 +1410,34 @@ function CreateCameras takes nothing returns nothing
     call CameraSetupSetField( gg_cam_Camera_005, CAMERA_FIELD_LOCAL_ROLL, 0.0, 0.0 )
     call CameraSetupSetDestPosition( gg_cam_Camera_005, 5034.5, -1000.9, 0.0 )
 
+    set gg_cam_Camera_006 = CreateCameraSetup(  )
+    call CameraSetupSetField( gg_cam_Camera_006, CAMERA_FIELD_ZOFFSET, 0.0, 0.0 )
+    call CameraSetupSetField( gg_cam_Camera_006, CAMERA_FIELD_ROTATION, 122.6, 0.0 )
+    call CameraSetupSetField( gg_cam_Camera_006, CAMERA_FIELD_ANGLE_OF_ATTACK, 352.3, 0.0 )
+    call CameraSetupSetField( gg_cam_Camera_006, CAMERA_FIELD_TARGET_DISTANCE, 718.2, 0.0 )
+    call CameraSetupSetField( gg_cam_Camera_006, CAMERA_FIELD_ROLL, 0.0, 0.0 )
+    call CameraSetupSetField( gg_cam_Camera_006, CAMERA_FIELD_FIELD_OF_VIEW, 70.0, 0.0 )
+    call CameraSetupSetField( gg_cam_Camera_006, CAMERA_FIELD_FARZ, 8857.8, 0.0 )
+    call CameraSetupSetField( gg_cam_Camera_006, CAMERA_FIELD_NEARZ, 16.0, 0.0 )
+    call CameraSetupSetField( gg_cam_Camera_006, CAMERA_FIELD_LOCAL_PITCH, 0.0, 0.0 )
+    call CameraSetupSetField( gg_cam_Camera_006, CAMERA_FIELD_LOCAL_YAW, 0.0, 0.0 )
+    call CameraSetupSetField( gg_cam_Camera_006, CAMERA_FIELD_LOCAL_ROLL, 0.0, 0.0 )
+    call CameraSetupSetDestPosition( gg_cam_Camera_006, -5430.7, -2179.8, 0.0 )
+
+    set gg_cam_Camera_007 = CreateCameraSetup(  )
+    call CameraSetupSetField( gg_cam_Camera_007, CAMERA_FIELD_ZOFFSET, 0.0, 0.0 )
+    call CameraSetupSetField( gg_cam_Camera_007, CAMERA_FIELD_ROTATION, 87.5, 0.0 )
+    call CameraSetupSetField( gg_cam_Camera_007, CAMERA_FIELD_ANGLE_OF_ATTACK, 351.4, 0.0 )
+    call CameraSetupSetField( gg_cam_Camera_007, CAMERA_FIELD_TARGET_DISTANCE, 718.2, 0.0 )
+    call CameraSetupSetField( gg_cam_Camera_007, CAMERA_FIELD_ROLL, 0.0, 0.0 )
+    call CameraSetupSetField( gg_cam_Camera_007, CAMERA_FIELD_FIELD_OF_VIEW, 70.0, 0.0 )
+    call CameraSetupSetField( gg_cam_Camera_007, CAMERA_FIELD_FARZ, 8857.8, 0.0 )
+    call CameraSetupSetField( gg_cam_Camera_007, CAMERA_FIELD_NEARZ, 16.0, 0.0 )
+    call CameraSetupSetField( gg_cam_Camera_007, CAMERA_FIELD_LOCAL_PITCH, 0.0, 0.0 )
+    call CameraSetupSetField( gg_cam_Camera_007, CAMERA_FIELD_LOCAL_YAW, 0.0, 0.0 )
+    call CameraSetupSetField( gg_cam_Camera_007, CAMERA_FIELD_LOCAL_ROLL, 0.0, 0.0 )
+    call CameraSetupSetDestPosition( gg_cam_Camera_007, -5430.7, -2179.8, 0.0 )
+
 endfunction
 
 //***************************************************************************
@@ -1301,121 +1470,128 @@ endfunction
 //===========================================================================
 // Trigger: Cinematic Intro
 //===========================================================================
-function Trig_Cinematic_Intro_Func004A takes nothing returns nothing
+function Trig_Cinematic_Intro_Func005A takes nothing returns nothing
+    call CameraSetupApplyForPlayer( true, gg_cam_Camera_006, GetEnumPlayer(), 0.00 )
+    call CameraSetupApplyForPlayer( true, gg_cam_Camera_007, GetEnumPlayer(), 4.00 )
+endfunction
+
+function Trig_Cinematic_Intro_Func006001 takes nothing returns boolean
+    return ( udg_CinematicSkip == true )
+endfunction
+
+function Trig_Cinematic_Intro_Func008001 takes nothing returns boolean
+    return ( udg_CinematicSkip == true )
+endfunction
+
+function Trig_Cinematic_Intro_Func009A takes nothing returns nothing
     call CameraSetupApplyForPlayer( true, gg_cam_Camera_002, GetEnumPlayer(), 4.00 )
-endfunction
-
-function Trig_Cinematic_Intro_Func005001 takes nothing returns boolean
-    return ( udg_CinematicSkip == true )
-endfunction
-
-function Trig_Cinematic_Intro_Func007001 takes nothing returns boolean
-    return ( udg_CinematicSkip == true )
-endfunction
-
-function Trig_Cinematic_Intro_Func009001 takes nothing returns boolean
-    return ( udg_CinematicSkip == true )
 endfunction
 
 function Trig_Cinematic_Intro_Func011001 takes nothing returns boolean
     return ( udg_CinematicSkip == true )
 endfunction
 
-function Trig_Cinematic_Intro_Func012A takes nothing returns nothing
-    call CameraSetupApplyForPlayer( true, gg_cam_Camera_003, GetEnumPlayer(), 4.00 )
-endfunction
-
 function Trig_Cinematic_Intro_Func013001 takes nothing returns boolean
     return ( udg_CinematicSkip == true )
+endfunction
+
+function Trig_Cinematic_Intro_Func014A takes nothing returns nothing
+    call CameraSetupApplyForPlayer( true, gg_cam_Camera_003, GetEnumPlayer(), 4.00 )
 endfunction
 
 function Trig_Cinematic_Intro_Func015001 takes nothing returns boolean
     return ( udg_CinematicSkip == true )
 endfunction
 
-function Trig_Cinematic_Intro_Func016A takes nothing returns nothing
-    call CameraSetupApplyForPlayer( true, gg_cam_Camera_004, GetEnumPlayer(), 4.00 )
-endfunction
-
 function Trig_Cinematic_Intro_Func017001 takes nothing returns boolean
     return ( udg_CinematicSkip == true )
+endfunction
+
+function Trig_Cinematic_Intro_Func018A takes nothing returns nothing
+    call CameraSetupApplyForPlayer( true, gg_cam_Camera_004, GetEnumPlayer(), 4.00 )
 endfunction
 
 function Trig_Cinematic_Intro_Func019001 takes nothing returns boolean
     return ( udg_CinematicSkip == true )
 endfunction
 
-function Trig_Cinematic_Intro_Func020A takes nothing returns nothing
-    call CameraSetupApplyForPlayer( true, gg_cam_Camera_005, GetEnumPlayer(), 3.00 )
-endfunction
-
 function Trig_Cinematic_Intro_Func021001 takes nothing returns boolean
     return ( udg_CinematicSkip == true )
+endfunction
+
+function Trig_Cinematic_Intro_Func022A takes nothing returns nothing
+    call CameraSetupApplyForPlayer( true, gg_cam_Camera_005, GetEnumPlayer(), 3.00 )
 endfunction
 
 function Trig_Cinematic_Intro_Func023001 takes nothing returns boolean
     return ( udg_CinematicSkip == true )
 endfunction
 
+function Trig_Cinematic_Intro_Func025001 takes nothing returns boolean
+    return ( udg_CinematicSkip == true )
+endfunction
+
 function Trig_Cinematic_Intro_Actions takes nothing returns nothing
     call PauseAllUnitsBJ( true )
     call PlayThematicMusicBJ( "TragicConfrontation" )
-    call ForForce( GetPlayersAll(), function Trig_Cinematic_Intro_Func004A )
-    if ( Trig_Cinematic_Intro_Func005001() ) then
+    call TransmissionFromUnitWithNameBJ( GetPlayersAll(), gg_unit_O001_0002, "TRIGSTR_374", null, "TRIGSTR_375", bj_TIMETYPE_ADD, 0, false )
+    call ForForce( GetPlayersAll(), function Trig_Cinematic_Intro_Func005A )
+    if ( Trig_Cinematic_Intro_Func006001() ) then
         return
     else
         call DoNothing(  )
     endif
-    call PolledWait( 1.50 )
-    if ( Trig_Cinematic_Intro_Func007001() ) then
+    call PolledWait( 3.50 )
+    if ( Trig_Cinematic_Intro_Func008001() ) then
         return
     else
         call DoNothing(  )
     endif
+    call ForForce( GetPlayersAll(), function Trig_Cinematic_Intro_Func009A )
     call TransmissionFromUnitWithNameBJ( GetPlayersAll(), gg_unit_h003_0080, "TRIGSTR_113", null, "TRIGSTR_114", bj_TIMETYPE_ADD, 0, false )
-    if ( Trig_Cinematic_Intro_Func009001() ) then
-        return
-    else
-        call DoNothing(  )
-    endif
-    call PolledWait( 1.50 )
     if ( Trig_Cinematic_Intro_Func011001() ) then
         return
     else
         call DoNothing(  )
     endif
-    call ForForce( GetPlayersAll(), function Trig_Cinematic_Intro_Func012A )
+    call PolledWait( 1.50 )
     if ( Trig_Cinematic_Intro_Func013001() ) then
         return
     else
         call DoNothing(  )
     endif
-    call PolledWait( 2.00 )
+    call ForForce( GetPlayersAll(), function Trig_Cinematic_Intro_Func014A )
     if ( Trig_Cinematic_Intro_Func015001() ) then
         return
     else
         call DoNothing(  )
     endif
-    call ForForce( GetPlayersAll(), function Trig_Cinematic_Intro_Func016A )
+    call PolledWait( 2.00 )
     if ( Trig_Cinematic_Intro_Func017001() ) then
         return
     else
         call DoNothing(  )
     endif
-    call PolledWait( 2.00 )
+    call ForForce( GetPlayersAll(), function Trig_Cinematic_Intro_Func018A )
     if ( Trig_Cinematic_Intro_Func019001() ) then
         return
     else
         call DoNothing(  )
     endif
-    call ForForce( GetPlayersAll(), function Trig_Cinematic_Intro_Func020A )
+    call PolledWait( 2.00 )
     if ( Trig_Cinematic_Intro_Func021001() ) then
         return
     else
         call DoNothing(  )
     endif
-    call PolledWait( 1.50 )
+    call ForForce( GetPlayersAll(), function Trig_Cinematic_Intro_Func022A )
     if ( Trig_Cinematic_Intro_Func023001() ) then
+        return
+    else
+        call DoNothing(  )
+    endif
+    call PolledWait( 1.50 )
+    if ( Trig_Cinematic_Intro_Func025001() ) then
         return
     else
         call DoNothing(  )
@@ -2011,6 +2187,7 @@ function main takes nothing returns nothing
     call CreateRegions(  )
     call CreateCameras(  )
     call CreateAllDestructables(  )
+    call CreateAllItems(  )
     call CreateAllUnits(  )
     call InitBlizzard(  )
     call InitGlobals(  )

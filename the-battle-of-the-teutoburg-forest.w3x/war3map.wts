@@ -118,7 +118,7 @@ Gives extra damage to the attacks of nearby friendly units.
 }
 
 STRING 65
-// Abilities: A002 (Command Aura), Researchhotkey (Hotkey - Learn)
+// Units: O001 (Chieftain), Hotkey (Hotkey)
 {
 A
 }
@@ -206,7 +206,7 @@ Revive Varus
 }
 
 STRING 90
-// Units: O001 (Blademaster), Propernames (Proper Names)
+// Units: O001 (Chieftain), Propernames (Proper Names)
 {
 Arminius
 }
@@ -419,18 +419,6 @@ STRING 138
 // Units: h00I (Cart), Tip (Tooltip - Basic)
 {
 Train Cart
-}
-
-STRING 140
-// Units: h00A (Lumber Mill), Name (Name)
-{
-Lumber Mill
-}
-
-STRING 141
-// Units: h00A (Lumber Mill), Tip (Tooltip - Basic)
-{
-Build Lumber Mill
 }
 
 STRING 142
@@ -1006,7 +994,7 @@ Aqueduct
 }
 
 STRING 240
-// Upgrades: R00F (Magic Sentry), Hotkey (Hotkey)
+// Abilities: A002 (Command Aura), Researchhotkey (Hotkey - Learn)
 {
 A
 }
@@ -1144,7 +1132,8 @@ STRING 262
 
 STRING 263
 {
-A major battle between Germanic tribes and the Roman Empire that took place somewhere near modern Kalkriese from September 8â€“11, 9 AD, when an alliance of Germanic peoples ambushed three Roman legions led by Publius Quinctilius Varus and their auxiliarie
+Discord: https://discord.gg/VBDFBSbQ
+A major battle between Germanic tribes and the Roman Empire.
 }
 
 STRING 264
@@ -1506,14 +1495,8 @@ STRING 328
 Primary structure, used to train Pioneers and receive gathered resources. Can be upgraded to Permanent Castrum and then Legion Castrum to enable the production of additional types of structures and units.
 }
 
-STRING 329
-// Units: h00A (Lumber Mill), Hotkey (Hotkey)
-{
-L
-}
-
 STRING 330
-// Units: h00A (Lumber Mill), Ubertip (Tooltip - Extended)
+// Units: h00A (Storage), Ubertip (Tooltip - Extended)
 {
 Serves as a drop-off point for harvested lumber. |nAlso contains the upgrades for improved armor, weaponry and Masonry.
 }
@@ -1594,5 +1577,197 @@ STRING 343
 // Abilities: A00E (Far Sight), Ubertip (Tooltip - Normal - Extended)
 {
 Reveals anarea for <Afla,Dur1> seconds. |nReveals invisible units.
+}
+
+STRING 344
+{
+Baradé's
+}
+
+STRING 345
+{
+Varus Disaster 1.0
+}
+
+STRING 346
+{
+- Roman Legions: Defeat the Germanic Tribes.
+- Germanic Tribes: Defeat the Roman Legions.
+- Use the waygates.
+- Use the fountains to heal and restore mana.
+- Level your heroes by killing creeps.
+- https://discord.gg/VBDFBSbQ
+}
+
+STRING 347
+// Units: O001 (Chieftain), Name (Name)
+{
+Chieftain
+}
+
+STRING 348
+// Units: O001 (Chieftain), Awakentip (Tooltip - Awaken)
+{
+Revive Arminius
+}
+
+STRING 349
+// Units: O001 (Chieftain), Revivetip (Tooltip - Revive)
+{
+Revive Arminius
+}
+
+STRING 350
+// Units: o00A (Druid), Casterupgradetip (Caster Upgrade Tips)
+{
+- Roar,- Roar|n- Rejuvenation,- Roar|n- Rejuvenation|n- Bear Form
+}
+
+STRING 351
+// Units: o00A (Druid), Ubertip (Tooltip - Extended)
+{
+Supporting spellcaster. Can initially cast Roar, which temporarily increases the damage of allied units. Can also learn Rejuvenation and Bear Form. |n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 352
+// Units: n00F (Pig), Hotkey (Hotkey)
+{
+P
+}
+
+STRING 353
+// Units: n00G (Sheep), Hotkey (Hotkey)
+{
+S
+}
+
+STRING 354
+// Upgrades: R000 (Shaman Adept Training,Shaman Master Training), Ubertip (Tooltip - Extended)
+{
+Increases Shaman mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Summon Eagle.
+}
+
+STRING 355
+// Upgrades: R001 (Witch Doctor Adept Training,Witch Doctor Master Training), Ubertip (Tooltip - Extended)
+{
+Increases Druids' mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Rejuvenation.
+}
+
+STRING 356
+// Upgrades: R001 (Witch Doctor Adept Training,Witch Doctor Master Training), Ubertip (Tooltip - Extended)
+{
+Increases Druids' mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Bear Form.
+}
+
+STRING 357
+// Upgrades: R00E (Spirit Walker Adept Training,Spirit Walker Master Training), Ubertip (Tooltip - Extended)
+{
+Increases Seers' mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Dispel Magic.
+}
+
+STRING 358
+// Upgrades: R00E (Spirit Walker Adept Training,Spirit Walker Master Training), Ubertip (Tooltip - Extended)
+{
+Increases Seers' mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Sacrifice.
+}
+
+STRING 359
+// Upgrades: R00F (Magic Sentry), Hotkey (Hotkey)
+{
+A
+}
+
+STRING 360
+// Upgrades: R00T (Steel Armor,Thorium Armor,Arcanite Armor), Name (Name)
+{
+Horse keeping
+}
+
+STRING 361
+// Upgrades: R00T (Steel Armor,Thorium Armor,Arcanite Armor), Name (Name)
+{
+Improved Horse keeping
+}
+
+STRING 362
+// Upgrades: R00T (Steel Armor,Thorium Armor,Arcanite Armor), Name (Name)
+{
+Advanced Horse keeping
+}
+
+STRING 363
+// Upgrades: R00T (Steel Armor,Thorium Armor,Arcanite Armor), effect1 (Effect 1)
+{
+rmvx
+}
+
+STRING 364
+// Upgrades: R00T (Steel Armor,Thorium Armor,Arcanite Armor), Tip (Tooltip)
+{
+Research Horse keeping
+}
+
+STRING 365
+// Upgrades: R00T (Steel Armor,Thorium Armor,Arcanite Armor), Tip (Tooltip)
+{
+Research Improved Horse keeping
+}
+
+STRING 366
+// Upgrades: R00T (Steel Armor,Thorium Armor,Arcanite Armor), Tip (Tooltip)
+{
+Research Advanced Horse keeping
+}
+
+STRING 367
+// Upgrades: R00T (Steel Armor,Thorium Armor,Arcanite Armor), Ubertip (Tooltip - Extended)
+{
+Increases the movement speed of Riders and Chariots.
+}
+
+STRING 368
+// Upgrades: R00T (Steel Armor,Thorium Armor,Arcanite Armor), Ubertip (Tooltip - Extended)
+{
+Further increases the movement speed of Riders and Chariots.
+}
+
+STRING 369
+// Upgrades: R00T (Steel Armor,Thorium Armor,Arcanite Armor), Ubertip (Tooltip - Extended)
+{
+Further increases the movement speed of Riders and Chariots.
+}
+
+STRING 370
+// Units: h00A (Storage), Name (Name)
+{
+Storage
+}
+
+STRING 371
+// Units: h00A (Storage), Tip (Tooltip - Basic)
+{
+Build Storage
+}
+
+STRING 372
+// Units: h00A (Storage), Hotkey (Hotkey)
+{
+O
+}
+
+STRING 373
+// Units: h00B (Seer), Hotkey (Hotkey)
+{
+E
+}
+
+STRING 374
+{
+Arminius:
+}
+
+STRING 375
+{
+The Romans form a long trail. We should start our ambush!
 }
 

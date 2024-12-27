@@ -73,6 +73,7 @@ function main takes nothing returns nothing
     call SetBuildUpgr(1, UPG_GERMANIC_DRUID)
     call SetBuildUpgr(1, UPG_GERMANIC_SEER)
     call SetBuildUpgr(1, UPG_GERMANIC_LUMBER)
+    call SetBuildUpgr(1, UPG_GERMANIC_HORSE)
 
     call SetBuildUnitEx( 1,1,1, GERMANIC_TIER_3    )
     call SetBuildUnitEx( 1,1,1, GERMANIC_STABLES    )
@@ -83,6 +84,7 @@ function main takes nothing returns nothing
     call SetBuildUpgr(2, UPG_GERMANIC_DRUID)
     call SetBuildUpgr(2, UPG_GERMANIC_SEER)
     call SetBuildUpgr(2, UPG_GERMANIC_LUMBER)
+    call SetBuildUpgr(3, UPG_GERMANIC_HORSE)
     call SetBuildUpgr(1, UPG_GERMANIC_VENOM)
     call SetBuildUpgr(1, UPG_GERMANIC_PILLAGE)
     call SetBuildUpgr(1, UPG_GERMANIC_ULTRAVISION)
