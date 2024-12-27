@@ -1054,7 +1054,7 @@ Hire Renegade Druid
 }
 
 STRING 250
-// Upgrades: R003 (Defend), Hotkey (Hotkey)
+// Abilities: A00Z (Hide in Trees), Hotkey (Hotkey - Normal)
 {
 T
 }
@@ -1893,12 +1893,6 @@ STRING 398
 Train Berserker
 }
 
-STRING 399
-// Units: o00K (Berserker), Ubertip (Tooltip - Extended)
-{
-Mighty warrior. |n|n|cffffcc00Attacks land units.|r
-}
-
 STRING 400
 // Upgrades: R00T (Steel Armor,Thorium Armor,Arcanite Armor), Ubertip (Tooltip - Extended)
 {
@@ -2148,5 +2142,167 @@ STRING 448
 // Units: n00L (Eagle Roost), Tip (Tooltip - Basic)
 {
 Build Eagle Roost
+}
+
+STRING 449
+// Abilities: A00Z (Hide in Trees), Name (Name)
+{
+Hide in Trees
+}
+
+STRING 450
+// Abilities: A00Z (Hide in Trees), Tip (Tooltip - Normal)
+{
+Hide in Trees
+}
+
+STRING 451
+// Abilities: A00Z (Hide in Trees), Ubertip (Tooltip - Normal - Extended)
+{
+Hides the unit in the targeted tree which makes it invisible and unmovable until leaving the trees or the tree is cut down.
+}
+
+STRING 452
+// Upgrades: R003 (Defend), Hotkey (Hotkey)
+{
+T
+}
+
+STRING 457
+// Abilities: A011 (Place Bear Trap), Name (Name)
+{
+Place Bear Trap
+}
+
+STRING 458
+// Abilities: A011 (Place Bear Trap), Tip (Tooltip - Normal)
+{
+Place Bear Trap
+}
+
+STRING 459
+// Abilities: A011 (Place Bear Trap), Hotkey (Hotkey - Normal)
+{
+P
+}
+
+STRING 460
+// Abilities: A010 (Unhide from Trees), Name (Name)
+{
+Unhide from Trees
+}
+
+STRING 462
+// Abilities: A010 (Unhide from Trees), Tip (Tooltip - Normal)
+{
+Unhide from Trees
+}
+
+STRING 463
+// Abilities: A010 (Unhide from Trees), Ubertip (Tooltip - Normal - Extended)
+{
+Unhides from the current tree.
+}
+
+STRING 464
+// Units: nglm (Bear Trap), Name (Name)
+{
+Bear Trap
+}
+
+STRING 465
+// Units: o00K (Berserker), Ubertip (Tooltip - Extended)
+{
+Fearless powerful melee warrior. Can cast Berserk which lets him attack faster but also take more damage. Can learn Cannibalize and Brute Strength. |n|n|cffffcc00Attacks land units.|r
+}
+
+STRING 466
+// Abilities: A011 (Place Bear Trap), Ubertip (Tooltip - Normal - Extended)
+{
+Places a permanent Bear Trap which is activated when enemy ground units approach and causes damage to them.
+}
+
+STRING 467
+// Abilities: A010 (Unhide from Trees), Hotkey (Hotkey - Normal)
+{
+U
+}
+
+STRING 468
+// Upgrades: R00A (Brute Strength), Ubertip (Tooltip - Extended)
+{
+Improves the fighting capabilities of melee warriors with a <Robs,base1> hit point increase, and <Robs,base2> bonus attack damage.
+}
+
+STRING 469
+// Upgrades: R00V (Cannibalize), Ubertip (Tooltip - Extended)
+{
+Enables Berserkers to use the Cannibalize ability. Cannibalize consumes a nearby corpse to restore health.
+}
+
+STRING 470
+// Upgrades: R00W (Sentinel), Ubertip (Tooltip - Extended)
+{
+Gives the spell casters the ability to send her owl companion to a nearby tree and provide vision. |nCan see invisible units.
+}
+
+STRING 471
+// Units: o00L (Dog), Name (Name)
+{
+Dog
+}
+
+STRING 472
+// Abilities: A014 (Summon Dog), Name (Name)
+{
+Summon Dog
+}
+
+STRING 473
+// Abilities: A014 (Summon Dog), Tip (Tooltip - Normal)
+{
+Summon Dog
+}
+
+STRING 474
+// Abilities: A014 (Summon Dog), Ubertip (Tooltip - Normal - Extended)
+{
+Summons the personal dog of the Berserk to attack your enemies.
+}
+
+STRING 475
+// Upgrades: R00X (Pulverize), Name (Name)
+{
+Summon Dog
+}
+
+STRING 476
+// Upgrades: R00X (Pulverize), Tip (Tooltip)
+{
+Research Summon Dog
+}
+
+STRING 477
+// Upgrades: R00X (Pulverize), Ubertip (Tooltip - Extended)
+{
+Gives Berserks the Summon Dog ability which summons one single personal dog to fight along the Berserk.
+}
+
+STRING 478
+// Upgrades: R00Y (Flak Cannons), Name (Name)
+{
+Searing Arrows
+}
+
+STRING 479
+// Upgrades: R00Y (Flak Cannons), Tip (Tooltip)
+{
+Research Searing Arrows
+}
+
+STRING 480
+// Upgrades: R00Y (Flak Cannons), Ubertip (Tooltip - Extended)
+{
+Gives Archers the Searing Arrows ability adding additional damage to attacks.
 }
 

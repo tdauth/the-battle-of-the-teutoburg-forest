@@ -90,6 +90,8 @@ function main takes nothing returns nothing
     call SetBuildUpgr(1, UPG_GERMANIC_PILLAGE)
     call SetBuildUpgr(1, UPG_GERMANIC_ULTRAVISION)
     call SetBuildUpgr(1, UPG_GERMANIC_ENSNARE)
+    call SetBuildUpgr(1, UPG_GERMANIC_CANNIBALIZE)
+    call SetBuildUpgr(1, UPG_GERMANIC_DOG)
 
     loop
         call InitAssaultGroup()

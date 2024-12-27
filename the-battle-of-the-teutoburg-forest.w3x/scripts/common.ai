@@ -713,6 +713,8 @@ globals
     constant integer UPG_GERMANIC_RANGED = 'R00C'
     constant integer UPG_GERMANIC_ULTRAVISION = 'R00H'
     constant integer UPG_GERMANIC_HORSE = 'R00T'
+    constant integer UPG_GERMANIC_CANNIBALIZE = 'R00V'
+    constant integer UPG_GERMANIC_DOG = 'R00X'
 
     constant integer COMMAND_AURA = 'A002'
     constant integer VOLCANO = 'ANvc'
