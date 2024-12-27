@@ -46,4 +46,5 @@ Warcraft III custom map featuring the famous [Battle of the Teutoburg Forest](ht
 * Sellenisko: [BTNRagnarFlamebeard](https://www.hiveworkshop.com/threads/btnragnarflamebeard.249810/)
 * Eagle XI: [BTNVrykulHarpooner](https://www.hiveworkshop.com/threads/btnvrykulharpooner.272397/)
 * Eagle XI: [BTNVrykulWarrior](https://www.hiveworkshop.com/threads/btnvrykulwarrior.272396/)
+* Eagle XI: [BTNVrykulThane](https://www.hiveworkshop.com/threads/btnvrykulthane.272400/)
 * General Frank: [It's a bear trap!](https://www.hiveworkshop.com/threads/its-a-bear-trap.231801/)

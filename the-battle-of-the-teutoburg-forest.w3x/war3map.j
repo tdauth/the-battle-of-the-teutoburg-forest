@@ -2007,6 +2007,49 @@ function Trig_Game_Start_Actions takes nothing returns nothing
     call CreateQuestItemBJ( GetLastCreatedQuestBJ(), "TRIGSTR_214" )
     call QuestMessageBJ( udg_RomanPlayers, bj_QUESTMESSAGE_DISCOVERED, "TRIGSTR_112" )
     call QuestMessageBJ( udg_GermanicPlayers, bj_QUESTMESSAGE_DISCOVERED, "TRIGSTR_111" )
+    // Credits
+    call CreateQuestBJ( bj_QUESTTYPE_REQ_DISCOVERED, "TRIGSTR_404", "TRIGSTR_405", "ReplaceableTextures\\CommandButtons\\BTNBanditLord.blp" )
+    call CreateQuestItemBJ( GetLastCreatedQuestBJ(), "TRIGSTR_406" )
+    call CreateQuestItemBJ( GetLastCreatedQuestBJ(), "TRIGSTR_407" )
+    call CreateQuestItemBJ( GetLastCreatedQuestBJ(), "TRIGSTR_408" )
+    call CreateQuestItemBJ( GetLastCreatedQuestBJ(), "TRIGSTR_409" )
+    call CreateQuestItemBJ( GetLastCreatedQuestBJ(), "TRIGSTR_410" )
+    call CreateQuestItemBJ( GetLastCreatedQuestBJ(), "TRIGSTR_411" )
+    call CreateQuestItemBJ( GetLastCreatedQuestBJ(), "TRIGSTR_412" )
+    call CreateQuestItemBJ( GetLastCreatedQuestBJ(), "TRIGSTR_413" )
+    call CreateQuestItemBJ( GetLastCreatedQuestBJ(), "TRIGSTR_414" )
+    call CreateQuestItemBJ( GetLastCreatedQuestBJ(), "TRIGSTR_415" )
+    call CreateQuestItemBJ( GetLastCreatedQuestBJ(), "TRIGSTR_416" )
+    call CreateQuestItemBJ( GetLastCreatedQuestBJ(), "TRIGSTR_417" )
+    call CreateQuestItemBJ( GetLastCreatedQuestBJ(), "TRIGSTR_418" )
+    call CreateQuestItemBJ( GetLastCreatedQuestBJ(), "TRIGSTR_419" )
+    call CreateQuestItemBJ( GetLastCreatedQuestBJ(), "TRIGSTR_420" )
+    call CreateQuestItemBJ( GetLastCreatedQuestBJ(), "TRIGSTR_421" )
+    call CreateQuestItemBJ( GetLastCreatedQuestBJ(), "TRIGSTR_422" )
+    call CreateQuestItemBJ( GetLastCreatedQuestBJ(), "TRIGSTR_423" )
+    call CreateQuestItemBJ( GetLastCreatedQuestBJ(), "TRIGSTR_424" )
+    call CreateQuestItemBJ( GetLastCreatedQuestBJ(), "TRIGSTR_425" )
+    call CreateQuestItemBJ( GetLastCreatedQuestBJ(), "TRIGSTR_426" )
+    call CreateQuestItemBJ( GetLastCreatedQuestBJ(), "TRIGSTR_427" )
+    call CreateQuestItemBJ( GetLastCreatedQuestBJ(), "TRIGSTR_428" )
+    call CreateQuestItemBJ( GetLastCreatedQuestBJ(), "TRIGSTR_429" )
+    call CreateQuestItemBJ( GetLastCreatedQuestBJ(), "TRIGSTR_430" )
+    call CreateQuestItemBJ( GetLastCreatedQuestBJ(), "TRIGSTR_431" )
+    call CreateQuestItemBJ( GetLastCreatedQuestBJ(), "TRIGSTR_432" )
+    call CreateQuestItemBJ( GetLastCreatedQuestBJ(), "TRIGSTR_433" )
+    call CreateQuestItemBJ( GetLastCreatedQuestBJ(), "TRIGSTR_434" )
+    call CreateQuestItemBJ( GetLastCreatedQuestBJ(), "TRIGSTR_435" )
+    call CreateQuestItemBJ( GetLastCreatedQuestBJ(), "TRIGSTR_436" )
+    call CreateQuestItemBJ( GetLastCreatedQuestBJ(), "TRIGSTR_437" )
+    call CreateQuestItemBJ( GetLastCreatedQuestBJ(), "TRIGSTR_438" )
+    call CreateQuestItemBJ( GetLastCreatedQuestBJ(), "TRIGSTR_439" )
+    call CreateQuestItemBJ( GetLastCreatedQuestBJ(), "TRIGSTR_440" )
+    call CreateQuestItemBJ( GetLastCreatedQuestBJ(), "TRIGSTR_441" )
+    call CreateQuestItemBJ( GetLastCreatedQuestBJ(), "TRIGSTR_442" )
+    call CreateQuestItemBJ( GetLastCreatedQuestBJ(), "TRIGSTR_443" )
+    call CreateQuestItemBJ( GetLastCreatedQuestBJ(), "TRIGSTR_444" )
+    call CreateQuestItemBJ( GetLastCreatedQuestBJ(), "TRIGSTR_445" )
+    call CreateQuestItemBJ( GetLastCreatedQuestBJ(), "TRIGSTR_446" )
     // Weather
     call ConditionalTriggerExecute( gg_trg_Lightning_Start )
 endfunction
@@ -2153,7 +2196,7 @@ function InitCustomPlayerSlots takes nothing returns nothing
     call SetPlayerColor( Player(0), ConvertPlayerColor(0) )
     call SetPlayerRacePreference( Player(0), RACE_PREF_HUMAN )
     call SetPlayerRaceSelectable( Player(0), false )
-    call SetPlayerController( Player(0), MAP_CONTROL_COMPUTER )
+    call SetPlayerController( Player(0), MAP_CONTROL_USER )
 
     // Player 1
     call SetPlayerStartLocation( Player(1), 1 )
@@ -2161,7 +2204,7 @@ function InitCustomPlayerSlots takes nothing returns nothing
     call SetPlayerColor( Player(1), ConvertPlayerColor(1) )
     call SetPlayerRacePreference( Player(1), RACE_PREF_HUMAN )
     call SetPlayerRaceSelectable( Player(1), false )
-    call SetPlayerController( Player(1), MAP_CONTROL_COMPUTER )
+    call SetPlayerController( Player(1), MAP_CONTROL_USER )
 
     // Player 2
     call SetPlayerStartLocation( Player(2), 2 )
@@ -2169,7 +2212,7 @@ function InitCustomPlayerSlots takes nothing returns nothing
     call SetPlayerColor( Player(2), ConvertPlayerColor(2) )
     call SetPlayerRacePreference( Player(2), RACE_PREF_HUMAN )
     call SetPlayerRaceSelectable( Player(2), false )
-    call SetPlayerController( Player(2), MAP_CONTROL_COMPUTER )
+    call SetPlayerController( Player(2), MAP_CONTROL_USER )
 
     // Player 3
     call SetPlayerStartLocation( Player(3), 3 )
@@ -2250,8 +2293,9 @@ endfunction
 
 function InitAllyPriorities takes nothing returns nothing
 
-    call SetStartLocPrioCount( 0, 1 )
+    call SetStartLocPrioCount( 0, 2 )
     call SetStartLocPrio( 0, 0, 1, MAP_LOC_PRIO_HIGH )
+    call SetStartLocPrio( 0, 1, 3, MAP_LOC_PRIO_LOW )
 
     call SetStartLocPrioCount( 1, 3 )
     call SetStartLocPrio( 1, 0, 0, MAP_LOC_PRIO_HIGH )
@@ -2263,15 +2307,17 @@ function InitAllyPriorities takes nothing returns nothing
     call SetStartLocPrio( 2, 1, 4, MAP_LOC_PRIO_HIGH )
     call SetStartLocPrio( 2, 2, 5, MAP_LOC_PRIO_LOW )
 
-    call SetStartLocPrioCount( 3, 1 )
-    call SetStartLocPrio( 3, 0, 4, MAP_LOC_PRIO_HIGH )
+    call SetStartLocPrioCount( 3, 3 )
+    call SetStartLocPrio( 3, 0, 0, MAP_LOC_PRIO_HIGH )
+    call SetStartLocPrio( 3, 1, 1, MAP_LOC_PRIO_LOW )
+    call SetStartLocPrio( 3, 2, 4, MAP_LOC_PRIO_LOW )
 
-    call SetStartLocPrioCount( 4, 1 )
-    call SetStartLocPrio( 4, 0, 3, MAP_LOC_PRIO_HIGH )
+    call SetStartLocPrioCount( 4, 2 )
+    call SetStartLocPrio( 4, 0, 2, MAP_LOC_PRIO_HIGH )
+    call SetStartLocPrio( 4, 1, 3, MAP_LOC_PRIO_LOW )
 
-    call SetStartLocPrioCount( 5, 2 )
-    call SetStartLocPrio( 5, 0, 3, MAP_LOC_PRIO_HIGH )
-    call SetStartLocPrio( 5, 1, 4, MAP_LOC_PRIO_HIGH )
+    call SetStartLocPrioCount( 5, 1 )
+    call SetStartLocPrio( 5, 0, 1, MAP_LOC_PRIO_HIGH )
 endfunction
 
 //***************************************************************************
