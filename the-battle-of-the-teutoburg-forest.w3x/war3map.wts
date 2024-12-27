@@ -1,6 +1,6 @@
 ﻿STRING 3
 {
-Varus Disaster 1.0
+Battle of the Teutoburg Forest 1.0
 }
 
 STRING 16
@@ -1132,8 +1132,9 @@ STRING 262
 
 STRING 263
 {
-Discord: https://discord.gg/VBDFBSbQ
 A major battle between Germanic tribes and the Roman Empire.
+|cffffcc00Supports Computer players.|r
+|cffffcc00Discord:|r https://discord.gg/VBDFBSbQ
 }
 
 STRING 264
@@ -1586,7 +1587,7 @@ Baradé's
 
 STRING 345
 {
-Varus Disaster 1.0
+Battle of the Teutoburg Forest 1.0
 }
 
 STRING 346
@@ -1596,6 +1597,7 @@ STRING 346
 - Use the waygates.
 - Use the fountains to heal and restore mana.
 - Level your heroes by killing creeps.
+- Supports Computer players.
 - https://discord.gg/VBDFBSbQ
 }
 
