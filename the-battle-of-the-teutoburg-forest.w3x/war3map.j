@@ -480,41 +480,6 @@ function Unit000295_DropItems takes nothing returns nothing
     call DestroyTrigger(GetTriggeringTrigger())
 endfunction
 
-function Unit000383_DropItems takes nothing returns nothing
-    local widget  trigWidget = null
-    local unit    trigUnit   = null
-    local integer itemID     = 0
-    local boolean canDrop    = true
-
-    set trigWidget = bj_lastDyingWidget
-    if (trigWidget == null) then
-        set trigUnit = GetTriggerUnit()
-    endif
-
-    if (trigUnit != null) then
-        set canDrop = not IsUnitHidden(trigUnit)
-        if (canDrop and GetChangingUnit() != null) then
-            set canDrop = (GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE))
-        endif
-    endif
-
-    if (canDrop) then
-        // Item set 0
-        call RandomDistReset(  )
-        call RandomDistAddItem( ChooseRandomItemEx( ITEM_TYPE_ANY, 6 ), 100 )
-        set itemID = RandomDistChoose(  )
-        if (trigUnit != null) then
-            call UnitDropItem( trigUnit, itemID )
-        else
-            call WidgetDropItem( trigWidget, itemID )
-        endif
-
-    endif
-
-    set bj_lastDyingWidget = null
-    call DestroyTrigger(GetTriggeringTrigger())
-endfunction
-
 
 //***************************************************************************
 //*
@@ -1045,7 +1010,7 @@ function CreateUnitsForPlayer3 takes nothing returns nothing
     local trigger t
     local real life
 
-    set gg_unit_O001_0002 = BlzCreateUnitWithSkin( p, 'O001', -4398.3, -5128.9, 90.849, 'O001' )
+    set gg_unit_O001_0002 = BlzCreateUnitWithSkin( p, 'O001', -4157.8, -5007.7, 90.849, 'O001' )
     set gg_unit_o003_0046 = BlzCreateUnitWithSkin( p, 'o003', -4795.1, -6454.7, 270.000, 'o003' )
     set gg_unit_o003_0047 = BlzCreateUnitWithSkin( p, 'o003', -4651.0, -6459.0, 270.000, 'o003' )
     set gg_unit_o003_0048 = BlzCreateUnitWithSkin( p, 'o003', -4536.8, -6455.2, 270.000, 'o003' )
@@ -1074,6 +1039,10 @@ function CreateUnitsForPlayer3 takes nothing returns nothing
     set u = BlzCreateUnitWithSkin( p, 'n002', -4537.4, -4936.9, 90.000, 'n002' )
     set u = BlzCreateUnitWithSkin( p, 'o00E', -5304.9, -5187.6, 90.000, 'o00E' )
     set u = BlzCreateUnitWithSkin( p, 'o00A', -5306.4, -5321.4, 90.000, 'o00A' )
+    set u = BlzCreateUnitWithSkin( p, 'n000', -4421.0, -5056.5, 90.000, 'n000' )
+    set u = BlzCreateUnitWithSkin( p, 'n002', -4407.6, -4942.9, 90.000, 'n002' )
+    set u = BlzCreateUnitWithSkin( p, 'n000', -4293.4, -5054.5, 90.000, 'n000' )
+    set u = BlzCreateUnitWithSkin( p, 'n002', -4280.1, -4941.0, 90.000, 'n002' )
 endfunction
 
 //===========================================================================
@@ -1117,15 +1086,15 @@ function CreateUnitsForPlayer4 takes nothing returns nothing
     set gg_unit_O00H_0067 = BlzCreateUnitWithSkin( p, 'O00H', 1835.6, -4844.6, 90.000, 'O00H' )
     set u = BlzCreateUnitWithSkin( p, 'o00E', 2664.4, -7169.6, 248.496, 'o00E' )
     set u = BlzCreateUnitWithSkin( p, 'o00A', 2523.7, -7269.0, 326.388, 'o00A' )
-    set u = BlzCreateUnitWithSkin( p, 'n002', 1709.4, -5006.2, 90.000, 'n002' )
-    set u = BlzCreateUnitWithSkin( p, 'n002', 1844.2, -5005.4, 90.000, 'n002' )
-    set u = BlzCreateUnitWithSkin( p, 'n002', 1982.4, -5011.9, 90.000, 'n002' )
+    set u = BlzCreateUnitWithSkin( p, 'n002', 1654.5, -5002.6, 90.000, 'n002' )
+    set u = BlzCreateUnitWithSkin( p, 'n002', 1789.2, -5001.8, 90.000, 'n002' )
+    set u = BlzCreateUnitWithSkin( p, 'n002', 1927.4, -5008.3, 90.000, 'n002' )
     set u = BlzCreateUnitWithSkin( p, 'o004', 1879.1, -5421.5, 90.000, 'o004' )
     set u = BlzCreateUnitWithSkin( p, 'o004', 2009.0, -5411.2, 90.000, 'o004' )
     set u = BlzCreateUnitWithSkin( p, 'o004', 1754.2, -5409.9, 90.000, 'o004' )
-    set u = BlzCreateUnitWithSkin( p, 'n000', 1735.0, -5150.7, 90.000, 'n000' )
-    set u = BlzCreateUnitWithSkin( p, 'n000', 1875.0, -5153.9, 90.000, 'n000' )
-    set u = BlzCreateUnitWithSkin( p, 'n000', 2004.2, -5162.1, 90.000, 'n000' )
+    set u = BlzCreateUnitWithSkin( p, 'n000', 1680.0, -5147.2, 90.000, 'n000' )
+    set u = BlzCreateUnitWithSkin( p, 'n000', 1820.0, -5150.4, 90.000, 'n000' )
+    set u = BlzCreateUnitWithSkin( p, 'n000', 1949.2, -5158.5, 90.000, 'n000' )
     set u = BlzCreateUnitWithSkin( p, 'n003', 2492.3, -5461.5, 90.000, 'n003' )
     set u = BlzCreateUnitWithSkin( p, 'n003', 2492.1, -5586.2, 90.000, 'n003' )
     set u = BlzCreateUnitWithSkin( p, 'n003', 2369.5, -5578.9, 90.000, 'n003' )
@@ -1134,12 +1103,16 @@ function CreateUnitsForPlayer4 takes nothing returns nothing
     set u = BlzCreateUnitWithSkin( p, 'o003', 4231.4, -6363.9, 270.000, 'o003' )
     set u = BlzCreateUnitWithSkin( p, 'o003', 4350.9, -6360.8, 270.000, 'o003' )
     set u = BlzCreateUnitWithSkin( p, 'o004', 2136.0, -5409.5, 90.000, 'o004' )
-    set u = BlzCreateUnitWithSkin( p, 'n000', 2114.2, -5154.3, 90.000, 'n000' )
-    set u = BlzCreateUnitWithSkin( p, 'n002', 2110.9, -5007.0, 90.000, 'n002' )
+    set u = BlzCreateUnitWithSkin( p, 'n000', 2059.2, -5150.8, 90.000, 'n000' )
+    set u = BlzCreateUnitWithSkin( p, 'n002', 2055.9, -5003.4, 90.000, 'n002' )
     set u = BlzCreateUnitWithSkin( p, 'o00E', 1850.1, -5580.0, 90.000, 'o00E' )
     set u = BlzCreateUnitWithSkin( p, 'o00A', 1848.5, -5713.8, 90.000, 'o00A' )
     set u = BlzCreateUnitWithSkin( p, 'o00E', 1987.0, -5589.7, 90.000, 'o00E' )
     set u = BlzCreateUnitWithSkin( p, 'o00A', 1985.5, -5723.5, 90.000, 'o00A' )
+    set u = BlzCreateUnitWithSkin( p, 'n002', 1540.6, -5005.9, 90.000, 'n002' )
+    set u = BlzCreateUnitWithSkin( p, 'n000', 1566.2, -5150.4, 90.000, 'n000' )
+    set u = BlzCreateUnitWithSkin( p, 'n002', 2167.4, -5005.7, 90.000, 'n002' )
+    set u = BlzCreateUnitWithSkin( p, 'n000', 2162.5, -5149.0, 90.000, 'n000' )
 endfunction
 
 //===========================================================================
@@ -1181,16 +1154,16 @@ function CreateUnitsForPlayer5 takes nothing returns nothing
     set u = BlzCreateUnitWithSkin( p, 'o003', 186.9, 6630.2, 117.524, 'o003' )
     set u = BlzCreateUnitWithSkin( p, 'o00E', -509.8, 5919.2, 248.496, 'o00E' )
     set u = BlzCreateUnitWithSkin( p, 'o00A', -650.5, 5819.9, 326.388, 'o00A' )
-    set u = BlzCreateUnitWithSkin( p, 'n002', -666.9, 5407.7, 270.000, 'n002' )
-    set u = BlzCreateUnitWithSkin( p, 'n002', -549.5, 5408.4, 270.000, 'n002' )
-    set u = BlzCreateUnitWithSkin( p, 'n002', -411.4, 5401.9, 270.000, 'n002' )
-    set u = BlzCreateUnitWithSkin( p, 'o004', -514.7, 4992.2, 270.000, 'o004' )
-    set u = BlzCreateUnitWithSkin( p, 'o004', -384.7, 5002.6, 270.000, 'o004' )
-    set u = BlzCreateUnitWithSkin( p, 'o004', -639.5, 5003.9, 270.000, 'o004' )
-    set u = BlzCreateUnitWithSkin( p, 'n000', -658.8, 5263.1, 270.000, 'n000' )
-    set u = BlzCreateUnitWithSkin( p, 'n000', -518.7, 5259.9, 270.000, 'n000' )
-    set u = BlzCreateUnitWithSkin( p, 'n000', -389.6, 5251.7, 270.000, 'n000' )
-    set gg_unit_H006_0213 = BlzCreateUnitWithSkin( p, 'H006', -527.7, 4796.8, 270.000, 'H006' )
+    set u = BlzCreateUnitWithSkin( p, 'n002', -680.5, 4982.0, 270.000, 'n002' )
+    set u = BlzCreateUnitWithSkin( p, 'n002', -563.1, 4982.7, 270.000, 'n002' )
+    set u = BlzCreateUnitWithSkin( p, 'n002', -424.9, 4976.2, 270.000, 'n002' )
+    set u = BlzCreateUnitWithSkin( p, 'o004', -481.3, 4667.2, 270.000, 'o004' )
+    set u = BlzCreateUnitWithSkin( p, 'o004', -351.3, 4677.6, 270.000, 'o004' )
+    set u = BlzCreateUnitWithSkin( p, 'o004', -606.2, 4678.8, 270.000, 'o004' )
+    set u = BlzCreateUnitWithSkin( p, 'n000', -672.3, 4837.4, 270.000, 'n000' )
+    set u = BlzCreateUnitWithSkin( p, 'n000', -532.3, 4834.2, 270.000, 'n000' )
+    set u = BlzCreateUnitWithSkin( p, 'n000', -403.1, 4826.0, 270.000, 'n000' )
+    set gg_unit_H006_0213 = BlzCreateUnitWithSkin( p, 'H006', -529.5, 4531.2, 270.000, 'H006' )
     set u = BlzCreateUnitWithSkin( p, 'n003', 177.2, 5395.6, 270.000, 'n003' )
     set u = BlzCreateUnitWithSkin( p, 'n003', 176.9, 5270.9, 270.000, 'n003' )
     set u = BlzCreateUnitWithSkin( p, 'n003', 54.3, 5278.2, 270.000, 'n003' )
@@ -1198,13 +1171,17 @@ function CreateUnitsForPlayer5 takes nothing returns nothing
     set u = BlzCreateUnitWithSkin( p, 'o003', 1028.0, 6452.9, 67.524, 'o003' )
     set u = BlzCreateUnitWithSkin( p, 'o003', 1114.8, 6449.0, 87.965, 'o003' )
     set u = BlzCreateUnitWithSkin( p, 'o003', 1205.0, 6449.1, 117.524, 'o003' )
-    set u = BlzCreateUnitWithSkin( p, 'o004', -749.0, 4997.9, 270.000, 'o004' )
-    set u = BlzCreateUnitWithSkin( p, 'n000', -777.0, 5268.2, 270.000, 'n000' )
-    set u = BlzCreateUnitWithSkin( p, 'n002', -791.0, 5399.0, 270.000, 'n002' )
+    set u = BlzCreateUnitWithSkin( p, 'o004', -715.6, 4672.9, 270.000, 'o004' )
+    set u = BlzCreateUnitWithSkin( p, 'n000', -790.5, 4842.5, 270.000, 'n000' )
+    set u = BlzCreateUnitWithSkin( p, 'n002', -804.6, 4973.3, 270.000, 'n002' )
     set u = BlzCreateUnitWithSkin( p, 'o00E', 308.4, 5430.4, 270.000, 'o00E' )
     set u = BlzCreateUnitWithSkin( p, 'o00A', 306.9, 5296.6, 270.000, 'o00A' )
     set u = BlzCreateUnitWithSkin( p, 'o00E', 445.4, 5420.7, 270.000, 'o00E' )
     set u = BlzCreateUnitWithSkin( p, 'o00A', 443.8, 5286.9, 270.000, 'o00A' )
+    set u = BlzCreateUnitWithSkin( p, 'n002', -312.8, 4964.2, 270.000, 'n002' )
+    set u = BlzCreateUnitWithSkin( p, 'n000', -288.1, 4820.4, 270.000, 'n000' )
+    set u = BlzCreateUnitWithSkin( p, 'n002', -933.5, 4985.3, 270.000, 'n002' )
+    set u = BlzCreateUnitWithSkin( p, 'n000', -911.7, 4835.2, 270.000, 'n000' )
 endfunction
 
 //===========================================================================
@@ -1290,13 +1267,9 @@ function CreateNeutralHostile takes nothing returns nothing
     set u = BlzCreateUnitWithSkin( p, 'n00J', -2013.4, -2448.7, 131.609, 'n00J' )
     set u = BlzCreateUnitWithSkin( p, 'n00I', -1903.4, -2521.4, 32.586, 'n00I' )
     set u = BlzCreateUnitWithSkin( p, 'n00H', -2149.4, -2401.3, 50.154, 'n00H' )
-    set u = BlzCreateUnitWithSkin( p, 'n009', 5169.1, 6701.9, 287.560, 'n009' )
-    set t = CreateTrigger(  )
-    call TriggerRegisterUnitEvent( t, u, EVENT_UNIT_DEATH )
-    call TriggerRegisterUnitEvent( t, u, EVENT_UNIT_CHANGE_OWNER )
-    call TriggerAddAction( t, function Unit000383_DropItems )
-    set u = BlzCreateUnitWithSkin( p, 'n008', 5351.9, 6653.8, -83.601, 'n008' )
-    set u = BlzCreateUnitWithSkin( p, 'n008', 5022.1, 6578.9, -37.271, 'n008' )
+    set u = BlzCreateUnitWithSkin( p, 'n009', 5169.1, 6701.9, 287.563, 'n009' )
+    set u = BlzCreateUnitWithSkin( p, 'n008', 5351.9, 6653.8, 276.399, 'n008' )
+    set u = BlzCreateUnitWithSkin( p, 'n008', 5022.1, 6578.9, 322.729, 'n008' )
 endfunction
 
 //===========================================================================
