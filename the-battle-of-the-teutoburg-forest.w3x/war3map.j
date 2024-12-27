@@ -1,7 +1,7 @@
 globals
 //globals from SimError:
 constant boolean LIBRARY_SimError=true
-sound SimError___error
+sound SimError__error
 //endglobals from SimError
 //globals from TreeUtils:
 constant boolean LIBRARY_TreeUtils=true
@@ -33,8 +33,8 @@ constant integer FALL_TREE_WALL= 'FTtw'
 constant integer SCORCHED_TREE_WALL= 'Ytsc'
 constant integer SILVERMOON_TREE= 'Yts1'
 
-integer array TreeUtils___ids
-integer TreeUtils___count= 0
+integer array TreeUtils__ids
+integer TreeUtils__count= 0
 //endglobals from TreeUtils
 //globals from HideInTrees:
 constant boolean LIBRARY_HideInTrees=true
@@ -42,20 +42,20 @@ constant string HideInTrees_ORDER_HIDE= "eattree"
 constant integer HideInTrees_ABILITY_ID_HIDE= 'A00Z'
 constant integer HideInTrees_ABILITY_ID_UNHIDE= 'A010'
     
-constant integer HideInTrees___KEY_UNIT= 0
-constant integer HideInTrees___KEY_MOVE_TYPE= 1
-constant integer HideInTrees___KEY_ATTACK_0_ENABLED= 2
-constant integer HideInTrees___KEY_ATTACK_1_ENABLED= 3
+constant integer HideInTrees__KEY_UNIT= 0
+constant integer HideInTrees__KEY_MOVE_TYPE= 1
+constant integer HideInTrees__KEY_ATTACK_0_ENABLED= 2
+constant integer HideInTrees__KEY_ATTACK_1_ENABLED= 3
 
-trigger HideInTrees___castTrigger= CreateTrigger()
-trigger HideInTrees___orderTrigger= CreateTrigger()
-trigger HideInTrees___deathTrigger= CreateTrigger()
+trigger HideInTrees__castTrigger= CreateTrigger()
+trigger HideInTrees__orderTrigger= CreateTrigger()
+trigger HideInTrees__deathTrigger= CreateTrigger()
     
-unit HideInTrees___filterCaster= null
-destructable HideInTrees___resultingTree= null
+unit HideInTrees__filterCaster= null
+destructable HideInTrees__resultingTree= null
     
-group HideInTrees___casters= CreateGroup()
-hashtable HideInTrees___h= InitHashtable()
+group HideInTrees__casters= CreateGroup()
+hashtable HideInTrees__h= InitHashtable()
 //endglobals from HideInTrees
     // User-defined
 force udg_RomanPlayers= null
@@ -150,6 +150,26 @@ destructable gg_dest_B000_8108= null
 destructable gg_dest_LOcg_12552= null
 destructable gg_dest_LOcg_12553= null
 destructable gg_dest_LOcg_12554= null
+unit gg_unit_o003_0051= null
+unit gg_unit_ngol_0124= null
+unit gg_unit_o003_0052= null
+unit gg_unit_o003_0053= null
+unit gg_unit_o003_0054= null
+unit gg_unit_o003_0055= null
+unit gg_unit_o003_0260= null
+destructable gg_dest_B000_5163= null
+unit gg_unit_o003_0261= null
+unit gg_unit_o003_0262= null
+unit gg_unit_o003_0068= null
+unit gg_unit_ngol_0126= null
+unit gg_unit_o003_0069= null
+unit gg_unit_o003_0070= null
+unit gg_unit_o003_0071= null
+unit gg_unit_o003_0075= null
+unit gg_unit_o003_0263= null
+destructable gg_dest_B000_6435= null
+unit gg_unit_o003_0264= null
+unit gg_unit_o003_0265= null
 
 trigger l__library_init
 
@@ -184,12 +204,12 @@ function sc___prototype14_evaluate takes integer i,destructable a1 returns nothi
 
 endfunction
 function h__RemoveUnit takes unit a0 returns nothing
-    //hook: HideInTrees___RemoveUnitHook
+    //hook: HideInTrees__RemoveUnitHook
     call sc___prototype9_evaluate(1,a0)
 call RemoveUnit(a0)
 endfunction
 function h__RemoveDestructable takes destructable a0 returns nothing
-    //hook: HideInTrees___RemoveDestructableHook
+    //hook: HideInTrees__RemoveDestructableHook
     call sc___prototype14_evaluate(1,a0)
 call RemoveDestructable(a0)
 endfunction
@@ -218,12 +238,12 @@ endfunction
         if ( GetLocalPlayer() == ForPlayer ) then
             call ClearTextMessages()
             call DisplayTimedTextToPlayer(ForPlayer, 0.52, 0.96, 2.00, msg)
-            call StartSound(SimError___error)
+            call StartSound(SimError__error)
         endif
     endfunction
 
-    function SimError___init takes nothing returns nothing
-         set SimError___error=CreateSoundFromLabel("InterfaceError", false, false, false, 10, 10)
+    function SimError__init takes nothing returns nothing
+         set SimError__error=CreateSoundFromLabel("InterfaceError", false, false, false, 10, 10)
          //call StartSound( error ) //apparently the bug in which you play a sound for the first time
                                     //and it doesn't work is not there anymore in patch 1.22
     endfunction
@@ -234,25 +254,25 @@ endfunction
 
 
 function AddTree takes integer id returns integer
-    local integer index= TreeUtils___count
-    set TreeUtils___ids[index]=id
-    set TreeUtils___count=index + 1
+    local integer index= TreeUtils__count
+    set TreeUtils__ids[index]=id
+    set TreeUtils__count=index + 1
     return index
 endfunction
 
 function GetTree takes integer index returns integer
-    return TreeUtils___ids[index]
+    return TreeUtils__ids[index]
 endfunction
 
 function GetTreeCount takes nothing returns integer
-    return TreeUtils___count
+    return TreeUtils__count
 endfunction
 
 function IsTree takes integer id returns boolean
     local integer i= 0
     loop
-        exitwhen ( i == TreeUtils___count )
-        if ( TreeUtils___ids[i] == id ) then
+        exitwhen ( i == TreeUtils__count )
+        if ( TreeUtils__ids[i] == id ) then
             return true
         endif
         set i=i + 1
@@ -264,7 +284,7 @@ function IsDestructableTree takes destructable whichDestructable returns boolean
     return IsTree(GetDestructableTypeId(whichDestructable))
 endfunction
 
-function TreeUtils___Init takes nothing returns nothing
+function TreeUtils__Init takes nothing returns nothing
     call AddTree(SUMMER_TREE_WALL)
     call AddTree(ASHENVALE_TREE_WALL)
     call AddTree(ASHENVALE_CANOPY_TREE)
@@ -299,21 +319,21 @@ endfunction
 //library HideInTrees:
 
 
-function HideInTrees___GetTreeHiddenUnit takes destructable t returns unit
-    return LoadUnitHandle(HideInTrees___h, GetHandleId(t), HideInTrees___KEY_UNIT)
+function HideInTrees__GetTreeHiddenUnit takes destructable t returns unit
+    return LoadUnitHandle(HideInTrees__h, GetHandleId(t), HideInTrees__KEY_UNIT)
 endfunction
 
-function HideInTrees___HideUnit takes unit whichUnit,destructable tree returns nothing
-    call GroupAddUnit(HideInTrees___casters, whichUnit)
+function HideInTrees__HideUnit takes unit whichUnit,destructable tree returns nothing
+    call GroupAddUnit(HideInTrees__casters, whichUnit)
     call SetUnitInvulnerable(whichUnit, true)
     call SetUnitPathing(whichUnit, false)
     call SetUnitX(whichUnit, GetDestructableX(tree))
     call SetUnitY(whichUnit, GetDestructableY(tree))
     call BlzUnitDisableAbility(GetTriggerUnit(), 'Amov', true, true)
-    call SaveDestructableHandle(HideInTrees___h, GetHandleId(whichUnit), HideInTrees___KEY_UNIT, tree)
-    call SaveInteger(HideInTrees___h, GetHandleId(whichUnit), HideInTrees___KEY_MOVE_TYPE, BlzGetUnitIntegerField(whichUnit, UNIT_IF_MOVE_TYPE))
-    call SaveBoolean(HideInTrees___h, GetHandleId(whichUnit), HideInTrees___KEY_ATTACK_0_ENABLED, BlzGetUnitWeaponBooleanField(whichUnit, UNIT_WEAPON_BF_ATTACKS_ENABLED, 0))
-    call SaveBoolean(HideInTrees___h, GetHandleId(whichUnit), HideInTrees___KEY_ATTACK_1_ENABLED, BlzGetUnitWeaponBooleanField(whichUnit, UNIT_WEAPON_BF_ATTACKS_ENABLED, 1))
+    call SaveDestructableHandle(HideInTrees__h, GetHandleId(whichUnit), HideInTrees__KEY_UNIT, tree)
+    call SaveInteger(HideInTrees__h, GetHandleId(whichUnit), HideInTrees__KEY_MOVE_TYPE, BlzGetUnitIntegerField(whichUnit, UNIT_IF_MOVE_TYPE))
+    call SaveBoolean(HideInTrees__h, GetHandleId(whichUnit), HideInTrees__KEY_ATTACK_0_ENABLED, BlzGetUnitWeaponBooleanField(whichUnit, UNIT_WEAPON_BF_ATTACKS_ENABLED, 0))
+    call SaveBoolean(HideInTrees__h, GetHandleId(whichUnit), HideInTrees__KEY_ATTACK_1_ENABLED, BlzGetUnitWeaponBooleanField(whichUnit, UNIT_WEAPON_BF_ATTACKS_ENABLED, 1))
     call BlzSetUnitIntegerField(whichUnit, UNIT_IF_MOVE_TYPE, 0)
     call BlzSetUnitWeaponBooleanField(whichUnit, UNIT_WEAPON_BF_ATTACKS_ENABLED, 0, false)
     call BlzSetUnitWeaponBooleanField(whichUnit, UNIT_WEAPON_BF_ATTACKS_ENABLED, 1, false)
@@ -323,9 +343,9 @@ function HideInTrees___HideUnit takes unit whichUnit,destructable tree returns n
     //call BJDebugMsg(GetUnitName(whichUnit) + " cast on " + GetDestructableName(tree))
 endfunction
 
-function HideInTrees___UnhideUnit takes unit whichUnit returns nothing
-    if ( IsUnitInGroup(whichUnit, HideInTrees___casters) ) then
-        call GroupRemoveUnit(HideInTrees___casters, whichUnit)
+function HideInTrees__UnhideUnit takes unit whichUnit returns nothing
+    if ( IsUnitInGroup(whichUnit, HideInTrees__casters) ) then
+        call GroupRemoveUnit(HideInTrees__casters, whichUnit)
         call SetUnitInvulnerable(whichUnit, false)
         call SetUnitPathing(whichUnit, true)
         call SetUnitPosition(whichUnit, GetUnitX(whichUnit), GetUnitY(whichUnit)) // for collision
@@ -334,53 +354,53 @@ function HideInTrees___UnhideUnit takes unit whichUnit returns nothing
         call UnitRemoveAbility(whichUnit, HideInTrees_ABILITY_ID_UNHIDE)
         //call BJDebugMsg(GetUnitName(whichUnit) + " cast unhide")
         
-        call BlzSetUnitIntegerField(whichUnit, UNIT_IF_MOVE_TYPE, LoadInteger(HideInTrees___h, GetHandleId(whichUnit), HideInTrees___KEY_MOVE_TYPE))
-        call BlzSetUnitWeaponBooleanField(whichUnit, UNIT_WEAPON_BF_ATTACKS_ENABLED, 0, LoadBoolean(HideInTrees___h, GetHandleId(whichUnit), HideInTrees___KEY_ATTACK_0_ENABLED))
-        call BlzSetUnitWeaponBooleanField(whichUnit, UNIT_WEAPON_BF_ATTACKS_ENABLED, 1, LoadBoolean(HideInTrees___h, GetHandleId(whichUnit), HideInTrees___KEY_ATTACK_1_ENABLED))
+        call BlzSetUnitIntegerField(whichUnit, UNIT_IF_MOVE_TYPE, LoadInteger(HideInTrees__h, GetHandleId(whichUnit), HideInTrees__KEY_MOVE_TYPE))
+        call BlzSetUnitWeaponBooleanField(whichUnit, UNIT_WEAPON_BF_ATTACKS_ENABLED, 0, LoadBoolean(HideInTrees__h, GetHandleId(whichUnit), HideInTrees__KEY_ATTACK_0_ENABLED))
+        call BlzSetUnitWeaponBooleanField(whichUnit, UNIT_WEAPON_BF_ATTACKS_ENABLED, 1, LoadBoolean(HideInTrees__h, GetHandleId(whichUnit), HideInTrees__KEY_ATTACK_1_ENABLED))
    
-        call FlushChildHashtable(HideInTrees___h, GetHandleId(whichUnit))
+        call FlushChildHashtable(HideInTrees__h, GetHandleId(whichUnit))
     endif
 endfunction
 
-function HideInTrees___TriggerConditionCast takes nothing returns boolean
+function HideInTrees__TriggerConditionCast takes nothing returns boolean
     if ( GetSpellAbilityId() == HideInTrees_ABILITY_ID_HIDE ) then
-        if ( (LoadUnitHandle(HideInTrees___h, GetHandleId((GetSpellTargetDestructable())), HideInTrees___KEY_UNIT)) == null ) then // INLINED!!
-            call HideInTrees___HideUnit(GetTriggerUnit() , GetSpellTargetDestructable())
+        if ( (LoadUnitHandle(HideInTrees__h, GetHandleId((GetSpellTargetDestructable())), HideInTrees__KEY_UNIT)) == null ) then // INLINED!!
+            call HideInTrees__HideUnit(GetTriggerUnit() , GetSpellTargetDestructable())
         else
             call IssueImmediateOrder(GetTriggerUnit(), "stop")
             call SimError(GetOwningPlayer(GetTriggerUnit()) , "Tree is already occupied.")
         endif
     elseif ( GetSpellAbilityId() == HideInTrees_ABILITY_ID_UNHIDE ) then
-        call HideInTrees___UnhideUnit(GetTriggerUnit())
+        call HideInTrees__UnhideUnit(GetTriggerUnit())
     endif
     
     return false
 endfunction
 
-function HideInTrees___DistanceBetweenCoordinates takes real x1,real y1,real x2,real y2 returns real
+function HideInTrees__DistanceBetweenCoordinates takes real x1,real y1,real x2,real y2 returns real
     local real dx= ( x2 - x1 )
     local real dy= ( y2 - y1 )
     return SquareRoot(dx * dx + dy * dy)
 endfunction
 
-function HideInTrees___EnumDestructableFreeTree takes nothing returns nothing
-    if ( (IsTree(GetDestructableTypeId((GetEnumDestructable())))) and (LoadUnitHandle(HideInTrees___h, GetHandleId((GetEnumDestructable())), HideInTrees___KEY_UNIT)) == null and ( HideInTrees___resultingTree == null or HideInTrees___DistanceBetweenCoordinates(GetUnitX(HideInTrees___filterCaster) , GetUnitY(HideInTrees___filterCaster) , GetDestructableX(GetEnumDestructable()) , GetDestructableY(GetEnumDestructable())) < HideInTrees___DistanceBetweenCoordinates(GetUnitX(HideInTrees___filterCaster) , GetUnitY(HideInTrees___filterCaster) , GetDestructableX(HideInTrees___resultingTree) , GetDestructableY(HideInTrees___resultingTree)) ) ) then // INLINED!!
-        set HideInTrees___resultingTree=GetEnumDestructable()
+function HideInTrees__EnumDestructableFreeTree takes nothing returns nothing
+    if ( (IsTree(GetDestructableTypeId((GetEnumDestructable())))) and (LoadUnitHandle(HideInTrees__h, GetHandleId((GetEnumDestructable())), HideInTrees__KEY_UNIT)) == null and ( HideInTrees__resultingTree == null or HideInTrees__DistanceBetweenCoordinates(GetUnitX(HideInTrees__filterCaster) , GetUnitY(HideInTrees__filterCaster) , GetDestructableX(GetEnumDestructable()) , GetDestructableY(GetEnumDestructable())) < HideInTrees__DistanceBetweenCoordinates(GetUnitX(HideInTrees__filterCaster) , GetUnitY(HideInTrees__filterCaster) , GetDestructableX(HideInTrees__resultingTree) , GetDestructableY(HideInTrees__resultingTree)) ) ) then // INLINED!!
+        set HideInTrees__resultingTree=GetEnumDestructable()
     endif
 endfunction
 
-function HideInTrees___GetFreeTreeNextTo takes unit caster,real x,real y returns destructable
+function HideInTrees__GetFreeTreeNextTo takes unit caster,real x,real y returns destructable
     local location l= Location(x, y)
-    set HideInTrees___resultingTree=null
-    set HideInTrees___filterCaster=caster
-    call EnumDestructablesInCircleBJ(64.0, l, function HideInTrees___EnumDestructableFreeTree)
+    set HideInTrees__resultingTree=null
+    set HideInTrees__filterCaster=caster
+    call EnumDestructablesInCircleBJ(64.0, l, function HideInTrees__EnumDestructableFreeTree)
     call RemoveLocation(l)
     set l=null
-    return HideInTrees___resultingTree
+    return HideInTrees__resultingTree
 endfunction
 
-function HideInTrees___OrderNextToTree takes unit caster,real x,real y returns nothing
-    local destructable tree= HideInTrees___GetFreeTreeNextTo(caster , x , y)
+function HideInTrees__OrderNextToTree takes unit caster,real x,real y returns nothing
+    local destructable tree= HideInTrees__GetFreeTreeNextTo(caster , x , y)
     if ( tree != null ) then
         //call BJDebugMsg("Found tree " + GetDestructableName(tree))
         call IssueTargetDestructableOrder(caster, HideInTrees_ORDER_HIDE, tree)
@@ -388,59 +408,59 @@ function HideInTrees___OrderNextToTree takes unit caster,real x,real y returns n
     endif
 endfunction
 
-function HideInTrees___TriggerConditionOrder takes nothing returns boolean
+function HideInTrees__TriggerConditionOrder takes nothing returns boolean
     if ( GetIssuedOrderId() == OrderId("smart") and GetUnitAbilityLevel(GetTriggerUnit(), HideInTrees_ABILITY_ID_HIDE) > 0 ) then
         //call BJDebugMsg("Order!")
-        call HideInTrees___OrderNextToTree(GetTriggerUnit() , GetOrderPointX() , GetOrderPointY())
+        call HideInTrees__OrderNextToTree(GetTriggerUnit() , GetOrderPointX() , GetOrderPointY())
     endif
     
     return false
 endfunction
 
-function HideInTrees___FilterIsTree takes nothing returns boolean
+function HideInTrees__FilterIsTree takes nothing returns boolean
     return (IsTree(GetDestructableTypeId((GetFilterDestructable())))) // INLINED!!
 endfunction
 
-function HideInTrees___RegisterDestDeathInRegionEnumX takes nothing returns nothing
+function HideInTrees__RegisterDestDeathInRegionEnumX takes nothing returns nothing
     call TriggerRegisterDeathEvent(bj_destInRegionDiesTrig, GetEnumDestructable())
 endfunction
 
-function HideInTrees___TriggerConditionDeath takes nothing returns boolean
-    if ( (LoadUnitHandle(HideInTrees___h, GetHandleId((GetTriggerDestructable())), HideInTrees___KEY_UNIT)) != null ) then // INLINED!!
-        call HideInTrees___UnhideUnit((LoadUnitHandle(HideInTrees___h, GetHandleId((GetTriggerDestructable())), HideInTrees___KEY_UNIT))) // INLINED!!
-        call FlushChildHashtable(HideInTrees___h, GetHandleId(GetTriggerDestructable()))
+function HideInTrees__TriggerConditionDeath takes nothing returns boolean
+    if ( (LoadUnitHandle(HideInTrees__h, GetHandleId((GetTriggerDestructable())), HideInTrees__KEY_UNIT)) != null ) then // INLINED!!
+        call HideInTrees__UnhideUnit((LoadUnitHandle(HideInTrees__h, GetHandleId((GetTriggerDestructable())), HideInTrees__KEY_UNIT))) // INLINED!!
+        call FlushChildHashtable(HideInTrees__h, GetHandleId(GetTriggerDestructable()))
     endif
     
     return false
 endfunction
 
-function HideInTrees___Init takes nothing returns nothing
+function HideInTrees__Init takes nothing returns nothing
     call AddTree('B000') // Germanic Tree
 
-    call TriggerRegisterAnyUnitEventBJ(HideInTrees___castTrigger, EVENT_PLAYER_UNIT_SPELL_CHANNEL)
-    call TriggerAddCondition(HideInTrees___castTrigger, Condition(function HideInTrees___TriggerConditionCast))
+    call TriggerRegisterAnyUnitEventBJ(HideInTrees__castTrigger, EVENT_PLAYER_UNIT_SPELL_CHANNEL)
+    call TriggerAddCondition(HideInTrees__castTrigger, Condition(function HideInTrees__TriggerConditionCast))
     
-    call TriggerRegisterAnyUnitEventBJ(HideInTrees___orderTrigger, EVENT_PLAYER_UNIT_ISSUED_POINT_ORDER)
-    call TriggerAddCondition(HideInTrees___orderTrigger, Condition(function HideInTrees___TriggerConditionOrder))
+    call TriggerRegisterAnyUnitEventBJ(HideInTrees__orderTrigger, EVENT_PLAYER_UNIT_ISSUED_POINT_ORDER)
+    call TriggerAddCondition(HideInTrees__orderTrigger, Condition(function HideInTrees__TriggerConditionOrder))
     
-    set bj_destInRegionDiesTrig=HideInTrees___deathTrigger
-    call EnumDestructablesInRect(GetPlayableMapRect(), Filter(function HideInTrees___FilterIsTree), function HideInTrees___RegisterDestDeathInRegionEnumX)
-    call TriggerAddCondition(HideInTrees___deathTrigger, Condition(function HideInTrees___TriggerConditionDeath))
+    set bj_destInRegionDiesTrig=HideInTrees__deathTrigger
+    call EnumDestructablesInRect(GetPlayableMapRect(), Filter(function HideInTrees__FilterIsTree), function HideInTrees__RegisterDestDeathInRegionEnumX)
+    call TriggerAddCondition(HideInTrees__deathTrigger, Condition(function HideInTrees__TriggerConditionDeath))
 endfunction
 
-function HideInTrees___RemoveUnitHook takes unit whichUnit returns nothing
-    if ( IsUnitInGroup(whichUnit, HideInTrees___casters) ) then
-        call GroupRemoveUnit(HideInTrees___casters, whichUnit)
-        call FlushChildHashtable(HideInTrees___h, GetHandleId(whichUnit))
+function HideInTrees__RemoveUnitHook takes unit whichUnit returns nothing
+    if ( IsUnitInGroup(whichUnit, HideInTrees__casters) ) then
+        call GroupRemoveUnit(HideInTrees__casters, whichUnit)
+        call FlushChildHashtable(HideInTrees__h, GetHandleId(whichUnit))
     endif
 endfunction
 
-function HideInTrees___RemoveDestructableHook takes destructable whichDestructable returns nothing
-    call FlushChildHashtable(HideInTrees___h, GetHandleId(whichDestructable))
+function HideInTrees__RemoveDestructableHook takes destructable whichDestructable returns nothing
+    call FlushChildHashtable(HideInTrees__h, GetHandleId(whichDestructable))
 endfunction
 
-//processed hook: hook RemoveUnit HideInTrees___RemoveUnitHook
-//processed hook: hook RemoveDestructable HideInTrees___RemoveDestructableHook
+//processed hook: hook RemoveUnit HideInTrees__RemoveUnitHook
+//processed hook: hook RemoveDestructable HideInTrees__RemoveDestructableHook
 
 
 //library HideInTrees ends
@@ -1019,6 +1039,111 @@ function Doodad012551_DropItems takes nothing returns nothing
     call DestroyTrigger(GetTriggeringTrigger())
 endfunction
 
+function Doodad017181_DropItems takes nothing returns nothing
+    local widget trigWidget= null
+    local unit trigUnit= null
+    local integer itemID= 0
+    local boolean canDrop= true
+
+    set trigWidget=bj_lastDyingWidget
+    if ( trigWidget == null ) then
+        set trigUnit=GetTriggerUnit()
+    endif
+
+    if ( trigUnit != null ) then
+        set canDrop=not IsUnitHidden(trigUnit)
+        if ( canDrop and GetChangingUnit() != null ) then
+            set canDrop=( GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE) )
+        endif
+    endif
+
+    if ( canDrop ) then
+        // Item set 0
+        call RandomDistReset()
+        call RandomDistAddItem('gobm', 100)
+        set itemID=RandomDistChoose()
+        if ( trigUnit != null ) then
+            call UnitDropItem(trigUnit, itemID)
+        else
+            call WidgetDropItem(trigWidget, itemID)
+        endif
+
+    endif
+
+    set bj_lastDyingWidget=null
+    call DestroyTrigger(GetTriggeringTrigger())
+endfunction
+
+function Doodad017182_DropItems takes nothing returns nothing
+    local widget trigWidget= null
+    local unit trigUnit= null
+    local integer itemID= 0
+    local boolean canDrop= true
+
+    set trigWidget=bj_lastDyingWidget
+    if ( trigWidget == null ) then
+        set trigUnit=GetTriggerUnit()
+    endif
+
+    if ( trigUnit != null ) then
+        set canDrop=not IsUnitHidden(trigUnit)
+        if ( canDrop and GetChangingUnit() != null ) then
+            set canDrop=( GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE) )
+        endif
+    endif
+
+    if ( canDrop ) then
+        // Item set 0
+        call RandomDistReset()
+        call RandomDistAddItem('gobm', 100)
+        set itemID=RandomDistChoose()
+        if ( trigUnit != null ) then
+            call UnitDropItem(trigUnit, itemID)
+        else
+            call WidgetDropItem(trigWidget, itemID)
+        endif
+
+    endif
+
+    set bj_lastDyingWidget=null
+    call DestroyTrigger(GetTriggeringTrigger())
+endfunction
+
+function Doodad017183_DropItems takes nothing returns nothing
+    local widget trigWidget= null
+    local unit trigUnit= null
+    local integer itemID= 0
+    local boolean canDrop= true
+
+    set trigWidget=bj_lastDyingWidget
+    if ( trigWidget == null ) then
+        set trigUnit=GetTriggerUnit()
+    endif
+
+    if ( trigUnit != null ) then
+        set canDrop=not IsUnitHidden(trigUnit)
+        if ( canDrop and GetChangingUnit() != null ) then
+            set canDrop=( GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE) )
+        endif
+    endif
+
+    if ( canDrop ) then
+        // Item set 0
+        call RandomDistReset()
+        call RandomDistAddItem('gobm', 100)
+        set itemID=RandomDistChoose()
+        if ( trigUnit != null ) then
+            call UnitDropItem(trigUnit, itemID)
+        else
+            call WidgetDropItem(trigWidget, itemID)
+        endif
+
+    endif
+
+    set bj_lastDyingWidget=null
+    call DestroyTrigger(GetTriggeringTrigger())
+endfunction
+
 
 //***************************************************************************
 //*
@@ -1048,38 +1173,55 @@ function CreateAllDestructables takes nothing returns nothing
     local destructable d
     local trigger t
     local real life
+    set gg_dest_B000_5163=BlzCreateDestructableWithSkin('B000', 4320.0, - 6240.0, 270.000, 0.800, 1, 'B000')
+    set gg_dest_B000_6435=BlzCreateDestructableWithSkin('B000', 1248.0, 6624.0, 270.000, 0.800, 2, 'B000')
     set gg_dest_B000_7302=BlzCreateDestructableWithSkin('B000', - 6880.0, - 224.0, 270.000, 0.800, 2, 'B000')
     set gg_dest_B000_7505=BlzCreateDestructableWithSkin('B000', - 672.0, 2208.0, 270.000, 0.800, 2, 'B000')
     set gg_dest_B000_8108=BlzCreateDestructableWithSkin('B000', 4640.0, - 96.0, 270.000, 0.800, 0, 'B000')
     set gg_dest_B000_0716=BlzCreateDestructableWithSkin('B000', - 3296.0, - 7520.0, 270.000, 0.800, 1, 'B000')
     set gg_dest_LOcg_12553=BlzCreateDestructableWithSkin('LOcg', - 2240.0, - 2240.0, 290.282, 0.915, 0, 'LOcg')
-    set gg_dest_LOcg_12552=BlzCreateDestructableWithSkin('LOcg', - 1984.0, - 2240.0, 266.379, 0.921, 0, 'LOcg')
     set gg_dest_LOcg_12554=BlzCreateDestructableWithSkin('LOcg', - 1792.0, - 2368.0, 235.383, 1.091, 0, 'LOcg')
+    set gg_dest_LOcg_12552=BlzCreateDestructableWithSkin('LOcg', - 1984.0, - 2240.0, 266.379, 0.921, 0, 'LOcg')
     set d=BlzCreateDestructableWithSkin('LTcr', - 5760.0, - 6720.0, 312.000, 1.131, 0, 'LTcr')
     set t=CreateTrigger()
     call TriggerRegisterDeathEvent(t, d)
     call TriggerAddAction(t, function SaveDyingWidget)
     call TriggerAddAction(t, function Doodad012551_DropItems)
-    set d=BlzCreateDestructableWithSkin('LTcr', - 2240.0, 7040.0, 268.000, 0.861, 1, 'LTcr')
-    set t=CreateTrigger()
-    call TriggerRegisterDeathEvent(t, d)
-    call TriggerAddAction(t, function SaveDyingWidget)
-    call TriggerAddAction(t, function Doodad012545_DropItems)
-    set d=BlzCreateDestructableWithSkin('LTcr', - 2112.0, 7040.0, 206.000, 1.131, 1, 'LTcr')
-    set t=CreateTrigger()
-    call TriggerRegisterDeathEvent(t, d)
-    call TriggerAddAction(t, function SaveDyingWidget)
-    call TriggerAddAction(t, function Doodad012544_DropItems)
     set d=BlzCreateDestructableWithSkin('LTcr', - 5824.0, - 6848.0, 164.000, 1.027, 1, 'LTcr')
     set t=CreateTrigger()
     call TriggerRegisterDeathEvent(t, d)
     call TriggerAddAction(t, function SaveDyingWidget)
     call TriggerAddAction(t, function Doodad012549_DropItems)
+    set d=BlzCreateDestructableWithSkin('LTcr', - 2112.0, 7040.0, 206.000, 1.131, 1, 'LTcr')
+    set t=CreateTrigger()
+    call TriggerRegisterDeathEvent(t, d)
+    call TriggerAddAction(t, function SaveDyingWidget)
+    call TriggerAddAction(t, function Doodad012544_DropItems)
+    set d=BlzCreateDestructableWithSkin('LTcr', - 2240.0, 7040.0, 268.000, 0.861, 1, 'LTcr')
+    set t=CreateTrigger()
+    call TriggerRegisterDeathEvent(t, d)
+    call TriggerAddAction(t, function SaveDyingWidget)
+    call TriggerAddAction(t, function Doodad012545_DropItems)
     set d=BlzCreateDestructableWithSkin('LTcr', - 5696.0, - 6848.0, 10.000, 1.025, 1, 'LTcr')
     set t=CreateTrigger()
     call TriggerRegisterDeathEvent(t, d)
     call TriggerAddAction(t, function SaveDyingWidget)
     call TriggerAddAction(t, function Doodad012550_DropItems)
+    set d=BlzCreateDestructableWithSkin('LTcr', 1728.0, - 7488.0, 10.000, 1.025, 1, 'LTcr')
+    set t=CreateTrigger()
+    call TriggerRegisterDeathEvent(t, d)
+    call TriggerAddAction(t, function SaveDyingWidget)
+    call TriggerAddAction(t, function Doodad017181_DropItems)
+    set d=BlzCreateDestructableWithSkin('LTcr', 1856.0, - 7552.0, 10.000, 1.025, 1, 'LTcr')
+    set t=CreateTrigger()
+    call TriggerRegisterDeathEvent(t, d)
+    call TriggerAddAction(t, function SaveDyingWidget)
+    call TriggerAddAction(t, function Doodad017182_DropItems)
+    set d=BlzCreateDestructableWithSkin('LTcr', 1600.0, - 7424.0, 10.000, 1.025, 1, 'LTcr')
+    set t=CreateTrigger()
+    call TriggerRegisterDeathEvent(t, d)
+    call TriggerAddAction(t, function SaveDyingWidget)
+    call TriggerAddAction(t, function Doodad017183_DropItems)
 endfunction
 
 //***************************************************************************
@@ -1439,11 +1581,11 @@ function CreateUnitsForPlayer4 takes nothing returns nothing
     local trigger t
     local real life
 
-    set u=BlzCreateUnitWithSkin(p, 'o003', 3042.9, - 6829.5, 270.000, 'o003')
-    set u=BlzCreateUnitWithSkin(p, 'o003', 3129.2, - 6829.1, 270.000, 'o003')
-    set u=BlzCreateUnitWithSkin(p, 'o003', 3263.7, - 6830.9, 270.000, 'o003')
-    set u=BlzCreateUnitWithSkin(p, 'o003', 3384.2, - 6829.3, 270.000, 'o003')
-    set u=BlzCreateUnitWithSkin(p, 'o003', 3503.7, - 6826.2, 270.000, 'o003')
+    set gg_unit_o003_0051=BlzCreateUnitWithSkin(p, 'o003', 3042.9, - 6829.5, 270.000, 'o003')
+    set gg_unit_o003_0052=BlzCreateUnitWithSkin(p, 'o003', 3129.2, - 6829.1, 270.000, 'o003')
+    set gg_unit_o003_0053=BlzCreateUnitWithSkin(p, 'o003', 3263.7, - 6830.9, 270.000, 'o003')
+    set gg_unit_o003_0054=BlzCreateUnitWithSkin(p, 'o003', 3384.2, - 6829.3, 270.000, 'o003')
+    set gg_unit_o003_0055=BlzCreateUnitWithSkin(p, 'o003', 3503.7, - 6826.2, 270.000, 'o003')
     set gg_unit_O00H_0067=BlzCreateUnitWithSkin(p, 'O00H', 1835.6, - 4844.6, 90.000, 'O00H')
     set u=BlzCreateUnitWithSkin(p, 'o00E', 2664.4, - 7169.6, 248.496, 'o00E')
     set u=BlzCreateUnitWithSkin(p, 'o00A', 2523.7, - 7269.0, 326.388, 'o00A')
@@ -1460,9 +1602,9 @@ function CreateUnitsForPlayer4 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'n003', 2492.1, - 5586.2, 90.000, 'n003')
     set u=BlzCreateUnitWithSkin(p, 'n003', 2369.5, - 5578.9, 90.000, 'n003')
     set u=BlzCreateUnitWithSkin(p, 'n003', 2365.6, - 5461.6, 90.000, 'n003')
-    set u=BlzCreateUnitWithSkin(p, 'o003', 4110.9, - 6365.4, 270.000, 'o003')
-    set u=BlzCreateUnitWithSkin(p, 'o003', 4231.4, - 6363.9, 270.000, 'o003')
-    set u=BlzCreateUnitWithSkin(p, 'o003', 4350.9, - 6360.8, 270.000, 'o003')
+    set gg_unit_o003_0260=BlzCreateUnitWithSkin(p, 'o003', 4110.9, - 6365.4, 90.000, 'o003')
+    set gg_unit_o003_0261=BlzCreateUnitWithSkin(p, 'o003', 4231.4, - 6363.9, 90.000, 'o003')
+    set gg_unit_o003_0262=BlzCreateUnitWithSkin(p, 'o003', 4350.9, - 6360.8, 90.000, 'o003')
     set u=BlzCreateUnitWithSkin(p, 'o004', 2136.0, - 5409.5, 90.000, 'o004')
     set u=BlzCreateUnitWithSkin(p, 'n000', 2059.2, - 5150.8, 90.000, 'n000')
     set u=BlzCreateUnitWithSkin(p, 'n002', 2055.9, - 5003.4, 90.000, 'n002')
@@ -1510,11 +1652,11 @@ function CreateUnitsForPlayer5 takes nothing returns nothing
     local trigger t
     local real life
 
-    set u=BlzCreateUnitWithSkin(p, 'o003', - 153.6, 6634.0, 201.254, 'o003')
-    set u=BlzCreateUnitWithSkin(p, 'o003', - 85.7, 6632.9, 9.635, 'o003')
-    set u=BlzCreateUnitWithSkin(p, 'o003', 9.8, 6634.0, 67.524, 'o003')
-    set u=BlzCreateUnitWithSkin(p, 'o003', 96.7, 6630.1, 274.007, 'o003')
-    set u=BlzCreateUnitWithSkin(p, 'o003', 186.9, 6630.2, 117.524, 'o003')
+    set gg_unit_o003_0068=BlzCreateUnitWithSkin(p, 'o003', - 153.6, 6634.0, 90.000, 'o003')
+    set gg_unit_o003_0069=BlzCreateUnitWithSkin(p, 'o003', - 85.7, 6632.9, 90.000, 'o003')
+    set gg_unit_o003_0070=BlzCreateUnitWithSkin(p, 'o003', 9.8, 6634.0, 90.000, 'o003')
+    set gg_unit_o003_0071=BlzCreateUnitWithSkin(p, 'o003', 96.7, 6630.1, 90.000, 'o003')
+    set gg_unit_o003_0075=BlzCreateUnitWithSkin(p, 'o003', 186.9, 6630.2, 90.000, 'o003')
     set u=BlzCreateUnitWithSkin(p, 'o00E', - 509.8, 5919.2, 248.496, 'o00E')
     set u=BlzCreateUnitWithSkin(p, 'o00A', - 650.5, 5819.9, 326.388, 'o00A')
     set u=BlzCreateUnitWithSkin(p, 'n002', - 680.5, 4982.0, 270.000, 'n002')
@@ -1531,9 +1673,9 @@ function CreateUnitsForPlayer5 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'n003', 176.9, 5270.9, 270.000, 'n003')
     set u=BlzCreateUnitWithSkin(p, 'n003', 54.3, 5278.2, 270.000, 'n003')
     set u=BlzCreateUnitWithSkin(p, 'n003', 50.5, 5395.5, 270.000, 'n003')
-    set u=BlzCreateUnitWithSkin(p, 'o003', 1028.0, 6452.9, 67.524, 'o003')
-    set u=BlzCreateUnitWithSkin(p, 'o003', 1114.8, 6449.0, 87.965, 'o003')
-    set u=BlzCreateUnitWithSkin(p, 'o003', 1205.0, 6449.1, 117.524, 'o003')
+    set gg_unit_o003_0263=BlzCreateUnitWithSkin(p, 'o003', 1028.0, 6452.9, 90.000, 'o003')
+    set gg_unit_o003_0264=BlzCreateUnitWithSkin(p, 'o003', 1114.8, 6449.0, 90.000, 'o003')
+    set gg_unit_o003_0265=BlzCreateUnitWithSkin(p, 'o003', 1205.0, 6449.1, 90.000, 'o003')
     set u=BlzCreateUnitWithSkin(p, 'o004', - 715.6, 4672.9, 270.000, 'o004')
     set u=BlzCreateUnitWithSkin(p, 'n000', - 790.5, 4842.5, 270.000, 'n000')
     set u=BlzCreateUnitWithSkin(p, 'n002', - 804.6, 4973.3, 270.000, 'n002')
@@ -1649,12 +1791,12 @@ function CreateNeutralPassiveBuildings takes nothing returns nothing
     call SetResourceAmount(gg_unit_ngol_0004, 1000000)
     set gg_unit_ngol_0006=BlzCreateUnitWithSkin(p, 'ngol', - 1152.0, 64.0, 270.000, 'ngol')
     call SetResourceAmount(gg_unit_ngol_0006, 1000000)
-    set u=BlzCreateUnitWithSkin(p, 'ngol', 3264.0, - 7104.0, 270.000, 'ngol')
-    call SetResourceAmount(u, 1000000)
+    set gg_unit_ngol_0124=BlzCreateUnitWithSkin(p, 'ngol', 3264.0, - 7104.0, 270.000, 'ngol')
+    call SetResourceAmount(gg_unit_ngol_0124, 1000000)
     set gg_unit_ngol_0125=BlzCreateUnitWithSkin(p, 'ngol', - 4480.0, - 6784.0, 270.000, 'ngol')
     call SetResourceAmount(gg_unit_ngol_0125, 1000000)
-    set u=BlzCreateUnitWithSkin(p, 'ngol', 0.0, 6848.0, 270.000, 'ngol')
-    call SetResourceAmount(u, 1000000)
+    set gg_unit_ngol_0126=BlzCreateUnitWithSkin(p, 'ngol', 0.0, 6848.0, 270.000, 'ngol')
+    call SetResourceAmount(gg_unit_ngol_0126, 1000000)
     set u=BlzCreateUnitWithSkin(p, 'n00A', - 6144.0, 3648.0, 270.000, 'n00A')
     call SetUnitColor(u, ConvertPlayerColor(11))
     set u=BlzCreateUnitWithSkin(p, 'nfoh', 5888.0, 5696.0, 270.000, 'nfoh')
@@ -2314,30 +2456,30 @@ endfunction
 //===========================================================================
 // Trigger: Game Start
 //===========================================================================
-function Trig_Game_Start_Func042Func001C takes nothing returns boolean
+function Trig_Game_Start_Func060Func001C takes nothing returns boolean
     if ( not ( GetPlayerController(GetEnumPlayer()) == MAP_CONTROL_COMPUTER ) ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_Game_Start_Func042A takes nothing returns nothing
-    if ( Trig_Game_Start_Func042Func001C() ) then
+function Trig_Game_Start_Func060A takes nothing returns nothing
+    if ( Trig_Game_Start_Func060Func001C() ) then
         call StartCampaignAI(GetEnumPlayer(), "war3mapImported/Roman.ai")
     else
         call DoNothing()
     endif
 endfunction
 
-function Trig_Game_Start_Func043Func001C takes nothing returns boolean
+function Trig_Game_Start_Func061Func001C takes nothing returns boolean
     if ( not ( GetPlayerController(GetEnumPlayer()) == MAP_CONTROL_COMPUTER ) ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_Game_Start_Func043A takes nothing returns nothing
-    if ( Trig_Game_Start_Func043Func001C() ) then
+function Trig_Game_Start_Func061A takes nothing returns nothing
+    if ( Trig_Game_Start_Func061Func001C() ) then
         call StartCampaignAI(GetEnumPlayer(), "war3mapImported/Germanic.ai")
     else
         call DoNothing()
@@ -2385,9 +2527,27 @@ function Trig_Game_Start_Actions takes nothing returns nothing
     call IssueTargetDestructableOrder(gg_unit_o003_0257, "harvest", gg_dest_B000_0716)
     call IssueTargetDestructableOrder(gg_unit_o003_0258, "harvest", gg_dest_B000_0716)
     call IssueTargetDestructableOrder(gg_unit_o003_0259, "harvest", gg_dest_B000_0716)
+    // Yellow
+    call IssueTargetOrderBJ(gg_unit_o003_0051, "harvest", gg_unit_ngol_0124)
+    call IssueTargetOrderBJ(gg_unit_o003_0052, "harvest", gg_unit_ngol_0124)
+    call IssueTargetOrderBJ(gg_unit_o003_0053, "harvest", gg_unit_ngol_0124)
+    call IssueTargetOrderBJ(gg_unit_o003_0054, "harvest", gg_unit_ngol_0124)
+    call IssueTargetOrderBJ(gg_unit_o003_0055, "harvest", gg_unit_ngol_0124)
+    call IssueTargetDestructableOrder(gg_unit_o003_0260, "harvest", gg_dest_B000_5163)
+    call IssueTargetDestructableOrder(gg_unit_o003_0261, "harvest", gg_dest_B000_5163)
+    call IssueTargetDestructableOrder(gg_unit_o003_0262, "harvest", gg_dest_B000_5163)
+    // Orange
+    call IssueTargetOrderBJ(gg_unit_o003_0068, "harvest", gg_unit_ngol_0126)
+    call IssueTargetOrderBJ(gg_unit_o003_0069, "harvest", gg_unit_ngol_0126)
+    call IssueTargetOrderBJ(gg_unit_o003_0070, "harvest", gg_unit_ngol_0126)
+    call IssueTargetOrderBJ(gg_unit_o003_0071, "harvest", gg_unit_ngol_0126)
+    call IssueTargetOrderBJ(gg_unit_o003_0075, "harvest", gg_unit_ngol_0126)
+    call IssueTargetDestructableOrder(gg_unit_o003_0263, "harvest", gg_dest_B000_6435)
+    call IssueTargetDestructableOrder(gg_unit_o003_0264, "harvest", gg_dest_B000_6435)
+    call IssueTargetDestructableOrder(gg_unit_o003_0265, "harvest", gg_dest_B000_6435)
     // AI
-    call ForForce(udg_RomanPlayers, function Trig_Game_Start_Func042A)
-    call ForForce(udg_GermanicPlayers, function Trig_Game_Start_Func043A)
+    call ForForce(udg_RomanPlayers, function Trig_Game_Start_Func060A)
+    call ForForce(udg_GermanicPlayers, function Trig_Game_Start_Func061A)
     // Objectives
     call CreateQuestBJ(bj_QUESTTYPE_REQ_DISCOVERED, "TRIGSTR_211", "TRIGSTR_212", "ReplaceableTextures\\CommandButtons\\BTNAmbush.blp")
     call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_213")
@@ -2731,10 +2891,10 @@ function main takes nothing returns nothing
     call CreateAllUnits()
     call InitBlizzard()
 
-call ExecuteFunc("jasshelper__initstructs41437734")
-call ExecuteFunc("SimError___init")
-call ExecuteFunc("TreeUtils___Init")
-call ExecuteFunc("HideInTrees___Init")
+call ExecuteFunc("jasshelper__initstructs43044609")
+call ExecuteFunc("SimError__init")
+call ExecuteFunc("TreeUtils__Init")
+call ExecuteFunc("HideInTrees__Init")
 
     call InitGlobals()
     call InitCustomTriggers()
@@ -2772,22 +2932,22 @@ endfunction
 
 
 //Struct method generated initializers/callers:
-function sa___prototype9_HideInTrees___RemoveUnitHook takes nothing returns boolean
-    call HideInTrees___RemoveUnitHook(f__arg_unit1)
+function sa___prototype9_HideInTrees__RemoveUnitHook takes nothing returns boolean
+    call HideInTrees__RemoveUnitHook(f__arg_unit1)
     return true
 endfunction
-function sa___prototype14_HideInTrees___RemoveDestructableHook takes nothing returns boolean
-    call FlushChildHashtable(HideInTrees___h, GetHandleId((f__arg_destructable1))) // INLINED!!
+function sa___prototype14_HideInTrees__RemoveDestructableHook takes nothing returns boolean
+    call FlushChildHashtable(HideInTrees__h, GetHandleId((f__arg_destructable1))) // INLINED!!
     return true
 endfunction
 
-function jasshelper__initstructs41437734 takes nothing returns nothing
+function jasshelper__initstructs43044609 takes nothing returns nothing
     set st___prototype9[1]=CreateTrigger()
-    call TriggerAddAction(st___prototype9[1],function sa___prototype9_HideInTrees___RemoveUnitHook)
-    call TriggerAddCondition(st___prototype9[1],Condition(function sa___prototype9_HideInTrees___RemoveUnitHook))
+    call TriggerAddAction(st___prototype9[1],function sa___prototype9_HideInTrees__RemoveUnitHook)
+    call TriggerAddCondition(st___prototype9[1],Condition(function sa___prototype9_HideInTrees__RemoveUnitHook))
     set st___prototype14[1]=CreateTrigger()
-    call TriggerAddAction(st___prototype14[1],function sa___prototype14_HideInTrees___RemoveDestructableHook)
-    call TriggerAddCondition(st___prototype14[1],Condition(function sa___prototype14_HideInTrees___RemoveDestructableHook))
+    call TriggerAddAction(st___prototype14[1],function sa___prototype14_HideInTrees__RemoveDestructableHook)
+    call TriggerAddCondition(st___prototype14[1],Condition(function sa___prototype14_HideInTrees__RemoveDestructableHook))
 
 endfunction
 

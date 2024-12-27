@@ -2192,6 +2192,12 @@ STRING 460
 Unhide from Trees
 }
 
+STRING 461
+// Upgrades: R00W (Sentinel), Hotkey (Hotkey)
+{
+L
+}
+
 STRING 462
 // Abilities: A010 (Unhide from Trees), Tip (Tooltip - Normal)
 {
@@ -2208,12 +2214,6 @@ STRING 464
 // Units: nglm (Bear Trap), Name (Name)
 {
 Bear Trap
-}
-
-STRING 465
-// Units: o00K (Berserker), Ubertip (Tooltip - Extended)
-{
-Fearless powerful melee warrior. Can cast Berserk which lets him attack faster but also take more damage. Can learn Cannibalize and Brute Strength. |n|n|cffffcc00Attacks land units.|r
 }
 
 STRING 466
@@ -2304,5 +2304,17 @@ STRING 480
 // Upgrades: R00Y (Flak Cannons), Ubertip (Tooltip - Extended)
 {
 Gives Archers the Searing Arrows ability adding additional damage to attacks.
+}
+
+STRING 481
+// Units: h00R (Chariot), Hotkey (Hotkey)
+{
+C
+}
+
+STRING 482
+// Units: o00K (Berserker), Ubertip (Tooltip - Extended)
+{
+Fearless powerful melee warrior. Can cast Berserk which lets him attack faster but also take more damage. Can learn Cannibalize, Summon Dog and Brute Strength. |n|n|cffffcc00Attacks land units.|r
 }
 
