@@ -2318,3 +2318,53 @@ STRING 482
 Fearless powerful melee warrior. Can cast Berserk which lets him attack faster but also take more damage. Can learn Cannibalize, Summon Dog and Brute Strength. |n|n|cffffcc00Attacks land units.|r
 }
 
+STRING 483
+{
+Version 1.1
+}
+
+STRING 484
+{
+All changes for this version.
+}
+
+STRING 485
+{
+Add Hunt ability to Germanic Hunters.
+}
+
+STRING 486
+// Abilities: A016 (Hunt), Name (Name)
+{
+Hunt
+}
+
+STRING 487
+// Abilities: A016 (Hunt), Tip (Tooltip - Normal)
+{
+Hunt
+}
+
+STRING 488
+// Abilities: A016 (Hunt), Ubertip (Tooltip - Normal - Extended)
+{
+Hunts a critter and gives the player gold and lumber.
+}
+
+STRING 489
+{
+Add new creep camp to the south east.
+}
+
+STRING 490
+// Destructibles: B002 (Germanic Birch), Name (Name)
+{
+Germanic Birch
+}
+
+STRING 491
+// Destructibles: B003 (Germanic Pine), Name (Name)
+{
+Germanic Pine
+}
+
