@@ -3006,3 +3006,39 @@ STRING 617
 |cffffcc00Discord:|r VBDFBSbQ
 }
 
+STRING 618
+{
+Version 1.2
+}
+
+STRING 619
+{
+All changes for this version.
+}
+
+STRING 620
+{
+Unblock entry to the hidden creep spot in the south east.
+}
+
+STRING 621
+{
+Add neutral Resurrection Stone.
+}
+
+STRING 622
+{
+Add another Germanic Merchant.
+}
+
+STRING 623
+{
+Change model of Germanic Merchant.
+}
+
+STRING 624
+// Units: ntav (Resurrecton Stone), Name (Name)
+{
+Resurrecton Stone
+}
+
