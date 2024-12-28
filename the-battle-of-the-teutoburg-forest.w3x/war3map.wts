@@ -2691,7 +2691,7 @@ H
 }
 
 STRING 555
-// Abilities: A011 (Place Bear Trap), Hotkey (Hotkey - Normal)
+// Units: h00S (Battering Ram), Hotkey (Hotkey)
 {
 B
 }
@@ -2910,5 +2910,34 @@ STRING 595
 // Units: n00N (Chicken), Ubertip (Tooltip - Extended)
 {
 Gives additional resources when dying.
+}
+
+STRING 596
+{
+Kuhneghetz: Owl
+}
+
+STRING 597
+// Units: h00S (Battering Ram), Name (Name)
+{
+Battering Ram
+}
+
+STRING 598
+// Units: h00S (Battering Ram), Tip (Tooltip - Basic)
+{
+Train Battering Ram
+}
+
+STRING 599
+// Units: h00S (Battering Ram), Ubertip (Tooltip - Extended)
+{
+Heavily armored vehicle, effective at destroying buildings. |n|n|cffffcc00Attacks buildings.|r
+}
+
+STRING 600
+// Abilities: A011 (Place Bear Trap), Hotkey (Hotkey - Normal)
+{
+B
 }
 

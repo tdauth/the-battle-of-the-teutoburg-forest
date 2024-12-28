@@ -120,7 +120,8 @@ function main takes nothing returns nothing
         call CampaignAttackerEx(1, 2, 3, GERMANIC_SHAMAN)
         call CampaignAttackerEx(1, 2, 3, GERMANIC_SEER)
         call CampaignAttackerEx(1, 2, 3, GERMANIC_HIGH_PRIEST)
-        call CampaignAttackerEx(1, 2, 3, GERMANIC_BERSKER)
+        call CampaignAttackerEx(1, 2, 3, GERMANIC_BERSERKER)
+        call CampaignAttackerEx(1, 2, 3, GERMANIC_BATTERING_RAM)
         call Sleep(M1) // Waits 1 minute before attacking
         call LaunchAttack()
     endloop

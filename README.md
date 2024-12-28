@@ -12,6 +12,7 @@ Warcraft III custom map featuring the famous [Battle of the Teutoburg Forest](ht
 * Hide in Trees ability.
 * Animal Breeding.
 * Animal Hunting.
+* Custom critters.
 
 ## Credits
 
@@ -71,4 +72,6 @@ Warcraft III custom map featuring the famous [Battle of the Teutoburg Forest](ht
 * Mr.Goblin: [TimberWolf.blp](https://www.hiveworkshop.com/threads/timberwolf-blp.96133/)
 * Vinz: [Eternity's Crown (1.32)](https://www.hiveworkshop.com/threads/eternitys-crown-1-32.334147/)
 * Kuhneghetz: [Owl](https://www.hiveworkshop.com/threads/owl.50308/)
+* Mechanical Man: [Battering ram](https://www.hiveworkshop.com/threads/battering-ram.50758/)
+* Eagle XI: [BTNBatteringRam](https://www.hiveworkshop.com/threads/btnbatteringram.271777/)
 * General Frank: [It's a bear trap!](https://www.hiveworkshop.com/threads/its-a-bear-trap.231801/)
