@@ -2756,3 +2756,67 @@ STRING 567
 Mr.Goblin: TimberWolf.blp
 }
 
+STRING 568
+// Units: o00M (High Priest), Ubertip (Tooltip - Extended)
+{
+Mystical caster. Can initially cast Heal which restores hit points of allied units. Can learn Life Drain, and Ancestral Spirit. |n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 569
+// Units: o00M (High Priest), Casterupgradetip (Caster Upgrade Tips)
+{
+- Heal,- Heal|n- Life Drain,- Heal|n- Life Drain|n- Ancestral Spirit
+}
+
+STRING 570
+// Abilities: A019 (Ancestral Spirit), Ubertip (Tooltip - Normal - Extended)
+{
+Raises a fallen non-Hero Berserker from the dead. The Berserker is revived with <Aast,DataA1,%>% of its hit points restored.
+}
+
+STRING 571
+// Upgrades: R010 (Spirit Walker Adept Training,Spirit Walker Master Training), Name (Name)
+{
+High Priest Adept Training
+}
+
+STRING 572
+// Upgrades: R010 (Spirit Walker Adept Training,Spirit Walker Master Training), Name (Name)
+{
+High Priest Master Training
+}
+
+STRING 573
+// Upgrades: R010 (Spirit Walker Adept Training,Spirit Walker Master Training), Tip (Tooltip)
+{
+High Priest Adept Training
+}
+
+STRING 574
+// Upgrades: R010 (Spirit Walker Adept Training,Spirit Walker Master Training), Tip (Tooltip)
+{
+High Priest Master Training
+}
+
+STRING 575
+// Upgrades: R010 (Spirit Walker Adept Training,Spirit Walker Master Training), Ubertip (Tooltip - Extended)
+{
+Increases High Priests' mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Life Drain.
+}
+
+STRING 576
+// Upgrades: R010 (Spirit Walker Adept Training,Spirit Walker Master Training), Ubertip (Tooltip - Extended)
+{
+Increases High Priests' mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Ancestral Spirit.
+}
+
+STRING 577
+{
+Add Germanic unit High Priest.
+}
+
+STRING 578
+{
+Add custom model for Germanic Ritual Site.
+}
+

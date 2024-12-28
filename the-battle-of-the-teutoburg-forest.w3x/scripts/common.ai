@@ -710,6 +710,7 @@ globals
     constant integer UPG_GERMANIC_PILLAGE = 'R004'
     constant integer UPG_GERMANIC_SEER = 'R00E'
     constant integer UPG_GERMANIC_SHAMAN = 'R000'
+    constant integer UPG_GERMANIC_HIGH_PRIEST = 'R010'
     constant integer UPG_GERMANIC_ARMOR = 'R00D'
     constant integer UPG_GERMANIC_MELEE = 'R00B'
     constant integer UPG_GERMANIC_RANGED = 'R00C'

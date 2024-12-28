@@ -87,6 +87,7 @@ function main takes nothing returns nothing
     call SetBuildUpgr(2, UPG_GERMANIC_SHAMAN)
     call SetBuildUpgr(2, UPG_GERMANIC_DRUID)
     call SetBuildUpgr(2, UPG_GERMANIC_SEER)
+    call SetBuildUpgr(2, UPG_GERMANIC_HIGH_PRIEST)
     call SetBuildUpgr(2, UPG_GERMANIC_LUMBER)
     call SetBuildUpgr(3, UPG_GERMANIC_HORSE)
     call SetBuildUpgr(1, UPG_GERMANIC_BACKPACK)

@@ -2665,6 +2665,8 @@ function Trig_Game_Start_Actions takes nothing returns nothing
     call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_543")
     call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_550")
     call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_551")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_577")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_578")
     // Credits
     call CreateQuestBJ(bj_QUESTTYPE_REQ_DISCOVERED, "TRIGSTR_404", "TRIGSTR_405", "ReplaceableTextures\\CommandButtons\\BTNBanditLord.blp")
     call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_406")
@@ -3057,7 +3059,7 @@ function main takes nothing returns nothing
     call CreateAllUnits()
     call InitBlizzard()
 
-call ExecuteFunc("jasshelper__initstructs105648500")
+call ExecuteFunc("jasshelper__initstructs106689640")
 call ExecuteFunc("SimError___init")
 call ExecuteFunc("TreeUtils___Init")
 call ExecuteFunc("HideInTrees___Init")
@@ -3107,7 +3109,7 @@ function sa___prototype14_HideInTrees___RemoveDestructableHook takes nothing ret
     return true
 endfunction
 
-function jasshelper__initstructs105648500 takes nothing returns nothing
+function jasshelper__initstructs106689640 takes nothing returns nothing
     set st___prototype9[1]=CreateTrigger()
     call TriggerAddAction(st___prototype9[1],function sa___prototype9_HideInTrees___RemoveUnitHook)
     call TriggerAddCondition(st___prototype9[1],Condition(function sa___prototype9_HideInTrees___RemoveUnitHook))
