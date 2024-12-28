@@ -89,12 +89,16 @@ function main takes nothing returns nothing
     call SetBuildUpgr(2, UPG_GERMANIC_SEER)
     call SetBuildUpgr(2, UPG_GERMANIC_LUMBER)
     call SetBuildUpgr(3, UPG_GERMANIC_HORSE)
+    call SetBuildUpgr(1, UPG_GERMANIC_BACKPACK)
     call SetBuildUpgr(1, UPG_GERMANIC_VENOM)
     call SetBuildUpgr(1, UPG_GERMANIC_PILLAGE)
+    call SetBuildUpgr(1, UPG_GERMANIC_STRENGTH)
     call SetBuildUpgr(1, UPG_GERMANIC_ULTRAVISION)
     call SetBuildUpgr(1, UPG_GERMANIC_ENSNARE)
     call SetBuildUpgr(1, UPG_GERMANIC_CANNIBALIZE)
     call SetBuildUpgr(1, UPG_GERMANIC_DOG)
+    call SetBuildUpgr(1, UPG_GERMANIC_SENTINEL)
+    call SetBuildUpgr(1, UPG_GERMANIC_HUNTING)
 
     call SetBuildExpa(2, GERMANIC_TIER_3)
 

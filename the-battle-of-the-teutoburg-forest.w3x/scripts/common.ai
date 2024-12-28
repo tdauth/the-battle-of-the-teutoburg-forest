@@ -715,6 +715,8 @@ globals
     constant integer UPG_GERMANIC_HORSE = 'R00T'
     constant integer UPG_GERMANIC_CANNIBALIZE = 'R00V'
     constant integer UPG_GERMANIC_DOG = 'R00X'
+    constant integer UPG_GERMANIC_HUNTING = 'R00Z'
+    constant integer UPG_GERMANIC_SENTINEL = 'R013'
 
     constant integer COMMAND_AURA = 'A002'
     constant integer VOLCANO = 'ANvc'
@@ -1417,6 +1419,8 @@ function StartExpansion takes integer qty, integer hall returns boolean
 
     set town = GetNextExpansion()
     if town == -1 then
+        //call BlzDisplayChatMessage(Player(GetAiPlayer()), 0, "No expansion spot!")
+
         return true
     endif
 
@@ -1436,6 +1440,8 @@ function StartExpansion takes integer qty, integer hall returns boolean
     if peon != null then
         return SetExpansion(peon,hall)
     endif
+
+    //call BlzDisplayChatMessage(Player(GetAiPlayer()), 0, "No worker for my expansion!")
 
     return true
 endfunction

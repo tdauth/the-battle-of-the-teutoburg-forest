@@ -361,12 +361,6 @@ STRING 125
 Throw Pilum
 }
 
-STRING 126
-// Abilities: A004 (Throw Pilum), Ubertip (Tooltip - Normal - Extended)
-{
-Throws a Pilum that stuns a target enemy unit.
-}
-
 STRING 127
 // Abilities: A004 (Throw Pilum), Name (Name)
 {
@@ -479,12 +473,6 @@ STRING 152
 // Upgrades: R003 (Defend), Tip (Tooltip)
 {
 Research Throw Pilum
-}
-
-STRING 153
-// Upgrades: R003 (Defend), Ubertip (Tooltip - Extended)
-{
-Allows Roman warriors to use the Throw Pilum ability, which damages and stuns enemy units.
 }
 
 STRING 154
@@ -2339,12 +2327,6 @@ STRING 487
 Hunt
 }
 
-STRING 488
-// Abilities: A016 (Hunt), Ubertip (Tooltip - Normal - Extended)
-{
-Hunts a critter and gives the player gold and lumber.
-}
-
 STRING 489
 {
 Add new creep camp to the south east.
@@ -2528,5 +2510,161 @@ STRING 522
 // Items: I001 (Germanic Banner), Description (Description)
 {
 The symbol of Germanic victory.
+}
+
+STRING 523
+// Units: o006 (Barracks), Ubertip (Tooltip - Extended)
+{
+Primary troop production building. Trains Warriors, Hunters and Javelin Throwers. |nAlso contains the Brute Strength, Ensnare, Improved Hunting, and Envenomed Weapons upgrades.
+}
+
+STRING 524
+// Units: n002 (Warrior), Hotkey (Hotkey)
+{
+W
+}
+
+STRING 525
+// Abilities: A00C (Envenomed Weapons), Name (Name)
+{
+Envenomed Weapons
+}
+
+STRING 526
+// Abilities: A00C (Envenomed Weapons), Tip (Tooltip - Normal)
+{
+Envenomed Weapons
+}
+
+STRING 527
+// Abilities: A00C (Envenomed Weapons), Ubertip (Tooltip - Normal - Extended)
+{
+Deals <A00C,DataA1> poison damage per second. |nLasts <A00C,Dur1> seconds.
+}
+
+STRING 528
+// Abilities: A016 (Hunt), Ubertip (Tooltip - Normal - Extended)
+{
+Hunts a critter and gives the player <A016,DataA1,%> % gold and <A016,DataB1,%> % lumber.
+}
+
+STRING 529
+// Abilities: A016 (Hunt), Tip (Tooltip - Normal)
+{
+Improved Hunting
+}
+
+STRING 530
+// Abilities: A016 (Hunt), Ubertip (Tooltip - Normal - Extended)
+{
+Hunts a critter and gives the player <A016,DataA2,%> % gold and <A016,DataB2,%> % lumber.
+}
+
+STRING 531
+// Upgrades: R008 (Envenomed Spears), Name (Name)
+{
+Envenomed Weapons
+}
+
+STRING 532
+// Upgrades: R008 (Envenomed Spears), Tip (Tooltip)
+{
+Research Envenomed Weapons
+}
+
+STRING 533
+// Upgrades: R008 (Envenomed Spears), Ubertip (Tooltip - Extended)
+{
+Adds an additional poison effect to Hunters' and Javelin Throwers' attacks. A unit poisoned by Envenomed Spears takes damage over time.
+}
+
+STRING 534
+// Upgrades: R00Z (Troll Regeneration,Improved Troll Regeneration,Advanced Troll Regeneration), Name (Name)
+{
+Improved Hunting
+}
+
+STRING 535
+// Upgrades: R00Z (Troll Regeneration,Improved Troll Regeneration,Advanced Troll Regeneration), Tip (Tooltip)
+{
+Research Improved Hunting
+}
+
+STRING 536
+// Upgrades: R00Z (Troll Regeneration,Improved Troll Regeneration,Advanced Troll Regeneration), Ubertip (Tooltip - Extended)
+{
+Increases the resources gained by hunting.
+}
+
+STRING 537
+// Upgrades: R00Z (Troll Regeneration,Improved Troll Regeneration,Advanced Troll Regeneration), effect1 (Effect 1)
+{
+rlev
+}
+
+STRING 538
+{
+Fix missing AI researches.
+}
+
+STRING 539
+{
+Germanic Watch Towers can load units now.
+}
+
+STRING 540
+{
+Germanic Shaman can be trained now.
+}
+
+STRING 541
+{
+Throw Pilum ability does not stun anymore.
+}
+
+STRING 542
+{
+Germanic Riders have the Ultravision ability now.
+}
+
+STRING 543
+{
+Germanic Riders have a Horse Keeping icon ability now.
+}
+
+STRING 544
+// Abilities: A004 (Throw Pilum), Ubertip (Tooltip - Normal - Extended)
+{
+Throws a Pilum that damages a target enemy unit.
+}
+
+STRING 545
+// Abilities: A00H (Rejuvenation), Hotkey (Hotkey - Normal)
+{
+J
+}
+
+STRING 546
+// Abilities: A017 (Horse Keeping), Tip (Tooltip - Normal)
+{
+Horse Keeping
+}
+
+STRING 547
+// Abilities: A017 (Horse Keeping), Name (Name)
+{
+Horse Keeping
+}
+
+STRING 548
+// Abilities: A017 (Horse Keeping), Ubertip (Tooltip - Normal - Extended)
+{
+Increases the maximum hit points of this unit by <R00T,base2> and the movement speed by <R00T,base1>.
+}
+
+STRING 549
+// Upgrades: R003 (Defend), Ubertip (Tooltip - Extended)
+{
+Allows Roman warriors to use the Throw Pilum ability, which damages enemy units.
 }
 

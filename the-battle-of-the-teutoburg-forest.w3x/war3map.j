@@ -178,6 +178,7 @@ item gg_item_I000_0422= null
 item gg_item_I000_0423= null
 trigger gg_trg_Cage_4_Death= null
 destructable gg_dest_LOcg_17750= null
+trigger gg_trg_Hunt= null
 
 trigger l__library_init
 
@@ -1228,17 +1229,17 @@ function CreateAllDestructables takes nothing returns nothing
     set gg_dest_LOcg_12552=BlzCreateDestructableWithSkin('LOcg', - 1984.0, - 2240.0, 266.379, 0.921, 0, 'LOcg')
     set gg_dest_LOcg_12553=BlzCreateDestructableWithSkin('LOcg', - 2240.0, - 2240.0, 290.282, 0.915, 0, 'LOcg')
     set gg_dest_LOcg_17750=BlzCreateDestructableWithSkin('LOcg', 7360.0, - 6400.0, 177.774, 0.921, 0, 'LOcg')
-    set d=BlzCreateDestructableWithSkin('LTcr', - 5824.0, - 6848.0, 164.000, 1.027, 1, 'LTcr')
+    set d=BlzCreateDestructableWithSkin('LTcr', - 5760.0, - 5120.0, 164.000, 1.027, 1, 'LTcr')
     set t=CreateTrigger()
     call TriggerRegisterDeathEvent(t, d)
     call TriggerAddAction(t, function SaveDyingWidget)
     call TriggerAddAction(t, function Doodad012549_DropItems)
-    set d=BlzCreateDestructableWithSkin('LTcr', - 5696.0, - 6848.0, 10.000, 1.025, 1, 'LTcr')
+    set d=BlzCreateDestructableWithSkin('LTcr', - 5632.0, - 5120.0, 10.000, 1.025, 1, 'LTcr')
     set t=CreateTrigger()
     call TriggerRegisterDeathEvent(t, d)
     call TriggerAddAction(t, function SaveDyingWidget)
     call TriggerAddAction(t, function Doodad012550_DropItems)
-    set d=BlzCreateDestructableWithSkin('LTcr', - 5760.0, - 6720.0, 312.000, 1.131, 0, 'LTcr')
+    set d=BlzCreateDestructableWithSkin('LTcr', - 5696.0, - 4992.0, 312.000, 1.131, 0, 'LTcr')
     set t=CreateTrigger()
     call TriggerRegisterDeathEvent(t, d)
     call TriggerAddAction(t, function SaveDyingWidget)
@@ -1880,7 +1881,7 @@ function CreateNeutralPassiveBuildings takes nothing returns nothing
     call SetResourceAmount(u, 1000000)
     set u=BlzCreateUnitWithSkin(p, 'ngol', - 768.0, - 6144.0, 270.000, 'ngol')
     call SetResourceAmount(u, 1000000)
-    set u=BlzCreateUnitWithSkin(p, 'ngol', - 5568.0, 6208.0, 270.000, 'ngol')
+    set u=BlzCreateUnitWithSkin(p, 'ngol', - 2944.0, 6912.0, 270.000, 'ngol')
     call SetResourceAmount(u, 1000000)
     set u=BlzCreateUnitWithSkin(p, 'ngol', - 2752.0, - 1088.0, 270.000, 'ngol')
     call SetResourceAmount(u, 1000000)
@@ -2652,6 +2653,12 @@ function Trig_Game_Start_Actions takes nothing returns nothing
     call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_516")
     call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_517")
     call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_518")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_538")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_539")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_540")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_541")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_542")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_543")
     // Credits
     call CreateQuestBJ(bj_QUESTTYPE_REQ_DISCOVERED, "TRIGSTR_404", "TRIGSTR_405", "ReplaceableTextures\\CommandButtons\\BTNBanditLord.blp")
     call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_406")
@@ -2703,6 +2710,50 @@ endfunction
 function InitTrig_Game_Start takes nothing returns nothing
     set gg_trg_Game_Start=CreateTrigger()
     call TriggerAddAction(gg_trg_Game_Start, function Trig_Game_Start_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: Hunt
+//===========================================================================
+function Trig_Hunt_Func004C takes nothing returns boolean
+    if ( ( GetUnitTypeId(GetOrderTargetUnit()) == 'n00K' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetOrderTargetUnit()) == 'n00M' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetOrderTargetUnit()) == 'nder' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetOrderTargetUnit()) == 'nfro' ) ) then
+        return true
+    endif
+    return false
+endfunction
+
+function Trig_Hunt_Conditions takes nothing returns boolean
+    if ( not ( GetUnitAbilityLevelSwapped('A016', GetTriggerUnit()) > 0 ) ) then
+        return false
+    endif
+    if ( not ( GetOrderTargetUnit() != null ) ) then
+        return false
+    endif
+    if ( not Trig_Hunt_Func004C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Hunt_Actions takes nothing returns nothing
+    call IssueTargetOrderBJ(GetTriggerUnit(), "transmute", GetOrderTargetUnit())
+endfunction
+
+//===========================================================================
+function InitTrig_Hunt takes nothing returns nothing
+    set gg_trg_Hunt=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_Hunt, EVENT_PLAYER_UNIT_ISSUED_TARGET_ORDER)
+    call TriggerAddCondition(gg_trg_Hunt, Condition(function Trig_Hunt_Conditions))
+    call TriggerAddAction(gg_trg_Hunt, function Trig_Hunt_Actions)
 endfunction
 
 //===========================================================================
@@ -2815,6 +2866,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_Breeding_Death()
     call InitTrig_Initialization()
     call InitTrig_Game_Start()
+    call InitTrig_Hunt()
     call InitTrig_Player_Leaves_Roman()
     call InitTrig_Player_Leaves_Germanic()
     call InitTrig_Lightning_Start()
@@ -2987,7 +3039,7 @@ function main takes nothing returns nothing
     call CreateAllUnits()
     call InitBlizzard()
 
-call ExecuteFunc("jasshelper__initstructs100851906")
+call ExecuteFunc("jasshelper__initstructs103719718")
 call ExecuteFunc("SimError___init")
 call ExecuteFunc("TreeUtils___Init")
 call ExecuteFunc("HideInTrees___Init")
@@ -3037,7 +3089,7 @@ function sa___prototype14_HideInTrees___RemoveDestructableHook takes nothing ret
     return true
 endfunction
 
-function jasshelper__initstructs100851906 takes nothing returns nothing
+function jasshelper__initstructs103719718 takes nothing returns nothing
     set st___prototype9[1]=CreateTrigger()
     call TriggerAddAction(st___prototype9[1],function sa___prototype9_HideInTrees___RemoveUnitHook)
     call TriggerAddCondition(st___prototype9[1],Condition(function sa___prototype9_HideInTrees___RemoveUnitHook))
