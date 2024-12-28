@@ -3329,7 +3329,7 @@ function InitCustomPlayerSlots takes nothing returns nothing
     call SetPlayerColor(Player(0), ConvertPlayerColor(0))
     call SetPlayerRacePreference(Player(0), RACE_PREF_HUMAN)
     call SetPlayerRaceSelectable(Player(0), false)
-    call SetPlayerController(Player(0), MAP_CONTROL_COMPUTER)
+    call SetPlayerController(Player(0), MAP_CONTROL_USER)
 
     // Player 1
     call SetPlayerStartLocation(Player(1), 1)
@@ -3337,7 +3337,7 @@ function InitCustomPlayerSlots takes nothing returns nothing
     call SetPlayerColor(Player(1), ConvertPlayerColor(1))
     call SetPlayerRacePreference(Player(1), RACE_PREF_HUMAN)
     call SetPlayerRaceSelectable(Player(1), false)
-    call SetPlayerController(Player(1), MAP_CONTROL_COMPUTER)
+    call SetPlayerController(Player(1), MAP_CONTROL_USER)
 
     // Player 2
     call SetPlayerStartLocation(Player(2), 2)
@@ -3345,7 +3345,7 @@ function InitCustomPlayerSlots takes nothing returns nothing
     call SetPlayerColor(Player(2), ConvertPlayerColor(2))
     call SetPlayerRacePreference(Player(2), RACE_PREF_HUMAN)
     call SetPlayerRaceSelectable(Player(2), false)
-    call SetPlayerController(Player(2), MAP_CONTROL_COMPUTER)
+    call SetPlayerController(Player(2), MAP_CONTROL_USER)
 
     // Player 3
     call SetPlayerStartLocation(Player(3), 3)
@@ -3361,7 +3361,7 @@ function InitCustomPlayerSlots takes nothing returns nothing
     call SetPlayerColor(Player(4), ConvertPlayerColor(4))
     call SetPlayerRacePreference(Player(4), RACE_PREF_ORC)
     call SetPlayerRaceSelectable(Player(4), false)
-    call SetPlayerController(Player(4), MAP_CONTROL_COMPUTER)
+    call SetPlayerController(Player(4), MAP_CONTROL_USER)
 
     // Player 5
     call SetPlayerStartLocation(Player(5), 5)
@@ -3369,7 +3369,7 @@ function InitCustomPlayerSlots takes nothing returns nothing
     call SetPlayerColor(Player(5), ConvertPlayerColor(5))
     call SetPlayerRacePreference(Player(5), RACE_PREF_ORC)
     call SetPlayerRaceSelectable(Player(5), false)
-    call SetPlayerController(Player(5), MAP_CONTROL_COMPUTER)
+    call SetPlayerController(Player(5), MAP_CONTROL_USER)
 
 endfunction
 
@@ -3440,12 +3440,17 @@ function InitAllyPriorities takes nothing returns nothing
     call SetStartLocPrio(2, 1, 4, MAP_LOC_PRIO_HIGH)
     call SetStartLocPrio(2, 2, 5, MAP_LOC_PRIO_LOW)
 
-    call SetStartLocPrioCount(4, 1)
-    call SetStartLocPrio(4, 0, 3, MAP_LOC_PRIO_HIGH)
+    call SetStartLocPrioCount(3, 3)
+    call SetStartLocPrio(3, 0, 0, MAP_LOC_PRIO_HIGH)
+    call SetStartLocPrio(3, 1, 1, MAP_LOC_PRIO_LOW)
+    call SetStartLocPrio(3, 2, 4, MAP_LOC_PRIO_LOW)
 
-    call SetStartLocPrioCount(5, 2)
-    call SetStartLocPrio(5, 0, 3, MAP_LOC_PRIO_HIGH)
-    call SetStartLocPrio(5, 1, 4, MAP_LOC_PRIO_HIGH)
+    call SetStartLocPrioCount(4, 2)
+    call SetStartLocPrio(4, 0, 2, MAP_LOC_PRIO_HIGH)
+    call SetStartLocPrio(4, 1, 3, MAP_LOC_PRIO_LOW)
+
+    call SetStartLocPrioCount(5, 1)
+    call SetStartLocPrio(5, 0, 1, MAP_LOC_PRIO_HIGH)
 endfunction
 
 //***************************************************************************
@@ -3475,7 +3480,7 @@ function main takes nothing returns nothing
     call CreateAllUnits()
     call InitBlizzard()
 
-call ExecuteFunc("jasshelper__initstructs115512531")
+call ExecuteFunc("jasshelper__initstructs116122750")
 call ExecuteFunc("SimError__init")
 call ExecuteFunc("TreeUtils__Init")
 call ExecuteFunc("HideInTrees__Init")
@@ -3497,7 +3502,7 @@ function config takes nothing returns nothing
     call SetMapDescription("TRIGSTR_263")
     call SetPlayers(6)
     call SetTeams(6)
-    call SetGamePlacement(MAP_PLACEMENT_USE_MAP_SETTINGS)
+    call SetGamePlacement(MAP_PLACEMENT_TEAMS_TOGETHER)
 
     call DefineStartLocation(0, - 4864.0, - 576.0)
     call DefineStartLocation(1, - 896.0, 1280.0)
@@ -3525,7 +3530,7 @@ function sa___prototype14_HideInTrees__RemoveDestructableHook takes nothing retu
     return true
 endfunction
 
-function jasshelper__initstructs115512531 takes nothing returns nothing
+function jasshelper__initstructs116122750 takes nothing returns nothing
     set st___prototype9[1]=CreateTrigger()
     call TriggerAddAction(st___prototype9[1],function sa___prototype9_HideInTrees__RemoveUnitHook)
     call TriggerAddCondition(st___prototype9[1],Condition(function sa___prototype9_HideInTrees__RemoveUnitHook))
