@@ -2820,3 +2820,95 @@ STRING 578
 Add custom model for Germanic Ritual Site.
 }
 
+STRING 579
+{
+Vinz: Eternity's Crown (1.32)
+}
+
+STRING 580
+{
++30
+}
+
+STRING 581
+{
++30
+}
+
+STRING 582
+{
+Show bounty floating texts for Breeding.
+}
+
+STRING 583
+{
+Vexorian: SimError
+}
+
+STRING 584
+{
+Fix Germanic Ultravision research.
+}
+
+STRING 585
+{
+Fix storing hidden units in trees.
+}
+
+STRING 586
+{
+Add Germanic unit Chicken.
+}
+
+STRING 587
+{
+Germanic AI breeds animals now.
+}
+
+STRING 588
+{
+Add critter Owl.
+}
+
+STRING 589
+// Units: nsno (Owl), Name (Name)
+{
+Owl
+}
+
+STRING 590
+// Units: nsno (Owl), Tip (Tooltip - Basic)
+{
+Invoke Owl
+}
+
+STRING 591
+// Units: nsno (Owl), Ubertip (Tooltip - Extended)
+{
+Call upon the spirit of Owl to save you.
+}
+
+STRING 592
+// Units: o005 (House), Ubertip (Tooltip - Extended)
+{
+Provides food, which increases the maximum number of units that can be trained. Can breed animals which give additional resources on dying.
+}
+
+STRING 593
+// Units: n00N (Chicken), Tip (Tooltip - Basic)
+{
+Breed Chicken
+}
+
+STRING 594
+// Units: n00N (Chicken), Hotkey (Hotkey)
+{
+C
+}
+
+STRING 595
+// Units: n00N (Chicken), Ubertip (Tooltip - Extended)
+{
+Gives additional resources when dying.
+}
+

@@ -4,10 +4,20 @@ Warcraft III custom map featuring the famous [Battle of the Teutoburg Forest](ht
 
 ![Furor Teutonicus by Paja Jovanović, 1899](LoadingScreen.jpg "Furor Teutonicus by Paja Jovanović, 1899")
 
+# Features
+
+* Inspired by a true historical event.
+* Two custom races: Roman Empire and Germanic Tribe.
+* AI support.
+* Hide in Trees ability.
+* Animal Breeding.
+* Animal Hunting.
+
 ## Credits
 
 * Creator: Baradé
 * Loading Screen: Painter Pavle "Paja" Jovanović
+* Vexorian: SimError
 * assasin_lord: [HeroGlow](https://www.hiveworkshop.com/threads/heroglow.129462/)
 * Fingolfin: [Celtic Town Center](https://www.hiveworkshop.com/threads/celtic-town-center.287546/)
 * Fingolfin: [Celtic House](https://www.hiveworkshop.com/threads/celtic-house.287534/)
@@ -60,4 +70,5 @@ Warcraft III custom map featuring the famous [Battle of the Teutoburg Forest](ht
 * BLazeKraze: [Bandit Hide](https://www.hiveworkshop.com/threads/bandit-hide.289286/)
 * Mr.Goblin: [TimberWolf.blp](https://www.hiveworkshop.com/threads/timberwolf-blp.96133/)
 * Vinz: [Eternity's Crown (1.32)](https://www.hiveworkshop.com/threads/eternitys-crown-1-32.334147/)
+* Kuhneghetz: [Owl](https://www.hiveworkshop.com/threads/owl.50308/)
 * General Frank: [It's a bear trap!](https://www.hiveworkshop.com/threads/its-a-bear-trap.231801/)
