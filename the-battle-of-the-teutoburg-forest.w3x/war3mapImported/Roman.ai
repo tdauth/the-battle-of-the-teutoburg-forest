@@ -109,6 +109,7 @@ function main takes nothing returns nothing
         call CampaignAttackerEx(2, 3, 4, ROMAN_CENTURIO)
         call CampaignAttackerEx(1, 2, 3, ROMAN_SLINGER)
         call CampaignAttackerEx(1, 2, 3, ROMAN_EQUES)
+        call CampaignAttackerEx(1, 2, 3, ROMAN_CHARIOT)
         call CampaignAttackerEx(1, 2, 3, ROMAN_PRIEST)
         call CampaignAttackerEx(1, 2, 3, ROMAN_VEXILLIFER)
         call CampaignAttackerEx(1, 1, 1, ROMAN_CART)

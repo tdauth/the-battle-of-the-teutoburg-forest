@@ -2162,12 +2162,6 @@ STRING 458
 Place Bear Trap
 }
 
-STRING 459
-// Abilities: A011 (Place Bear Trap), Hotkey (Hotkey - Normal)
-{
-P
-}
-
 STRING 460
 // Abilities: A010 (Unhide from Trees), Name (Name)
 {
@@ -2666,5 +2660,39 @@ STRING 549
 // Upgrades: R003 (Defend), Ubertip (Tooltip - Extended)
 {
 Allows Roman warriors to use the Throw Pilum ability, which damages enemy units.
+}
+
+STRING 550
+{
+Scale down Roman Catapult.
+}
+
+STRING 551
+{
+Scale down Roman Ballista.
+}
+
+STRING 552
+// Units: o00M (High Priest), Name (Name)
+{
+High Priest
+}
+
+STRING 553
+// Units: o00M (High Priest), Tip (Tooltip - Basic)
+{
+Train High Priest
+}
+
+STRING 554
+// Units: o00M (High Priest), Hotkey (Hotkey)
+{
+H
+}
+
+STRING 555
+// Abilities: A011 (Place Bear Trap), Hotkey (Hotkey - Normal)
+{
+B
 }
 

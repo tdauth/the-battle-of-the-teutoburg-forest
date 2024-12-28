@@ -179,6 +179,7 @@ item gg_item_I000_0423= null
 trigger gg_trg_Cage_4_Death= null
 destructable gg_dest_LOcg_17750= null
 trigger gg_trg_Hunt= null
+rect gg_rct_Fog_3= null
 
 trigger l__library_init
 
@@ -1968,14 +1969,17 @@ function CreateRegions takes nothing returns nothing
     set gg_rct_Fog=Rect(5408.0, - 4640.0, 6176.0, - 4096.0)
     set we=AddWeatherEffect(gg_rct_Fog, 'FDwh')
     call EnableWeatherEffect(we, true)
-    set gg_rct_Waygate_Top=Rect(2336.0, 6208.0, 3200.0, 7040.0)
-    set gg_rct_Waygate_Bottom=Rect(- 1312.0, - 5504.0, - 448.0, - 4672.0)
-    set gg_rct_Moonlight=Rect(- 5472.0, 6464.0, - 4704.0, 7072.0)
-    set we=AddWeatherEffect(gg_rct_Moonlight, 'LRma')
-    call EnableWeatherEffect(we, true)
     set gg_rct_Fog_2=Rect(6560.0, 1856.0, 7360.0, 2912.0)
     set we=AddWeatherEffect(gg_rct_Fog_2, 'FDgh')
     call EnableWeatherEffect(we, true)
+    set gg_rct_Fog_3=Rect(6080.0, - 7680.0, 7040.0, - 6720.0)
+    set we=AddWeatherEffect(gg_rct_Fog_3, 'FDwh')
+    call EnableWeatherEffect(we, true)
+    set gg_rct_Moonlight=Rect(- 5472.0, 6464.0, - 4704.0, 7072.0)
+    set we=AddWeatherEffect(gg_rct_Moonlight, 'LRma')
+    call EnableWeatherEffect(we, true)
+    set gg_rct_Waygate_Bottom=Rect(- 1312.0, - 5504.0, - 448.0, - 4672.0)
+    set gg_rct_Waygate_Top=Rect(2336.0, 6208.0, 3200.0, 7040.0)
 endfunction
 
 //***************************************************************************
@@ -2659,6 +2663,8 @@ function Trig_Game_Start_Actions takes nothing returns nothing
     call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_541")
     call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_542")
     call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_543")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_550")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_551")
     // Credits
     call CreateQuestBJ(bj_QUESTTYPE_REQ_DISCOVERED, "TRIGSTR_404", "TRIGSTR_405", "ReplaceableTextures\\CommandButtons\\BTNBanditLord.blp")
     call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_406")
@@ -3039,7 +3045,7 @@ function main takes nothing returns nothing
     call CreateAllUnits()
     call InitBlizzard()
 
-call ExecuteFunc("jasshelper__initstructs103719718")
+call ExecuteFunc("jasshelper__initstructs105299968")
 call ExecuteFunc("SimError___init")
 call ExecuteFunc("TreeUtils___Init")
 call ExecuteFunc("HideInTrees___Init")
@@ -3089,7 +3095,7 @@ function sa___prototype14_HideInTrees___RemoveDestructableHook takes nothing ret
     return true
 endfunction
 
-function jasshelper__initstructs103719718 takes nothing returns nothing
+function jasshelper__initstructs105299968 takes nothing returns nothing
     set st___prototype9[1]=CreateTrigger()
     call TriggerAddAction(st___prototype9[1],function sa___prototype9_HideInTrees___RemoveUnitHook)
     call TriggerAddCondition(st___prototype9[1],Condition(function sa___prototype9_HideInTrees___RemoveUnitHook))
