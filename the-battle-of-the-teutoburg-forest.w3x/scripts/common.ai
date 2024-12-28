@@ -729,6 +729,7 @@ globals
     constant integer VOLCANO = 'ANvc'
     constant integer SILENCE = 'ANsi'
     constant integer CHARM = 'ANch'
+    constant integer MONSOON = 'A01A'
     constant integer VARUS              = 'H00D'
     constant integer TRIBUNE            = 'H008'
     constant integer SENATOR            = 'H007'

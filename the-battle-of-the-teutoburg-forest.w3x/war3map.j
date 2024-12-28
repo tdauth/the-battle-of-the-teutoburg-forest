@@ -41,6 +41,8 @@ constant boolean LIBRARY_HideInTrees=true
 constant string HideInTrees_ORDER_HIDE= "eattree"
 constant integer HideInTrees_ABILITY_ID_HIDE= 'A00Z'
 constant integer HideInTrees_ABILITY_ID_UNHIDE= 'A010'
+constant integer HideInTrees_ABILITY_ID_LIFE_REGENERATION= 'A01B'
+constant integer HideInTrees_ABILITY_ID_MANA_REGENERATION= 'A01C'
     
 constant integer HideInTrees__KEY_UNIT= 0
 constant integer HideInTrees__KEY_MOVE_TYPE= 1
@@ -67,10 +69,11 @@ timer udg_LightningTimer= null
 
     // Generated
 rect gg_rct_Fog= null
-rect gg_rct_Waygate_Top= null
-rect gg_rct_Waygate_Bottom= null
-rect gg_rct_Moonlight= null
 rect gg_rct_Fog_2= null
+rect gg_rct_Fog_3= null
+rect gg_rct_Moonlight= null
+rect gg_rct_Waygate_Bottom= null
+rect gg_rct_Waygate_Top= null
 camerasetup gg_cam_Camera_001= null
 camerasetup gg_cam_Camera_002= null
 camerasetup gg_cam_Camera_003= null
@@ -88,16 +91,18 @@ trigger gg_trg_Cheats_Lightning= null
 trigger gg_trg_Cage_1_Death= null
 trigger gg_trg_Cage_2_Death= null
 trigger gg_trg_Cage_3_Death= null
+trigger gg_trg_Cage_4_Death= null
 trigger gg_trg_Breeding_Training= null
 trigger gg_trg_Breeding_Death= null
+trigger gg_trg_Lightning_Start= null
+trigger gg_trg_Lightning_Effect= null
+trigger gg_trg_Hunt= null
 trigger gg_trg_Initialization= null
 trigger gg_trg_Game_Start= null
 trigger gg_trg_Player_Leaves_Roman= null
 trigger gg_trg_Player_Leaves_Germanic= null
 trigger gg_trg_Roman_Victory_Kills= null
 trigger gg_trg_Germanic_Victory= null
-trigger gg_trg_Lightning_Start= null
-trigger gg_trg_Lightning_Effect= null
 trigger gg_trg_Shrine_Death= null
 unit gg_unit_ngol_0004= null
 unit gg_unit_ngol_0003= null
@@ -142,6 +147,7 @@ unit gg_unit_o003_0069= null
 unit gg_unit_o003_0070= null
 unit gg_unit_o003_0071= null
 unit gg_unit_o003_0075= null
+item gg_item_I001_0426= null
 unit gg_unit_H006_0213= null
 unit gg_unit_O00H_0067= null
 unit gg_unit_h009_0236= null
@@ -161,6 +167,11 @@ unit gg_unit_o003_0259= null
 unit gg_unit_o003_0260= null
 unit gg_unit_o003_0261= null
 unit gg_unit_o003_0262= null
+item gg_item_I000_0421= null
+item gg_item_I000_0422= null
+item gg_item_I000_0423= null
+item gg_item_I001_0424= null
+item gg_item_I001_0425= null
 destructable gg_dest_B000_0716= null
 destructable gg_dest_B000_5163= null
 destructable gg_dest_B000_6435= null
@@ -170,16 +181,7 @@ destructable gg_dest_B000_8108= null
 destructable gg_dest_LOcg_12552= null
 destructable gg_dest_LOcg_12553= null
 destructable gg_dest_LOcg_12554= null
-item gg_item_I001_0424= null
-item gg_item_I001_0425= null
-item gg_item_I001_0426= null
-item gg_item_I000_0421= null
-item gg_item_I000_0422= null
-item gg_item_I000_0423= null
-trigger gg_trg_Cage_4_Death= null
 destructable gg_dest_LOcg_17750= null
-trigger gg_trg_Hunt= null
-rect gg_rct_Fog_3= null
 
 trigger l__library_init
 
@@ -352,6 +354,8 @@ function HideInTrees__HideUnit takes unit whichUnit,destructable tree returns no
     call BlzSetUnitWeaponBooleanField(whichUnit, UNIT_WEAPON_BF_ATTACKS_ENABLED, 0, false)
     call BlzSetUnitWeaponBooleanField(whichUnit, UNIT_WEAPON_BF_ATTACKS_ENABLED, 1, false)
     call UnitAddAbility(whichUnit, 'Apiv')
+    call UnitAddAbility(whichUnit, HideInTrees_ABILITY_ID_LIFE_REGENERATION)
+    call UnitAddAbility(whichUnit, HideInTrees_ABILITY_ID_LIFE_REGENERATION)
     call UnitAddAbility(whichUnit, HideInTrees_ABILITY_ID_UNHIDE)
     call UnitAddType(whichUnit, UNIT_TYPE_SNARED)
     //call BJDebugMsg(GetUnitName(whichUnit) + " cast on " + GetDestructableName(tree))
@@ -365,6 +369,8 @@ function HideInTrees__UnhideUnit takes unit whichUnit returns nothing
         call SetUnitPosition(whichUnit, GetUnitX(whichUnit), GetUnitY(whichUnit)) // for collision
         call BlzUnitDisableAbility(GetTriggerUnit(), 'Amov', false, false)
         call UnitRemoveAbility(whichUnit, 'Apiv')
+        call UnitRemoveAbility(whichUnit, HideInTrees_ABILITY_ID_LIFE_REGENERATION)
+        call UnitRemoveAbility(whichUnit, HideInTrees_ABILITY_ID_MANA_REGENERATION)
         call UnitRemoveAbility(whichUnit, HideInTrees_ABILITY_ID_UNHIDE)
         //call BJDebugMsg(GetUnitName(whichUnit) + " cast unhide")
         
@@ -2140,7 +2146,7 @@ function CreateNeutralHostile takes nothing returns nothing
     call TriggerAddAction(t, function Unit000184_DropItems)
     set u=BlzCreateUnitWithSkin(p, 'n006', - 5986.8, - 3416.2, 117.809, 'n006')
     set u=BlzCreateUnitWithSkin(p, 'n006', - 7145.9, 4917.8, 38.585, 'n006')
-    set u=BlzCreateUnitWithSkin(p, 'n006', - 7143.7, 4718.0, - 43.642, 'n006')
+    set u=BlzCreateUnitWithSkin(p, 'n006', - 7143.7, 4718.0, 316.358, 'n006')
     set u=BlzCreateUnitWithSkin(p, 'n007', - 6956.9, 4769.8, 317.550, 'n007')
     set t=CreateTrigger()
     call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
@@ -2192,7 +2198,7 @@ function CreateNeutralHostile takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'n00J', 4108.5, 1778.3, 19.633, 'n00J')
     set u=BlzCreateUnitWithSkin(p, 'n00J', - 2013.4, - 2448.7, 268.951, 'n00J')
     set u=BlzCreateUnitWithSkin(p, 'n00I', - 1903.4, - 2521.4, 234.451, 'n00I')
-    set u=BlzCreateUnitWithSkin(p, 'n00H', - 2149.4, - 2401.3, - 64.550, 'n00H')
+    set u=BlzCreateUnitWithSkin(p, 'n00H', - 2149.4, - 2401.3, 295.450, 'n00H')
     set u=BlzCreateUnitWithSkin(p, 'n009', 5169.1, 6701.9, 287.563, 'n009')
     set u=BlzCreateUnitWithSkin(p, 'n008', 5351.9, 6653.8, 276.399, 'n008')
     set u=BlzCreateUnitWithSkin(p, 'n008', 5022.1, 6578.9, 322.729, 'n008')
@@ -2201,8 +2207,8 @@ function CreateNeutralHostile takes nothing returns nothing
     call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
     call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
     call TriggerAddAction(t, function Unit000417_DropItems)
-    set u=BlzCreateUnitWithSkin(p, 'n00C', 6617.9, - 7011.7, - 83.423, 'n00C')
-    set u=BlzCreateUnitWithSkin(p, 'n00C', 6319.6, - 7199.1, - 40.623, 'n00C')
+    set u=BlzCreateUnitWithSkin(p, 'n00C', 6617.9, - 7011.7, 276.577, 'n00C')
+    set u=BlzCreateUnitWithSkin(p, 'n00C', 6319.6, - 7199.1, 319.377, 'n00C')
     set u=BlzCreateUnitWithSkin(p, 'n005', 7045.4, - 7394.4, 156.571, 'n005')
 endfunction
 
@@ -3124,6 +3130,8 @@ function Trig_Game_Start_Actions takes nothing returns nothing
     call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_214")
     call QuestMessageBJ(udg_RomanPlayers, bj_QUESTMESSAGE_DISCOVERED, "TRIGSTR_112")
     call QuestMessageBJ(udg_GermanicPlayers, bj_QUESTMESSAGE_DISCOVERED, "TRIGSTR_111")
+    call QuestMessageBJ(udg_GermanicPlayers, bj_QUESTMESSAGE_DISCOVERED, "TRIGSTR_615")
+    call QuestMessageBJ(udg_GermanicPlayers, bj_QUESTMESSAGE_DISCOVERED, "TRIGSTR_614")
     // Change Logs
     call CreateQuestBJ(bj_QUESTTYPE_REQ_DISCOVERED, "TRIGSTR_483", "TRIGSTR_484", "ReplaceableTextures\\CommandButtons\\BTNSnazzyScroll.blp")
     call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_485")
@@ -3150,6 +3158,9 @@ function Trig_Game_Start_Actions takes nothing returns nothing
     call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_585")
     call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_586")
     call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_587")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_603")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_609")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_613")
     // Credits
     call CreateQuestBJ(bj_QUESTTYPE_REQ_DISCOVERED, "TRIGSTR_404", "TRIGSTR_405", "ReplaceableTextures\\CommandButtons\\BTNBanditLord.blp")
     call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_406")
@@ -3448,7 +3459,8 @@ function main takes nothing returns nothing
     local weathereffect we
     call SetCameraBounds(- 7424.0 + GetCameraMargin(CAMERA_MARGIN_LEFT), - 7680.0 + GetCameraMargin(CAMERA_MARGIN_BOTTOM), 7424.0 - GetCameraMargin(CAMERA_MARGIN_RIGHT), 7168.0 - GetCameraMargin(CAMERA_MARGIN_TOP), - 7424.0 + GetCameraMargin(CAMERA_MARGIN_LEFT), 7168.0 - GetCameraMargin(CAMERA_MARGIN_TOP), 7424.0 - GetCameraMargin(CAMERA_MARGIN_RIGHT), - 7680.0 + GetCameraMargin(CAMERA_MARGIN_BOTTOM))
     call SetDayNightModels("Environment\\DNC\\DNCAshenvale\\DNCAshenvaleTerrain\\DNCAshenvaleTerrain.mdl", "Environment\\DNC\\DNCAshenvale\\DNCAshenvaleUnit\\DNCAshenvaleUnit.mdl")
-    call SetTerrainFogEx(0, 0.0, 4000.0, 0.500, 0.502, 0.502, 0.502)
+    call SetTerrainFogEx(0, 0.0, 4000.0, 0.500, 0.000, 0.000, 0.000)
+    call SetWaterBaseColor(150, 75, 0, 255)
     set we=AddWeatherEffect(Rect(- 8192.0, - 8192.0, 8192.0, 8192.0), 'RLhr')
     call EnableWeatherEffect(we, true)
     call NewSoundEnvironment("Default")
@@ -3463,7 +3475,7 @@ function main takes nothing returns nothing
     call CreateAllUnits()
     call InitBlizzard()
 
-call ExecuteFunc("jasshelper__initstructs112023093")
+call ExecuteFunc("jasshelper__initstructs115149453")
 call ExecuteFunc("SimError__init")
 call ExecuteFunc("TreeUtils__Init")
 call ExecuteFunc("HideInTrees__Init")
@@ -3513,7 +3525,7 @@ function sa___prototype14_HideInTrees__RemoveDestructableHook takes nothing retu
     return true
 endfunction
 
-function jasshelper__initstructs112023093 takes nothing returns nothing
+function jasshelper__initstructs115149453 takes nothing returns nothing
     set st___prototype9[1]=CreateTrigger()
     call TriggerAddAction(st___prototype9[1],function sa___prototype9_HideInTrees__RemoveUnitHook)
     call TriggerAddCondition(st___prototype9[1],Condition(function sa___prototype9_HideInTrees__RemoveUnitHook))

@@ -2138,12 +2138,6 @@ STRING 450
 Hide in Trees
 }
 
-STRING 451
-// Abilities: A00Z (Hide in Trees), Ubertip (Tooltip - Normal - Extended)
-{
-Hides the unit in the targeted tree which makes it invisible and unmovable until leaving the trees or the tree is cut down.
-}
-
 STRING 452
 // Abilities: A00Z (Hide in Trees), Hotkey (Hotkey - Normal)
 {
@@ -2626,12 +2620,6 @@ STRING 543
 Germanic Riders have a Horse Keeping icon ability now.
 }
 
-STRING 544
-// Abilities: A004 (Throw Pilum), Ubertip (Tooltip - Normal - Extended)
-{
-Throws a Pilum that damages a target enemy unit.
-}
-
 STRING 545
 // Abilities: A00H (Rejuvenation), Hotkey (Hotkey - Normal)
 {
@@ -2654,12 +2642,6 @@ STRING 548
 // Abilities: A017 (Horse Keeping), Ubertip (Tooltip - Normal - Extended)
 {
 Increases the maximum hit points of this unit by <R00T,base2> and the movement speed by <R00T,base1>.
-}
-
-STRING 549
-// Upgrades: R003 (Defend), Ubertip (Tooltip - Extended)
-{
-Allows Roman warriors to use the Throw Pilum ability, which damages enemy units.
 }
 
 STRING 550
@@ -2949,5 +2931,78 @@ Mechanical Man: Battering ram
 STRING 602
 {
 Eagle XI: BTNBatteringRam
+}
+
+STRING 603
+{
+Germanic hero Druid gets Monsoon ulti instead of Charm.
+}
+
+STRING 604
+// Abilities: A004 (Throw Pilum), Ubertip (Tooltip - Normal - Extended)
+{
+Throws a Pilum that damages a target enemy unit and interrupts its actions.
+}
+
+STRING 605
+// Abilities: A015 (Searing Arrows), Ubertip (Tooltip - Normal - Extended)
+{
+Adds <A015,DataA1> bonus fire damage to an attack against enemies, but drains mana with each shot fired.
+}
+
+STRING 606
+// Abilities: A01A (Monsoon), Researchtip (Tooltip - Learn)
+{
+Learn Monsoon
+}
+
+STRING 607
+// Abilities: A01A (Monsoon), Tip (Tooltip - Normal)
+{
+Monsoon
+}
+
+STRING 608
+// Upgrades: R003 (Defend), Ubertip (Tooltip - Extended)
+{
+Allows Roman warriors to use the Throw Pilum ability, which damages enemy units and interrupt their actions.
+}
+
+STRING 609
+{
+Hide in Trees increase life and mana regeneration.
+}
+
+STRING 610
+// Abilities: A00Z (Hide in Trees), Ubertip (Tooltip - Normal - Extended)
+{
+Hides the unit in the targeted tree which makes it invisible and unmovable and increases the life and mana regeneration until leaving the trees or the tree is cut down.
+}
+
+STRING 611
+// Abilities: A01B (Hide in Trees Life Regeneration), Name (Name)
+{
+Hide in Trees Life Regeneration
+}
+
+STRING 612
+// Abilities: A01C (Hide in Trees Mana Regeneration), Name (Name)
+{
+Hide in Trees Mana Regeneration
+}
+
+STRING 613
+{
+Change water color.
+}
+
+STRING 614
+{
+|cffffcc00Discord:|r VBDFBSbQ
+}
+
+STRING 615
+{
+|cffffcc00Supports Computer players.|r|n
 }
 

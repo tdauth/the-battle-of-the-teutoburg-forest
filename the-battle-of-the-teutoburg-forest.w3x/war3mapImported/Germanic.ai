@@ -34,7 +34,7 @@ function InitHero takes nothing returns nothing
         set skills1[ 3] = HEX
         set skills1[ 4] = HEALING_WAVE
         set skills1[ 5] = SCOUT
-        set skills1[ 6] = CHARM
+        set skills1[ 6] = MONSOON
         set skills1[ 7] = SCOUT
         set skills1[ 8] = HEALING_WAVE
         set skills1[ 9] = HEX
