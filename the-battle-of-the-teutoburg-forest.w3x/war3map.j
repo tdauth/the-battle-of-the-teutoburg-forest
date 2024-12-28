@@ -2676,6 +2676,16 @@ function Trig_Game_Start_Actions takes nothing returns nothing
     call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_412")
     call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_413")
     call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_414")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_556")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_557")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_558")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_559")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_560")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_561")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_562")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_563")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_564")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_565")
     call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_415")
     call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_416")
     call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_417")
@@ -2707,6 +2717,8 @@ function Trig_Game_Start_Actions takes nothing returns nothing
     call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_443")
     call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_444")
     call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_445")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_566")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_567")
     call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_446")
     // Weather
     call ConditionalTriggerExecute(gg_trg_Lightning_Start)
@@ -3045,7 +3057,7 @@ function main takes nothing returns nothing
     call CreateAllUnits()
     call InitBlizzard()
 
-call ExecuteFunc("jasshelper__initstructs105474812")
+call ExecuteFunc("jasshelper__initstructs105648500")
 call ExecuteFunc("SimError___init")
 call ExecuteFunc("TreeUtils___Init")
 call ExecuteFunc("HideInTrees___Init")
@@ -3095,7 +3107,7 @@ function sa___prototype14_HideInTrees___RemoveDestructableHook takes nothing ret
     return true
 endfunction
 
-function jasshelper__initstructs105474812 takes nothing returns nothing
+function jasshelper__initstructs105648500 takes nothing returns nothing
     set st___prototype9[1]=CreateTrigger()
     call TriggerAddAction(st___prototype9[1],function sa___prototype9_HideInTrees___RemoveUnitHook)
     call TriggerAddCondition(st___prototype9[1],Condition(function sa___prototype9_HideInTrees___RemoveUnitHook))
