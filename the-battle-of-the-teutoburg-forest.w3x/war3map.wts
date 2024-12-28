@@ -2996,13 +2996,13 @@ STRING 613
 Change water color.
 }
 
-STRING 614
-{
-|cffffcc00Discord:|r VBDFBSbQ
-}
-
-STRING 615
+STRING 616
 {
 |cffffcc00Supports Computer players.|r|n
+}
+
+STRING 617
+{
+|cffffcc00Discord:|r VBDFBSbQ
 }
 
