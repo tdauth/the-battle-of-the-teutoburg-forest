@@ -1,6 +1,6 @@
 ﻿STRING 3
 {
-Battle of the Teutoburg Forest 1.0
+Battle of the Teutoburg Forest 1.1
 }
 
 STRING 16
@@ -209,12 +209,6 @@ STRING 90
 // Units: O001 (Chieftain), Propernames (Proper Names)
 {
 Arminius
-}
-
-STRING 91
-// Destructibles: B000 (Germanic Tree), Name (Name)
-{
-Germanic Tree
 }
 
 STRING 94
@@ -994,7 +988,7 @@ Aqueduct
 }
 
 STRING 240
-// Abilities: A002 (Command Aura), Researchhotkey (Hotkey - Learn)
+// Units: n007 (Alpha Wolf), Hotkey (Hotkey)
 {
 A
 }
@@ -1054,7 +1048,7 @@ Hire Renegade Druid
 }
 
 STRING 250
-// Abilities: A00Z (Hide in Trees), Hotkey (Hotkey - Normal)
+// Units: n009 (Thunder Eagle), Hotkey (Hotkey)
 {
 T
 }
@@ -1072,13 +1066,13 @@ Ready
 }
 
 STRING 253
-// Abilities: A00J (Ready), Hotkey (Hotkey - Normal)
+// Units: n005 (Raging Bear), Hotkey (Hotkey)
 {
 R
 }
 
 STRING 254
-// Abilities: A00J (Ready), Unhotkey (Hotkey - Turn Off)
+// Abilities: A00J (Ready), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -1203,13 +1197,13 @@ Gives additional resources when dying.
 }
 
 STRING 276
-// Abilities: A00L (Draw Sword), Hotkey (Hotkey - Normal)
+// Abilities: A00J (Ready), Unhotkey (Hotkey - Turn Off)
 {
 R
 }
 
 STRING 277
-// Abilities: A00L (Draw Sword), Unhotkey (Hotkey - Turn Off)
+// Abilities: A00L (Draw Sword), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -1587,7 +1581,7 @@ Baradé's
 
 STRING 345
 {
-Battle of the Teutoburg Forest 1.0
+Battle of the Teutoburg Forest 1.1
 }
 
 STRING 346
@@ -1674,7 +1668,7 @@ Increases Seers' mana capacity, mana regeneration rate, hit points, and gives th
 }
 
 STRING 359
-// Upgrades: R00F (Magic Sentry), Hotkey (Hotkey)
+// Abilities: A002 (Command Aura), Researchhotkey (Hotkey - Learn)
 {
 A
 }
@@ -1740,7 +1734,7 @@ O
 }
 
 STRING 373
-// Units: h00B (Seer), Hotkey (Hotkey)
+// Units: n008 (Eagle), Hotkey (Hotkey)
 {
 E
 }
@@ -1834,7 +1828,7 @@ STRING 388
 }
 
 STRING 389
-// Units: h005 (Chariot), Hotkey (Hotkey)
+// Units: n00B (Corrupted Druid), Hotkey (Hotkey)
 {
 C
 }
@@ -1882,7 +1876,7 @@ Berserker
 }
 
 STRING 397
-// Units: o00K (Berserker), Hotkey (Hotkey)
+// Units: n004 (Bear), Hotkey (Hotkey)
 {
 B
 }
@@ -2163,7 +2157,7 @@ Hides the unit in the targeted tree which makes it invisible and unmovable until
 }
 
 STRING 452
-// Upgrades: R003 (Defend), Hotkey (Hotkey)
+// Abilities: A00Z (Hide in Trees), Hotkey (Hotkey - Normal)
 {
 T
 }
@@ -2307,7 +2301,7 @@ Gives Archers the Searing Arrows ability adding additional damage to attacks.
 }
 
 STRING 481
-// Units: h00R (Chariot), Hotkey (Hotkey)
+// Units: h005 (Chariot), Hotkey (Hotkey)
 {
 C
 }
@@ -2356,15 +2350,183 @@ STRING 489
 Add new creep camp to the south east.
 }
 
-STRING 490
-// Destructibles: B002 (Germanic Birch), Name (Name)
+STRING 492
+// Destructibles: B000 (Oak), Name (Name)
 {
-Germanic Birch
+Oak
 }
 
-STRING 491
-// Destructibles: B003 (Germanic Pine), Name (Name)
+STRING 493
+// Destructibles: B002 (Birch), Name (Name)
 {
-Germanic Pine
+Birch
+}
+
+STRING 494
+// Destructibles: B003 (Pine), Name (Name)
+{
+Pine
+}
+
+STRING 495
+// Items: I000 (Roman Eagle), Name (Name)
+{
+Roman Eagle
+}
+
+STRING 496
+// Items: I000 (Roman Eagle), Tip (Tooltip - Basic)
+{
+Purchase Roman Eagle
+}
+
+STRING 497
+// Items: I001 (Germanic Banner), Name (Name)
+{
+Germanic Banner
+}
+
+STRING 498
+// Items: I001 (Germanic Banner), Tip (Tooltip - Basic)
+{
+Purchase Germanic Banner
+}
+
+STRING 499
+{
+Use custom tree models.
+}
+
+STRING 500
+{
+Use custom icon for Hide ability.
+}
+
+STRING 501
+{
+Add banner items.
+}
+
+STRING 502
+// Units: n006 (Wolf), Hotkey (Hotkey)
+{
+G
+}
+
+STRING 503
+// Units: n006 (Wolf), Name (Name)
+{
+Wolf
+}
+
+STRING 504
+// Units: n006 (Wolf), Tip (Tooltip - Basic)
+{
+Summon Wolf
+}
+
+STRING 505
+// Units: n007 (Alpha Wolf), Name (Name)
+{
+Alpha Wolf
+}
+
+STRING 506
+// Units: n007 (Alpha Wolf), Tip (Tooltip - Basic)
+{
+Summon Alpha Wolf
+}
+
+STRING 507
+// Units: h00B (Seer), Hotkey (Hotkey)
+{
+E
+}
+
+STRING 508
+// Units: h00R (Chariot), Hotkey (Hotkey)
+{
+C
+}
+
+STRING 509
+// Units: o00K (Berserker), Hotkey (Hotkey)
+{
+B
+}
+
+STRING 510
+// Abilities: A00L (Draw Sword), Unhotkey (Hotkey - Turn Off)
+{
+R
+}
+
+STRING 511
+// Abilities: A016 (Hunt), Hotkey (Hotkey - Normal)
+{
+U
+}
+
+STRING 512
+// Upgrades: R003 (Defend), Hotkey (Hotkey)
+{
+T
+}
+
+STRING 513
+// Upgrades: R00F (Magic Sentry), Hotkey (Hotkey)
+{
+A
+}
+
+STRING 514
+// Units: n00M (Fox), Name (Name)
+{
+Fox
+}
+
+STRING 515
+// Units: n00M (Fox), Tip (Tooltip - Basic)
+{
+Invoke Fox
+}
+
+STRING 516
+{
+Add critter Fox.
+}
+
+STRING 517
+{
+Add missing hotkeys for mercenaries.
+}
+
+STRING 518
+{
+AI starts one expansion now.
+}
+
+STRING 519
+// Items: I000 (Roman Eagle), Description (Description)
+{
+The symbol of Roman victory.
+}
+
+STRING 520
+// Items: I000 (Roman Eagle), Ubertip (Tooltip - Extended)
+{
+The symbol of Roman victory.
+}
+
+STRING 521
+// Items: I001 (Germanic Banner), Ubertip (Tooltip - Extended)
+{
+The symbol of Germanic victory.
+}
+
+STRING 522
+// Items: I001 (Germanic Banner), Description (Description)
+{
+The symbol of Germanic victory.
 }
 

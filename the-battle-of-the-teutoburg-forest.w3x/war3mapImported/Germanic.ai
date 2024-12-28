@@ -63,6 +63,7 @@ function main takes nothing returns nothing
     call SetBuildUpgr(1, UPG_GERMANIC_ARMOR)
     call SetBuildUpgr(1, UPG_GERMANIC_RANGED)
 
+    call SetBuildExpa(2, GERMANIC_TIER_1)
 
     call SetBuildUnitEx( 1,1,1, GERMANIC_TIER_2    )
     call SetBuildUnitEx( 1,1,1, GERMANIC_SHRINE    )
@@ -74,6 +75,8 @@ function main takes nothing returns nothing
     call SetBuildUpgr(1, UPG_GERMANIC_SEER)
     call SetBuildUpgr(1, UPG_GERMANIC_LUMBER)
     call SetBuildUpgr(1, UPG_GERMANIC_HORSE)
+
+    call SetBuildExpa(2, GERMANIC_TIER_2)
 
     call SetBuildUnitEx( 1,1,1, GERMANIC_TIER_3    )
     call SetBuildUnitEx( 1,1,1, GERMANIC_STABLES    )
@@ -92,6 +95,8 @@ function main takes nothing returns nothing
     call SetBuildUpgr(1, UPG_GERMANIC_ENSNARE)
     call SetBuildUpgr(1, UPG_GERMANIC_CANNIBALIZE)
     call SetBuildUpgr(1, UPG_GERMANIC_DOG)
+
+    call SetBuildExpa(2, GERMANIC_TIER_3)
 
     loop
         call InitAssaultGroup()

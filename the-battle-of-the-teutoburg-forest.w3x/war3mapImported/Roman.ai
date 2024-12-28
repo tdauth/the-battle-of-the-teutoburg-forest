@@ -66,6 +66,8 @@ function main takes nothing returns nothing
     call SetBuildUpgr(1, UPG_ROMAN_DEFEND)
     call SetBuildUpgr(1, UPG_ROMAN_MASONRY)
 
+    call SetBuildExpa(2, ROMAN_TIER_1)
+
     call SetBuildUnitEx( 1,1,1, ROMAN_TIER_2    )
     call SetBuildUnitEx( 1,1,1, ROMAN_TEMPLE    )
     call SetBuildUnitEx( 1,1,1, ROMAN_WORKSHOP    )
@@ -75,6 +77,8 @@ function main takes nothing returns nothing
     call SetBuildUpgr(1, UPG_ROMAN_PRIEST)
     call SetBuildUpgr(1, UPG_ROMAN_VEXILLIFIER)
     call SetBuildUpgr(2, UPG_ROMAN_MASONRY)
+
+    call SetBuildExpa(2, ROMAN_TIER_2)
 
     call SetBuildUnitEx( 1,1,1, ROMAN_TIER_3    )
     call SetBuildUnitEx( 1,1,1, ROMAN_STABLES    )
@@ -95,6 +99,8 @@ function main takes nothing returns nothing
     call SetBuildUpgr(1, UPG_ROMAN_PILUM)
     call SetBuildUpgr(1, UPG_ROMAN_VORPAL_BLADES)
     call SetBuildUpgr(1, UPG_ROMAN_EVASION)
+
+    call SetBuildExpa(2, ROMAN_TIER_3)
 
     loop
         call InitAssaultGroup()
