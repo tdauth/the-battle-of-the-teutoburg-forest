@@ -1887,221 +1887,6 @@ STRING 403
 rhpx
 }
 
-STRING 404
-{
-Credits
-}
-
-STRING 405
-{
-List of people who contributed.
-}
-
-STRING 406
-{
-Creator: Baradé
-}
-
-STRING 407
-{
-Loading Screen: Painter Pavle "Paja" Jovanović
-}
-
-STRING 408
-{
-assasin_lord: HeroGlow
-}
-
-STRING 409
-{
-Fingolfin: Celtic Town Center
-}
-
-STRING 410
-{
-Fingolfin: Celtic House
-}
-
-STRING 411
-{
-Fingolfin: Celtic Barracks
-}
-
-STRING 412
-{
-Fingolfin: Celtic Stables
-}
-
-STRING 413
-{
-Fingolfin: Celtic Stockpile
-}
-
-STRING 414
-{
-Fingolfin: Celtic Dockyard
-}
-
-STRING 415
-{
-Sin'dorei300: BarbarianVillager
-}
-
-STRING 416
-{
-HerrDave: Villager Cavalier Weaponless (Mike)
-}
-
-STRING 417
-{
-StonemaulMidget: Deer
-}
-
-STRING 418
-{
-HerrDave, Le Shaysonio: Roman Infantry Pack
-}
-
-STRING 419
-{
-Dekarchos, HerrDave: Additional Roman Infantry
-}
-
-STRING 420
-{
-Hoth: Cage/Transport Chariot pack
-}
-
-STRING 421
-{
-Ujimasa Hojo: Druid of the Talon, Malfurion Stormrage, and Derivatives
-}
-
-STRING 422
-{
-Mike: All types castle (on standart textures)
-}
-
-STRING 423
-{
-Mike: SiegeWorkshop
-}
-
-STRING 424
-{
-Mike: Stable
-}
-
-STRING 425
-{
-Mike: Towers
-}
-
-STRING 426
-{
-Mr. Bob: Academy
-}
-
-STRING 427
-{
-Mr. Bob: Greek/Roman Temple
-}
-
-STRING 428
-{
-Storage: Storage
-}
-
-STRING 429
-{
-purparisien: Ancient Shipyard
-}
-
-STRING 430
-{
-genin32: BTNTent
-}
-
-STRING 431
-{
-Eagle XI: Medieval Building Icons
-}
-
-STRING 432
-{
-MiniMage: Human Shaman
-}
-
-STRING 433
-{
-Stanakin: HumanShaman.blp
-}
-
-STRING 434
-{
-Mike: Arcaballista
-}
-
-STRING 435
-{
-Eagle XI: BTNArcBallista
-}
-
-STRING 436
-{
-Mister_Haudrauf: Battle Chariot
-}
-
-STRING 437
-{
-AndrewOverload519: Female Human Mage
-}
-
-STRING 438
-{
-NFWar: BTNHorseShoe
-}
-
-STRING 439
-{
-NFWar: BTNHorseShoe2
-}
-
-STRING 440
-{
-NFWar: BTNHorseShoe3
-}
-
-STRING 441
-{
-Raging Ent: BTNRomanHelmet
-}
-
-STRING 442
-{
-Sellenisko: Vrykul Race Pack
-}
-
-STRING 443
-{
-Sellenisko: BTNRagnarFlamebeard
-}
-
-STRING 444
-{
-Eagle XI: BTNVrykulHarpooner
-}
-
-STRING 445
-{
-Eagle XI: BTNVrykulWarrior
-}
-
-STRING 446
-{
-General Frank: It's a bear trap!
-}
-
 STRING 447
 // Units: n00L (Eagle Roost), Name (Name)
 {
@@ -2151,7 +1936,7 @@ Unhide from Trees
 }
 
 STRING 461
-// Upgrades: R00W (Sentinel), Hotkey (Hotkey)
+// Abilities: ANsi (Silence), Researchhotkey (Hotkey - Learn)
 {
 L
 }
@@ -2666,66 +2451,6 @@ STRING 555
 B
 }
 
-STRING 556
-{
-Fingolfin: Birch (variation 1)
-}
-
-STRING 557
-{
-Fingolfin: Birch (variation 2)
-}
-
-STRING 558
-{
-Fingolfin: Birch (variation 3)
-}
-
-STRING 559
-{
-Fingolfin: Pine (Variation 1)
-}
-
-STRING 560
-{
-Fingolfin: Pine (Variation 2)
-}
-
-STRING 561
-{
-Fingolfin: Pine (Variation 3)
-}
-
-STRING 562
-{
-Fingolfin: Pine (Variation 4)
-}
-
-STRING 563
-{
-Fingolfin: Oak (variation 1)
-}
-
-STRING 564
-{
-Fingolfin: Oak (variation 2)
-}
-
-STRING 565
-{
-Fingolfin: Oak (variation 3)
-}
-
-STRING 566
-{
-BLazeKraze: Bandit Hide
-}
-
-STRING 567
-{
-Mr.Goblin: TimberWolf.blp
-}
-
 STRING 568
 // Units: o00M (High Priest), Ubertip (Tooltip - Extended)
 {
@@ -2790,11 +2515,6 @@ STRING 578
 Add custom model for Germanic Ritual Site.
 }
 
-STRING 579
-{
-Vinz: Eternity's Crown (1.32)
-}
-
 STRING 580
 {
 +30
@@ -2808,11 +2528,6 @@ STRING 581
 STRING 582
 {
 Show bounty floating texts for Breeding.
-}
-
-STRING 583
-{
-Vexorian: SimError
 }
 
 STRING 584
@@ -2882,11 +2597,6 @@ STRING 595
 Gives additional resources when dying.
 }
 
-STRING 596
-{
-Kuhneghetz: Owl
-}
-
 STRING 597
 // Units: h00S (Battering Ram), Name (Name)
 {
@@ -2909,16 +2619,6 @@ STRING 600
 // Abilities: A011 (Place Bear Trap), Hotkey (Hotkey - Normal)
 {
 B
-}
-
-STRING 601
-{
-Mechanical Man: Battering ram
-}
-
-STRING 602
-{
-Eagle XI: BTNBatteringRam
 }
 
 STRING 603
@@ -3121,5 +2821,397 @@ STRING 644
 // Units: o00J (Ritual Site), Ubertip (Tooltip - Extended)
 {
 Trains Berserkers and High Priests. Contains upgrades Summon Dog, Cannibalize and High Priest Adept Training.
+}
+
+STRING 645
+{
+Credits
+}
+
+STRING 646
+{
+List of people who contributed.
+}
+
+STRING 647
+{
+Creator: Baradé
+}
+
+STRING 648
+{
+Loading Screen: Painter Pavle "Paja" Jovanović
+}
+
+STRING 649
+{
+Vexorian: SimError
+}
+
+STRING 650
+{
+assasin_lord: HeroGlow
+}
+
+STRING 651
+{
+Fingolfin: Celtic Town Center
+}
+
+STRING 652
+{
+Fingolfin: Celtic House
+}
+
+STRING 653
+{
+Fingolfin: Celtic Barracks
+}
+
+STRING 654
+{
+Fingolfin: Celtic Stables
+}
+
+STRING 655
+{
+Fingolfin: Celtic Stockpile
+}
+
+STRING 656
+{
+Fingolfin: Celtic Dockyard
+}
+
+STRING 657
+{
+Fingolfin: Birch (variation 1)
+}
+
+STRING 658
+{
+Fingolfin: Birch (variation 2)
+}
+
+STRING 659
+{
+Fingolfin: Birch (variation 3)
+}
+
+STRING 660
+{
+Fingolfin: Pine (Variation 1)
+}
+
+STRING 661
+{
+Fingolfin: Pine (Variation 2)
+}
+
+STRING 662
+{
+Fingolfin: Pine (Variation 3)
+}
+
+STRING 663
+{
+Fingolfin: Pine (Variation 4)
+}
+
+STRING 664
+{
+Fingolfin: Oak (variation 1)
+}
+
+STRING 665
+{
+Fingolfin: Oak (variation 2)
+}
+
+STRING 666
+{
+Fingolfin: Oak (variation 3)
+}
+
+STRING 667
+{
+Sin'dorei300: BarbarianVillager
+}
+
+STRING 668
+{
+HerrDave: Villager Cavalier Weaponless (Mike)
+}
+
+STRING 669
+{
+StonemaulMidget: Deer
+}
+
+STRING 670
+{
+HerrDave, Le Shaysonio: Roman Infantry Pack
+}
+
+STRING 671
+{
+Dekarchos, HerrDave: Additional Roman Infantry
+}
+
+STRING 672
+{
+Hoth: Cage/Transport Chariot pack
+}
+
+STRING 673
+{
+Ujimasa Hojo: Druid of the Talon, Malfurion Stormrage, and Derivatives
+}
+
+STRING 674
+{
+Mike: All types castle (on standart textures)
+}
+
+STRING 675
+{
+Mike: SiegeWorkshop
+}
+
+STRING 676
+{
+Mike: Stable
+}
+
+STRING 677
+{
+Mike: Towers
+}
+
+STRING 678
+{
+Mr. Bob: Academy
+}
+
+STRING 679
+{
+Mr. Bob: Greek/Roman Temple
+}
+
+STRING 680
+{
+Storage: Storage
+}
+
+STRING 681
+{
+purparisien: Ancient Shipyard
+}
+
+STRING 682
+{
+genin32: BTNTent
+}
+
+STRING 683
+{
+Eagle XI: Medieval Building Icons
+}
+
+STRING 684
+{
+MiniMage: Human Shaman
+}
+
+STRING 685
+{
+Stanakin: HumanShaman.blp
+}
+
+STRING 686
+{
+Mike: Arcaballista
+}
+
+STRING 687
+{
+Eagle XI: BTNArcBallista
+}
+
+STRING 688
+{
+Mister_Haudrauf: Battle Chariot
+}
+
+STRING 689
+{
+AndrewOverload519: Female Human Mage
+}
+
+STRING 690
+{
+NFWar: BTNHorseShoe
+}
+
+STRING 691
+{
+NFWar: BTNHorseShoe2
+}
+
+STRING 692
+{
+NFWar: BTNHorseShoe3
+}
+
+STRING 693
+{
+Raging Ent: BTNRomanHelmet
+}
+
+STRING 694
+{
+Sellenisko: Vrykul Race Pack
+}
+
+STRING 695
+{
+Sellenisko: BTNRagnarFlamebeard
+}
+
+STRING 696
+{
+Eagle XI: BTNVrykulHarpooner
+}
+
+STRING 697
+{
+Eagle XI: BTNVrykulWarrior
+}
+
+STRING 698
+{
+BLazeKraze: Bandit Hide
+}
+
+STRING 699
+{
+Mr.Goblin: TimberWolf.blp
+}
+
+STRING 700
+{
+Vinz: Eternity's Crown (1.32)
+}
+
+STRING 701
+{
+Kuhneghetz: Owl
+}
+
+STRING 702
+{
+Mechanical Man: Battering ram
+}
+
+STRING 703
+{
+Eagle XI: BTNBatteringRam
+}
+
+STRING 704
+{
+General Frank: It's a bear trap!
+}
+
+STRING 705
+{
+Fix several tooltips.
+}
+
+STRING 706
+{
+Mike: Palisade
+}
+
+STRING 707
+{
+Add item Tiny Palisade.
+}
+
+STRING 708
+// Units: o00D (Market), Tip (Tooltip - Basic)
+{
+Build Market
+}
+
+STRING 709
+// Units: o00D (Market), Ubertip (Tooltip - Extended)
+{
+Creates a shop with purchasable items. The items available depend upon what level of upgrade your Town Center has (Town Center, Stronghold, or Fortress) and which buildings you have.
+}
+
+STRING 710
+// Units: h00T (Palisade), Name (Name)
+{
+Palisade
+}
+
+STRING 711
+// Units: h00T (Palisade), Hotkey (Hotkey)
+{
+P
+}
+
+STRING 712
+// Units: h00T (Palisade), Tip (Tooltip - Basic)
+{
+Build Palisade
+}
+
+STRING 713
+// Items: I002 (Tiny Palisade), Name (Name)
+{
+Tiny Palisade
+}
+
+STRING 714
+// Items: I002 (Tiny Palisade), Description (Description)
+{
+Creates a Palisade.
+}
+
+STRING 715
+// Items: I002 (Tiny Palisade), Ubertip (Tooltip - Extended)
+{
+Creates a Palisade at a target location.
+}
+
+STRING 716
+// Items: I002 (Tiny Palisade), Tip (Tooltip - Basic)
+{
+Purchase Tiny Palisade
+}
+
+STRING 717
+// Abilities: A01D (Build Tiny Palisade), Name (Name)
+{
+Build Tiny Palisade
+}
+
+STRING 718
+{
+Fix hotkey of ability Silence.
+}
+
+STRING 720
+// Abilities: ANsi (Silence), Hotkey (Hotkey - Normal)
+{
+L
+}
+
+STRING 721
+// Upgrades: R00W (Sentinel), Hotkey (Hotkey)
+{
+L
 }
 

@@ -47,6 +47,7 @@ Warcraft III custom map featuring the famous [Battle of the Teutoburg Forest](ht
 * Mike: [SiegeWorkshop](https://www.hiveworkshop.com/threads/siegeworkshop.244863/)
 * Mike: [Stable](https://www.hiveworkshop.com/threads/stable.241035/)
 * Mike: [Towers](https://www.hiveworkshop.com/threads/towers.273887/)
+* Mike: [Palisade](https://www.hiveworkshop.com/threads/palisade.286709/)
 * Mr. Bob: [Academy](https://www.hiveworkshop.com/threads/academy.156115/)
 * Mr. Bob: [Greek/Roman Temple](https://www.hiveworkshop.com/threads/greek-roman-temple.107960/)
 * Storage: [Storage](https://www.hiveworkshop.com/threads/storage.274516/)

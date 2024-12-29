@@ -634,6 +634,41 @@ function Unit000188_DropItems takes nothing returns nothing
     call DestroyTrigger(GetTriggeringTrigger())
 endfunction
 
+function Unit000191_DropItems takes nothing returns nothing
+    local widget trigWidget= null
+    local unit trigUnit= null
+    local integer itemID= 0
+    local boolean canDrop= true
+
+    set trigWidget=bj_lastDyingWidget
+    if ( trigWidget == null ) then
+        set trigUnit=GetTriggerUnit()
+    endif
+
+    if ( trigUnit != null ) then
+        set canDrop=not IsUnitHidden(trigUnit)
+        if ( canDrop and GetChangingUnit() != null ) then
+            set canDrop=( GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE) )
+        endif
+    endif
+
+    if ( canDrop ) then
+        // Item set 0
+        call RandomDistReset()
+        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_ANY, 4), 100)
+        set itemID=RandomDistChoose()
+        if ( trigUnit != null ) then
+            call UnitDropItem(trigUnit, itemID)
+        else
+            call WidgetDropItem(trigWidget, itemID)
+        endif
+
+    endif
+
+    set bj_lastDyingWidget=null
+    call DestroyTrigger(GetTriggeringTrigger())
+endfunction
+
 function Unit000230_DropItems takes nothing returns nothing
     local widget trigWidget= null
     local unit trigUnit= null
@@ -866,6 +901,41 @@ function Unit000295_DropItems takes nothing returns nothing
         // Item set 0
         call RandomDistReset()
         call RandomDistAddItem('rreb', 100)
+        set itemID=RandomDistChoose()
+        if ( trigUnit != null ) then
+            call UnitDropItem(trigUnit, itemID)
+        else
+            call WidgetDropItem(trigWidget, itemID)
+        endif
+
+    endif
+
+    set bj_lastDyingWidget=null
+    call DestroyTrigger(GetTriggeringTrigger())
+endfunction
+
+function Unit000383_DropItems takes nothing returns nothing
+    local widget trigWidget= null
+    local unit trigUnit= null
+    local integer itemID= 0
+    local boolean canDrop= true
+
+    set trigWidget=bj_lastDyingWidget
+    if ( trigWidget == null ) then
+        set trigUnit=GetTriggerUnit()
+    endif
+
+    if ( trigUnit != null ) then
+        set canDrop=not IsUnitHidden(trigUnit)
+        if ( canDrop and GetChangingUnit() != null ) then
+            set canDrop=( GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE) )
+        endif
+    endif
+
+    if ( canDrop ) then
+        // Item set 0
+        call RandomDistReset()
+        call RandomDistAddItem(ChooseRandomItemEx(ITEM_TYPE_ANY, 5), 100)
         set itemID=RandomDistChoose()
         if ( trigUnit != null ) then
             call UnitDropItem(trigUnit, itemID)
@@ -2158,7 +2228,11 @@ function CreateNeutralHostile takes nothing returns nothing
     call TriggerAddAction(t, function Unit000188_DropItems)
     set u=BlzCreateUnitWithSkin(p, 'n004', 4762.3, 4501.3, 150.045, 'n004')
     set u=BlzCreateUnitWithSkin(p, 'n005', 4810.3, 4327.1, 178.432, 'n005')
-    set u=BlzCreateUnitWithSkin(p, 'n005', 4960.8, 4495.5, 171.007, 'n005')
+    set u=BlzCreateUnitWithSkin(p, 'n005', 4960.8, 4495.5, 171.010, 'n005')
+    set t=CreateTrigger()
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
+    call TriggerAddAction(t, function Unit000191_DropItems)
     set u=BlzCreateUnitWithSkin(p, 'n004', - 988.9, - 5773.3, 204.396, 'n004')
     set u=BlzCreateUnitWithSkin(p, 'n005', - 938.4, - 5950.7, 265.235, 'n005')
     set u=BlzCreateUnitWithSkin(p, 'n004', - 5224.7, 6911.1, 192.804, 'n004')
@@ -2203,7 +2277,11 @@ function CreateNeutralHostile takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'n00J', - 2013.4, - 2448.7, 268.951, 'n00J')
     set u=BlzCreateUnitWithSkin(p, 'n00I', - 1903.4, - 2521.4, 234.451, 'n00I')
     set u=BlzCreateUnitWithSkin(p, 'n00H', - 2149.4, - 2401.3, 295.450, 'n00H')
-    set u=BlzCreateUnitWithSkin(p, 'n009', 5169.1, 6701.9, 287.563, 'n009')
+    set u=BlzCreateUnitWithSkin(p, 'n009', 5169.1, 6701.9, 287.560, 'n009')
+    set t=CreateTrigger()
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_DEATH)
+    call TriggerRegisterUnitEvent(t, u, EVENT_UNIT_CHANGE_OWNER)
+    call TriggerAddAction(t, function Unit000383_DropItems)
     set u=BlzCreateUnitWithSkin(p, 'n008', 5351.9, 6653.8, 276.399, 'n008')
     set u=BlzCreateUnitWithSkin(p, 'n008', 5022.1, 6578.9, 322.729, 'n008')
     set u=BlzCreateUnitWithSkin(p, 'n00B', 6473.6, - 7152.3, 306.700, 'n00B')
@@ -3174,15 +3252,76 @@ function Trig_Game_Start_Actions takes nothing returns nothing
     call ForForce(udg_RomanPlayers, function Trig_Game_Start_Func060A)
     call ForForce(udg_GermanicPlayers, function Trig_Game_Start_Func061A)
     // Objectives
-    call CreateQuestBJ(bj_QUESTTYPE_REQ_DISCOVERED, "TRIGSTR_211", "TRIGSTR_212", "ReplaceableTextures\\CommandButtons\\BTNAmbush.blp")
+    call CreateQuestBJ(bj_QUESTTYPE_REQ_DISCOVERED, "TRIGSTR_211", "TRIGSTR_212", "ReplaceableTextures\\CommandButtons\\BTNBanditHide.blp")
     call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_213")
     call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_214")
     call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_616")
     call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_617")
     call QuestMessageBJ(udg_RomanPlayers, bj_QUESTMESSAGE_DISCOVERED, "TRIGSTR_112")
     call QuestMessageBJ(udg_GermanicPlayers, bj_QUESTMESSAGE_DISCOVERED, "TRIGSTR_111")
+    // Credits
+    call CreateQuestBJ(bj_QUESTTYPE_OPT_DISCOVERED, "TRIGSTR_645", "TRIGSTR_646", "ReplaceableTextures\\CommandButtons\\BTNBanditLord.blp")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_647")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_648")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_649")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_650")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_651")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_652")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_653")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_654")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_655")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_656")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_657")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_658")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_659")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_660")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_661")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_662")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_663")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_664")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_665")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_666")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_667")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_668")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_669")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_670")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_671")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_672")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_673")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_674")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_675")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_676")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_677")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_706")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_678")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_679")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_680")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_681")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_682")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_683")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_684")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_685")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_686")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_687")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_688")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_689")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_690")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_691")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_692")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_693")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_694")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_695")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_696")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_697")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_698")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_699")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_700")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_701")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_702")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_703")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_704")
     // Change Logs
-    call CreateQuestBJ(bj_QUESTTYPE_REQ_DISCOVERED, "TRIGSTR_618", "TRIGSTR_619", "ReplaceableTextures\\CommandButtons\\BTNSnazzyScroll.blp")
+    call CreateQuestBJ(bj_QUESTTYPE_OPT_DISCOVERED, "TRIGSTR_618", "TRIGSTR_619", "ReplaceableTextures\\CommandButtons\\BTNSnazzyScroll.blp")
     call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_620")
     call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_621")
     call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_622")
@@ -3194,7 +3333,10 @@ function Trig_Game_Start_Actions takes nothing returns nothing
     call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_632")
     call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_633")
     call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_636")
-    call CreateQuestBJ(bj_QUESTTYPE_REQ_DISCOVERED, "TRIGSTR_483", "TRIGSTR_484", "ReplaceableTextures\\CommandButtons\\BTNSnazzyScroll.blp")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_705")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_707")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_718")
+    call CreateQuestBJ(bj_QUESTTYPE_OPT_DISCOVERED, "TRIGSTR_483", "TRIGSTR_484", "ReplaceableTextures\\CommandButtons\\BTNSnazzyScroll.blp")
     call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_485")
     call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_489")
     call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_499")
@@ -3222,66 +3364,6 @@ function Trig_Game_Start_Actions takes nothing returns nothing
     call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_603")
     call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_609")
     call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_613")
-    // Credits
-    call CreateQuestBJ(bj_QUESTTYPE_REQ_DISCOVERED, "TRIGSTR_404", "TRIGSTR_405", "ReplaceableTextures\\CommandButtons\\BTNBanditLord.blp")
-    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_406")
-    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_407")
-    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_583")
-    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_408")
-    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_409")
-    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_410")
-    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_411")
-    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_412")
-    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_413")
-    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_414")
-    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_556")
-    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_557")
-    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_558")
-    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_559")
-    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_560")
-    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_561")
-    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_562")
-    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_563")
-    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_564")
-    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_565")
-    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_415")
-    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_416")
-    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_417")
-    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_418")
-    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_419")
-    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_420")
-    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_421")
-    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_422")
-    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_423")
-    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_424")
-    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_425")
-    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_426")
-    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_427")
-    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_428")
-    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_429")
-    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_430")
-    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_431")
-    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_432")
-    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_433")
-    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_434")
-    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_435")
-    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_436")
-    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_437")
-    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_438")
-    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_439")
-    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_440")
-    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_441")
-    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_442")
-    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_443")
-    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_444")
-    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_445")
-    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_566")
-    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_567")
-    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_579")
-    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_596")
-    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_601")
-    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_602")
-    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_446")
     // Weather
     call ConditionalTriggerExecute(gg_trg_Lightning_Start)
 endfunction
@@ -3585,7 +3667,7 @@ function main takes nothing returns nothing
     call CreateAllUnits()
     call InitBlizzard()
 
-call ExecuteFunc("jasshelper__initstructs213855437")
+call ExecuteFunc("jasshelper__initstructs215583781")
 call ExecuteFunc("SimError__init")
 call ExecuteFunc("TreeUtils__Init")
 call ExecuteFunc("HideInTrees__Init")
@@ -3635,7 +3717,7 @@ function sa___prototype14_HideInTrees__RemoveDestructableHook takes nothing retu
     return true
 endfunction
 
-function jasshelper__initstructs213855437 takes nothing returns nothing
+function jasshelper__initstructs215583781 takes nothing returns nothing
     set st___prototype9[1]=CreateTrigger()
     call TriggerAddAction(st___prototype9[1],function sa___prototype9_HideInTrees__RemoveUnitHook)
     call TriggerAddCondition(st___prototype9[1],Condition(function sa___prototype9_HideInTrees__RemoveUnitHook))
