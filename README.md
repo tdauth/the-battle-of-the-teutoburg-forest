@@ -8,7 +8,7 @@ Warcraft III custom map featuring the famous [Battle of the Teutoburg Forest](ht
 
 * Inspired by a true historical event.
 * Two custom races: Roman Empire and Germanic Tribe.
-* AI support.
+* Supports Computer players.
 * Hide in Trees ability.
 * Animal Breeding.
 * Animal Hunting.
