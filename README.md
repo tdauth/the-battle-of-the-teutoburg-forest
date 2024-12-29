@@ -75,4 +75,5 @@ Warcraft III custom map featuring the famous [Battle of the Teutoburg Forest](ht
 * Mechanical Man: [Battering ram](https://www.hiveworkshop.com/threads/battering-ram.50758/)
 * Eagle XI: [BTNBatteringRam](https://www.hiveworkshop.com/threads/btnbatteringram.271777/)
 * ILH: [Ground Cave Entrance](https://www.hiveworkshop.com/threads/ground-cave-entrance.355173/)
+* Ujimasa Hojo: [Acolyte and Derivatives](https://www.hiveworkshop.com/threads/acolyte-and-derivatives.310836/)
 * General Frank: [It's a bear trap!](https://www.hiveworkshop.com/threads/its-a-bear-trap.231801/)

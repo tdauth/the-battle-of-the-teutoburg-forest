@@ -3067,3 +3067,13 @@ STRING 629
 Players start with tier 2 building now.
 }
 
+STRING 630
+{
+Add custom icons.
+}
+
+STRING 632
+{
+Use custom model and icon for hero Senator.
+}
+
