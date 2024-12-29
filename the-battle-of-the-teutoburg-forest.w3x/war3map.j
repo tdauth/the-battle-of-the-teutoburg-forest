@@ -66,6 +66,8 @@ unit udg_TmpUnit= null
 group udg_TmpGroup= null
 boolean udg_CinematicSkip= false
 timer udg_LightningTimer= null
+force udg_RomanPlayersUsers= null
+force udg_GermanicPlayersUsers= null
 
     // Generated
 rect gg_rct_Fog= null
@@ -505,6 +507,8 @@ function InitGlobals takes nothing returns nothing
     set udg_TmpGroup=CreateGroup()
     set udg_CinematicSkip=false
     set udg_LightningTimer=CreateTimer()
+    set udg_RomanPlayersUsers=CreateForce()
+    set udg_GermanicPlayersUsers=CreateForce()
 endfunction
 
 //***************************************************************************
@@ -1675,7 +1679,7 @@ function CreateBuildingsForPlayer0 takes nothing returns nothing
     local trigger t
     local real life
 
-    set u=BlzCreateUnitWithSkin(p, 'h002', - 5568.0, - 64.0, 270.000, 'h002')
+    set u=BlzCreateUnitWithSkin(p, 'h00C', - 5568.0, - 64.0, 270.000, 'h00C')
     set u=BlzCreateUnitWithSkin(p, 'h00A', - 6528.0, - 384.0, 270.000, 'h00A')
     set u=BlzCreateUnitWithSkin(p, 'h00H', - 4992.0, - 960.0, 270.000, 'h00H')
     set u=BlzCreateUnitWithSkin(p, 'h00H', - 4736.0, - 896.0, 270.000, 'h00H')
@@ -1753,7 +1757,7 @@ function CreateBuildingsForPlayer1 takes nothing returns nothing
     local trigger t
     local real life
 
-    set u=BlzCreateUnitWithSkin(p, 'h002', - 704.0, 448.0, 270.000, 'h002')
+    set u=BlzCreateUnitWithSkin(p, 'h00C', - 640.0, 512.0, 270.000, 'h00C')
     set u=BlzCreateUnitWithSkin(p, 'h00A', - 768.0, 1792.0, 270.000, 'h00A')
     set u=BlzCreateUnitWithSkin(p, 'h00H', - 2176.0, 1600.0, 270.000, 'h00H')
     set u=BlzCreateUnitWithSkin(p, 'h00H', - 2368.0, 1472.0, 270.000, 'h00H')
@@ -1831,7 +1835,7 @@ function CreateBuildingsForPlayer2 takes nothing returns nothing
     local trigger t
     local real life
 
-    set u=BlzCreateUnitWithSkin(p, 'h002', 4992.0, - 1600.0, 270.000, 'h002')
+    set u=BlzCreateUnitWithSkin(p, 'h00C', 4992.0, - 1600.0, 270.000, 'h00C')
     set u=BlzCreateUnitWithSkin(p, 'h00A', 4544.0, - 512.0, 270.000, 'h00A')
     set u=BlzCreateUnitWithSkin(p, 'h00H', 5504.0, - 1408.0, 270.000, 'h00H')
     set u=BlzCreateUnitWithSkin(p, 'h00H', 5696.0, - 1408.0, 270.000, 'h00H')
@@ -1909,7 +1913,7 @@ function CreateBuildingsForPlayer3 takes nothing returns nothing
     local trigger t
     local real life
 
-    set u=BlzCreateUnitWithSkin(p, 'o002', - 4480.0, - 6080.0, 270.000, 'o002')
+    set u=BlzCreateUnitWithSkin(p, 'o00F', - 4480.0, - 6144.0, 270.000, 'o00F')
     set u=BlzCreateUnitWithSkin(p, 'o005', - 5536.0, - 5856.0, 270.000, 'o005')
     set u=BlzCreateUnitWithSkin(p, 'o006', - 3648.0, - 5760.0, 270.000, 'o006')
     set u=BlzCreateUnitWithSkin(p, 'o008', - 3488.0, - 7008.0, 270.000, 'o008')
@@ -1979,7 +1983,7 @@ function CreateBuildingsForPlayer4 takes nothing returns nothing
     local trigger t
     local real life
 
-    set u=BlzCreateUnitWithSkin(p, 'o002', 3264.0, - 6464.0, 270.000, 'o002')
+    set u=BlzCreateUnitWithSkin(p, 'o00F', 3264.0, - 6400.0, 270.000, 'o00F')
     set u=BlzCreateUnitWithSkin(p, 'o007', 4352.0, - 6784.0, 270.000, 'o007')
     set u=BlzCreateUnitWithSkin(p, 'o00C', 2496.0, - 7040.0, 270.000, 'o00C')
     set u=BlzCreateUnitWithSkin(p, 'o006', 2688.0, - 5952.0, 270.000, 'o006')
@@ -2052,7 +2056,7 @@ function CreateBuildingsForPlayer5 takes nothing returns nothing
     local trigger t
     local real life
 
-    set u=BlzCreateUnitWithSkin(p, 'o002', 0.0, 6144.0, 270.000, 'o002')
+    set u=BlzCreateUnitWithSkin(p, 'o00F', 64.0, 6080.0, 270.000, 'o00F')
     set u=BlzCreateUnitWithSkin(p, 'o00D', - 192.0, 5440.0, 270.000, 'o00D')
     set u=BlzCreateUnitWithSkin(p, 'o00B', 736.0, 5920.0, 270.000, 'o00B')
     set u=BlzCreateUnitWithSkin(p, 'o00C', - 704.0, 6016.0, 270.000, 'o00C')
@@ -2497,15 +2501,15 @@ endfunction
 //===========================================================================
 // Trigger: Cinematic Intro
 //===========================================================================
-function Trig_Cinematic_Intro_Func007A takes nothing returns nothing
-    call CameraSetupApplyForPlayer(true, gg_cam_Camera_007, GetEnumPlayer(), 6.00)
-endfunction
-
-function Trig_Cinematic_Intro_Func008001 takes nothing returns boolean
+function Trig_Cinematic_Intro_Func007001 takes nothing returns boolean
     return ( udg_CinematicSkip == true )
 endfunction
 
-function Trig_Cinematic_Intro_Func010001 takes nothing returns boolean
+function Trig_Cinematic_Intro_Func010A takes nothing returns nothing
+    call CameraSetupApplyForPlayer(true, gg_cam_Camera_007, GetEnumPlayer(), 6.00)
+endfunction
+
+function Trig_Cinematic_Intro_Func011001 takes nothing returns boolean
     return ( udg_CinematicSkip == true )
 endfunction
 
@@ -2513,56 +2517,60 @@ function Trig_Cinematic_Intro_Func013001 takes nothing returns boolean
     return ( udg_CinematicSkip == true )
 endfunction
 
-function Trig_Cinematic_Intro_Func014A takes nothing returns nothing
+function Trig_Cinematic_Intro_Func016001 takes nothing returns boolean
+    return ( udg_CinematicSkip == true )
+endfunction
+
+function Trig_Cinematic_Intro_Func017A takes nothing returns nothing
     call CameraSetupApplyForPlayer(true, gg_cam_Camera_001, GetEnumPlayer(), 0.00)
     call CameraSetupApplyForPlayer(true, gg_cam_Camera_002, GetEnumPlayer(), 4.00)
 endfunction
 
-function Trig_Cinematic_Intro_Func017001 takes nothing returns boolean
+function Trig_Cinematic_Intro_Func020001 takes nothing returns boolean
     return ( udg_CinematicSkip == true )
 endfunction
 
-function Trig_Cinematic_Intro_Func019001 takes nothing returns boolean
+function Trig_Cinematic_Intro_Func022001 takes nothing returns boolean
     return ( udg_CinematicSkip == true )
 endfunction
 
-function Trig_Cinematic_Intro_Func021001 takes nothing returns boolean
+function Trig_Cinematic_Intro_Func024001 takes nothing returns boolean
     return ( udg_CinematicSkip == true )
 endfunction
 
-function Trig_Cinematic_Intro_Func022A takes nothing returns nothing
+function Trig_Cinematic_Intro_Func025A takes nothing returns nothing
     call CameraSetupApplyForPlayer(true, gg_cam_Camera_003, GetEnumPlayer(), 3.00)
 endfunction
 
-function Trig_Cinematic_Intro_Func023001 takes nothing returns boolean
+function Trig_Cinematic_Intro_Func026001 takes nothing returns boolean
     return ( udg_CinematicSkip == true )
 endfunction
 
-function Trig_Cinematic_Intro_Func025001 takes nothing returns boolean
+function Trig_Cinematic_Intro_Func028001 takes nothing returns boolean
     return ( udg_CinematicSkip == true )
 endfunction
 
-function Trig_Cinematic_Intro_Func026A takes nothing returns nothing
+function Trig_Cinematic_Intro_Func029A takes nothing returns nothing
     call CameraSetupApplyForPlayer(true, gg_cam_Camera_004, GetEnumPlayer(), 3.00)
 endfunction
 
-function Trig_Cinematic_Intro_Func027001 takes nothing returns boolean
+function Trig_Cinematic_Intro_Func030001 takes nothing returns boolean
     return ( udg_CinematicSkip == true )
 endfunction
 
-function Trig_Cinematic_Intro_Func029001 takes nothing returns boolean
+function Trig_Cinematic_Intro_Func032001 takes nothing returns boolean
     return ( udg_CinematicSkip == true )
 endfunction
 
-function Trig_Cinematic_Intro_Func030A takes nothing returns nothing
+function Trig_Cinematic_Intro_Func033A takes nothing returns nothing
     call CameraSetupApplyForPlayer(true, gg_cam_Camera_005, GetEnumPlayer(), 3.00)
 endfunction
 
-function Trig_Cinematic_Intro_Func031001 takes nothing returns boolean
+function Trig_Cinematic_Intro_Func034001 takes nothing returns boolean
     return ( udg_CinematicSkip == true )
 endfunction
 
-function Trig_Cinematic_Intro_Func033001 takes nothing returns boolean
+function Trig_Cinematic_Intro_Func036001 takes nothing returns boolean
     return ( udg_CinematicSkip == true )
 endfunction
 
@@ -2571,8 +2579,15 @@ function Trig_Cinematic_Intro_Actions takes nothing returns nothing
     call SetTerrainFogExBJ(0, 200.00, 8000, 0.00, 60.00, 60.00, 60.00)
     call PauseAllUnitsBJ(true)
     call PlayThematicMusicBJ("Tension")
+    call CinematicFadeBJ(bj_CINEFADETYPE_FADEIN, 1.50, "ReplaceableTextures\\CameraMasks\\White_mask.blp", 0, 0, 0, 0)
+    call PolledWait(1.50)
+    if ( (udg_CinematicSkip == true) ) then // INLINED!!
+        return
+    else
+        call DoNothing()
+    endif
     call TransmissionFromUnitWithNameBJ(GetPlayersAll(), gg_unit_O001_0002, "TRIGSTR_374", null, "TRIGSTR_375", bj_TIMETYPE_ADD, 0, false)
-    call ForForce(GetPlayersAll(), function Trig_Cinematic_Intro_Func007A)
+    call ForForce(GetPlayersAll(), function Trig_Cinematic_Intro_Func010A)
     if ( (udg_CinematicSkip == true) ) then // INLINED!!
         return
     else
@@ -2591,7 +2606,7 @@ function Trig_Cinematic_Intro_Actions takes nothing returns nothing
     else
         call DoNothing()
     endif
-    call ForForce(GetPlayersAll(), function Trig_Cinematic_Intro_Func014A)
+    call ForForce(GetPlayersAll(), function Trig_Cinematic_Intro_Func017A)
     call CinematicFadeBJ(bj_CINEFADETYPE_FADEIN, 2, "ReplaceableTextures\\CameraMasks\\Black_mask.blp", 0, 0, 0, 0)
     call PolledWait(2.00)
     if ( (udg_CinematicSkip == true) ) then // INLINED!!
@@ -2611,7 +2626,7 @@ function Trig_Cinematic_Intro_Actions takes nothing returns nothing
     else
         call DoNothing()
     endif
-    call ForForce(GetPlayersAll(), function Trig_Cinematic_Intro_Func022A)
+    call ForForce(GetPlayersAll(), function Trig_Cinematic_Intro_Func025A)
     if ( (udg_CinematicSkip == true) ) then // INLINED!!
         return
     else
@@ -2623,7 +2638,7 @@ function Trig_Cinematic_Intro_Actions takes nothing returns nothing
     else
         call DoNothing()
     endif
-    call ForForce(GetPlayersAll(), function Trig_Cinematic_Intro_Func026A)
+    call ForForce(GetPlayersAll(), function Trig_Cinematic_Intro_Func029A)
     if ( (udg_CinematicSkip == true) ) then // INLINED!!
         return
     else
@@ -2635,7 +2650,7 @@ function Trig_Cinematic_Intro_Actions takes nothing returns nothing
     else
         call DoNothing()
     endif
-    call ForForce(GetPlayersAll(), function Trig_Cinematic_Intro_Func030A)
+    call ForForce(GetPlayersAll(), function Trig_Cinematic_Intro_Func033A)
     if ( (udg_CinematicSkip == true) ) then // INLINED!!
         return
     else
@@ -2949,7 +2964,17 @@ endfunction
 //
 // Default melee game initialization for all players
 //===========================================================================
-function Trig_Initialization_Func012Func001Func001C takes nothing returns boolean
+function Trig_Initialization_Func012Func001C takes nothing returns boolean
+    if ( not ( GetPlayerSlotState(GetEnumPlayer()) == PLAYER_SLOT_STATE_PLAYING ) ) then
+        return false
+    endif
+    if ( not ( GetPlayerController(GetEnumPlayer()) == MAP_CONTROL_USER ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Initialization_Func012Func002Func001C takes nothing returns boolean
     if ( ( GetPlayerSlotState(GetEnumPlayer()) == PLAYER_SLOT_STATE_EMPTY ) ) then
         return true
     endif
@@ -2959,8 +2984,8 @@ function Trig_Initialization_Func012Func001Func001C takes nothing returns boolea
     return false
 endfunction
 
-function Trig_Initialization_Func012Func001C takes nothing returns boolean
-    if ( not Trig_Initialization_Func012Func001Func001C() ) then
+function Trig_Initialization_Func012Func002C takes nothing returns boolean
+    if ( not Trig_Initialization_Func012Func002Func001C() ) then
         return false
     endif
     return true
@@ -2968,13 +2993,28 @@ endfunction
 
 function Trig_Initialization_Func012A takes nothing returns nothing
     if ( Trig_Initialization_Func012Func001C() ) then
+        call ForceAddPlayerSimple(GetEnumPlayer(), udg_RomanPlayersUsers)
+    else
+        call DoNothing()
+    endif
+    if ( Trig_Initialization_Func012Func002C() ) then
         call SetForceAllianceStateBJ(GetForceOfPlayer(GetEnumPlayer()), udg_RomanPlayers, bj_ALLIANCE_ALLIED_ADVUNITS)
     else
         call DoNothing()
     endif
 endfunction
 
-function Trig_Initialization_Func013Func001Func003C takes nothing returns boolean
+function Trig_Initialization_Func013Func001C takes nothing returns boolean
+    if ( not ( GetPlayerSlotState(GetEnumPlayer()) == PLAYER_SLOT_STATE_PLAYING ) ) then
+        return false
+    endif
+    if ( not ( GetPlayerController(GetEnumPlayer()) == MAP_CONTROL_USER ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Initialization_Func013Func002Func003C takes nothing returns boolean
     if ( ( GetPlayerSlotState(GetEnumPlayer()) == PLAYER_SLOT_STATE_EMPTY ) ) then
         return true
     endif
@@ -2984,8 +3024,8 @@ function Trig_Initialization_Func013Func001Func003C takes nothing returns boolea
     return false
 endfunction
 
-function Trig_Initialization_Func013Func001C takes nothing returns boolean
-    if ( not Trig_Initialization_Func013Func001Func003C() ) then
+function Trig_Initialization_Func013Func002C takes nothing returns boolean
+    if ( not Trig_Initialization_Func013Func002Func003C() ) then
         return false
     endif
     return true
@@ -2993,6 +3033,11 @@ endfunction
 
 function Trig_Initialization_Func013A takes nothing returns nothing
     if ( Trig_Initialization_Func013Func001C() ) then
+        call ForceAddPlayerSimple(GetEnumPlayer(), udg_GermanicPlayersUsers)
+    else
+        call DoNothing()
+    endif
+    if ( Trig_Initialization_Func013Func002C() ) then
         call SetForceAllianceStateBJ(GetForceOfPlayer(GetEnumPlayer()), udg_GermanicPlayers, bj_ALLIANCE_ALLIED_ADVUNITS)
     else
         call DoNothing()
@@ -3141,6 +3186,9 @@ function Trig_Game_Start_Actions takes nothing returns nothing
     call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_621")
     call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_622")
     call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_623")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_627")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_628")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_629")
     call CreateQuestBJ(bj_QUESTTYPE_REQ_DISCOVERED, "TRIGSTR_483", "TRIGSTR_484", "ReplaceableTextures\\CommandButtons\\BTNSnazzyScroll.blp")
     call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_485")
     call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_489")
@@ -3242,8 +3290,30 @@ endfunction
 //===========================================================================
 // Trigger: Player Leaves Roman
 //===========================================================================
+function Trig_Player_Leaves_Roman_Func003Func002A takes nothing returns nothing
+    call CustomVictoryBJ(GetEnumPlayer(), true, true)
+endfunction
+
+function Trig_Player_Leaves_Roman_Func003Func003A takes nothing returns nothing
+    call CustomDefeatBJ(GetEnumPlayer(), "TRIGSTR_625")
+endfunction
+
+function Trig_Player_Leaves_Roman_Func003C takes nothing returns boolean
+    if ( not ( CountPlayersInForceBJ(udg_RomanPlayersUsers) == 0 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
 function Trig_Player_Leaves_Roman_Actions takes nothing returns nothing
     call SetForceAllianceStateBJ(GetForceOfPlayer(GetTriggerPlayer()), udg_RomanPlayers, bj_ALLIANCE_ALLIED_ADVUNITS)
+    call ForceRemovePlayerSimple(GetTriggerPlayer(), udg_RomanPlayersUsers)
+    if ( Trig_Player_Leaves_Roman_Func003C() ) then
+        call ForForce(udg_GermanicPlayers, function Trig_Player_Leaves_Roman_Func003Func002A)
+        call ForForce(udg_RomanPlayers, function Trig_Player_Leaves_Roman_Func003Func003A)
+    else
+        call DoNothing()
+    endif
 endfunction
 
 //===========================================================================
@@ -3258,8 +3328,30 @@ endfunction
 //===========================================================================
 // Trigger: Player Leaves Germanic
 //===========================================================================
+function Trig_Player_Leaves_Germanic_Func003Func002A takes nothing returns nothing
+    call CustomVictoryBJ(GetEnumPlayer(), true, true)
+endfunction
+
+function Trig_Player_Leaves_Germanic_Func003Func003A takes nothing returns nothing
+    call CustomDefeatBJ(GetEnumPlayer(), "TRIGSTR_626")
+endfunction
+
+function Trig_Player_Leaves_Germanic_Func003C takes nothing returns boolean
+    if ( not ( CountPlayersInForceBJ(udg_GermanicPlayersUsers) == 0 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
 function Trig_Player_Leaves_Germanic_Actions takes nothing returns nothing
     call SetForceAllianceStateBJ(GetForceOfPlayer(GetTriggerPlayer()), udg_GermanicPlayers, bj_ALLIANCE_ALLIED_ADVUNITS)
+    call ForceRemovePlayerSimple(GetTriggerPlayer(), udg_GermanicPlayersUsers)
+    if ( Trig_Player_Leaves_Germanic_Func003C() ) then
+        call ForForce(udg_RomanPlayers, function Trig_Player_Leaves_Germanic_Func003Func002A)
+        call ForForce(udg_GermanicPlayers, function Trig_Player_Leaves_Germanic_Func003Func003A)
+    else
+        call DoNothing()
+    endif
 endfunction
 
 //===========================================================================
@@ -3488,7 +3580,7 @@ function main takes nothing returns nothing
     call CreateAllUnits()
     call InitBlizzard()
 
-call ExecuteFunc("jasshelper__initstructs120152984")
+call ExecuteFunc("jasshelper__initstructs204892171")
 call ExecuteFunc("SimError___init")
 call ExecuteFunc("TreeUtils___Init")
 call ExecuteFunc("HideInTrees___Init")
@@ -3538,7 +3630,7 @@ function sa___prototype14_HideInTrees___RemoveDestructableHook takes nothing ret
     return true
 endfunction
 
-function jasshelper__initstructs120152984 takes nothing returns nothing
+function jasshelper__initstructs204892171 takes nothing returns nothing
     set st___prototype9[1]=CreateTrigger()
     call TriggerAddAction(st___prototype9[1],function sa___prototype9_HideInTrees___RemoveUnitHook)
     call TriggerAddCondition(st___prototype9[1],Condition(function sa___prototype9_HideInTrees___RemoveUnitHook))

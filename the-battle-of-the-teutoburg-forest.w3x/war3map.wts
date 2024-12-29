@@ -3042,3 +3042,28 @@ STRING 624
 Resurrecton Stone
 }
 
+STRING 625
+{
+Defeat!
+}
+
+STRING 626
+{
+Defeat!
+}
+
+STRING 627
+{
+End game when all players of one team left the game.
+}
+
+STRING 628
+{
+Improve intro cinematic.
+}
+
+STRING 629
+{
+Players start with tier 2 building now.
+}
+
