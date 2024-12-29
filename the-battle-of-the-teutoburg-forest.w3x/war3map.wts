@@ -1508,12 +1508,6 @@ STRING 334
 Train Hunter
 }
 
-STRING 335
-// Units: o007 (Stables), Ubertip (Tooltip - Extended)
-{
-Trains Riders and Chariots.
-}
-
 STRING 336
 // Units: o00E (Shaman), Hotkey (Hotkey)
 {
@@ -1849,12 +1843,6 @@ STRING 394
 // Units: o00J (Ritual Site), Tip (Tooltip - Basic)
 {
 Build Ritual Site
-}
-
-STRING 395
-// Units: o00J (Ritual Site), Ubertip (Tooltip - Extended)
-{
-Trains Berserkers.
 }
 
 STRING 396
@@ -3091,5 +3079,47 @@ STRING 637
 // Units: h00F (Academy), Ubertip (Tooltip - Extended)
 {
 Primary troop production building. Trains Legionaries, Archers and Centurios. |nAlso contains the Defend, Throw Pilum, Searing Arrows, Ready, and Evasion upgrades.
+}
+
+STRING 638
+// Units: o007 (Stables), Ubertip (Tooltip - Extended)
+{
+Trains Riders. Chariots, and Battering Rams.
+}
+
+STRING 639
+// Units: o008 (Stockpile), Ubertip (Tooltip - Extended)
+{
+Serves as a drop-off point for harvested lumber. |nAlso contains upgrades for improved armor, melee weapons, ranged weapons, and Improved Lumber Harvesting.
+}
+
+STRING 640
+// Units: h00J (Forum), Ubertip (Tooltip - Extended)
+{
+Creates a shop with purchasable items. The items available depend upon what level of upgrade your Town Hall has (Castrum, Permanent Castrum, or Legion Castrum) and which buildings you have.
+}
+
+STRING 641
+// Units: h00K (Workshop), Ubertip (Tooltip - Extended)
+{
+Produces Slingers, Catapults, Ballistas, and Carts. |nAlso contains the Burning Oil, and Vorpal Blades upgrades.
+}
+
+STRING 642
+// Units: h00L (Stables), Ubertip (Tooltip - Extended)
+{
+Trains Eques, and Chariots. |nAlso contains the Sundering Blades and Animal War Training upgrades.
+}
+
+STRING 643
+// Units: h00O (Temple), Ubertip (Tooltip - Extended)
+{
+Trains Vexilifers, and  Priests. |nAlso contains spell upgrades for Vexilifers and Priests, and Magic Sentry.
+}
+
+STRING 644
+// Units: o00J (Ritual Site), Ubertip (Tooltip - Extended)
+{
+Trains Berserkers and High Priests. Contains upgrades Summon Dog, Cannibalize and High Priest Adept Training.
 }
 

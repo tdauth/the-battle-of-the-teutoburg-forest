@@ -3585,7 +3585,7 @@ function main takes nothing returns nothing
     call CreateAllUnits()
     call InitBlizzard()
 
-call ExecuteFunc("jasshelper__initstructs213430093")
+call ExecuteFunc("jasshelper__initstructs213855437")
 call ExecuteFunc("SimError__init")
 call ExecuteFunc("TreeUtils__Init")
 call ExecuteFunc("HideInTrees__Init")
@@ -3635,7 +3635,7 @@ function sa___prototype14_HideInTrees__RemoveDestructableHook takes nothing retu
     return true
 endfunction
 
-function jasshelper__initstructs213430093 takes nothing returns nothing
+function jasshelper__initstructs213855437 takes nothing returns nothing
     set st___prototype9[1]=CreateTrigger()
     call TriggerAddAction(st___prototype9[1],function sa___prototype9_HideInTrees__RemoveUnitHook)
     call TriggerAddCondition(st___prototype9[1],Condition(function sa___prototype9_HideInTrees__RemoveUnitHook))
