@@ -69,6 +69,7 @@ Warcraft III custom map featuring the famous [Battle of the Teutoburg Forest](ht
 * Eagle XI: [BTNVrykulHarpooner](https://www.hiveworkshop.com/threads/btnvrykulharpooner.272397/)
 * Eagle XI: [BTNVrykulWarrior](https://www.hiveworkshop.com/threads/btnvrykulwarrior.272396/)
 * Eagle XI: [BTNVrykulThane](https://www.hiveworkshop.com/threads/btnvrykulthane.272400/)
+* Eagle XI: [BTNStonewall](https://www.hiveworkshop.com/threads/btnstonewall.275743/)
 * BLazeKraze: [Bandit Hide](https://www.hiveworkshop.com/threads/bandit-hide.289286/)
 * Mr.Goblin: [TimberWolf.blp](https://www.hiveworkshop.com/threads/timberwolf-blp.96133/)
 * Vinz: [Eternity's Crown (1.32)](https://www.hiveworkshop.com/threads/eternitys-crown-1-32.334147/)
