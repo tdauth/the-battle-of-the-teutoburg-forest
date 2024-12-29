@@ -91,6 +91,7 @@ function main takes nothing returns nothing
     call SetBuildUpgr(1, UPG_ROMAN_BACKPACK)
     call SetBuildUpgr(1, UPG_ROMAN_ANIMAL)
     call SetBuildUpgr(1, UPG_ROMAN_AQUEDUCT)
+    call SetBuildUpgr(1, UPG_ROMAN_SEARING_ARROWS)
     call SetBuildUpgr(1, UPG_ROMAN_OIL)
     call SetBuildUpgr(1, UPG_ROMAN_SENTRY)
     call SetBuildUpgr(1, UPG_ROMAN_READY)

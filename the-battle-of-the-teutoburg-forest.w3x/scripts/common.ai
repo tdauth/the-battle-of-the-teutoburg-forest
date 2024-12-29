@@ -774,6 +774,7 @@ globals
     constant integer UPG_ROMAN_PILUM = 'R003'
     constant integer UPG_ROMAN_VORPAL_BLADES = 'R00J'
     constant integer UPG_ROMAN_EVASION = 'R00U'
+    constant integer UPG_ROMAN_SEARING_ARROWS = 'R00Y'
 
     //--------------------------------------------------------------------
 

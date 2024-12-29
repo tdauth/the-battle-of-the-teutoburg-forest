@@ -3192,6 +3192,8 @@ function Trig_Game_Start_Actions takes nothing returns nothing
     call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_629")
     call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_630")
     call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_632")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_633")
+    call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_636")
     call CreateQuestBJ(bj_QUESTTYPE_REQ_DISCOVERED, "TRIGSTR_483", "TRIGSTR_484", "ReplaceableTextures\\CommandButtons\\BTNSnazzyScroll.blp")
     call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_485")
     call CreateQuestItemBJ(GetLastCreatedQuestBJ(), "TRIGSTR_489")
@@ -3568,7 +3570,7 @@ function main takes nothing returns nothing
     call SetCameraBounds(- 7424.0 + GetCameraMargin(CAMERA_MARGIN_LEFT), - 7680.0 + GetCameraMargin(CAMERA_MARGIN_BOTTOM), 7424.0 - GetCameraMargin(CAMERA_MARGIN_RIGHT), 7168.0 - GetCameraMargin(CAMERA_MARGIN_TOP), - 7424.0 + GetCameraMargin(CAMERA_MARGIN_LEFT), 7168.0 - GetCameraMargin(CAMERA_MARGIN_TOP), 7424.0 - GetCameraMargin(CAMERA_MARGIN_RIGHT), - 7680.0 + GetCameraMargin(CAMERA_MARGIN_BOTTOM))
     call SetDayNightModels("Environment\\DNC\\DNCAshenvale\\DNCAshenvaleTerrain\\DNCAshenvaleTerrain.mdl", "Environment\\DNC\\DNCAshenvale\\DNCAshenvaleUnit\\DNCAshenvaleUnit.mdl")
     call SetTerrainFogEx(0, 0.0, 4000.0, 0.500, 0.000, 0.000, 0.000)
-    call SetWaterBaseColor(150, 75, 0, 255)
+    call SetWaterBaseColor(0, 0, 128, 255)
     set we=AddWeatherEffect(Rect(- 8192.0, - 8192.0, 8192.0, 8192.0), 'RLhr')
     call EnableWeatherEffect(we, true)
     call NewSoundEnvironment("Default")
@@ -3583,7 +3585,7 @@ function main takes nothing returns nothing
     call CreateAllUnits()
     call InitBlizzard()
 
-call ExecuteFunc("jasshelper__initstructs210290015")
+call ExecuteFunc("jasshelper__initstructs213430093")
 call ExecuteFunc("SimError__init")
 call ExecuteFunc("TreeUtils__Init")
 call ExecuteFunc("HideInTrees__Init")
@@ -3633,7 +3635,7 @@ function sa___prototype14_HideInTrees__RemoveDestructableHook takes nothing retu
     return true
 endfunction
 
-function jasshelper__initstructs210290015 takes nothing returns nothing
+function jasshelper__initstructs213430093 takes nothing returns nothing
     set st___prototype9[1]=CreateTrigger()
     call TriggerAddAction(st___prototype9[1],function sa___prototype9_HideInTrees__RemoveUnitHook)
     call TriggerAddCondition(st___prototype9[1],Condition(function sa___prototype9_HideInTrees__RemoveUnitHook))

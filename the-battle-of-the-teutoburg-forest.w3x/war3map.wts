@@ -3077,3 +3077,19 @@ STRING 632
 Use custom model and icon for hero Senator.
 }
 
+STRING 633
+{
+Add missing Roman research Searing Arrows.
+}
+
+STRING 636
+{
+Add missing Roman research Evasion.
+}
+
+STRING 637
+// Units: h00F (Academy), Ubertip (Tooltip - Extended)
+{
+Primary troop production building. Trains Legionaries, Archers and Centurios. |nAlso contains the Defend, Throw Pilum, Searing Arrows, Ready, and Evasion upgrades.
+}
+
