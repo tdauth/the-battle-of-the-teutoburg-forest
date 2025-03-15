@@ -1,18 +1,18 @@
 ﻿STRING 3
 {
-Battle of the Teutoburg Forest 1.3
+Schlacht im Teutoburger Wald 1.3
 }
 
 STRING 16
-// Units: h000 (Legionary), Name (Name)
+// Units: h000 (Legionär), Name (Name)
 {
-Legionary
+Legionär
 }
 
 STRING 17
-// Units: h000 (Legionary), Tip (Tooltip - Basic)
+// Units: h000 (Legionär), Tip (Tooltip - Basic)
 {
-Train Legionary
+Legionär ausbilden
 }
 
 STRING 18
@@ -24,31 +24,31 @@ Eques
 STRING 19
 // Units: h001 (Eques), Tip (Tooltip - Basic)
 {
-Train Eques
+Eques ausbilden
 }
 
 STRING 20
 // Units: h00H (Tent), Name (Name)
 {
-Tent
+Zelt
 }
 
 STRING 21
 // Units: o000 (Catapult), Name (Name)
 {
-Catapult
+Katapult
 }
 
 STRING 22
 // Units: o000 (Catapult), Tip (Tooltip - Basic)
 {
-Train Catapult
+Katapult ausbilden
 }
 
 STRING 25
 // Abilities: A000 (Defend), EditorSuffix (Editor Suffix)
 {
-(Legionary)
+(Legionär)
 }
 
 STRING 50
@@ -66,31 +66,31 @@ STRING 51
 STRING 52
 // Units: h009 (Pioneer), Name (Name)
 {
-Pioneer
+Pionier
 }
 
 STRING 53
 // Units: h009 (Pioneer), Tip (Tooltip - Basic)
 {
-Train Pioneer
+Pionier ausbilden
 }
 
 STRING 58
 // Abilities: A002 (Command Aura), Tip (Tooltip - Normal)
 {
-Command Aura - [|cffffcc00Level 1|r]
+Befehlsaura - [|cffffcc00Stufe 1|r]
 }
 
 STRING 59
 // Abilities: A002 (Command Aura), Tip (Tooltip - Normal)
 {
-Command Aura - [|cffffcc00Level 2|r]
+Befehlsaura - [|cffffcc00Stufe 2|r]
 }
 
 STRING 60
 // Abilities: A002 (Command Aura), Tip (Tooltip - Normal)
 {
-Command Aura - [|cffffcc00Level 3|r]
+Befehlsaura - [|cffffcc00Stufe 3|r]
 }
 
 STRING 61
@@ -108,7 +108,7 @@ Gives extra damage to the attacks of nearby friendly units.
 STRING 63
 // Abilities: A002 (Command Aura), Researchtip (Tooltip - Learn)
 {
-Learn Devotion Aura - [|cffffcc00Level %d|r]
+Hingabeaura erlernen - [|cffffcc00Stufe %d|r]
 }
 
 STRING 64
@@ -126,19 +126,19 @@ A
 STRING 71
 // Abilities: A003 (Cavallery Charge), Name (Name)
 {
-Cavallery Charge
+Kavallerieangriff
 }
 
 STRING 72
 // Abilities: A003 (Cavallery Charge), Researchtip (Tooltip - Learn)
 {
-Learn Cavallery Charge
+Kavallerieangriff erlernen
 }
 
 STRING 73
 // Abilities: A003 (Cavallery Charge), Tip (Tooltip - Normal)
 {
-Cavallery Charge
+Kavallerieangriff
 }
 
 STRING 77
@@ -158,12 +158,12 @@ Legio XIX
 
 STRING 80
 {
-Cherusci
+Cherusker
 }
 
 STRING 81
 {
-Bructeri
+Brukter
 }
 
 STRING 82
@@ -173,12 +173,12 @@ Angrivarii
 
 STRING 83
 {
-Roman Legions
+Römische Legionen
 }
 
 STRING 84
 {
-Germanic Tribes
+Germnaische Stämme
 }
 
 STRING 86
@@ -190,19 +190,19 @@ Varus
 STRING 87
 // Units: H00D (Roman Governor), Name (Name)
 {
-Roman Governor
+Römischer Gouverneur
 }
 
 STRING 88
 // Units: H00D (Roman Governor), Awakentip (Tooltip - Awaken)
 {
-Revive Varus
+Varus wiederbeleben
 }
 
 STRING 89
 // Units: H00D (Roman Governor), Revivetip (Tooltip - Revive)
 {
-Revive Varus
+Varus wiederbeleben
 }
 
 STRING 90
@@ -214,13 +214,13 @@ Arminius
 STRING 94
 // Units: o003 (Villager), Name (Name)
 {
-Villager
+Dorfbewohner
 }
 
 STRING 95
 // Units: o003 (Villager), Tip (Tooltip - Basic)
 {
-Train Villager
+Dorfbewohner ausbilden
 }
 
 STRING 98
@@ -238,77 +238,77 @@ Train Rider
 STRING 100
 // Units: o005 (House), Name (Name)
 {
-House
+Haus
 }
 
 STRING 101
 // Units: o005 (House), Tip (Tooltip - Basic)
 {
-Build House
+Haus errichten
 }
 
 STRING 102
 // Units: o007 (Stables), Name (Name)
 {
-Stables
+Stall
 }
 
 STRING 103
 // Units: o007 (Stables), Tip (Tooltip - Basic)
 {
-Build Stables
+Stall errichten
 }
 
 STRING 104
 // Units: o008 (Stockpile), Name (Name)
 {
-Stockpile
+Vorratslager
 }
 
 STRING 105
 // Units: o008 (Stockpile), Tip (Tooltip - Basic)
 {
-Build Stockpile
+Vorratslager errichten
 }
 
 STRING 106
 // Units: n002 (Warrior), Name (Name)
 {
-Warrior
+Krieger
 }
 
 STRING 107
 // Units: n002 (Warrior), Tip (Tooltip - Basic)
 {
-Train Warrior
+Krieger ausbilden
 }
 
 STRING 108
 // Units: n003 (Javelin Thrower), Name (Name)
 {
-Javelin Thrower
+Speerwerfer
 }
 
 STRING 109
 // Units: n003 (Javelin Thrower), Tip (Tooltip - Basic)
 {
-Train Javelin Thrower
+Speerwerfer ausbilden
 }
 
 STRING 110
 // Units: h00E (Guard Tower), Tip (Tooltip - Basic)
 {
-Build Guard Tower
+Wachturm errichten
 }
 
 STRING 111
 {
-Defeat the Roman Legions!
+Besiegt die römischen Legionen!
 }
 
 STRING 112
 {
-Defeat the Germanic Tribes!
+Besiegt die germanischen Stämme!
 }
 
 STRING 113
@@ -318,29 +318,29 @@ Varus:
 
 STRING 114
 {
-Arminius has betrayed us. Prepare for battle!
+Arminius hat uns verraten. Bereitet euch auf den Kampf vor!
 }
 
 STRING 116
 {
-Defeat!
+Niederlage!
 }
 
 STRING 118
 {
-Defeat!
+Niederlage!
 }
 
 STRING 121
 // Units: h003 (Centurio), Name (Name)
 {
-Centurio
+Zenturio
 }
 
 STRING 122
 // Units: h003 (Centurio), Tip (Tooltip - Basic)
 {
-Train Centurio
+Zenturio ausbilden
 }
 
 STRING 123
@@ -358,55 +358,55 @@ Train Vexillifer
 STRING 125
 // Abilities: A004 (Throw Pilum), Tip (Tooltip - Normal)
 {
-Throw Pilum
+Pilum werfen
 }
 
 STRING 127
 // Abilities: A004 (Throw Pilum), Name (Name)
 {
-Throw Pilum
+Pilum werfen
 }
 
 STRING 128
 // Units: o00A (Druid), Name (Name)
 {
-Druid
+Druide
 }
 
 STRING 129
 // Units: o00A (Druid), Tip (Tooltip - Basic)
 {
-Train Druid
+Druiden ausbilden
 }
 
 STRING 130
 // Units: o00B (Altar of Sacrifice), Name (Name)
 {
-Altar of Sacrifice
+Altar der Opferung
 }
 
 STRING 131
 // Units: o00B (Altar of Sacrifice), Tip (Tooltip - Basic)
 {
-Build Altar of Sacrifice
+Altar der Opferung errichten
 }
 
 STRING 134
 // Units: o00D (Market), Name (Name)
 {
-Market
+Markt
 }
 
 STRING 137
 // Units: h00I (Cart), Name (Name)
 {
-Cart
+Karren
 }
 
 STRING 138
 // Units: h00I (Cart), Tip (Tooltip - Basic)
 {
-Train Cart
+Karren ausbilden
 }
 
 STRING 142
@@ -418,7 +418,7 @@ Forum
 STRING 143
 // Units: h00J (Forum), Tip (Tooltip - Basic)
 {
-Build Forum
+Forum errichten
 }
 
 STRING 144
@@ -448,13 +448,13 @@ Druid Master Training
 STRING 148
 // Units: n008 (Eagle), Name (Name)
 {
-Eagle
+Adler
 }
 
 STRING 149
 // Units: n009 (Thunder Eagle), Name (Name)
 {
-Thunder Eagle
+Donneradler
 }
 
 STRING 150
@@ -466,13 +466,13 @@ Allows Roman Warriors to use the Defend ability, which increases their defensive
 STRING 151
 // Upgrades: R003 (Defend), Name (Name)
 {
-Throw Pilum
+Pilum werfen
 }
 
 STRING 152
 // Upgrades: R003 (Defend), Tip (Tooltip)
 {
-Research Throw Pilum
+Pilum werfen erforschen
 }
 
 STRING 154
@@ -484,13 +484,13 @@ T
 STRING 155
 // Units: h00L (Stables), Name (Name)
 {
-Stables
+Stall
 }
 
 STRING 156
 // Units: h00L (Stables), Tip (Tooltip - Basic)
 {
-Build Stables
+Stall errichten
 }
 
 STRING 157
@@ -502,7 +502,7 @@ Highly mobile rider. Effective against archers. Can learn the Ensnare ability. |
 STRING 158
 // Units: o009 (Shipyard), Name (Name)
 {
-Shipyard
+Hafen
 }
 
 STRING 159
@@ -514,7 +514,7 @@ Y
 STRING 160
 // Units: o009 (Shipyard), Tip (Tooltip - Basic)
 {
-Build Shipyard
+Hafen errichten
 }
 
 STRING 161
@@ -526,61 +526,61 @@ Y
 STRING 162
 // Units: h00M (Shipyard), Name (Name)
 {
-Shipyard
+Hafen
 }
 
 STRING 163
 // Units: h00M (Shipyard), Tip (Tooltip - Basic)
 {
-Build Shipyard
+Hafen errichten
 }
 
 STRING 164
 // Units: H006 (Chieftain), Name (Name)
 {
-Chieftain
+Häuptling
 }
 
 STRING 165
 // Units: H006 (Chieftain), Awakentip (Tooltip - Awaken)
 {
-Revive Chieftain
+Häuptling wiederbeleben
 }
 
 STRING 166
 // Units: H006 (Chieftain), Revivetip (Tooltip - Revive)
 {
-Revive Chieftain
+Häuptling wiederbeleben
 }
 
 STRING 167
 // Units: H006 (Chieftain), Tip (Tooltip - Basic)
 {
-Summon Chieftain
+Häuptling beschwören
 }
 
 STRING 168
 // Units: O00H (Druid), Name (Name)
 {
-Druid
+Druide
 }
 
 STRING 169
 // Units: O00H (Druid), Awakentip (Tooltip - Awaken)
 {
-Revive Druid
+Druiden wiederbeleben
 }
 
 STRING 170
 // Units: O00H (Druid), Revivetip (Tooltip - Revive)
 {
-Revive Druid
+Druiden wiederbeleben
 }
 
 STRING 171
 // Units: O00H (Druid), Tip (Tooltip - Basic)
 {
-Summon Druid
+Druiden beschwören
 }
 
 STRING 172
@@ -598,7 +598,7 @@ STRING 173
 STRING 174
 // Upgrades: R004 (Pillage), Ubertip (Tooltip - Extended)
 {
-Causes Germanic unit attacks to gain resources when hitting enemy buildings.
+Germanische Einheitenangriffe erzeugen Resourcen wenn sie feindliche Gebäude treffen.
 }
 
 STRING 175
@@ -610,7 +610,7 @@ STRING 175
 STRING 176
 // Upgrades: R005 (Backpack), Ubertip (Tooltip - Extended)
 {
-Gives specific Roman ground units the ability to carry items.
+Gibt bestimmten römischen Bodeneinheiten die Fähigkeit, Gegenstände zu tragen.
 }
 
 STRING 177
@@ -622,49 +622,49 @@ STRING 177
 STRING 178
 // Upgrades: R006 (Backpack), Ubertip (Tooltip - Extended)
 {
-Gives specific Germanic ground units the ability to carry items.
+Gibt bestimmten germanischen Bodeneinheiten die Fähigkeit, Gegenstände zu tragen.
 }
 
 STRING 180
 // Abilities: A008 (Summon Eagle), Name (Name)
 {
-Summon Eagle
+Adler beschwören
 }
 
 STRING 181
 // Abilities: A008 (Summon Eagle), Tip (Tooltip - Normal)
 {
-Summon Eagle
+Adler beschwören
 }
 
 STRING 182
 // Abilities: A008 (Summon Eagle), Ubertip (Tooltip - Normal - Extended)
 {
-Summons a powerful Eagle with <nsel,realHP> hit points that does <nsel,mindmg1> - <nsel,maxdmg1> damage. |nLasts <ACwe,Dur1> seconds.
+Beschwört einen mächtigen Adler mit <nsel,realHP> Trefferpunkten, der <nsel,mindmg1> - <nsel,maxdmg1> Schaden verursacht. |nHält <ACwe,Dur1> Sekunden.
 }
 
 STRING 183
 // Buffs/Effects: B000 (), Bufftip (Tooltip)
 {
-Eagle
+Adler
 }
 
 STRING 184
 // Units: o002 (Town Center), Name (Name)
 {
-Town Center
+Dorfzentrum
 }
 
 STRING 185
 // Units: o002 (Town Center), Tip (Tooltip - Basic)
 {
-Build Town Center
+Dorfzentrum errichten
 }
 
 STRING 186
 // Units: o002 (Town Center), Ubertip (Tooltip - Extended)
 {
-Primary structure, used to train Villagers and receive gathered resources. Can be upgraded to Stronghold and then Fortress to enable the production of additional types of structures and units.
+Primäres Gebäude, das benutzt wird, um Dorfbewohner auszubilden und gesammelte Rohstoffe entgegenzunehmen. Kann zur Hochburg und Festung ausgebaut werden, um die Produktion von zusätzlichen Gebäuden und Einheiten zu aktivieren.
 }
 
 STRING 188
@@ -676,85 +676,85 @@ J
 STRING 189
 // Upgrades: R007 (Improved Lumber Harvesting,Advanced Lumber Harvesting), Ubertip (Tooltip - Extended)
 {
-Increases the amount of lumber that Villagers can carry by <Rhlh,mod1>.
+Erhöht die Menge von Holz, die Dorfbewohner tragen können um <Rhlh,mod1>.
 }
 
 STRING 190
 // Upgrades: R007 (Improved Lumber Harvesting,Advanced Lumber Harvesting), Ubertip (Tooltip - Extended)
 {
-Further increases the amount of lumber that Villagers can carry by <Rhlh,mod1>.
+Erhöht die Menge von Holz, die Dorfbewohner können weiter um <Rhlh,mod1>.
 }
 
 STRING 191
 // Abilities: A00A (Bear Form), Unubertip (Tooltip - Turn Off - Extended)
 {
-Transforms the Druid into a Human.
+Verwandelt den Druiden in einen Menschen
 }
 
 STRING 192
 // Abilities: A00A (Bear Form), Untip (Tooltip - Turn Off)
 {
-Human Form
+Menschenform
 }
 
 STRING 193
 // Units: o00C (Shrine), Ubertip (Tooltip - Extended)
 {
-Spellcaster production building. Trains Shaman and Druids. |nAlso contains spell upgrades for Shaman and Druids.
+Zaubererproduktionsgebäude. Bildet Schamanen und Druiden aus. |nEnthält außerdem Zauberforschungen für Schamanen und Druiden.
 }
 
 STRING 194
 // Items: gobm (Bear Traps), Name (Name)
 {
-Bear Traps
+Bärenfallen
 }
 
 STRING 195
 // Items: gobm (Bear Traps), Tip (Tooltip - Basic)
 {
-Purchase Bear Traps
+Bärenfallen erwerben
 }
 
 STRING 196
 // Units: o00C (Shrine), Name (Name)
 {
-Shrine
+Schrein
 }
 
 STRING 197
 // Units: o00C (Shrine), Tip (Tooltip - Basic)
 {
-Build Shrine
+Schrein errichten
 }
 
 STRING 198
 // Units: h00B (Seer), Name (Name)
 {
-Seer
+Seher
 }
 
 STRING 199
 // Units: h00B (Seer), Tip (Tooltip - Basic)
 {
-Train Seer
+Seher ausbilden
 }
 
 STRING 200
 // Abilities: A00E (Far Sight), Name (Name)
 {
-Far Sight
+Fernsicht
 }
 
 STRING 201
 // Abilities: A00E (Far Sight), Tip (Tooltip - Normal)
 {
-Far Sight
+Fernsicht
 }
 
 STRING 202
 // Units: H008 (Tribune), Name (Name)
 {
-Tribune
+Tribun
 }
 
 STRING 203
@@ -766,19 +766,19 @@ Gaius Rabuleius,Volero Publilius,Quintus Maelius,Gaius Servilius Geminus,Liciniu
 STRING 204
 // Units: H008 (Tribune), Awakentip (Tooltip - Awaken)
 {
-Revive Tribune
+Tribun wiederbeleben
 }
 
 STRING 205
 // Units: H008 (Tribune), Revivetip (Tooltip - Revive)
 {
-Revive Tribune
+Tribun wiederbeleben
 }
 
 STRING 206
 // Units: H008 (Tribune), Tip (Tooltip - Basic)
 {
-Summon Tribune
+Tribun beschwören
 }
 
 STRING 207
@@ -790,51 +790,51 @@ Senator
 STRING 208
 // Units: H007 (Senator), Awakentip (Tooltip - Awaken)
 {
-Revive Senator
+Senator wiederbeleben
 }
 
 STRING 209
 // Units: H007 (Senator), Revivetip (Tooltip - Revive)
 {
-Revive Senator
+Senator wiederbeleben
 }
 
 STRING 210
 // Units: H007 (Senator), Tip (Tooltip - Basic)
 {
-Summon Senator
+Senator beschwören
 }
 
 STRING 211
 {
-The Battle
+Die Schlacht.
 }
 
 STRING 212
 {
-A major battle between Germanic tribes and the Roman Empire that took place somewhere near modern Kalkriese from September 8–11, 9 AD, when an alliance of Germanic peoples ambushed three Roman legions led by Publius Quinctilius Varus and their auxiliaries.
+Eine bedeutende Schlacht zwischen germanischen Stämmen und dem römischen Reich, die irgendwo nahe des modernen Kalkriese vom 8.-11. September 9 AD stattfand, als eine Allianz von germanischen Völkern drei römische Legionen und deren Hilfstruppen, angeführt von Publilius Quinctilius Varus, überfiehl.
 }
 
 STRING 213
 {
-Roman Legions: Defeat the Germanic Tribes.
+Römischen Legionen: Besiegt die germanischen Stämme.
 }
 
 STRING 214
 {
-Germanic Tribes: Defeat the Roman Legions.
+Germanische Stämme: Besiegt die römischen Legionen.
 }
 
 STRING 215
 // Abilities: A00G (Sacrifice), Name (Name)
 {
-Sacrifice
+Opfern
 }
 
 STRING 216
 // Abilities: A00G (Sacrifice), Tip (Tooltip - Normal)
 {
-Sacrifice
+Opfern
 }
 
 STRING 217
@@ -864,13 +864,13 @@ Seer Master Training
 STRING 221
 // Units: h00B (Seer), Casterupgradetip (Caster Upgrade Tips)
 {
-- Far Sight,- Far Sight|n- Dispel Magic,- Far Sight|n- Dispel Magic|n- Sacrifice
+- Fernsicht,- Fernsicht|n- Magie bannen,- Fernsicht|n- Magie bannen|n- Opfern
 }
 
 STRING 222
 // Units: h00B (Seer), Ubertip (Tooltip - Extended)
 {
-Versatile spellcaster. Can initially cast Far Sight, which reveals a hidden area on the map. Can also learn Dispel Magic and Sacrifice. |n|n|cffffcc00Attacks land and air units.|r
+Vielseitiger Zauberer. Kann initial Fernsicht wirken, das ein unsichtbares Gebiet auf der Karte sichtbar macht. Kann außerdem Magie bannen und Opfern erlernen. |n|n|cffffcc00Greift Boden- und Lufteinheiten an.|r
 }
 
 STRING 223
@@ -882,7 +882,7 @@ Castrum
 STRING 224
 // Units: h002 (Castrum), Tip (Tooltip - Basic)
 {
-Build Castrum
+Castrum errichten
 }
 
 STRING 225
@@ -894,25 +894,25 @@ STRING 225
 STRING 226
 // Units: h00F (Academy), Name (Name)
 {
-Academy
+Akademie
 }
 
 STRING 227
 // Units: h00F (Academy), Tip (Tooltip - Basic)
 {
-Build Academy
+Akademie errichten
 }
 
 STRING 228
 // Units: h00C (Permanent Castrum), Name (Name)
 {
-Permanent Castrum
+Dauerhaftes Castrum
 }
 
 STRING 229
 // Units: h00C (Permanent Castrum), Tip (Tooltip - Basic)
 {
-Upgrade to Permanent Castrum
+Ausbau zum Dauerhaften Castrum
 }
 
 STRING 230
@@ -930,37 +930,37 @@ STRING 231
 STRING 232
 // Units: h00N (Legion Castrum), Name (Name)
 {
-Legion Castrum
+Legions-Castrum
 }
 
 STRING 233
 // Units: h00N (Legion Castrum), Tip (Tooltip - Basic)
 {
-Upgrade to Legion Castrum
+Ausbau zum Legions-Castrum
 }
 
 STRING 234
 // Units: h00O (Temple), Name (Name)
 {
-Temple
+Tempel
 }
 
 STRING 235
 // Units: h00O (Temple), Tip (Tooltip - Basic)
 {
-Build Temple
+Tempel errichten
 }
 
 STRING 236
 // Units: h00P (Altar of Gods), Name (Name)
 {
-Altar of Gods
+Altar der Götter
 }
 
 STRING 237
 // Units: h00P (Altar of Gods), Tip (Tooltip - Basic)
 {
-Build Altar of Gods
+Altar der Götter errichten
 }
 
 STRING 238
@@ -972,7 +972,7 @@ C
 STRING 239
 // Upgrades: R00F (Magic Sentry), Name (Name)
 {
-Aqueduct
+Aquädukt
 }
 
 STRING 240
@@ -984,13 +984,13 @@ A
 STRING 241
 // Upgrades: R00F (Magic Sentry), Tip (Tooltip)
 {
-Research Aqueduct
+Aquädukt erforschen
 }
 
 STRING 242
 // Upgrades: R00F (Magic Sentry), Ubertip (Tooltip - Extended)
 {
-Increases the mana capacity of Roman units.
+Erhöht die Manakapazität von römischen Einheiten.
 }
 
 STRING 243
@@ -1014,25 +1014,25 @@ STRING 245
 STRING 246
 // Units: n00B (Corrupted Druid), Name (Name)
 {
-Corrupted Druid
+Verdorbener Druide
 }
 
 STRING 247
 // Units: n00B (Corrupted Druid), Tip (Tooltip - Basic)
 {
-Hire Corrupted Druid
+Verdorbenen Druiden anheuern
 }
 
 STRING 248
 // Units: n00C (Renegade Druid), Name (Name)
 {
-Renegade Druid
+Abtrünniger Druide
 }
 
 STRING 249
 // Units: n00C (Renegade Druid), Tip (Tooltip - Basic)
 {
-Hire Renegade Druid
+Abtrünnigen Druiden anheuern
 }
 
 STRING 250
@@ -1050,7 +1050,7 @@ STRING 251
 STRING 252
 // Abilities: A00J (Ready), Name (Name)
 {
-Ready
+Bereit
 }
 
 STRING 253
@@ -1068,43 +1068,43 @@ R
 STRING 255
 // Abilities: A00J (Ready), Tip (Tooltip - Normal)
 {
-Ready
+Bereit
 }
 
 STRING 256
 // Abilities: A00J (Ready), Untip (Tooltip - Turn Off)
 {
-Normal Form
+Normale Form
 }
 
 STRING 257
 // Abilities: A00J (Ready), Unubertip (Tooltip - Turn Off - Extended)
 {
-Transforms the Archer into the normal movable form.
+Verwandelt den Bogenschützen in die normale bewegliche Form.
 }
 
 STRING 258
 // Abilities: A00J (Ready), Ubertip (Tooltip - Normal - Extended)
 {
-Changes into an imovable form with larger attack range.
+Wechselt in eine unbewegliche Form mit einer höheren Angriffsreichweite.
 }
 
 STRING 259
 // Upgrades: R00G (Long Rifles), Name (Name)
 {
-Ready
+Bereit
 }
 
 STRING 260
 // Upgrades: R00G (Long Rifles), Tip (Tooltip)
 {
-Research Ready
+Bereit erforschen
 }
 
 STRING 261
 // Upgrades: R00G (Long Rifles), Ubertip (Tooltip - Extended)
 {
-Gives Archers the Ready ability.
+Gibt Bogenschützen die Bereitfähigkeit.
 }
 
 STRING 262
@@ -1114,8 +1114,8 @@ STRING 262
 
 STRING 263
 {
-A major battle between Germanic tribes and the Roman Empire.|n
-|cffffcc00Supports Computer players.|r|n
+Eine bedeutende Schlacht zwischen germanischen Stämmen und dem römischen Reich.|n
+|cffffcc00Unterstützt Computer-Spieler.|r|n
 |cffffcc00Discord:|r VBDFBSbQ
 }
 
@@ -1133,29 +1133,29 @@ Lucius Minicius Rufus,Gaius Oppius Sabinus,Servius Cornelius Cethegus,Titus Quin
 STRING 266
 // Units: n00E (Slinger), Name (Name)
 {
-Slinger
+Schleuderer
 }
 
 STRING 267
 // Units: n00E (Slinger), Tip (Tooltip - Basic)
 {
-Train Slinger
+Schleuderer ausbilden
 }
 
 STRING 268
-// Units: h00Q (Legionary), Name (Name)
+// Units: h00Q (Legionär), Name (Name)
 {
-Legionary
+Legionär
 }
 
 STRING 269
-// Units: h00Q (Legionary), Tip (Tooltip - Basic)
+// Units: h00Q (Legionär), Tip (Tooltip - Basic)
 {
-Train Legionary
+Legionär ausbilden
 }
 
 STRING 270
-// Units: h00Q (Legionary), EditorSuffix (Name - Editor Suffix)
+// Units: h00Q (Legionär), EditorSuffix (Name - Editor Suffix)
 {
 (Sword)
 }
@@ -1163,25 +1163,25 @@ STRING 270
 STRING 271
 // Units: n00F (Pig), Tip (Tooltip - Basic)
 {
-Breed Pig
+Schwein züchten
 }
 
 STRING 272
 // Units: n00F (Pig), Ubertip (Tooltip - Extended)
 {
-Gives additional resources when dying.
+Gibt zusätzliche Rohstoffe wenn es stirbt.
 }
 
 STRING 273
 // Units: n00G (Sheep), Tip (Tooltip - Basic)
 {
-Breed Sheep
+Schaf züchten
 }
 
 STRING 274
 // Units: n00G (Sheep), Ubertip (Tooltip - Extended)
 {
-Gives additional resources when dying.
+Gibt zusätzliche Rohstoffe wenn es stirbt.
 }
 
 STRING 276
@@ -1199,43 +1199,43 @@ R
 STRING 282
 // Abilities: A00L (Draw Sword), Unubertip (Tooltip - Turn Off - Extended)
 {
-Draws the spear removing attack speed but adding damage and attack range.
+Zieht den Speer und reduziert damit Angriffsgeschwindigkeit aber erhöht Schaden und Angriffsreichweite.
 }
 
 STRING 283
 // Abilities: A00L (Draw Sword), Ubertip (Tooltip - Normal - Extended)
 {
-Draws the sword adding attack speed but removing damage and range.
+Zieht das Schwert und erhöht dabei Angriffsgeschwindigkeit aber reduziert Schaden und Angriffsreichweite.
 }
 
 STRING 284
 // Units: e001 (Ballista), Name (Name)
 {
-Ballista
+Balliste
 }
 
 STRING 285
 // Units: e001 (Ballista), Tip (Tooltip - Basic)
 {
-Train Ballista
+Balliste ausbilden
 }
 
 STRING 286
 // Abilities: A00L (Draw Sword), Name (Name)
 {
-Draw Sword
+Schwert ziehen
 }
 
 STRING 287
 // Abilities: A00L (Draw Sword), Tip (Tooltip - Normal)
 {
-Draw Sword
+Schwert ziehen
 }
 
 STRING 288
 // Abilities: A00L (Draw Sword), Untip (Tooltip - Turn Off)
 {
-Draw Spear
+Speer ziehen
 }
 
 STRING 289
@@ -1247,19 +1247,19 @@ STRING 289
 STRING 290
 // Units: h009 (Pioneer), Ubertip (Tooltip - Extended)
 {
-Basic worker unit. Can harvest gold and lumber, build structures and Repair. |n|n|cffffcc00Attacks land units and trees.|r
+Einfache Arbeitereinheit. Kann Gold und Holz sammeln, Gebäude errichten und reparieren. |n|n|cffffcc00Greift Bodeneinheiten und Bäume an.|r
 }
 
 STRING 291
 // Items: tsct (Ivory Tower), Description (Description)
 {
-Creates a Guard Tower.
+Erzeugt einen Wachturm.
 }
 
 STRING 292
 // Items: tsct (Ivory Tower), Ubertip (Tooltip - Extended)
 {
-Creates a Guard Tower at a target location.
+Erzeugt am Zielort einen Wachturm.
 }
 
 STRING 293
@@ -1295,7 +1295,7 @@ C
 STRING 298
 // Units: h00I (Cart), Ubertip (Tooltip - Extended)
 {
-Transporting and healing unit without attack.
+Transportierende und heilende Einheit ohne Angriff.
 }
 
 STRING 299
@@ -1313,61 +1313,61 @@ Permits the missiles launched by the Ballista to strike through initial ground t
 STRING 301
 // Upgrades: R00L (Improved Masonry,Advanced Masonry,Imbued Masonry), Ubertip (Tooltip - Extended)
 {
-Increases the armor and hit points of Roman buildings.
+Erhöht die Rüstung und Trefferpunkte von römischen Gebäuden.
 }
 
 STRING 302
 // Upgrades: R00L (Improved Masonry,Advanced Masonry,Imbued Masonry), Ubertip (Tooltip - Extended)
 {
-Further increases the armor and hit points of Roman buildings.
+Erhöht die Rüstung und Trefferpunkte von römischen Gebäuden weiter.
 }
 
 STRING 303
 // Upgrades: R00L (Improved Masonry,Advanced Masonry,Imbued Masonry), Ubertip (Tooltip - Extended)
 {
-Further increases the armor and hit points of Roman buildings.
+Erhöht die Rüstung und Trefferpunkte von römischen Gebäuden weiter.
 }
 
 STRING 304
 // Upgrades: R00O (Black Gunpowder,Refined Gunpowder,Imbued Gunpowder), Name (Name)
 {
-Steel Ranged Weapons
+Stahl-Fernkampfwaffen
 }
 
 STRING 305
 // Upgrades: R00O (Black Gunpowder,Refined Gunpowder,Imbued Gunpowder), Name (Name)
 {
-Thorium Ranged Weapons
+Thorium-Fernkampfwaffen
 }
 
 STRING 306
 // Upgrades: R00O (Black Gunpowder,Refined Gunpowder,Imbued Gunpowder), Name (Name)
 {
-Arcanite Ranged Weapons
+Arkanit-Fernkampfwaffen
 }
 
 STRING 307
 // Upgrades: R00O (Black Gunpowder,Refined Gunpowder,Imbued Gunpowder), Tip (Tooltip)
 {
-Upgrade to Steel Ranged Weapons
+Ausbau zu Stahl-Fernkampfwaffen
 }
 
 STRING 308
 // Upgrades: R00O (Black Gunpowder,Refined Gunpowder,Imbued Gunpowder), Tip (Tooltip)
 {
-Upgrade to Thorium Ranged Weapons
+Ausbau zu Thorium-Fernkampfwaffen
 }
 
 STRING 309
 // Upgrades: R00O (Black Gunpowder,Refined Gunpowder,Imbued Gunpowder), Tip (Tooltip)
 {
-Upgrade to Arcanite Ranged Weapons
+Ausbau zu Arkanit-Fernkampfwaffen
 }
 
 STRING 310
 // Units: ngme (Germanic Merchant), Name (Name)
 {
-Germanic Merchant
+Germanischer Händler
 }
 
 STRING 311
@@ -1379,25 +1379,25 @@ H
 STRING 312
 // Units: o00E (Shaman), Casterupgradetip (Caster Upgrade Tips)
 {
-- Invisibility,- Invisibility|n- Summon Eagle,- Invisibility|n- Summon Eagle|n- Bloodlust
+- Unsichtbarkeit,- Unsichtbarkeit|n- Adler beschwören,- Unsichtbarkeit|n- Adler beschwören|n- Kampfrausch
 }
 
 STRING 313
 // Units: o00E (Shaman), Ubertip (Tooltip - Extended)
 {
-Primary spellcaster. Can initially cast Invisibility which makes allied units invisible for some time. Can also learn Summon Eagle and Bloodlust. |n|n|cffffcc00Attacks land and air units.|r
+Primärer Zauberer. Kann initial Unsichtbarkeit wirken, wodruch verbündete Einheiten für einige Zeit unsichtbar werden. Kann außerdem Adler beschwören und Kampfrausch erlernen. |n|n|cffffcc00Greift Boden- und Lufteinheiten an.|r
 }
 
 STRING 314
 // Units: n00H (Germanic Warrior), Name (Name)
 {
-Germanic Warrior
+Germanischer Krieger
 }
 
 STRING 315
 // Units: n00H (Germanic Warrior), Tip (Tooltip - Basic)
 {
-Hire Germanic Warrior
+Germanischen Krieger anheuern
 }
 
 STRING 316
@@ -1415,13 +1415,13 @@ Supporting spellcaster. Can initially cast Abolish Magic which removes positive 
 STRING 318
 // Units: h004 (Priest), Casterupgradetip (Caster Upgrade Tips)
 {
-- Heal,- Heal|n- Anti-Magic Shell,- Heal|n- Anti-Magic Shell|n- Cripple
+- Heilen,- Heilen|n- Antimagiehülle,- Heilen|n- Antimagiehülle|n- Verkrüppeln
 }
 
 STRING 319
 // Units: h004 (Priest), Ubertip (Tooltip - Extended)
 {
-Supporting spellcaster. Can initially cast Heal, which increases the life of wounded units. Can also learn Anti-Magic Shell and Cripple. |n|n|cffffcc00Attacks land and air units.|r
+Unterstützender Zauberer. Kann anfangs Heilen wirken, welches das Leben von verwundeten Einheiten erhöht. Kann außerdem Antimagiehülle und Verkrüppeln erlernen. |n|n|cffffcc00Greift Land- und Lufteinheiten an.|r
 }
 
 STRING 320
@@ -1481,7 +1481,7 @@ Primary structure, used to train Pioneers and receive gathered resources. Can be
 STRING 330
 // Units: h00A (Storage), Ubertip (Tooltip - Extended)
 {
-Serves as a drop-off point for harvested lumber. |nAlso contains the upgrades for improved armor, weaponry and Masonry.
+Dient als Abgabestelle für gesammeltes Holz. |nEnthält außerdem Verbesserungen für verbesserte Rüstung, Waffen und Mauerwerk.
 }
 
 STRING 331
@@ -1493,13 +1493,13 @@ C
 STRING 333
 // Units: n000 (Hunter), Name (Name)
 {
-Hunter
+Jäger
 }
 
 STRING 334
 // Units: n000 (Hunter), Tip (Tooltip - Basic)
 {
-Train Hunter
+Jäger ausbilden
 }
 
 STRING 336
@@ -1511,37 +1511,37 @@ H
 STRING 337
 // Units: h005 (Chariot), Name (Name)
 {
-Chariot
+Streitwagen
 }
 
 STRING 338
 // Units: h005 (Chariot), Tip (Tooltip - Basic)
 {
-Train Chariot
+Streitwagen ausbilden
 }
 
 STRING 339
 // Units: h00R (Chariot), Name (Name)
 {
-Chariot
+Streitwagen
 }
 
 STRING 340
 // Units: h00R (Chariot), Tip (Tooltip - Basic)
 {
-Train Chariot
+Streitwagen ausbilden
 }
 
 STRING 341
 // Units: h00R (Chariot), Ubertip (Tooltip - Extended)
 {
-Powerful mounted warrior. |n|n|cffffcc00Attacks land units.|r
+Mächtiger berittener Krieger. |n|n|cffffcc00Greift Bodeneinheiten an.|r
 }
 
 STRING 342
 // Units: o003 (Villager), Ubertip (Tooltip - Extended)
 {
-Basic worker unit. Can harvest gold and lumber, build structures, and Repair. |n|n|cffffcc00Attacks land units and trees.|r
+Einfache Arbeitereinheit. Kann Gold und Holz sammeln, Gebäude errichten und reparieren. |n|n|cffffcc00Greift Bodeneinheiten und Bäume an.|r
 }
 
 STRING 343
@@ -1557,48 +1557,48 @@ Baradé's
 
 STRING 345
 {
-Battle of the Teutoburg Forest 1.3
+Schlacht im Teutoburger Wald 1.3
 }
 
 STRING 346
 {
-- Roman Legions: Defeat the Germanic Tribes.
-- Germanic Tribes: Defeat the Roman Legions.
-- Use the waygates.
-- Use the fountains to heal and restore mana.
-- Level your heroes by killing creeps.
-- Supports Computer players.
+- Römische Legionen: Besiegt die germanischen Stämme.
+- Germanische Stämme: Besiegt die römischen Legionen.
+- Benutzt Portale.
+- Benutzt Brunnen zur Heilung und um Mana wiederherzustellen.
+- Erhöht die Stufen eurer Helden, indem ihr Unholde tötet.
+- Unterstützt Computer-Spieler.
 - |cffffcc00Discord:|r VBDFBSbQ
 }
 
 STRING 347
 // Units: O001 (Chieftain), Name (Name)
 {
-Chieftain
+Häuptling
 }
 
 STRING 348
 // Units: O001 (Chieftain), Awakentip (Tooltip - Awaken)
 {
-Revive Arminius
+Arminius wiederbeleben
 }
 
 STRING 349
 // Units: O001 (Chieftain), Revivetip (Tooltip - Revive)
 {
-Revive Arminius
+Arminius wiederbeleben
 }
 
 STRING 350
 // Units: o00A (Druid), Casterupgradetip (Caster Upgrade Tips)
 {
-- Roar,- Roar|n- Rejuvenation,- Roar|n- Rejuvenation|n- Bear Form
+- Gebrüll,- Gebrüll|n- Verjüngung,- Gebrüll|n- Verjüngung|n- Bärenform
 }
 
 STRING 351
 // Units: o00A (Druid), Ubertip (Tooltip - Extended)
 {
-Supporting spellcaster. Can initially cast Roar, which temporarily increases the damage of allied units. Can also learn Rejuvenation and Bear Form. |n|n|cffffcc00Attacks land and air units.|r
+Unterstützender Zauberer. Kann anfangs Gebrüll wirken, was temporär den Schaden von verbündeten Einheiten erhöht. Kann außerdem Verjüngung und Bärenform erlernen. |n|n|cffffcc00Greif Boden- und Lufteinheiten an.|r
 }
 
 STRING 352
@@ -1652,19 +1652,19 @@ A
 STRING 360
 // Upgrades: R00T (Steel Armor,Thorium Armor,Arcanite Armor), Name (Name)
 {
-Horse Keeping
+Pferdehaltung
 }
 
 STRING 361
 // Upgrades: R00T (Steel Armor,Thorium Armor,Arcanite Armor), Name (Name)
 {
-Improved Horse Keeping
+Verbesserte Pferdehaltung
 }
 
 STRING 362
 // Upgrades: R00T (Steel Armor,Thorium Armor,Arcanite Armor), Name (Name)
 {
-Advanced Horse Keeping
+Fortgeschrittene Pferdehaltung
 }
 
 STRING 363
@@ -1676,31 +1676,31 @@ rmvx
 STRING 364
 // Upgrades: R00T (Steel Armor,Thorium Armor,Arcanite Armor), Tip (Tooltip)
 {
-Research Horse Keeping
+Pferdehaltung erforschen
 }
 
 STRING 365
 // Upgrades: R00T (Steel Armor,Thorium Armor,Arcanite Armor), Tip (Tooltip)
 {
-Research Improved Horse Keeping
+Verbesserte Pferdehaltung erforschen
 }
 
 STRING 366
 // Upgrades: R00T (Steel Armor,Thorium Armor,Arcanite Armor), Tip (Tooltip)
 {
-Research Advanced Horse Keeping
+Fortgeschrittene Pferdehaltung erforschen
 }
 
 STRING 370
 // Units: h00A (Storage), Name (Name)
 {
-Storage
+Lager
 }
 
 STRING 371
 // Units: h00A (Storage), Tip (Tooltip - Basic)
 {
-Build Storage
+Lager errichten
 }
 
 STRING 372
@@ -1722,13 +1722,13 @@ Arminius:
 
 STRING 375
 {
-We should prepare our ambush and destroy the Roman Legions!
+Wir sollten unseren Hinterhalt vorbereiten und die römischen Legionen vernichten!
 }
 
 STRING 376
 // Units: n004 (Bear), Tip (Tooltip - Basic)
 {
-Hire Bear
+Bären anheuern
 }
 
 STRING 377
@@ -1746,13 +1746,13 @@ Medium raging beast. Has the Bash ability. |n|n|cffffcc00Attacks land units.|r
 STRING 379
 // Units: n005 (Raging Bear), Tip (Tooltip - Basic)
 {
-Hire Raging Bear
+Wütenden Bären anheuern
 }
 
 STRING 380
 // Units: n008 (Eagle), Tip (Tooltip - Basic)
 {
-Hire Eagle
+Adler anheuern
 }
 
 STRING 381
@@ -1770,7 +1770,7 @@ Medium flying ranged unit that hurls pin-feathers. Has the True Sight ability. |
 STRING 383
 // Units: n009 (Thunder Eagle), Tip (Tooltip - Basic)
 {
-Hire Thunder Eagle
+Donneradler anheuern
 }
 
 STRING 384
@@ -1782,13 +1782,13 @@ Versatile foot soldier. Can learn the Defend and Evasion ability. |n|n|cffffcc00
 STRING 385
 // Upgrades: R00U (Cloud), Name (Name)
 {
-Evasion
+Ausweichen
 }
 
 STRING 386
 // Upgrades: R00U (Cloud), Tip (Tooltip)
 {
-Research Evasion
+Ausweichen erforschen
 }
 
 STRING 387
@@ -1812,13 +1812,13 @@ C
 STRING 390
 // Units: n00K (Boar), Name (Name)
 {
-Boar
+Eber
 }
 
 STRING 391
 // Units: n00K (Boar), Tip (Tooltip - Basic)
 {
-Invoke Boar
+Eber herbeirufen
 }
 
 STRING 392
@@ -1830,13 +1830,13 @@ Call upon the spirit of Boar to save you.
 STRING 393
 // Units: o00J (Ritual Site), Name (Name)
 {
-Ritual Site
+Ritualstätte
 }
 
 STRING 394
 // Units: o00J (Ritual Site), Tip (Tooltip - Basic)
 {
-Build Ritual Site
+Ritualstätte errichten
 }
 
 STRING 396
@@ -1854,7 +1854,7 @@ B
 STRING 398
 // Units: o00K (Berserker), Tip (Tooltip - Basic)
 {
-Train Berserker
+Berserker ausbilden
 }
 
 STRING 400
@@ -1884,25 +1884,25 @@ rhpx
 STRING 447
 // Units: n00L (Eagle Roost), Name (Name)
 {
-Eagle Roost
+Adlerhorst
 }
 
 STRING 448
 // Units: n00L (Eagle Roost), Tip (Tooltip - Basic)
 {
-Build Eagle Roost
+Adlerhorst errichten
 }
 
 STRING 449
 // Abilities: A00Z (Hide in Trees), Name (Name)
 {
-Hide in Trees
+In Bäumen verstecken
 }
 
 STRING 450
 // Abilities: A00Z (Hide in Trees), Tip (Tooltip - Normal)
 {
-Hide in Trees
+In Bäumen verstecken
 }
 
 STRING 452
@@ -1914,13 +1914,13 @@ T
 STRING 457
 // Abilities: A011 (Place Bear Trap), Name (Name)
 {
-Place Bear Trap
+Bärenfalle platzieren
 }
 
 STRING 458
 // Abilities: A011 (Place Bear Trap), Tip (Tooltip - Normal)
 {
-Place Bear Trap
+Bärenfalle platzieren
 }
 
 STRING 460
@@ -1950,7 +1950,7 @@ Unhides from the current tree.
 STRING 464
 // Units: nglm (Bear Trap), Name (Name)
 {
-Bear Trap
+Bärenfalle
 }
 
 STRING 466
@@ -1986,61 +1986,61 @@ Gives the spell casters the ability to send her owl companion to a nearby tree a
 STRING 471
 // Units: o00L (Dog), Name (Name)
 {
-Dog
+Hund
 }
 
 STRING 472
 // Abilities: A014 (Summon Dog), Name (Name)
 {
-Summon Dog
+Hund beschwören
 }
 
 STRING 473
 // Abilities: A014 (Summon Dog), Tip (Tooltip - Normal)
 {
-Summon Dog
+Hund beschwören
 }
 
 STRING 474
 // Abilities: A014 (Summon Dog), Ubertip (Tooltip - Normal - Extended)
 {
-Summons the personal dog of the Berserk to attack your enemies.
+Beschwört den persönlichen Hund des Berserkers, um Eure Feinde anzugreifen.
 }
 
 STRING 475
 // Upgrades: R00X (Pulverize), Name (Name)
 {
-Summon Dog
+Hund beschwören
 }
 
 STRING 476
 // Upgrades: R00X (Pulverize), Tip (Tooltip)
 {
-Research Summon Dog
+Hund beschwören erforschen
 }
 
 STRING 477
 // Upgrades: R00X (Pulverize), Ubertip (Tooltip - Extended)
 {
-Gives Berserks the Summon Dog ability which summons one single personal dog to fight along the Berserk.
+Gibt Berserkern die Fähigkeit Hund beschwören, die einen einzelnen persönlichen Hund beschwört, der an der Seite des Berserkers kämpft.
 }
 
 STRING 478
 // Upgrades: R00Y (Flak Cannons), Name (Name)
 {
-Searing Arrows
+Sengpfeile
 }
 
 STRING 479
 // Upgrades: R00Y (Flak Cannons), Tip (Tooltip)
 {
-Research Searing Arrows
+Sengpfeile erforschen
 }
 
 STRING 480
 // Upgrades: R00Y (Flak Cannons), Ubertip (Tooltip - Extended)
 {
-Gives Archers the Searing Arrows ability adding additional damage to attacks.
+Gibt Bogenschützen die Sengpfeilefähigkeit, die zusätzlichen Schaden zu Angriffen hinzufügt.
 }
 
 STRING 481
@@ -2073,13 +2073,13 @@ Add Hunt ability to Germanic Hunters.
 STRING 486
 // Abilities: A016 (Hunt), Name (Name)
 {
-Hunt
+Jagd
 }
 
 STRING 487
 // Abilities: A016 (Hunt), Tip (Tooltip - Normal)
 {
-Hunt
+Jagd
 }
 
 STRING 489
@@ -2090,43 +2090,43 @@ Add new creep camp to the south east.
 STRING 492
 // Destructibles: B000 (Oak), Name (Name)
 {
-Oak
+Eiche
 }
 
 STRING 493
 // Destructibles: B002 (Birch), Name (Name)
 {
-Birch
+Birke
 }
 
 STRING 494
 // Destructibles: B003 (Pine), Name (Name)
 {
-Pine
+Kiefer
 }
 
 STRING 495
 // Items: I000 (Roman Eagle), Name (Name)
 {
-Roman Eagle
+Römischer Adler
 }
 
 STRING 496
 // Items: I000 (Roman Eagle), Tip (Tooltip - Basic)
 {
-Purchase Roman Eagle
+Römischen Adler erwerben
 }
 
 STRING 497
 // Items: I001 (Germanic Banner), Name (Name)
 {
-Germanic Banner
+Germanisches Banner
 }
 
 STRING 498
 // Items: I001 (Germanic Banner), Tip (Tooltip - Basic)
 {
-Purchase Germanic Banner
+Germanisches Banner erwerben
 }
 
 STRING 499
@@ -2159,19 +2159,19 @@ Wolf
 STRING 504
 // Units: n006 (Wolf), Tip (Tooltip - Basic)
 {
-Summon Wolf
+Wolf beschwören
 }
 
 STRING 505
 // Units: n007 (Alpha Wolf), Name (Name)
 {
-Alpha Wolf
+Alpha-Wolf
 }
 
 STRING 506
 // Units: n007 (Alpha Wolf), Tip (Tooltip - Basic)
 {
-Summon Alpha Wolf
+Alpha-Wolf beschwören
 }
 
 STRING 507
@@ -2219,13 +2219,13 @@ A
 STRING 514
 // Units: n00M (Fox), Name (Name)
 {
-Fox
+Fuchs
 }
 
 STRING 515
 // Units: n00M (Fox), Tip (Tooltip - Basic)
 {
-Invoke Fox
+Fuchs herbeirufen
 }
 
 STRING 516
@@ -2246,25 +2246,25 @@ AI starts one expansion now.
 STRING 519
 // Items: I000 (Roman Eagle), Description (Description)
 {
-The symbol of Roman victory.
+Das Symbol des römischen Sieges.
 }
 
 STRING 520
 // Items: I000 (Roman Eagle), Ubertip (Tooltip - Extended)
 {
-The symbol of Roman victory.
+Das Symbol des römischen Sieges.
 }
 
 STRING 521
 // Items: I001 (Germanic Banner), Ubertip (Tooltip - Extended)
 {
-The symbol of Germanic victory.
+Das Symbol des germanischen Sieges.
 }
 
 STRING 522
 // Items: I001 (Germanic Banner), Description (Description)
 {
-The symbol of Germanic victory.
+Das Symbol des germanischen Sieges.
 }
 
 STRING 523
@@ -2282,13 +2282,13 @@ W
 STRING 525
 // Abilities: A00C (Envenomed Weapons), Name (Name)
 {
-Envenomed Weapons
+Vergiftete Waffen
 }
 
 STRING 526
 // Abilities: A00C (Envenomed Weapons), Tip (Tooltip - Normal)
 {
-Envenomed Weapons
+Vergiftete Waffen
 }
 
 STRING 527
@@ -2300,31 +2300,31 @@ Deals <A00C,DataA1> poison damage per second. |nLasts <A00C,Dur1> seconds.
 STRING 528
 // Abilities: A016 (Hunt), Ubertip (Tooltip - Normal - Extended)
 {
-Hunts a critter and gives the player <A016,DataA1,%> % gold and <A016,DataB1,%> % lumber.
+Jagt ein Lebewesen und gibt dem Spieler <A016,DataA1,%> % Gold und <A016,DataB1,%> % Holz.
 }
 
 STRING 529
 // Abilities: A016 (Hunt), Tip (Tooltip - Normal)
 {
-Improved Hunting
+Verbesserte Jagd
 }
 
 STRING 530
 // Abilities: A016 (Hunt), Ubertip (Tooltip - Normal - Extended)
 {
-Hunts a critter and gives the player <A016,DataA2,%> % gold and <A016,DataB2,%> % lumber.
+Jagt ein Lebewesen und gibt dem Spieler <A016,DataA2,%> % Gold und <A016,DataB2,%> % Holz.
 }
 
 STRING 531
 // Upgrades: R008 (Envenomed Spears), Name (Name)
 {
-Envenomed Weapons
+Vergiftete Waffen
 }
 
 STRING 532
 // Upgrades: R008 (Envenomed Spears), Tip (Tooltip)
 {
-Research Envenomed Weapons
+Vergiftete Waffen erforschen
 }
 
 STRING 533
@@ -2336,19 +2336,19 @@ Adds an additional poison effect to Hunters' and Javelin Throwers' attacks. A un
 STRING 534
 // Upgrades: R00Z (Troll Regeneration,Improved Troll Regeneration,Advanced Troll Regeneration), Name (Name)
 {
-Improved Hunting
+Verbesserte Jagd
 }
 
 STRING 535
 // Upgrades: R00Z (Troll Regeneration,Improved Troll Regeneration,Advanced Troll Regeneration), Tip (Tooltip)
 {
-Research Improved Hunting
+Verbesserte Jagd erforschen
 }
 
 STRING 536
 // Upgrades: R00Z (Troll Regeneration,Improved Troll Regeneration,Advanced Troll Regeneration), Ubertip (Tooltip - Extended)
 {
-Increases the resources gained by hunting.
+Erhöht die durch Jagd erhaltenen Rohstoffe.
 }
 
 STRING 537
@@ -2396,13 +2396,13 @@ J
 STRING 546
 // Abilities: A017 (Horse Keeping), Tip (Tooltip - Normal)
 {
-Horse Keeping
+Pferdehaltung
 }
 
 STRING 547
 // Abilities: A017 (Horse Keeping), Name (Name)
 {
-Horse Keeping
+Pferdehaltung
 }
 
 STRING 548
@@ -2552,13 +2552,13 @@ Add critter Owl.
 STRING 589
 // Units: nsno (Owl), Name (Name)
 {
-Owl
+Eule
 }
 
 STRING 590
 // Units: nsno (Owl), Tip (Tooltip - Basic)
 {
-Invoke Owl
+Eule herbeirufen
 }
 
 STRING 591
@@ -2576,7 +2576,7 @@ Provides food, which increases the maximum number of units that can be trained. 
 STRING 593
 // Units: n00N (Chicken), Tip (Tooltip - Basic)
 {
-Breed Chicken
+Huhn züchten
 }
 
 STRING 594
@@ -2588,25 +2588,25 @@ C
 STRING 595
 // Units: n00N (Chicken), Ubertip (Tooltip - Extended)
 {
-Gives additional resources when dying.
+Gibt beim Sterben zusätzliche Rohstoffe.
 }
 
 STRING 597
 // Units: h00S (Battering Ram), Name (Name)
 {
-Battering Ram
+Belagerungsramme
 }
 
 STRING 598
 // Units: h00S (Battering Ram), Tip (Tooltip - Basic)
 {
-Train Battering Ram
+Belagerungsramme ausbilden
 }
 
 STRING 599
 // Units: h00S (Battering Ram), Ubertip (Tooltip - Extended)
 {
-Heavily armored siege weapon, effective at destroying buildings. |n|n|cffffcc00Attacks buildings.|r
+Stark gepanzerte Belagerungswaffe, das effektiv in der Zerstörung von Gebäuden ist. |n|n|cffffcc00Greift Gebäude an.|r
 }
 
 STRING 600
@@ -2635,13 +2635,13 @@ Adds <A015,DataA1> bonus fire damage to an attack against enemies, but drains ma
 STRING 606
 // Abilities: A01A (Monsoon), Researchtip (Tooltip - Learn)
 {
-Learn Monsoon
+Monsun erlernen
 }
 
 STRING 607
 // Abilities: A01A (Monsoon), Tip (Tooltip - Normal)
 {
-Monsoon
+Monsun
 }
 
 STRING 608
@@ -2778,7 +2778,7 @@ Primary troop production building. Trains Legionaries, Archers and Centurios. |n
 STRING 638
 // Units: o007 (Stables), Ubertip (Tooltip - Extended)
 {
-Trains Riders, Chariots, and Battering Rams.
+Bildet Reiter, Streitwägen und Belagerungsrammen aus.
 }
 
 STRING 639
@@ -2796,19 +2796,19 @@ Creates a shop with purchasable items. The items available depend upon what leve
 STRING 641
 // Units: h00K (Workshop), Ubertip (Tooltip - Extended)
 {
-Produces Slingers, Catapults, Ballistas, and Carts. |nAlso contains the Burning Oil, and Vorpal Blades upgrades.
+Produziert Schleuderer, Katapulte, Ballisten und Karren. |nEnthält außerdem die Verbesserungen Brennendes Öl und Vorpalklingen.
 }
 
 STRING 642
 // Units: h00L (Stables), Ubertip (Tooltip - Extended)
 {
-Trains Eques, and Chariots. |nAlso contains the Sundering Blades and Animal War Training upgrades.
+Bildet Eques und Streitwägen aus. |nEnthält außerdem die Verbesserungen Trennende Klingen und Tierkriegstraining.
 }
 
 STRING 643
 // Units: h00O (Temple), Ubertip (Tooltip - Extended)
 {
-Trains Vexilifers, and  Priests. |nAlso contains spell upgrades for Vexilifers and Priests, and Magic Sentry.
+Bildet Vexilifers und Priester aus. |nEnthält außerdem Zauberverbesserungen für Vexilifers und Priester und Magischer Wächter.
 }
 
 STRING 644
@@ -2819,12 +2819,12 @@ Trains Berserkers and High Priests. Contains upgrades Summon Dog, Cannibalize an
 
 STRING 645
 {
-Credits
+Mitwirkende
 }
 
 STRING 646
 {
-List of people who contributed.
+Liste der Leute, die mitgewirkt haben.
 }
 
 STRING 647
@@ -3135,13 +3135,13 @@ Add item Tiny Palisade.
 STRING 708
 // Units: o00D (Market), Tip (Tooltip - Basic)
 {
-Build Market
+Markt errichten
 }
 
 STRING 709
 // Units: o00D (Market), Ubertip (Tooltip - Extended)
 {
-Creates a shop with purchasable items. The items available depend upon what level of upgrade your Town Center has (Town Center, Stronghold, or Fortress) and which buildings you have.
+Errichtet einen Laden mit käuflichen Gegenständen. Die verfügbaren Gegenstände hängen von der Ausbaustufe Ihres Dorfzentrums (Dorfzentrum, Hochburg oder Festung) und den Gebäuden ab, die Sie besitzen.
 }
 
 STRING 710
@@ -3159,37 +3159,37 @@ P
 STRING 712
 // Units: h00T (Palisade), Tip (Tooltip - Basic)
 {
-Build Palisade
+Palisade errichten
 }
 
 STRING 713
 // Items: I002 (Tiny Palisade), Name (Name)
 {
-Tiny Palisade
+Winzige Palisade
 }
 
 STRING 714
 // Items: I002 (Tiny Palisade), Description (Description)
 {
-Creates a Palisade.
+Erschafft eine Palisade.
 }
 
 STRING 715
 // Items: I002 (Tiny Palisade), Ubertip (Tooltip - Extended)
 {
-Creates a Palisade at a target location.
+Erschafft am Zielort eine Palisade.
 }
 
 STRING 716
 // Items: I002 (Tiny Palisade), Tip (Tooltip - Basic)
 {
-Purchase Tiny Palisade
+Winzige Palisade erwerben
 }
 
 STRING 717
 // Abilities: A01D (Build Tiny Palisade), Name (Name)
 {
-Build Tiny Palisade
+Winzige Palisade errichten
 }
 
 STRING 718
@@ -3244,11 +3244,11 @@ S
 STRING 729
 // Buffs/Effects: B001 (Hero Glow), Bufftip (Tooltip)
 {
-|cff00ff00Hero|r
+|cff00ff00Held|r
 }
 
 STRING 730
 {
-Tree is already occupied.
+Baum ist bereits besetzt.
 }
 
