@@ -93,28 +93,10 @@ STRING 60
 Command Aura - [|cffffcc00Level 3|r]
 }
 
-STRING 61
-// Abilities: A002 (Command Aura), Ubertip (Tooltip - Normal - Extended)
-{
-Gives extra damage to the attacks of nearby friendly units.
-}
-
-STRING 62
-// Abilities: A002 (Command Aura), Ubertip (Tooltip - Normal - Extended)
-{
-Gives extra damage to the attacks of nearby friendly units.
-}
-
 STRING 63
 // Abilities: A002 (Command Aura), Researchtip (Tooltip - Learn)
 {
 Learn Command Aura - [|cffffcc00Level %d|r]
-}
-
-STRING 64
-// Abilities: A002 (Command Aura), Researchubertip (Tooltip - Learn - Extended)
-{
-Gives extra damage to the attacks of nearby friendly units.
 }
 
 STRING 65
@@ -1650,7 +1632,7 @@ A
 }
 
 STRING 360
-// Upgrades: R00T (Steel Armor,Thorium Armor,Arcanite Armor), Name (Name)
+// Abilities: A017 (Horse Keeping), Tip (Tooltip - Normal)
 {
 Horse Keeping
 }
@@ -2394,13 +2376,13 @@ J
 }
 
 STRING 546
-// Abilities: A017 (Horse Keeping), Tip (Tooltip - Normal)
+// Abilities: A017 (Horse Keeping), Name (Name)
 {
 Horse Keeping
 }
 
 STRING 547
-// Abilities: A017 (Horse Keeping), Name (Name)
+// Upgrades: R00T (Steel Armor,Thorium Armor,Arcanite Armor), Name (Name)
 {
 Horse Keeping
 }
@@ -3226,7 +3208,7 @@ Fix hero glows.
 
 STRING 725
 {
-Fix icon position and hotkey of research Searing Arrows.
+Fix icon positions.
 }
 
 STRING 726
@@ -3260,5 +3242,219 @@ Add German translation.
 STRING 732
 {
 Improve tooltips.
+}
+
+STRING 733
+// Units: n001 (Archer), Name (Name)
+{
+Archer
+}
+
+STRING 734
+// Units: n001 (Archer), Tip (Tooltip - Basic)
+{
+Train Archer
+}
+
+STRING 735
+// Items: I002 (Tiny Palisade), Hotkey (Hotkey)
+{
+D
+}
+
+STRING 736
+// Abilities: A002 (Command Aura), Ubertip (Tooltip - Normal - Extended)
+{
+Gives extra damage of <A002,DataA2,%> % damage to the attacks of nearby friendly units.
+}
+
+STRING 737
+// Abilities: A002 (Command Aura), Ubertip (Tooltip - Normal - Extended)
+{
+Gives extra damage of <A002,DataA3,%> % to the attacks of nearby friendly units.
+}
+
+STRING 738
+// Abilities: A002 (Command Aura), Researchubertip (Tooltip - Learn - Extended)
+{
+Gives extra damage to the attacks of nearby friendly units.|n|n|cffffcc00Level 1|r - <A002,DataA1,%> % damage bonus.|n|cffffcc00Level 2|r - <A002,DataA2,%> % damage bonus..|n|cffffcc00Level 3|r - <A002,DataA3,%> % damage bonus.
+}
+
+STRING 739
+// Abilities: A002 (Command Aura), Ubertip (Tooltip - Normal - Extended)
+{
+Gives extra damage of <A002,DataA1,%> % to the attacks of nearby friendly units.
+}
+
+STRING 740
+{
+Fix Archer's mana in Ready form.
+}
+
+STRING 741
+{
+Fix hotkeys.
+}
+
+STRING 742
+// Units: n001 (Archer), Ubertip (Tooltip - Extended)
+{
+Basic Roman long-ranged attacker. |n|n|cffffcc00Attacks land and air units.|r
+}
+
+STRING 743
+// Units: h00C (Permanent Castrum), Ubertip (Tooltip - Extended)
+{
+Upgrade to Permanent Castrum to enable the production of additional types of structures and units.
+}
+
+STRING 744
+// Units: h00N (Legion Castrum), Ubertip (Tooltip - Extended)
+{
+Upgrade to Legion Castrum to enable the production of additional types of structures and units.
+}
+
+STRING 745
+// Upgrades: R009 (Ensnare), Ubertip (Tooltip - Extended)
+{
+Enables Riders to use the Ensnare ability. Ensnare causes a target enemy unit to be bound to the ground so that it cannot move. Air units that are ensnared can be attacked as though they were land units.
+}
+
+STRING 746
+// Upgrades: R00B (Steel Melee Weapons,Thorium Melee Weapons,Arcanite Melee Weapons), Ubertip (Tooltip - Extended)
+{
+Increases the melee attack damage of Warriors, Riders, Chariots, Berserkers and Battering Rams.
+}
+
+STRING 747
+// Upgrades: R00B (Steel Melee Weapons,Thorium Melee Weapons,Arcanite Melee Weapons), Ubertip (Tooltip - Extended)
+{
+Further increases the melee attack damage of Warriors, Riders, Chariots, Berserkers and Battering Rams.
+}
+
+STRING 748
+// Upgrades: R00B (Steel Melee Weapons,Thorium Melee Weapons,Arcanite Melee Weapons), Ubertip (Tooltip - Extended)
+{
+Further increases the melee attack damage of Warriors, Riders, Chariots, Berserkers and Battering Rams.
+}
+
+STRING 749
+// Upgrades: R00C (Steel Ranged Weapons,Thorium Ranged Weapons,Arcanite Ranged Weapons), Ubertip (Tooltip - Extended)
+{
+Increases the ranged attack damage of Hunters and Javelin Throwers.
+}
+
+STRING 750
+// Upgrades: R00C (Steel Ranged Weapons,Thorium Ranged Weapons,Arcanite Ranged Weapons), Ubertip (Tooltip - Extended)
+{
+Further increases the ranged attack damage of Hunters and Javelin Throwers.
+}
+
+STRING 751
+// Upgrades: R00C (Steel Ranged Weapons,Thorium Ranged Weapons,Arcanite Ranged Weapons), Ubertip (Tooltip - Extended)
+{
+Further increases the ranged attack damage of Hunters and Javelin Throwers.
+}
+
+STRING 752
+// Upgrades: R00D (Steel Armor,Thorium Armor,Arcanite Armor), Ubertip (Tooltip - Extended)
+{
+Increases the armor of Warriors, Riders, Chariots, Berserkers, Battering Rams, Hunters and Javelin Throwers.
+}
+
+STRING 753
+// Upgrades: R00D (Steel Armor,Thorium Armor,Arcanite Armor), Ubertip (Tooltip - Extended)
+{
+Further increases the armor of Warriors, Riders, Chariots, Berserkers, Battering Rams, Hunters and Javelin Throwers.
+}
+
+STRING 754
+// Upgrades: R00D (Steel Armor,Thorium Armor,Arcanite Armor), Ubertip (Tooltip - Extended)
+{
+Further increases the armor of Warriors, Riders, Chariots, Berserkers, Battering Rams, Hunters and Javelin Throwers.
+}
+
+STRING 755
+// Upgrades: R00H (Ultravision), Ubertip (Tooltip - Extended)
+{
+Gives Germanic units the ability to see as far at night as they do during the day.
+}
+
+STRING 756
+// Upgrades: R00I (Burning Oil), Ubertip (Tooltip - Extended)
+{
+Upgrades Catapults to fire rocks smothered in burning oil, which causes the ground to burn.
+}
+
+STRING 757
+// Upgrades: R00K (Magic Sentry), Ubertip (Tooltip - Extended)
+{
+Provides Roman towers with the ability to detect invisible units.
+}
+
+STRING 758
+// Upgrades: R00M (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Increases the attack damage of Legionaries, Centurios, Eques and Chariots.
+}
+
+STRING 759
+// Upgrades: R00M (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Further increases the attack damage of Legionaries, Centurios, Eques and Chariots.
+}
+
+STRING 760
+// Upgrades: R00M (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Further increases the attack damage of Legionaries, Centurios, Eques and Chariots.
+}
+
+STRING 761
+// Upgrades: R00N (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+{
+Increases the armor of Legionaries, Centurios, Eques, Chariots, Archers, Slingers, Ballistas, Catapults and Carts.
+}
+
+STRING 762
+// Upgrades: R00N (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+{
+Further increases the armor of Legionaries, Centurios, Eques, Chariots, Archers, Slingers, Ballistas, Catapults and Carts.
+}
+
+STRING 763
+// Upgrades: R00N (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
+{
+Further increases the armor of Legionaries, Centurios, Eques, Chariots, Archers, Slingers, Ballistas, Catapults and Carts.
+}
+
+STRING 764
+// Upgrades: R00O (Black Gunpowder,Refined Gunpowder,Imbued Gunpowder), Ubertip (Tooltip - Extended)
+{
+Increases the ranged attack damage of Archers, Slingers, Ballistas and Catapults.
+}
+
+STRING 765
+// Upgrades: R00O (Black Gunpowder,Refined Gunpowder,Imbued Gunpowder), Ubertip (Tooltip - Extended)
+{
+Further increases the ranged attack damage of Archers, Slingers, Ballistas and Catapults.
+}
+
+STRING 766
+// Upgrades: R00O (Black Gunpowder,Refined Gunpowder,Imbued Gunpowder), Ubertip (Tooltip - Extended)
+{
+Further increases the ranged attack damage of Archers, Slingers, Ballistas and Catapults.
+}
+
+STRING 767
+// Upgrades: R00R (Animal War Training), Ubertip (Tooltip - Extended)
+{
+Increases the maximum hit points of Eques and Chariots by <Rhan,base1>.
+}
+
+STRING 768
+// Upgrades: R00S (Sundering Blades), Ubertip (Tooltip - Extended)
+{
+Upgrades Eques to deal increased damage to targets with Medium armor.
 }
 
