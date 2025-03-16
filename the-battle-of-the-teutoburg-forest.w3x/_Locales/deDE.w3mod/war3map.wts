@@ -2294,7 +2294,7 @@ Vergiftete Waffen
 STRING 527
 // Abilities: A00C (Envenomed Weapons), Ubertip (Tooltip - Normal - Extended)
 {
-Deals <A00C,DataA1> poison damage per second. |nLasts <A00C,Dur1> seconds.
+Richtet <A00C,DataA1> Giftschaden pro Sekunde an. |nHält <A00C,Dur1> Sekunden.
 }
 
 STRING 528
@@ -2408,7 +2408,7 @@ Pferdehaltung
 STRING 548
 // Abilities: A017 (Horse Keeping), Ubertip (Tooltip - Normal - Extended)
 {
-Increases the maximum hit points of this unit by <R00T,base2> and the movement speed by <R00T,base1>.
+Erhöht die maxmimalen Trefferpunkte dieser Einheit um <R00T,base2> und ihre Bewegungsgeschwindigkeit um <R00T,base1>.
 }
 
 STRING 550
@@ -2424,13 +2424,13 @@ Scale down Roman Ballista.
 STRING 552
 // Units: o00M (High Priest), Name (Name)
 {
-High Priest
+Hohepriester
 }
 
 STRING 553
 // Units: o00M (High Priest), Tip (Tooltip - Basic)
 {
-Train High Priest
+Hohepriester ausbilden
 }
 
 STRING 554
@@ -2448,19 +2448,19 @@ B
 STRING 568
 // Units: o00M (High Priest), Ubertip (Tooltip - Extended)
 {
-Mystical caster. Can initially cast Heal which restores hit points of allied units. Can learn Life Drain, and Ancestral Spirit. |n|n|cffffcc00Attacks land and air units.|r
+Mystischer Magiebenutzer. Beherrscht Heilen, wodurch die Trefferpunkte verwundeter Einheiten wiederhergestellt werden. Kann Lebensentzug und Geist der Ahnen erlernen. |n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
 }
 
 STRING 569
 // Units: o00M (High Priest), Casterupgradetip (Caster Upgrade Tips)
 {
-- Heal,- Heal|n- Life Drain,- Heal|n- Life Drain|n- Ancestral Spirit
+- Heilen,- Heilen|n- Lebensentzug,- Heilen|n- Lebensentzug|n- Geist der Ahnen
 }
 
 STRING 570
 // Abilities: A019 (Ancestral Spirit), Ubertip (Tooltip - Normal - Extended)
 {
-Raises a fallen non-Hero Berserker from the dead. The Berserker is revived with <Aast,DataA1,%>% of its hit points restored.
+Belebt einen nicht-heroischen Berserker mit <Aast,DataA1,%>% seiner Trefferpunkte wieder.
 }
 
 STRING 571
