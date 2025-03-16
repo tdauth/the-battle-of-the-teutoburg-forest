@@ -3236,12 +3236,12 @@ Baum ist bereits besetzt.
 
 STRING 731
 {
-Add German translation.
+Füge deutsche Übersetzung hinzu.
 }
 
 STRING 732
 {
-Improve tooltips.
+Tooltips verbessert.
 }
 
 STRING 733
@@ -3305,13 +3305,13 @@ Ein einfacher römischer Angreiferin mit hoher Reichweite.|n|n|cffffcc00Kann Bod
 STRING 743
 // Units: h00C (Permanent Castrum), Ubertip (Tooltip - Extended)
 {
-Upgrade to Permanent Castrum to enable the production of additional types of structures and units.
+Der Ausbau zum Dauerhaften Castrum ermöglicht die Produktion weiterer Gebäude- und Einheitentypen.
 }
 
 STRING 744
 // Units: h00N (Legion Castrum), Ubertip (Tooltip - Extended)
 {
-Upgrade to Legion Castrum to enable the production of additional types of structures and units.
+Der Ausbau zum Legions-Castrum ermöglicht die Produktion weiterer Gebäude- und Einheitentypen.
 }
 
 STRING 745
@@ -3323,55 +3323,55 @@ Lehrt Reiter Einschnüren, womit sie eine gegnerische Zieleinheit an den Boden f
 STRING 746
 // Upgrades: R00B (Steel Melee Weapons,Thorium Melee Weapons,Arcanite Melee Weapons), Ubertip (Tooltip - Extended)
 {
-Increases the melee attack damage of Warriors, Riders, Chariots, Berserkers and Battering Rams.
+Erhöht den Nahkampfschaden von Kriegern, Reitern, Streitwägen, Beserkern und Belagerungsrammen.
 }
 
 STRING 747
 // Upgrades: R00B (Steel Melee Weapons,Thorium Melee Weapons,Arcanite Melee Weapons), Ubertip (Tooltip - Extended)
 {
-Further increases the melee attack damage of Warriors, Riders, Chariots, Berserkers and Battering Rams.
+Erhöht den Nahkampfschaden von Kriegern, Reitern, Streitwägen, Beserkern und Belagerungsrammen zusätzlich.
 }
 
 STRING 748
 // Upgrades: R00B (Steel Melee Weapons,Thorium Melee Weapons,Arcanite Melee Weapons), Ubertip (Tooltip - Extended)
 {
-Further increases the melee attack damage of Warriors, Riders, Chariots, Berserkers and Battering Rams.
+Erhöht den Nahkampfschaden von Kriegern, Reitern, Streitwägen, Beserkern und Belagerungsrammen zusätzlich.
 }
 
 STRING 749
 // Upgrades: R00C (Steel Ranged Weapons,Thorium Ranged Weapons,Arcanite Ranged Weapons), Ubertip (Tooltip - Extended)
 {
-Increases the ranged attack damage of Hunters and Javelin Throwers.
+Erhöht den Fernkampfschaden von Jägern und Speerwerfern.
 }
 
 STRING 750
 // Upgrades: R00C (Steel Ranged Weapons,Thorium Ranged Weapons,Arcanite Ranged Weapons), Ubertip (Tooltip - Extended)
 {
-Further increases the ranged attack damage of Hunters and Javelin Throwers.
+Erhöht den Fernkampfschaden von Jägern und Speerwerfern zusätzlich.
 }
 
 STRING 751
 // Upgrades: R00C (Steel Ranged Weapons,Thorium Ranged Weapons,Arcanite Ranged Weapons), Ubertip (Tooltip - Extended)
 {
-Further increases the ranged attack damage of Hunters and Javelin Throwers.
+Erhöht den Fernkampfschaden von Jägern und Speerwerfern zusätzlich.
 }
 
 STRING 752
 // Upgrades: R00D (Steel Armor,Thorium Armor,Arcanite Armor), Ubertip (Tooltip - Extended)
 {
-Increases the armor of Warriors, Riders, Chariots, Berserkers, Battering Rams, Hunters and Javelin Throwers.
+Erhöht die Rüstung  von Kriegern, Reitern, Streitwägen, Beserkern, Belagerungsrammen, Jägern und Speerwerfern.
 }
 
 STRING 753
 // Upgrades: R00D (Steel Armor,Thorium Armor,Arcanite Armor), Ubertip (Tooltip - Extended)
 {
-Further increases the armor of Warriors, Riders, Chariots, Berserkers, Battering Rams, Hunters and Javelin Throwers.
+Erhöht die Rüstung  von Kriegern, Reitern, Streitwägen, Beserkern, Belagerungsrammen, Jägern und Speerwerfern zusätzlich.
 }
 
 STRING 754
 // Upgrades: R00D (Steel Armor,Thorium Armor,Arcanite Armor), Ubertip (Tooltip - Extended)
 {
-Further increases the armor of Warriors, Riders, Chariots, Berserkers, Battering Rams, Hunters and Javelin Throwers.
+Erhöht die Rüstung  von Kriegern, Reitern, Streitwägen, Beserkern, Belagerungsrammen, Jägern und Speerwerfern zusätzlich.
 }
 
 STRING 755
@@ -3395,55 +3395,55 @@ Ermöglicht römischen Türmen, unsichtbare Einheiten aufzudecken.
 STRING 758
 // Upgrades: R00M (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
 {
-Increases the attack damage of Legionaries, Centurios, Eques and Chariots.
+Erhöht den Angriffsschaden von Legionären, Zenturios, Eques und Streitwägen.
 }
 
 STRING 759
 // Upgrades: R00M (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
 {
-Further increases the attack damage of Legionaries, Centurios, Eques and Chariots.
+Erhöht den Angriffsschaden von Legionären, Zenturios, Eques und Streitwägen zusätzlich.
 }
 
 STRING 760
 // Upgrades: R00M (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
 {
-Further increases the attack damage of Legionaries, Centurios, Eques and Chariots.
+Erhöht den Angriffsschaden von Legionären, Zenturios, Eques und Streitwägen zusätzlich.
 }
 
 STRING 761
 // Upgrades: R00N (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
 {
-Increases the armor of Legionaries, Centurios, Eques, Chariots, Archers, Slingers, Ballistas, Catapults and Carts.
+Erhöht die Rüstung von Legionären, Zenturios, Eques, Streitwägen, Bogenschützen, Schleuderer, Ballistas, Katapulte und Karren.
 }
 
 STRING 762
 // Upgrades: R00N (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
 {
-Further increases the armor of Legionaries, Centurios, Eques, Chariots, Archers, Slingers, Ballistas, Catapults and Carts.
+Erhöht die Rüstung von Legionären, Zenturios, Eques, Streitwägen, Bogenschützen, Schleuderer, Ballistas, Katapulte und Karren zusätzlich.
 }
 
 STRING 763
 // Upgrades: R00N (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
 {
-Further increases the armor of Legionaries, Centurios, Eques, Chariots, Archers, Slingers, Ballistas, Catapults and Carts.
+Erhöht die Rüstung von Legionären, Zenturios, Eques, Streitwägen, Bogenschützen, Schleuderer, Ballistas, Katapulte und Karren zusätzlich.
 }
 
 STRING 764
 // Upgrades: R00O (Black Gunpowder,Refined Gunpowder,Imbued Gunpowder), Ubertip (Tooltip - Extended)
 {
-Increases the ranged attack damage of Archers, Slingers, Ballistas and Catapults.
+Erhöht den Fernkampfschaden von Bogenschützen, Schleuderern, Ballistas und Katapulten.
 }
 
 STRING 765
 // Upgrades: R00O (Black Gunpowder,Refined Gunpowder,Imbued Gunpowder), Ubertip (Tooltip - Extended)
 {
-Further increases the ranged attack damage of Archers, Slingers, Ballistas and Catapults.
+Erhöht den Fernkampfschaden von Bogenschützen, Schleuderern, Ballistas und Katapulten zusätzlich.
 }
 
 STRING 766
 // Upgrades: R00O (Black Gunpowder,Refined Gunpowder,Imbued Gunpowder), Ubertip (Tooltip - Extended)
 {
-Further increases the ranged attack damage of Archers, Slingers, Ballistas and Catapults.
+Erhöht den Fernkampfschaden von Bogenschützen, Schleuderern, Ballistas und Katapulten zusätzlich.
 }
 
 STRING 767
