@@ -3277,7 +3277,7 @@ Gives extra damage of <A002,DataA3,%> % to the attacks of nearby friendly units.
 STRING 738
 // Abilities: A002 (Command Aura), Researchubertip (Tooltip - Learn - Extended)
 {
-Gives extra damage to the attacks of nearby friendly units.|n|n|cffffcc00Level 1|r - <A002,DataA1,%> % damage bonus.|n|cffffcc00Level 2|r - <A002,DataA2,%> % damage bonus..|n|cffffcc00Level 3|r - <A002,DataA3,%> % damage bonus.
+Gives extra damage to the attacks of nearby friendly units.|n|n|cffffcc00Level 1|r - <A002,DataA1,%> % damage bonus.|n|cffffcc00Level 2|r - <A002,DataA2,%> % damage bonus.|n|cffffcc00Level 3|r - <A002,DataA3,%> % damage bonus.
 }
 
 STRING 739
