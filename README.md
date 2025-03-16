@@ -17,8 +17,8 @@ Warcraft III custom map featuring the famous [Battle of the Teutoburg Forest](ht
 
 ## Credits
 
-* Creator: Baradé
-* Loading Screen: Painter Pavle "Paja" Jovanović
+* Baradé: Creator
+* Painter Pavle "Paja" Jovanović: Loading Screen
 * Vexorian: SimError
 * assasin_lord: [HeroGlow](https://www.hiveworkshop.com/threads/heroglow.129462/)
 * Fingolfin: [Celtic Town Center](https://www.hiveworkshop.com/threads/celtic-town-center.287546/)
