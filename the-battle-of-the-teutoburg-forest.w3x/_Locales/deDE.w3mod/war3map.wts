@@ -3277,7 +3277,7 @@ Erhöht den Schaden verbündeter Einheiten in der Nähe um <A002,DataA3,%> %.
 STRING 738
 // Abilities: A002 (Command Aura), Researchubertip (Tooltip - Learn - Extended)
 {
-Erhöht den Schaden verbündeter Einheiten in der Nähe.|n|n|cffffcc00Level 1|r - <A002,DataA1,%> % Bonusschaden.|n|cffffcc00Level 2|r - <A002,DataA2,%> % Bonusschaden.|n|cffffcc00Level 3|r - <A002,DataA3,%> % Bonusschaden.
+Erhöht den Schaden verbündeter Einheiten in der Nähe.|n|n|cffffcc00Stufe 1|r - <A002,DataA1,%> % Bonusschaden.|n|cffffcc00Stufe 2|r - <A002,DataA2,%> % Bonusschaden.|n|cffffcc00Stufe 3|r - <A002,DataA3,%> % Bonusschaden.
 }
 
 STRING 739
