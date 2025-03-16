@@ -15,6 +15,12 @@ Warcraft III custom map featuring the famous [Battle of the Teutoburg Forest](ht
 * Custom critters.
 * [German translation](./the-battle-of-the-teutoburg-forest.w3x/_Locales/deDE.w3mod/war3map.wts).
 
+# External
+
+* [maps.w3reforged.com](https://maps.w3reforged.com/maps/categories/alternate-melee/battle-of-the-teutoburg-forest-13-738710)
+* [epicwar.com](https://www.epicwar.com/maps/342821/)
+* [hiveworkshop.com](https://www.hiveworkshop.com/threads/battle-of-the-teutoburg-forest-1-3.357674/)
+
 ## Credits
 
 * Baradé: Creator
