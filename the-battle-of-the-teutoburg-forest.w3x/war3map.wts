@@ -2790,7 +2790,7 @@ Serves as a drop-off point for harvested lumber. |nAlso contains upgrades for im
 STRING 640
 // Units: h00J (Forum), Ubertip (Tooltip - Extended)
 {
-Creates a shop with purchasable items. The items available depend upon what level of upgrade your Town Hall has (Castrum, Permanent Castrum, or Legion Castrum) and which buildings you have.
+Creates a shop with purchasable items. The items available depend upon what level of upgrade your Castrum has (Castrum, Permanent Castrum, or Legion Castrum) and which buildings you have.
 }
 
 STRING 641

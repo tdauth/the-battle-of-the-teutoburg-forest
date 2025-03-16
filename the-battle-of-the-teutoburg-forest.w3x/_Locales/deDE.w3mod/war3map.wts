@@ -96,13 +96,13 @@ Befehlsaura - [|cffffcc00Stufe 3|r]
 STRING 61
 // Abilities: A002 (Command Aura), Ubertip (Tooltip - Normal - Extended)
 {
-Gives extra damage to the attacks of nearby friendly units.
+Erhöht den Schaden verbündeter Einheiten in der Nähe.
 }
 
 STRING 62
 // Abilities: A002 (Command Aura), Ubertip (Tooltip - Normal - Extended)
 {
-Gives extra damage to the attacks of nearby friendly units.
+Erhöht den Schaden verbündeter Einheiten in der Nähe.
 }
 
 STRING 63
@@ -114,7 +114,7 @@ Hingabeaura erlernen - [|cffffcc00Stufe %d|r]
 STRING 64
 // Abilities: A002 (Command Aura), Researchubertip (Tooltip - Learn - Extended)
 {
-Gives extra damage to the attacks of nearby friendly units.
+Erhöht den Schaden verbündeter Einheiten in der Nähe.
 }
 
 STRING 65
@@ -424,25 +424,25 @@ Forum errichten
 STRING 144
 // Upgrades: R001 (Witch Doctor Adept Training,Witch Doctor Master Training), Name (Name)
 {
-Druid Adept Training
+Adeptenausbildung für Druiden
 }
 
 STRING 145
 // Upgrades: R001 (Witch Doctor Adept Training,Witch Doctor Master Training), Name (Name)
 {
-Druid Master Training
+Meisterausbildung für Druiden
 }
 
 STRING 146
 // Upgrades: R001 (Witch Doctor Adept Training,Witch Doctor Master Training), Tip (Tooltip)
 {
-Druid Adept Training
+Adeptenausbildung für Druiden
 }
 
 STRING 147
 // Upgrades: R001 (Witch Doctor Adept Training,Witch Doctor Master Training), Tip (Tooltip)
 {
-Druid Master Training
+Meisterausbildung für Druiden
 }
 
 STRING 148
@@ -460,7 +460,7 @@ Donneradler
 STRING 150
 // Upgrades: R002 (Defend), Ubertip (Tooltip - Extended)
 {
-Allows Roman Warriors to use the Defend ability, which increases their defensive capabilities against Piercing attacks.
+Lehrt römische Krieger Verteidigungshaltung, was den Schaden durch Stichangriffe verringert.
 }
 
 STRING 151
@@ -496,7 +496,7 @@ Stall errichten
 STRING 157
 // Units: o004 (Rider), Ubertip (Tooltip - Extended)
 {
-Highly mobile rider. Effective against archers. Can learn the Ensnare ability. |n|n|cffffcc00Attacks land units.|r
+Ein extrem mobiler Reiter. Effektiv gegen Bogenschützen. Kann Einschnüren erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
 }
 
 STRING 158
@@ -586,25 +586,25 @@ Druiden beschwören
 STRING 172
 // Units: e001 (Ballista), EditorSuffix (Name - Editor Suffix)
 {
-(Roman Empire)
+(Römisches Reich)
 }
 
 STRING 173
 // Abilities: A007 (Unit Inventory), EditorSuffix (Editor Suffix)
 {
-(Germanic Tribes)
+(Germanische Stämme)
 }
 
 STRING 174
 // Upgrades: R004 (Pillage), Ubertip (Tooltip - Extended)
 {
-Germanische Einheitenangriffe erzeugen Resourcen wenn sie feindliche Gebäude treffen.
+Germanische Einheitenangriffe erzeugen Rohstoffe wenn sie feindliche Gebäude treffen.
 }
 
 STRING 175
 // Abilities: A006 (Unit Inventory), EditorSuffix (Editor Suffix)
 {
-(Roman Empire)
+(Römisches Reich)
 }
 
 STRING 176
@@ -616,7 +616,7 @@ Gibt bestimmten römischen Bodeneinheiten die Fähigkeit, Gegenstände zu tragen
 STRING 177
 // Upgrades: R006 (Backpack), EditorSuffix (Editor Suffix)
 {
-(Germanic Tribes)
+(Germanische Stämme)
 }
 
 STRING 178
@@ -840,25 +840,25 @@ Opfern
 STRING 217
 // Upgrades: R00E (Spirit Walker Adept Training,Spirit Walker Master Training), Name (Name)
 {
-Seer Adept Training
+Adeptenausbildung für Seher
 }
 
 STRING 218
 // Upgrades: R00E (Spirit Walker Adept Training,Spirit Walker Master Training), Name (Name)
 {
-Seer Master Training
+Meisterausbildung für Seher
 }
 
 STRING 219
 // Upgrades: R00E (Spirit Walker Adept Training,Spirit Walker Master Training), Tip (Tooltip)
 {
-Seer Adept Training
+Adeptenausbildung für Seher
 }
 
 STRING 220
 // Upgrades: R00E (Spirit Walker Adept Training,Spirit Walker Master Training), Tip (Tooltip)
 {
-Seer Master Training
+Meisterausbildung für Seher
 }
 
 STRING 221
@@ -870,7 +870,7 @@ STRING 221
 STRING 222
 // Units: h00B (Seer), Ubertip (Tooltip - Extended)
 {
-Vielseitiger Zauberer. Kann initial Fernsicht wirken, das ein unsichtbares Gebiet auf der Karte sichtbar macht. Kann außerdem Magie bannen und Opfern erlernen. |n|n|cffffcc00Greift Boden- und Lufteinheiten an.|r
+Vielseitiger Zauberer. Kann initial Fernsicht wirken, das ein unsichtbares Gebiet auf der Karte sichtbar macht. Kann außerdem Magie bannen und Opfern erlernen. |n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
 }
 
 STRING 223
@@ -888,7 +888,7 @@ Castrum errichten
 STRING 225
 // Units: h002 (Castrum), EditorSuffix (Name - Editor Suffix)
 {
-(Tier 1)
+(Stufe 1)
 }
 
 STRING 226
@@ -918,13 +918,13 @@ Ausbau zum Dauerhaften Castrum
 STRING 230
 // Units: h00C (Permanent Castrum), EditorSuffix (Name - Editor Suffix)
 {
-(Tier 2)
+(Stufe 2)
 }
 
 STRING 231
 // Units: h00N (Legion Castrum), EditorSuffix (Name - Editor Suffix)
 {
-(Tier 3)
+(Stufe 3)
 }
 
 STRING 232
@@ -1002,7 +1002,7 @@ rmnx
 STRING 244
 // Units: H007 (Senator), Ubertip (Tooltip - Extended)
 {
-Mystical Hero, adept at controlling magic and ranged assaults. Can learn Silence, Sleep, Brilliance Aura and Charm. |n|n|cffffcc00Attacks land and air units.|r
+Ein mystischer Held, der Magie kontrolliert und geschickt aus der Entfernung angreift. Kann Stille, Schlaf, Brillanzaura und Bezauberung erlernen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
 }
 
 STRING 245
@@ -1050,7 +1050,7 @@ STRING 251
 STRING 252
 // Abilities: A00J (Ready), Name (Name)
 {
-Bereit
+Bereit machen
 }
 
 STRING 253
@@ -1068,7 +1068,7 @@ R
 STRING 255
 // Abilities: A00J (Ready), Tip (Tooltip - Normal)
 {
-Bereit
+Bereit machen
 }
 
 STRING 256
@@ -1092,19 +1092,19 @@ Wechselt in eine unbewegliche Form mit einer höheren Angriffsreichweite.
 STRING 259
 // Upgrades: R00G (Long Rifles), Name (Name)
 {
-Bereit
+Bereit machen
 }
 
 STRING 260
 // Upgrades: R00G (Long Rifles), Tip (Tooltip)
 {
-Bereit erforschen
+Bereit machen erforschen
 }
 
 STRING 261
 // Upgrades: R00G (Long Rifles), Ubertip (Tooltip - Extended)
 {
-Gibt Bogenschützen die Bereitfähigkeit.
+Gibt Bogenschützen die Fähigkeit Bereit machen.
 }
 
 STRING 262
@@ -1247,7 +1247,7 @@ STRING 289
 STRING 290
 // Units: h009 (Pioneer), Ubertip (Tooltip - Extended)
 {
-Einfache Arbeitereinheit. Kann Gold und Holz sammeln, Gebäude errichten und reparieren. |n|n|cffffcc00Greift Bodeneinheiten und Bäume an.|r
+Einfache Arbeitereinheit. Kann Gold und Holz sammeln, Gebäude errichten und reparieren. |n|n|cffffcc00Kann Bodeneinheiten und Bäume angreifen.|r
 }
 
 STRING 291
@@ -1307,7 +1307,7 @@ V
 STRING 300
 // Upgrades: R00J (Vorpal Blades), Ubertip (Tooltip - Extended)
 {
-Permits the missiles launched by the Ballista to strike through initial ground targets and damage those behind. Also allows them to attack trees.
+Erlaubt von Ballisten abgefeuerte Geschosse durch initial getroffen Bodenziele hindurchzuschießen und die Ziele dahinter zu beschädigen. Ermöglicht Ballisten, Bäume anzugreifen.
 }
 
 STRING 301
@@ -1319,49 +1319,49 @@ Erhöht die Rüstung und Trefferpunkte von römischen Gebäuden.
 STRING 302
 // Upgrades: R00L (Improved Masonry,Advanced Masonry,Imbued Masonry), Ubertip (Tooltip - Extended)
 {
-Erhöht die Rüstung und Trefferpunkte von römischen Gebäuden weiter.
+Erhöht die Rüstung und Trefferpunkte von römischen Gebäuden zusätzlich.
 }
 
 STRING 303
 // Upgrades: R00L (Improved Masonry,Advanced Masonry,Imbued Masonry), Ubertip (Tooltip - Extended)
 {
-Erhöht die Rüstung und Trefferpunkte von römischen Gebäuden weiter.
+Erhöht die Rüstung und Trefferpunkte von römischen Gebäuden zusätzlich.
 }
 
 STRING 304
 // Upgrades: R00O (Black Gunpowder,Refined Gunpowder,Imbued Gunpowder), Name (Name)
 {
-Stahl-Fernkampfwaffen
+Stahlfernkampfwaffen
 }
 
 STRING 305
 // Upgrades: R00O (Black Gunpowder,Refined Gunpowder,Imbued Gunpowder), Name (Name)
 {
-Thorium-Fernkampfwaffen
+Thoriumfernkampfwaffen
 }
 
 STRING 306
 // Upgrades: R00O (Black Gunpowder,Refined Gunpowder,Imbued Gunpowder), Name (Name)
 {
-Arkanit-Fernkampfwaffen
+Arkanitfernkampfwaffen
 }
 
 STRING 307
 // Upgrades: R00O (Black Gunpowder,Refined Gunpowder,Imbued Gunpowder), Tip (Tooltip)
 {
-Ausbau zu Stahl-Fernkampfwaffen
+Ausbau zu Stahlfernkampfwaffen
 }
 
 STRING 308
 // Upgrades: R00O (Black Gunpowder,Refined Gunpowder,Imbued Gunpowder), Tip (Tooltip)
 {
-Ausbau zu Thorium-Fernkampfwaffen
+Ausbau zu Thoriumfernkampfwaffen
 }
 
 STRING 309
 // Upgrades: R00O (Black Gunpowder,Refined Gunpowder,Imbued Gunpowder), Tip (Tooltip)
 {
-Ausbau zu Arkanit-Fernkampfwaffen
+Ausbau zu Arkanitfernkampfwaffen
 }
 
 STRING 310
@@ -1385,7 +1385,7 @@ STRING 312
 STRING 313
 // Units: o00E (Shaman), Ubertip (Tooltip - Extended)
 {
-Primärer Zauberer. Kann initial Unsichtbarkeit wirken, wodruch verbündete Einheiten für einige Zeit unsichtbar werden. Kann außerdem Adler beschwören und Kampfrausch erlernen. |n|n|cffffcc00Greift Boden- und Lufteinheiten an.|r
+Primärer Zauberer. Kann initial Unsichtbarkeit wirken, wodruch verbündete Einheiten für einige Zeit unsichtbar werden. Kann außerdem Adler beschwören und Kampfrausch erlernen. |n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
 }
 
 STRING 314
@@ -1403,13 +1403,13 @@ Germanischen Krieger anheuern
 STRING 316
 // Units: h00G (Vexillifer), Casterupgradetip (Caster Upgrade Tips)
 {
-- Abolish Magic,- Abolish Magic|n- Mana Burn,- Abolish Magic|n- Mana Burn|n- Inner Fire
+- Magie aufheben,- Magie aufheben|n- Manabrand,- Magie aufheben|n- Manabrand|n- Inneres Feuer
 }
 
 STRING 317
 // Units: h00G (Vexillifer), Ubertip (Tooltip - Extended)
 {
-Supporting spellcaster. Can initially cast Abolish Magic which removes positive buffs from enemies or negative buffs from allies. Can also learn Mana Burn and Inner Fire. |n|n|cffffcc00Attacks land and air units.|r
+Ein unterstützender Magiebenutzer. Beherrscht Magie aufheben, wodurch Stärkungseffekte von Feinden und Schwächungseffekte von Verbündeten entfernt werden. Kann Manabrand und Inneres Feuer erlernen.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
 }
 
 STRING 318
@@ -1421,67 +1421,67 @@ STRING 318
 STRING 319
 // Units: h004 (Priest), Ubertip (Tooltip - Extended)
 {
-Unterstützender Zauberer. Kann anfangs Heilen wirken, welches das Leben von verwundeten Einheiten erhöht. Kann außerdem Antimagiehülle und Verkrüppeln erlernen. |n|n|cffffcc00Greift Land- und Lufteinheiten an.|r
+Ein unterstützender Magiebenutzer. Beherrscht Heilen, wodurch die Trefferpunkte verwundeter Einheiten wiederhergestellt werden. Kann Antimagiehülle und Verkrüppeln erlernen. |n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
 }
 
 STRING 320
 // Upgrades: R00P (Sorceress Adept Training,Sorceress Master Training), Name (Name)
 {
-Vexillifer Adept Training
+Adeptenausbildung für Vexillifer
 }
 
 STRING 321
 // Upgrades: R00P (Sorceress Adept Training,Sorceress Master Training), Name (Name)
 {
-Vexillifer Master Training
+Meisterausbildung für Vexillifer
 }
 
 STRING 322
 // Upgrades: R00P (Sorceress Adept Training,Sorceress Master Training), Tip (Tooltip)
 {
-Vexillifer Adept Training
+Adeptenausbildung für Vexillifer
 }
 
 STRING 323
 // Upgrades: R00P (Sorceress Adept Training,Sorceress Master Training), Tip (Tooltip)
 {
-Vexillifer Master Training
+Meisterausbildung für Vexillifer
 }
 
 STRING 324
 // Upgrades: R00P (Sorceress Adept Training,Sorceress Master Training), Ubertip (Tooltip - Extended)
 {
-Increases Vexillifers' mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Mana Burn.
+Erhöht das maximale Mana, die Manaregeneration und die Trefferpunkte von Vexillifern und lehrt sie Manabrand.
 }
 
 STRING 325
 // Upgrades: R00P (Sorceress Adept Training,Sorceress Master Training), Ubertip (Tooltip - Extended)
 {
-Increases Vexillifers' mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Inner Fire.
+Erhöht das maximale Mana, die Manaregeneration und die Trefferpunkte von Vexillifern und lehrt sie Inneres Feuer.
 }
 
 STRING 326
 // Upgrades: R00Q (Priest Adept Training,Priest Master Training), Ubertip (Tooltip - Extended)
 {
-Increases Priests' mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Anti-Magic Shell.
+Erhöht das maximale Mana, die Manaregeneration und die Trefferpunkte von Priestern und lehrt sie Antimagiehülle.
 }
 
 STRING 327
 // Upgrades: R00Q (Priest Adept Training,Priest Master Training), Ubertip (Tooltip - Extended)
 {
-Increases Priests' mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Cripple.
+Erhöht das maximale Mana, die Manaregeneration und die Trefferpunkte von Priestern und lehrt sie Verkrüppeln.
 }
 
 STRING 328
 // Units: h002 (Castrum), Ubertip (Tooltip - Extended)
 {
-Primary structure, used to train Pioneers and receive gathered resources. Can be upgraded to Permanent Castrum and then Legion Castrum to enable the production of additional types of structures and units.
+Hauptgebäude. Bildet Pioniere aus und nimmt abgebaute Rohstoffe entgegen. Kann erst zum Dauerhaften Castrum und dann zum Legion-Castrum ausgebaut werden, um die Produktion weiterer Gebäude- und Einheitentypen zu ermöglichen.
 }
 
 STRING 330
 // Units: h00A (Storage), Ubertip (Tooltip - Extended)
 {
-Dient als Abgabestelle für gesammeltes Holz. |nEnthält außerdem Verbesserungen für verbesserte Rüstung, Waffen und Mauerwerk.
+Dient als Abgabestelle für gesammeltes Holz. |nEnthält außerdem Verbesserungen für verbesserte Rüstung, Waffen und Baukunst.
 }
 
 STRING 331
@@ -1535,19 +1535,19 @@ Streitwagen ausbilden
 STRING 341
 // Units: h00R (Chariot), Ubertip (Tooltip - Extended)
 {
-Mächtiger berittener Krieger. |n|n|cffffcc00Greift Bodeneinheiten an.|r
+Mächtiger berittener Krieger. |n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
 }
 
 STRING 342
 // Units: o003 (Villager), Ubertip (Tooltip - Extended)
 {
-Einfache Arbeitereinheit. Kann Gold und Holz sammeln, Gebäude errichten und reparieren. |n|n|cffffcc00Greift Bodeneinheiten und Bäume an.|r
+Einfache Arbeitereinheit. Kann Gold und Holz sammeln, Gebäude errichten und reparieren. |n|n|cffffcc00Kann Bodeneinheiten und Bäume angreifen.|r
 }
 
 STRING 343
 // Abilities: A00E (Far Sight), Ubertip (Tooltip - Normal - Extended)
 {
-Reveals anarea for <Afla,Dur1> seconds. |nReveals invisible units.
+Macht ein ausgewähltes Gebiet der Karte <Afla,Dur1> Sekunden lang sichtbar. |nDeckt auch unsichtbare Einheiten auf.
 }
 
 STRING 344
@@ -1592,13 +1592,13 @@ Arminius wiederbeleben
 STRING 350
 // Units: o00A (Druid), Casterupgradetip (Caster Upgrade Tips)
 {
-- Gebrüll,- Gebrüll|n- Verjüngung,- Gebrüll|n- Verjüngung|n- Bärenform
+- Gebrüll,- Gebrüll|n- Verjüngung,- Gebrüll|n- Verjüngung|n- Bärengestalt
 }
 
 STRING 351
 // Units: o00A (Druid), Ubertip (Tooltip - Extended)
 {
-Unterstützender Zauberer. Kann anfangs Gebrüll wirken, was temporär den Schaden von verbündeten Einheiten erhöht. Kann außerdem Verjüngung und Bärenform erlernen. |n|n|cffffcc00Greif Boden- und Lufteinheiten an.|r
+Ein unterstützender Magiebenutzer. Kann anfangs Gebrüll wirken, was temporär den Schaden von verbündeten Einheiten erhöht. Kann Verjüngung und Bärengestalt erlernen. |n|n|cffffcc00Greif Boden- und Lufteinheiten an.|r
 }
 
 STRING 352
@@ -1616,31 +1616,31 @@ S
 STRING 354
 // Upgrades: R000 (Shaman Adept Training,Shaman Master Training), Ubertip (Tooltip - Extended)
 {
-Increases Shaman mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Summon Eagle.
+Erhöht das maximale Mana, die Manaregeneration und die Trefferpunkte von Schamanen und lehrt sie Adler beschwören.
 }
 
 STRING 355
 // Upgrades: R001 (Witch Doctor Adept Training,Witch Doctor Master Training), Ubertip (Tooltip - Extended)
 {
-Increases Druids' mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Rejuvenation.
+Erhöht das maximale Mana, die Manaregeneration und die Trefferpunkte von Druiden und lehrt sie Verjüngung.
 }
 
 STRING 356
 // Upgrades: R001 (Witch Doctor Adept Training,Witch Doctor Master Training), Ubertip (Tooltip - Extended)
 {
-Increases Druids' mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Bear Form.
+Erhöht das maximale Mana, die Manaregeneration und die Trefferpunkte von Druiden und lehrt sie Bärengestalt.
 }
 
 STRING 357
 // Upgrades: R00E (Spirit Walker Adept Training,Spirit Walker Master Training), Ubertip (Tooltip - Extended)
 {
-Increases Seers' mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Dispel Magic.
+Erhöht das maximale Mana, die Manaregeneration und die Trefferpunkte von Sehern und lehrt sie Magie bannen.
 }
 
 STRING 358
 // Upgrades: R00E (Spirit Walker Adept Training,Spirit Walker Master Training), Ubertip (Tooltip - Extended)
 {
-Increases Seers' mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Sacrifice.
+Erhöht das maximale Mana, die Manaregeneration und die Trefferpunkte von Sehern und lehrt sie Opfern.
 }
 
 STRING 359
@@ -1734,13 +1734,13 @@ Bären anheuern
 STRING 377
 // Units: n004 (Bear), Ubertip (Tooltip - Extended)
 {
-Light raging beast. |n|n|cffffcc00Attacks land units.|r
+Eine leichte wütende Bestie.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
 }
 
 STRING 378
 // Units: n005 (Raging Bear), Ubertip (Tooltip - Extended)
 {
-Medium raging beast. Has the Bash ability. |n|n|cffffcc00Attacks land units.|r
+Eine mittelschweres wütende Bestie. Beherrscht Hieb.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
 }
 
 STRING 379
@@ -1758,13 +1758,13 @@ Adler anheuern
 STRING 381
 // Units: n008 (Eagle), Ubertip (Tooltip - Extended)
 {
-Light flying ranged unit that hurls pin-feathers. |n|n|cffffcc00Attacks land and air units.|r
+Eine leichte Fernkampflufteinheit, die Federpfeile verschießt.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
 }
 
 STRING 382
 // Units: n009 (Thunder Eagle), Ubertip (Tooltip - Extended)
 {
-Medium flying ranged unit that hurls pin-feathers. Has the True Sight ability. |n|n|cffffcc00Attacks land and air units.|r
+Eine mittelschwere Fernkampflufteinheit, die Federpfeile verschießt. Beherrscht Durchblick.|n|n|cffffcc00Kann Boden- und Lufteinheiten angreifen.|r
 }
 
 STRING 383
@@ -1776,7 +1776,7 @@ Donneradler anheuern
 STRING 384
 // Units: h003 (Centurio), Ubertip (Tooltip - Extended)
 {
-Versatile foot soldier. Can learn the Defend and Evasion ability. |n|n|cffffcc00Attacks land units.|r
+Ein vielseitiger Fußsoldat. Kann Verteidigungshaltung und Ausweichen erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
 }
 
 STRING 385
@@ -1794,7 +1794,7 @@ Ausweichen erforschen
 STRING 387
 // Upgrades: R00U (Cloud), Ubertip (Tooltip - Extended)
 {
-Provides Centurios with the Evasion ability which gives the unit a chance to avoid enemy attacks.
+Lehrt Zenturios Ausweichen, womit sie eine Chance bekommen gegnerische Angriffe zu vermeiden.
 }
 
 STRING 388
@@ -1860,19 +1860,19 @@ Berserker ausbilden
 STRING 400
 // Upgrades: R00T (Steel Armor,Thorium Armor,Arcanite Armor), Ubertip (Tooltip - Extended)
 {
-Increases the movement speed and maximum hit points of Riders and Chariots.
+Erhöht die Bewegungsgeschwindigkeit und die maximalen Trefferpunkte von Reitern und Streitwägen.
 }
 
 STRING 401
 // Upgrades: R00T (Steel Armor,Thorium Armor,Arcanite Armor), Ubertip (Tooltip - Extended)
 {
-Further increases the movement speed and maximum hit points of Riders and Chariots.
+Erhöht die Bewegungsgeschwindigkeit und die maximalen Trefferpunkte von Reitern und Streitwägen zusätzlich.
 }
 
 STRING 402
 // Upgrades: R00T (Steel Armor,Thorium Armor,Arcanite Armor), Ubertip (Tooltip - Extended)
 {
-Further increases the movement speed and maximum hit points of Riders and Chariots.
+Erhöht die Bewegungsgeschwindigkeit und die maximalen Trefferpunkte von Reitern und Streitwägen zusätzlich.
 }
 
 STRING 403
@@ -1926,7 +1926,7 @@ Bärenfalle platzieren
 STRING 460
 // Abilities: A010 (Unhide from Trees), Name (Name)
 {
-Unhide from Trees
+Aus Bäumen auftauchen
 }
 
 STRING 461
@@ -1938,13 +1938,13 @@ L
 STRING 462
 // Abilities: A010 (Unhide from Trees), Tip (Tooltip - Normal)
 {
-Unhide from Trees
+Aus Bäumen auftauchen
 }
 
 STRING 463
 // Abilities: A010 (Unhide from Trees), Ubertip (Tooltip - Normal - Extended)
 {
-Unhides from the current tree.
+Taucht aus dem aktuellen Baum auf.
 }
 
 STRING 464
@@ -1956,7 +1956,7 @@ Bärenfalle
 STRING 466
 // Abilities: A011 (Place Bear Trap), Ubertip (Tooltip - Normal - Extended)
 {
-Places a permanent Bear Trap which is activated when enemy ground units approach and causes damage to them.
+Platziert eine dauerhafte Bärenfalle, welche aktiviert wird sobald gegnerische Bodeneinheiten sich nähern und fügt ihnen Schaden zu.
 }
 
 STRING 467
@@ -1968,19 +1968,19 @@ U
 STRING 468
 // Upgrades: R00A (Brute Strength), Ubertip (Tooltip - Extended)
 {
-Improves the fighting capabilities of melee warriors with a <Robs,base1> hit point increase, and <Robs,base2> bonus attack damage.
+Erhöht die Trefferpunkte von Nahkampfkriegern um <Robs,base1> und ihren Angriffsschaden um <Robs,base2>.
 }
 
 STRING 469
 // Upgrades: R00V (Cannibalize), Ubertip (Tooltip - Extended)
 {
-Enables Berserkers to use the Cannibalize ability. Cannibalize consumes a nearby corpse to restore health.
+Lehrt Berserker Kannibalismus, womit sie eine Leiche in der Nähe verschlingen können, um Trefferpunkte wiederherzustellen.
 }
 
 STRING 470
 // Upgrades: R00W (Sentinel), Ubertip (Tooltip - Extended)
 {
-Gives the spell casters the ability to send her owl companion to a nearby tree and provide vision. |nCan see invisible units.
+Ermöglicht Magiebenutzern, eine Eule zu einen Baum in der Nähe zu schicken, um das Gebiet um den Baum sichtbar zu machen.|nKann unsichtbare Einheiten aufdecken.
 }
 
 STRING 471
@@ -2052,7 +2052,7 @@ C
 STRING 482
 // Units: o00K (Berserker), Ubertip (Tooltip - Extended)
 {
-Fearless powerful melee warrior. Can cast Berserk which lets him attack faster but also take more damage. Can learn Cannibalize, Summon Dog and Brute Strength. |n|n|cffffcc00Attacks land units.|r
+Furchtloser mächtiger Nahkampfkrieger. Kann Berserk wirken, das ihn schneller angreifen, aber auch mehr Schaden erhalten lässt. Kann Kannibalismus, Hund beschwören und Bestialische Kraft erlernen. |n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
 }
 
 STRING 483
@@ -2062,7 +2062,7 @@ Version 1.1
 
 STRING 484
 {
-All changes for this version.
+Alle Änderungen für diese Version.
 }
 
 STRING 485
@@ -2270,7 +2270,7 @@ Das Symbol des germanischen Sieges.
 STRING 523
 // Units: o006 (Barracks), Ubertip (Tooltip - Extended)
 {
-Primary troop production building. Trains Warriors, Hunters and Javelin Throwers. |nAlso contains the Brute Strength, Ensnare, Improved Hunting, and Envenomed Weapons upgrades.
+Primäres Truppenproduktionsgebäude. Bildet Krieger, Jäger und Speerwerfer aus.|nDient zur Erforschung von Bestialische Kraft, Einschnüren, Verbesserter Jagd und Vergiftete Waffen.
 }
 
 STRING 524
@@ -2330,7 +2330,7 @@ Vergiftete Waffen erforschen
 STRING 533
 // Upgrades: R008 (Envenomed Spears), Ubertip (Tooltip - Extended)
 {
-Adds an additional poison effect to Hunters' and Javelin Throwers' attacks. A unit poisoned by Envenomed Spears takes damage over time.
+Verstärkt die Angriffe von Jägern und Speerwerfern mit Giftschaden. Von Giftspeeren getroffene Einheiten erleiden periodischen Schaden.
 }
 
 STRING 534
@@ -2466,37 +2466,37 @@ Raises a fallen non-Hero Berserker from the dead. The Berserker is revived with 
 STRING 571
 // Upgrades: R010 (Spirit Walker Adept Training,Spirit Walker Master Training), Name (Name)
 {
-High Priest Adept Training
+Adeptenausbildung für Hohepriester
 }
 
 STRING 572
 // Upgrades: R010 (Spirit Walker Adept Training,Spirit Walker Master Training), Name (Name)
 {
-High Priest Master Training
+Meisterausbildung für Hohepriester
 }
 
 STRING 573
 // Upgrades: R010 (Spirit Walker Adept Training,Spirit Walker Master Training), Tip (Tooltip)
 {
-High Priest Adept Training
+Adeptenausbildung für Hohepriester
 }
 
 STRING 574
 // Upgrades: R010 (Spirit Walker Adept Training,Spirit Walker Master Training), Tip (Tooltip)
 {
-High Priest Master Training
+Meisterausbildung für Hohepriester
 }
 
 STRING 575
 // Upgrades: R010 (Spirit Walker Adept Training,Spirit Walker Master Training), Ubertip (Tooltip - Extended)
 {
-Increases High Priests' mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Life Drain.
+Erhöht das maximale Mana, die Manaregeneration und die Trefferpunkte von Hohepriestern und lehrt sie Lebensentzug.
 }
 
 STRING 576
 // Upgrades: R010 (Spirit Walker Adept Training,Spirit Walker Master Training), Ubertip (Tooltip - Extended)
 {
-Increases High Priests' mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Ancestral Spirit.
+Erhöht das maximale Mana, die Manaregeneration und die Trefferpunkte von Hohepriestern und lehrt sie Geist der Ahnen.
 }
 
 STRING 577
@@ -2570,7 +2570,7 @@ Call upon the spirit of Owl to save you.
 STRING 592
 // Units: o005 (House), Ubertip (Tooltip - Extended)
 {
-Provides food, which increases the maximum number of units that can be trained. Can breed animals which give additional resources on dying.
+Liefert Versorgung, wodurch die maximale Anzahl produzierter Einheiten erhöht wird. Ermöglicht Tiere zu züchten, die zusätzliche Rohstoffe geben, wenn sie sterben.
 }
 
 STRING 593
@@ -2606,7 +2606,7 @@ Belagerungsramme ausbilden
 STRING 599
 // Units: h00S (Battering Ram), Ubertip (Tooltip - Extended)
 {
-Stark gepanzerte Belagerungswaffe, das effektiv in der Zerstörung von Gebäuden ist. |n|n|cffffcc00Greift Gebäude an.|r
+Stark gepanzerte Belagerungswaffe, das effektiv in der Zerstörung von Gebäuden ist. |n|n|cffffcc00Kann Gebäude angreifen.|r
 }
 
 STRING 600
@@ -2623,13 +2623,13 @@ Germanic hero Druid gets Monsoon ulti instead of Charm.
 STRING 604
 // Abilities: A004 (Throw Pilum), Ubertip (Tooltip - Normal - Extended)
 {
-Throws a Pilum that damages a target enemy unit and interrupts its actions.
+Wirft einen Pilum, der eine feindliche Zieleinheit beschädigt und ihre Aktionen unterbricht.
 }
 
 STRING 605
 // Abilities: A015 (Searing Arrows), Ubertip (Tooltip - Normal - Extended)
 {
-Adds <A015,DataA1> bonus fire damage to an attack against enemies, but drains mana with each shot fired.
+Fügt <A015,DataA1> Bonus-Feuerschaden zu einem Angriff gegen Feinde hinzu, aber zieht Mana für jeden gefeuerten Schuss ab.
 }
 
 STRING 606
@@ -2647,18 +2647,18 @@ Monsun
 STRING 608
 // Upgrades: R003 (Defend), Ubertip (Tooltip - Extended)
 {
-Allows Roman warriors to use the Throw Pilum ability, which damages enemy units and interrupt their actions.
+Erlaubt römischen Kriegern, die Fähigkeit Pilum werfen zu benutzen, welche feindliche Einheiten beschädigt und deren Aktionen unterbricht.
 }
 
 STRING 609
 {
-Hide in Trees increase life and mana regeneration.
+In Bäumen verstecken erhöht Lebens- und Manaregeneration.
 }
 
 STRING 610
 // Abilities: A00Z (Hide in Trees), Ubertip (Tooltip - Normal - Extended)
 {
-Hides the unit in the targeted tree which makes it invisible and unmovable and increases the life and mana regeneration until leaving the trees or the tree is cut down.
+Versteckt die Einheit im anvisierten Baum, was sie unsichtbar und unbeweglich macht und ihre Lebens- und Manaregeneration erhöht, bis sie die Bäume verlässt oder der Baum gefällt wird.
 }
 
 STRING 611
@@ -2680,7 +2680,7 @@ Change water color.
 
 STRING 616
 {
-|cffffcc00Supports Computer players.|r|n
+|cffffcc00Unterstützt Computer-Spieler.|r|n
 }
 
 STRING 617
@@ -2695,7 +2695,7 @@ Version 1.2
 
 STRING 619
 {
-All changes for this version.
+Alle Änderungen für diese Version.
 }
 
 STRING 620
@@ -2721,17 +2721,17 @@ Change model of Germanic Merchant.
 STRING 624
 // Units: ntav (Resurrecton Stone), Name (Name)
 {
-Resurrecton Stone
+Auferstehungsstein
 }
 
 STRING 625
 {
-Defeat!
+Niederlage!
 }
 
 STRING 626
 {
-Defeat!
+Niederlage!
 }
 
 STRING 627
@@ -2772,7 +2772,7 @@ Add missing Roman research Evasion.
 STRING 637
 // Units: h00F (Academy), Ubertip (Tooltip - Extended)
 {
-Primary troop production building. Trains Legionaries, Archers and Centurios. |nAlso contains the Defend, Throw Pilum, Searing Arrows, Ready, and Evasion upgrades.
+Primäres Truppenproduktionsgebäude. Bildet Legionäre, Bogenschützen und Zenturios aus.|nDient zur Erforschung von Verteidigungshaltung, Pilum werfen, Sengpfeile, Bereit machen und Ausweichen.
 }
 
 STRING 638
@@ -2784,13 +2784,13 @@ Bildet Reiter, Streitwägen und Belagerungsrammen aus.
 STRING 639
 // Units: o008 (Stockpile), Ubertip (Tooltip - Extended)
 {
-Serves as a drop-off point for harvested lumber. |nAlso contains upgrades for improved armor, melee weapons, ranged weapons, and Improved Lumber Harvesting.
+Dient als Abgabestelle für gesammeltes Holz. |nEnthält außerdem Verbesserungen für verbesserte Rüstung, Nahkampfwaffen, Fernkampfwaffen und verbesserten Holzabbau.
 }
 
 STRING 640
 // Units: h00J (Forum), Ubertip (Tooltip - Extended)
 {
-Creates a shop with purchasable items. The items available depend upon what level of upgrade your Town Hall has (Castrum, Permanent Castrum, or Legion Castrum) and which buildings you have.
+Errichtet einen Laden mit käuflichen Gegenständen. Die verfügbaren Gegenstände hängen von der Ausbaustufe Ihres Castrums (Castrum, Dauerhaftes Castrum oder Legions-Castrum) und den Gebäuden ab, die Sie besitzen.
 }
 
 STRING 641
@@ -2808,13 +2808,13 @@ Bildet Eques und Streitwägen aus. |nEnthält außerdem die Verbesserungen Trenn
 STRING 643
 // Units: h00O (Temple), Ubertip (Tooltip - Extended)
 {
-Bildet Vexilifers und Priester aus. |nEnthält außerdem Zauberverbesserungen für Vexilifers und Priester und Magischer Wächter.
+Bildet Vexilifers und Priester aus. |nEnthält außerdem Zauberverbesserungen für Vexilifers und Priester und Magischer Schutz.
 }
 
 STRING 644
 // Units: o00J (Ritual Site), Ubertip (Tooltip - Extended)
 {
-Trains Berserkers and High Priests. Contains upgrades Summon Dog, Cannibalize and High Priest Adept Training.
+Bildet Berserker und Hohepriester aus.|nDient zur Erforschung von Hund beschwören, Kannibalismus und Adeptenausbildung für Hohepriester.
 }
 
 STRING 645
@@ -3216,7 +3216,7 @@ Version 1.3
 
 STRING 723
 {
-All changes for this version.
+Alle Änderungen für diese Version.
 }
 
 STRING 724

@@ -13,7 +13,7 @@ Warcraft III custom map featuring the famous [Battle of the Teutoburg Forest](ht
 * Animal Breeding.
 * Animal Hunting.
 * Custom critters.
-* German translation.
+* [German translation](./the-battle-of-the-teutoburg-forest.w3x/_Locales/deDE.w3mod/war3map.wts).
 
 ## Credits
 
