@@ -3252,3 +3252,13 @@ STRING 730
 Tree is already occupied.
 }
 
+STRING 731
+{
+Add German translation.
+}
+
+STRING 732
+{
+Improve tooltips.
+}
+
