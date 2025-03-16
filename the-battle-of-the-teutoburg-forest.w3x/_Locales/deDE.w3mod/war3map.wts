@@ -108,7 +108,7 @@ Erhöht den Schaden verbündeter Einheiten in der Nähe.
 STRING 63
 // Abilities: A002 (Command Aura), Researchtip (Tooltip - Learn)
 {
-Hingabeaura erlernen - [|cffffcc00Stufe %d|r]
+Befehlsaura erlernen - [|cffffcc00Stufe %d|r]
 }
 
 STRING 64
@@ -807,7 +807,7 @@ Senator beschwören
 
 STRING 211
 {
-Die Schlacht.
+Die Schlacht
 }
 
 STRING 212
@@ -1475,13 +1475,13 @@ Erhöht das maximale Mana, die Manaregeneration und die Trefferpunkte von Priest
 STRING 328
 // Units: h002 (Castrum), Ubertip (Tooltip - Extended)
 {
-Hauptgebäude. Bildet Pioniere aus und nimmt abgebaute Rohstoffe entgegen. Kann erst zum Dauerhaften Castrum und dann zum Legion-Castrum ausgebaut werden, um die Produktion weiterer Gebäude- und Einheitentypen zu ermöglichen.
+Hauptgebäude. Bildet Pioniere aus und nimmt abgebaute Rohstoffe entgegen. Kann erst zum Dauerhaften Castrum und dann zum Legions-Castrum ausgebaut werden, um die Produktion weiterer Gebäude- und Einheitentypen zu ermöglichen.
 }
 
 STRING 330
 // Units: h00A (Storage), Ubertip (Tooltip - Extended)
 {
-Dient als Abgabestelle für gesammeltes Holz. |nEnthält außerdem Verbesserungen für verbesserte Rüstung, Waffen und Baukunst.
+Dient als Abgabepunkt für geschlagenes Holz. |nDient zur Erforschung von verbesserter Rüstung, Waffen und verbesserter Baukunst.
 }
 
 STRING 331
@@ -1776,25 +1776,25 @@ Donneradler anheuern
 STRING 384
 // Units: h003 (Centurio), Ubertip (Tooltip - Extended)
 {
-Ein vielseitiger Fußsoldat. Kann Verteidigungshaltung und Ausweichen erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
+Ein vielseitiger Fußsoldat. Kann Verteidigungshaltung und Entrinnen erlernen.|n|n|cffffcc00Kann Bodeneinheiten angreifen.|r
 }
 
 STRING 385
 // Upgrades: R00U (Cloud), Name (Name)
 {
-Ausweichen
+Entrinnen
 }
 
 STRING 386
 // Upgrades: R00U (Cloud), Tip (Tooltip)
 {
-Ausweichen erforschen
+Entrinnen erforschen
 }
 
 STRING 387
 // Upgrades: R00U (Cloud), Ubertip (Tooltip - Extended)
 {
-Lehrt Zenturios Ausweichen, womit sie eine Chance bekommen gegnerische Angriffe zu vermeiden.
+Lehrt Zenturios Entrinnen, womit sie eine Chance bekommen gegnerische Angriffe zu vermeiden.
 }
 
 STRING 388
@@ -2772,7 +2772,7 @@ Add missing Roman research Evasion.
 STRING 637
 // Units: h00F (Academy), Ubertip (Tooltip - Extended)
 {
-Primäres Truppenproduktionsgebäude. Bildet Legionäre, Bogenschützen und Zenturios aus.|nDient zur Erforschung von Verteidigungshaltung, Pilum werfen, Sengpfeile, Bereit machen und Ausweichen.
+Primäres Truppenproduktionsgebäude. Bildet Legionäre, Bogenschützen und Zenturios aus.|nDient zur Erforschung von Verteidigungshaltung, Pilum werfen, Sengpfeile, Bereit machen und Entrinnen.
 }
 
 STRING 638
@@ -2784,7 +2784,7 @@ Bildet Reiter, Streitwägen und Belagerungsrammen aus.
 STRING 639
 // Units: o008 (Stockpile), Ubertip (Tooltip - Extended)
 {
-Dient als Abgabestelle für gesammeltes Holz. |nEnthält außerdem Verbesserungen für verbesserte Rüstung, Nahkampfwaffen, Fernkampfwaffen und verbesserten Holzabbau.
+Dient als Abgabepunkt für geschlagenes Holz. |nDient zur Erforschung von verbesserter Rüstung, Nahkampfwaffen, Fernkampfwaffen und verbessertem Holzabbau.
 }
 
 STRING 640

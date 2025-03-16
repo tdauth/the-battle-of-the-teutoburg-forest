@@ -108,7 +108,7 @@ Gives extra damage to the attacks of nearby friendly units.
 STRING 63
 // Abilities: A002 (Command Aura), Researchtip (Tooltip - Learn)
 {
-Learn Devotion Aura - [|cffffcc00Level %d|r]
+Learn Command Aura - [|cffffcc00Level %d|r]
 }
 
 STRING 64
